@@ -2,63 +2,540 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>หน้าแนะนำตัวของฉัน</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>วชิรญาณ์ | My Profile</title>
 
 <style>
-body {
-    background-color: #FFF59D;
-    color: #131313;
-    text-align: center;
-    padding: 30px;
-    font-family: Arial, sans-serif;
+
+/* ---------- พื้นฐาน ---------- */
+
+* {
+    box-sizing: border-box;
 }
 
-.card {
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #FFF9D9;
+    color: #5C4A20;
+}
+
+/* ---------- เมนู ---------- */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #FFD84D;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(120, 90, 0, 0.15);
+}
+
+nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #654F16;
+    background: #FFF8D6;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #FFB703;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ---------- หน้าหลัก ---------- */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background:
+        radial-gradient(circle at 10% 20%, #FFE98A 0 35px, transparent 36px),
+        radial-gradient(circle at 90% 30%, #FFD95A 0 25px, transparent 26px),
+        #FFF9D9;
+}
+
+.hero-box {
+    max-width: 1000px;
+    width: 100%;
     background: white;
-    border-radius: 50px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 40px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    box-shadow: 0 10px 30px rgba(180, 140, 20, 0.18);
+    border: 4px solid #FFE58A;
+}
+
+/* ---------- ช่องรูป ---------- */
+
+.profile-photo {
+    width: 280px;
+    height: 340px;
+    background: #FFF4B8;
+    border: 4px dashed #F5C542;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #B28A18;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------- ข้อความหน้าแรก ---------- */
+
+.hero-text {
     max-width: 500px;
-    margin: 0 auto;
-    padding: 30px;
+}
+
+.small-title {
+    color: #E7A900;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 h1 {
-    color: #2c3e50;
+    font-size: 45px;
+    color: #E5A900;
+    margin: 10px 0;
 }
 
-p {
+.hero-text h2 {
+    color: #80621C;
+}
+
+.description {
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
-a {
+/* ---------- ปุ่ม ---------- */
+
+.main-button {
     display: inline-block;
-    background: #FF8FAB;
-    color: #795548;
-    padding: 10px 20px;
+    margin-top: 20px;
+    padding: 14px 25px;
+    background: #FFB703;
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(200, 150, 0, 0.2);
+    transition: 0.3s;
 }
-</style>
 
+.main-button:hover {
+    background: #F59E0B;
+    transform: scale(1.05);
+}
+
+/* ---------- Section ---------- */
+
+section {
+    padding: 80px 20px;
+}
+
+.section-box {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 35px;
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(180, 140, 20, 0.15);
+    border: 3px solid #FFE58A;
+}
+
+.section-title {
+    text-align: center;
+    color: #E5A900;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+/* ---------- คำนำ ---------- */
+
+.intro {
+    background: #FFF7CC;
+    padding: 30px;
+    border-radius: 25px;
+    line-height: 2;
+    font-size: 18px;
+}
+
+/* ---------- การศึกษา ---------- */
+
+.education-item {
+    background: #FFF8D8;
+    border-left: 8px solid #FFD23F;
+    padding: 22px;
+    margin: 20px 0;
+    border-radius: 20px;
+}
+
+.education-item h3 {
+    color: #D99B00;
+    margin-top: 0;
+}
+
+/* ---------- มหาวิทยาลัย ---------- */
+
+.university {
+    background: #FFF8D8;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 25px;
+    border: 2px solid #FFE79A;
+}
+
+.university h3 {
+    color: #D99B00;
+}
+
+.tag {
+    display: inline-block;
+    background: #FFD84D;
+    color: #654F16;
+    padding: 7px 14px;
+    border-radius: 20px;
+    margin: 4px;
+    font-size: 14px;
+}
+
+/* ---------- รูปตกแต่ง ---------- */
+
+.decor {
+    text-align: center;
+    font-size: 30px;
+    margin: 15px;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background: #FFD84D;
+    text-align: center;
+    padding: 25px;
+    color: #654F16;
+    font-weight: bold;
+}
+
+
+/* ---------- มือถือ ---------- */
+
+@media (max-width: 700px) {
+
+    .hero-box {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .profile-photo {
+        width: 230px;
+        height: 280px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-<div class="card">
 
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน 🌼</h1>
+<!-- ================= เมนู ================= -->
 
-<p>สวัสดีค่ะ! ฉันชื่อ <strong>วชิรญาณ์ (Vachiraya)</strong></p>
+<nav>
 
-<p>ขณะนี้กำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6 โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์</p>
+<a href="#home">🌼 หน้าหลัก</a>
 
-<p>แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์เตรียมวิศวกรรม !</p>
+<a href="#intro">💛 คำนำ</a>
 
-<a href="portfolio.html">👉 รู้จักฉันเพิ่มเติม</a>
+<a href="#education">📚 ประวัติการศึกษา</a>
+
+<a href="#university">🎓 คณะที่สนใจ</a>
+
+</nav>
+
+
+<!-- ================= หน้าหลัก ================= -->
+
+<div class="hero" id="home">
+
+<div class="hero-box">
+
+
+<!-- ช่องใส่รูป -->
+
+<div class="profile-photo">
+
+    <!-- ถ้ามีรูป ให้เปลี่ยนเป็น
+    <img src="ชื่อไฟล์รูป.jpg">
+    -->
+
+    🌼<br>
+    ใส่รูปของฉัน<br>
+    ตรงนี้
 
 </div>
+
+
+<!-- ข้อมูล -->
+
+<div class="hero-text">
+
+<div class="small-title">
+🌻 WELCOME TO MY PROFILE 🌻
+</div>
+
+<h1>วชิรญาณ์</h1>
+
+<h2>Vachiraya Klangkaew</h2>
+
+<p class="description">
+
+สวัสดีค่ะ! ฉันชื่อ <b>วชิรญาณ์ คลังแก้ว</b><br>
+
+ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6<br>
+
+โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+
+</p>
+
+<p>
+💛 แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์<br>
+เตรียมวิศวกรรม
+</p>
+
+<a class="main-button" href="#intro">
+✨ ทำความรู้จักฉัน ✨
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ================= คำนำ ================= -->
+
+<section id="intro">
+
+<div class="section-box">
+
+<div class="decor">
+🌼 💛 🌼
+</div>
+
+<h2 class="section-title">
+💛 คำนำ
+</h2>
+
+<div class="intro">
+
+สวัสดีค่ะ ดิฉันชื่อ <b>วชิรญาณ์ คลังแก้ว</b>
+กำลังศึกษาอยู่ระดับชั้นมัธยมศึกษาปีที่ 6
+แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์เตรียมวิศวกรรม
+
+เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมข้อมูลเกี่ยวกับตัวฉัน
+ประวัติการศึกษา ความสนใจ และเป้าหมายในการศึกษาต่อ
+เพื่อให้ทุกคนได้รู้จักตัวฉันมากยิ่งขึ้น
+
+<br><br>
+
+ดิฉันมีความสนใจในด้านวิศวกรรม เทคโนโลยี
+การออกแบบ และการสร้างสรรค์ผลงาน
+และตั้งใจพัฒนาความรู้และทักษะของตนเอง
+เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อในอนาคต
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= การศึกษา ================= -->
+
+<section id="education">
+
+<div class="section-box">
+
+<div class="decor">
+📚 🌻 📚
+</div>
+
+<h2 class="section-title">
+📚 ประวัติการศึกษา
+</h2>
+
+
+<div class="education-item">
+
+<h3>🌱 ระดับประถมศึกษา</h3>
+
+<p>
+โรงเรียนบ้านเนินโมกการุณราษฎร์อุปถัมภ์
+</p>
+
+</div>
+
+
+<div class="education-item">
+
+<h3>🌼 ระดับมัธยมศึกษาตอนต้น</h3>
+
+<p>
+โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+</p>
+
+</div>
+
+
+<div class="education-item">
+
+<h3>🌻 ระดับมัธยมศึกษาตอนปลาย</h3>
+
+<p>
+โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+</p>
+
+<p>
+แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
+เตรียมวิศวกรรม
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= คณะและมหาวิทยาลัย ================= -->
+
+<section id="university">
+
+<div class="section-box">
+
+<div class="decor">
+🎓 💛 🎓
+</div>
+
+<h2 class="section-title">
+🎓 คณะและมหาวิทยาลัยที่สนใจ
+</h2>
+
+
+<div class="university">
+
+<h3>🏫 มหาวิทยาลัยที่สนใจ</h3>
+
+<p>
+สามารถใส่ชื่อมหาวิทยาลัยที่สนใจได้ตรงนี้
+</p>
+
+<span class="tag">มหาวิทยาลัยที่ 1</span>
+<span class="tag">มหาวิทยาลัยที่ 2</span>
+<span class="tag">มหาวิทยาลัยที่ 3</span>
+
+</div>
+
+
+<div class="university">
+
+<h3>⚙️ คณะที่สนใจ</h3>
+
+<p>
+<b>คณะวิศวกรรมศาสตร์</b>
+</p>
+
+<p>
+สาขาที่สนใจ: ........................................
+</p>
+
+<span class="tag">วิศวกรรม</span>
+<span class="tag">เทคโนโลยี</span>
+<span class="tag">การออกแบบ</span>
+
+</div>
+
+
+<!-- ช่องใส่รูป -->
+
+<div class="university">
+
+<h3>🌼 รูปภาพเพิ่มเติม</h3>
+
+<div class="profile-photo"
+     style="width:100%; height:250px;">
+
+    ใส่รูปมหาวิทยาลัย<br>
+    หรือรูปที่เกี่ยวข้องตรงนี้
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ================= Footer ================= -->
+
+<footer>
+
+🌼 Portfolio ของ วชิรญาณ์ คลังแก้ว 🌼<br>
+
+💛 Thank you for visiting my profile 💛
+
+</footer>
+
 
 </body>
 </html>
