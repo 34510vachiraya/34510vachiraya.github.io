@@ -7,6 +7,7 @@
 <title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -18,14 +19,22 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+
     font-family: Arial, Tahoma, sans-serif;
+
     color: #76536b;
 
     background:
         radial-gradient(circle at 15% 20%, #ffffff 0 2px, transparent 3px),
         radial-gradient(circle at 80% 15%, #ffffff 0 2px, transparent 3px),
         radial-gradient(circle at 70% 70%, #ffffff 0 2px, transparent 3px),
-        linear-gradient(135deg, #ffe5f1, #f9d8e9, #eadcff, #fff1f8);
+        linear-gradient(
+            135deg,
+            #ffe5f1,
+            #f9d8e9,
+            #eadcff,
+            #fff1f8
+        );
 
     background-size:
         130px 130px,
@@ -36,312 +45,548 @@ body {
     background-attachment: fixed;
 }
 
-/* ดาว */
+
+/* ================= ดาว ================= */
+
 .magic-stars {
+
     text-align: center;
+
     color: #d88db4;
+
     font-size: 25px;
+
     letter-spacing: 15px;
-    padding-top: 20px;
+
+    padding-top: 25px;
 }
 
-/* หน้าแรก */
+
+/* ================= หน้าแรก ================= */
+
 .home {
+
     width: 92%;
+
     max-width: 900px;
+
     margin: auto;
+
     padding: 35px 20px 60px;
+
     text-align: center;
 }
+
 
 .welcome {
+
     margin-top: 25px;
+
     color: #c86696;
+
     font-size: 18px;
+
     font-weight: bold;
+
     letter-spacing: 2px;
 }
 
+
 .title {
+
     margin: 8px 0;
+
     color: #d05d92;
+
     font-size: 48px;
+
     letter-spacing: 3px;
+
     text-shadow: 2px 2px white;
 }
 
+
 .english-name {
+
     color: #8e657e;
+
     font-size: 20px;
+
     font-weight: bold;
 }
 
+
+/* ================= รูปโปรไฟล์ ================= */
+
 .profile {
+
     margin: 30px auto 20px;
+
+    position: relative;
+
+    width: 230px;
+
+    height: 230px;
 }
 
+
+.profile::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: -20px;
+
+    left: 5px;
+
+    color: #d88db4;
+
+    font-size: 28px;
+}
+
+
+.profile::after {
+
+    content: "✧";
+
+    position: absolute;
+
+    right: 5px;
+
+    bottom: -10px;
+
+    color: #c47bd3;
+
+    font-size: 28px;
+}
+
+
 .profile img {
+
     width: 220px;
+
     height: 220px;
+
     object-fit: cover;
+
     border-radius: 50%;
+
     border: 6px solid #eca9ca;
+
     padding: 6px;
+
     background: white;
 
     box-shadow:
-        0 0 0 8px rgba(255, 235, 246, 0.9),
-        0 10px 25px rgba(160, 90, 130, 0.2);
+
+        0 0 0 8px rgba(255,235,246,0.9),
+
+        0 10px 25px rgba(160,90,130,0.25);
+
+    transition: 0.3s;
 }
 
+
+.profile img:hover {
+
+    transform: scale(1.05);
+
+    box-shadow:
+
+        0 0 0 8px rgba(255,235,246,0.9),
+
+        0 0 25px rgba(220,130,190,0.5);
+}
+
+
+/* ================= ชื่อ ================= */
+
 .home-name {
+
     font-size: 28px;
+
     font-weight: bold;
+
     color: #c75d91;
 }
 
+
 .student {
+
     margin-top: 8px;
+
     font-size: 17px;
+
     color: #8d6a80;
 }
 
-/* เมนู */
+
+/* ================= เมนู ================= */
+
 .menu {
+
     width: 100%;
+
     max-width: 760px;
+
     margin: 35px auto 0;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns: repeat(2,1fr);
+
     gap: 18px;
 }
 
+
 .card {
+
     display: block;
+
     width: 100%;
+
     padding: 25px 20px;
 
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255,255,255,0.9);
+
     border: 2px solid #efbfd8;
+
     border-radius: 25px;
 
     text-decoration: none;
+
     color: #77536b;
 
     box-shadow:
-        0 8px 20px rgba(160, 90, 140, 0.12);
+
+        0 8px 20px rgba(160,90,140,0.12);
 
     transition: 0.3s;
+
     cursor: pointer;
 
     font-family: inherit;
+
     text-align: center;
 }
 
+
 .card:hover {
+
     transform: translateY(-6px);
+
     background: #fff7fb;
+
     border-color: #dc8db5;
 
     box-shadow:
-        0 12px 25px rgba(160, 90, 140, 0.2);
+
+        0 12px 25px rgba(160,90,140,0.2);
 }
 
+
 .card:active {
+
     transform: scale(0.97);
 }
 
+
 .card-icon {
+
     font-size: 38px;
 }
 
+
 .card-title {
+
     margin-top: 8px;
+
     color: #bd5a8b;
+
     font-size: 20px;
+
     font-weight: bold;
 }
 
+
 .card-text {
+
     margin-top: 8px;
+
     color: #8d7181;
+
     font-size: 14px;
+
     line-height: 1.6;
 }
 
+
 .open {
+
     display: inline-block;
+
     margin-top: 10px;
+
     color: #ce719d;
+
     font-size: 13px;
+
     font-weight: bold;
 }
 
-/* หน้าด้านใน */
+
+/* ================= หน้าด้านใน ================= */
+
 .page {
+
     display: none;
 
     width: 90%;
+
     max-width: 850px;
 
     margin: 30px auto 60px;
+
     padding: 40px;
 
     background: rgba(255,255,255,0.95);
 
     border: 2px solid #edb7d4;
+
     border-radius: 30px;
 
     box-shadow:
-        0 12px 30px rgba(150, 90, 140, 0.15);
+
+        0 12px 30px rgba(150,90,140,0.15);
 
     animation: fadeIn 0.4s ease;
 }
 
+
 .page.active {
+
     display: block;
 }
 
+
 @keyframes fadeIn {
+
     from {
+
         opacity: 0;
+
         transform: translateY(10px);
+
     }
 
     to {
+
         opacity: 1;
+
         transform: translateY(0);
+
     }
+
 }
 
+
 .page-title {
+
     text-align: center;
+
     color: #c75d91;
+
     font-size: 38px;
+
     margin-bottom: 5px;
 }
 
-.page-subtitle {
-    text-align: center;
-    color: #9a7188;
-    font-size: 17px;
-    margin-bottom: 30px;
-}
 
 .decor {
+
     text-align: center;
+
     color: #d98db5;
+
     font-size: 20px;
+
     margin: 15px 0 30px;
 }
 
+
 .section {
-    background: linear-gradient(
-        135deg,
-        #fff1f7,
-        #f7efff
-    );
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff1f7,
+            #f7efff
+        );
 
     padding: 22px;
+
     margin: 18px 0;
 
     border-radius: 20px;
+
     border: 1px solid #efc9df;
 }
 
+
 .section h2 {
+
     margin-top: 0;
+
     color: #bd5d91;
+
     font-size: 22px;
 }
 
+
 .section p {
+
     color: #66586b;
+
     font-size: 17px;
+
     line-height: 1.9;
 }
 
-/* ปุ่มกลับ */
-.back {
-    display: block;
-    width: fit-content;
 
-    margin: 35px auto 0;
-    padding: 12px 25px;
+/* ================= รูปผลงาน ================= */
 
-    background: #f0a8c9;
-    color: white;
-
-    border: none;
-    border-radius: 25px;
-
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: bold;
-
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.back:hover {
-    background: #d982ad;
-    transform: translateY(-2px);
-}
-
-/* ผลงาน */
 .work-image {
+
     width: 100%;
+
     max-width: 500px;
 
     display: block;
+
     margin: 15px auto;
 
     border-radius: 20px;
+
     border: 4px solid #f1c1d9;
 }
 
-/* footer */
+
+/* ================= ปุ่มกลับ ================= */
+
+.back {
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 35px auto 0;
+
+    padding: 12px 25px;
+
+    background: #f0a8c9;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 25px;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.back:hover {
+
+    background: #d982ad;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================= Footer ================= */
+
 footer {
+
     text-align: center;
+
     padding: 20px;
+
     color: #98728a;
+
     font-size: 14px;
 }
 
-/* มือถือ */
-@media (max-width: 600px) {
+
+/* ================= มือถือ ================= */
+
+@media (max-width:600px) {
 
     .title {
+
         font-size: 36px;
+
+    }
+
+    .profile {
+
+        width: 190px;
+
+        height: 190px;
+
     }
 
     .profile img {
+
         width: 180px;
+
         height: 180px;
+
     }
 
     .menu {
+
         grid-template-columns: 1fr;
+
     }
 
     .page {
+
         width: 92%;
+
         padding: 25px;
+
     }
 
     .page-title {
+
         font-size: 30px;
+
     }
 
     .section p {
+
         font-size: 16px;
+
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
+
 
 <!-- ================= หน้าแรก ================= -->
 
@@ -351,37 +596,57 @@ footer {
         ✦　✧　♡　✧　✦
     </div>
 
+
     <div class="welcome">
         WELCOME TO MY PORTFOLIO
     </div>
+
 
     <h1 class="title">
         PORTFOLIO
     </h1>
 
+
     <div class="english-name">
         Wachiraya Klangkaew
     </div>
 
+
+    <!-- รูปหน้าของมึง -->
+
     <div class="profile">
-        <img src="IMG_0665.jpeg" alt="รูปโปรไฟล์">
+
+        <img
+            src="IMG_0665.jpeg"
+            alt="วชิรญาณ์ คลังแก้ว"
+        >
+
     </div>
+
 
     <div class="home-name">
         วชิรญาณ์ คลังแก้ว
     </div>
 
+
     <div class="student">
         แฟ้มสะสมผลงาน
     </div>
 
-    <!-- เมนู -->
+
+    <!-- ================= เมนู ================= -->
 
     <div class="menu">
 
-        <button class="card" onclick="showPage('about')">
 
-            <div class="card-icon">🌷</div>
+        <button
+            class="card"
+            onclick="showPage('about')"
+        >
+
+            <div class="card-icon">
+                🌷
+            </div>
 
             <div class="card-title">
                 เกี่ยวกับฉัน
@@ -399,9 +664,14 @@ footer {
         </button>
 
 
-        <button class="card" onclick="showPage('education')">
+        <button
+            class="card"
+            onclick="showPage('education')"
+        >
 
-            <div class="card-icon">🎓</div>
+            <div class="card-icon">
+                🎓
+            </div>
 
             <div class="card-title">
                 ประวัติการศึกษา
@@ -419,9 +689,14 @@ footer {
         </button>
 
 
-        <button class="card" onclick="showPage('works')">
+        <button
+            class="card"
+            onclick="showPage('works')"
+        >
 
-            <div class="card-icon">💗</div>
+            <div class="card-icon">
+                💗
+            </div>
 
             <div class="card-title">
                 ผลงาน
@@ -439,9 +714,14 @@ footer {
         </button>
 
 
-        <button class="card" onclick="showPage('skills')">
+        <button
+            class="card"
+            onclick="showPage('skills')"
+        >
 
-            <div class="card-icon">✨</div>
+            <div class="card-icon">
+                ✨
+            </div>
 
             <div class="card-title">
                 ความสามารถ
@@ -457,13 +737,16 @@ footer {
 
         </button>
 
+
     </div>
 
+
     <footer>
-        © 2026 Wachiraya Klangkaew
+        ✦ ♡ ✧ © 2026 Wachiraya Klangkaew ✧ ♡ ✦
     </footer>
 
 </div>
+
 
 
 <!-- ================= เกี่ยวกับฉัน ================= -->
@@ -478,6 +761,7 @@ footer {
         ✦ ───────── ♡ ───────── ✦
     </div>
 
+
     <div class="section">
 
         <h2>
@@ -485,16 +769,25 @@ footer {
         </h2>
 
         <p>
+
             ชื่อ : วชิรญาณ์ คลังแก้ว
+
             <br>
+
             ชื่อเล่น : โฟร์ท
+
             <br>
+
             อายุ : 17 ปี
+
             <br>
+
             โรงเรียน : บ้านบึงอุตสาหกรรมนุเคราะห์
+
         </p>
 
     </div>
+
 
     <div class="section">
 
@@ -503,19 +796,26 @@ footer {
         </h2>
 
         <p>
+
             สวัสดีค่ะ ฉันชื่อวชิรญาณ์ คลังแก้ว
             เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมประวัติ
             ผลงาน กิจกรรม และความสามารถต่าง ๆ
             ของฉัน
+
         </p>
 
     </div>
 
-    <button class="back" onclick="goHome()">
+
+    <button
+        class="back"
+        onclick="goHome()"
+    >
         🏠 กลับหน้าแรก
     </button>
 
 </div>
+
 
 
 <!-- ================= การศึกษา ================= -->
@@ -530,6 +830,7 @@ footer {
         ✦ ───────── ♡ ───────── ✦
     </div>
 
+
     <div class="section">
 
         <h2>
@@ -537,14 +838,23 @@ footer {
         </h2>
 
         <p>
+
             โรงเรียน : บ้านบึงอุตสาหกรรมนุเคราะห์
+
             <br>
-            ระดับมัธยมศึกษาปีที่ 1-3 : แผนการเรียนภาษาอังกฤษและภาษาจีน
+
+            ระดับมัธยมศึกษาปีที่ 1-3 :
+            แผนการเรียนภาษาอังกฤษและภาษาจีน
+
             <br>
-            ระดับมัธยมศึกษาปีที่ 4-6 : แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
+
+            ระดับมัธยมศึกษาปีที่ 4-6 :
+            แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
+
         </p>
 
     </div>
+
 
     <div class="section">
 
@@ -553,18 +863,29 @@ footer {
         </h2>
 
         <p>
-            วิทยาศาสตร์<br>
-            คณิตศาสตร์<br>
+
+            วิทยาศาสตร์
+            <br>
+
+            คณิตศาสตร์
+            <br>
+
             ภาษาอังกฤษ
+
         </p>
 
     </div>
 
-    <button class="back" onclick="goHome()">
+
+    <button
+        class="back"
+        onclick="goHome()"
+    >
         🏠 กลับหน้าแรก
     </button>
 
 </div>
+
 
 
 <!-- ================= ผลงาน ================= -->
@@ -579,27 +900,49 @@ footer {
         ✦ ───────── ♡ ───────── ✦
     </div>
 
+
     <div class="section">
 
         <h2>
             🏆 ผลงานและกิจกรรม
         </h2>
 
+        <!-- ถ้าจะใส่รูปผลงาน
+             เปลี่ยนชื่อไฟล์ตรงนี้ -->
+
+        <img
+            src="work1.jpg"
+            alt="ผลงาน"
+            class="work-image"
+        >
+
+
         <p>
-            • ผลงานที่ : การแข่งขันเล่านิทานคุณธรรมมัธยมศึกษาตอนปลาย
-            ระดับเขตพื้นที่การศึกษาชลบุรีระยอง ได้รับรางวัลเหรียญทอง
+
+            • การแข่งขันเล่านิทานคุณธรรม
+            ระดับมัธยมศึกษาตอนปลาย
+            ระดับเขตพื้นที่การศึกษาชลบุรีระยอง
+            ได้รับรางวัลเหรียญทอง
+
             <br><br>
 
-            • กิจกรรม : เข้าค่ายคอมพิวเตอร์ Mecanum Car IoT
+            • เข้าค่ายคอมพิวเตอร์
+            Mecanum Car IoT
+
         </p>
 
     </div>
 
-    <button class="back" onclick="goHome()">
+
+    <button
+        class="back"
+        onclick="goHome()"
+    >
         🏠 กลับหน้าแรก
     </button>
 
 </div>
+
 
 
 <!-- ================= ความสามารถ ================= -->
@@ -614,88 +957,8 @@ footer {
         ✦ ───────── ♡ ───────── ✦
     </div>
 
-    <div class="section">
-
-        <h2>
-            💻 ทักษะ
-        </h2>
-
-        <p>
-            • การสื่อสารกับผู้คน
-            <br>
-            • การทำเว็บไซต์
-            <br>
-            • การนำเสนอ
-            <br>
-            • การทำงานร่วมกับผู้อื่น
-        </p>
-
-    </div>
 
     <div class="section">
 
         <h2>
-            🌟 ความสนใจ
-        </h2>
-
-        <p>
-            สิ่งที่สนใจ : วง Rock Metal 2000's
-            <br>
-            งานอดิเรก : ฟังเพลง
-        </p>
-
-    </div>
-
-    <button class="back" onclick="goHome()">
-        🏠 กลับหน้าแรก
-    </button>
-
-</div>
-
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script>
-
-function showPage(pageId) {
-
-    // ซ่อนหน้าแรก
-    document.getElementById("home").style.display = "none";
-
-    // ซ่อนทุกหน้า
-    document.querySelectorAll(".page").forEach(function(page) {
-        page.classList.remove("active");
-    });
-
-    // แสดงหน้าที่กด
-    document.getElementById(pageId).classList.add("active");
-
-    // เลื่อนขึ้นด้านบน
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-
-function goHome() {
-
-    // ซ่อนหน้าด้านใน
-    document.querySelectorAll(".page").forEach(function(page) {
-        page.classList.remove("active");
-    });
-
-    // แสดงหน้าแรก
-    document.getElementById("home").style.display = "block";
-
-    // เลื่อนขึ้นด้านบน
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-</script>
-
-</body>
-</html>
+            💻 
