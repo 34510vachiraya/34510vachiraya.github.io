@@ -4,77 +4,200 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio ของวชิรญาณ์ คลังแก้ว</title>
+<title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
-font-family: Arial, sans-serif;
-background-color: #f4f4f4;
-margin: 0;
-padding: 30px;
-text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff5f8;
+    color: #555;
 }
 
+/* แถบเมนู */
+nav {
+    background: #f7c9d9;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(180, 100, 130, 0.15);
+}
+
+nav a {
+    color: #8f536b;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #d8759b;
+}
+
+/* กล่องหลัก */
 .container {
-max-width: 800px;
-margin: auto;
-background-color: white;
-padding: 40px;
-border-radius: 15px;
-box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 850px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(190, 120, 145, 0.15);
 }
 
+/* หัวข้อ */
 h1 {
-color: #333;
+    margin-bottom: 8px;
+    color: #d8759b;
+    font-size: 42px;
 }
 
+.subtitle {
+    color: #a8798b;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+/* หัวข้อย่อย */
 h2 {
-color: #555;
-margin-top: 30px;
+    color: #c9678e;
+    margin-top: 35px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f5d4df;
 }
 
+/* เนื้อหา */
 p {
-font-size: 18px;
-line-height: 1.8;
-color: #444;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+}
+
+/* ข้อมูลการศึกษา */
+.info {
+    background: #fff1f5;
+    padding: 20px 25px;
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.info p {
+    margin: 8px 0;
+}
+
+/* กล่องความสนใจ */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.skill {
+    background: #f9dce7;
+    color: #95566e;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+/* ส่วนท้าย */
+footer {
+    text-align: center;
+    color: #a8798b;
+    font-size: 14px;
+    padding: 20px;
+}
+
+/* รองรับมือถือ */
+@media (max-width: 600px) {
+
+    body {
+        padding: 0;
+    }
+
+    .container {
+        width: 92%;
+        padding: 25px;
+        margin: 25px auto;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    nav a {
+        margin: 0 7px;
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 16px;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- เมนูเชื่อมกับหน้า index -->
+<nav>
+    <a href="index.html">หน้าแรก</a>
+    <a href="portfolio.html">Portfolio</a>
+</nav>
+
 <div class="container">
 
-<h1>Portfolio</h1>
+    <h1>Portfolio</h1>
 
-<h2>แนะนำตัว</h2>
+    <div class="subtitle">
+        วชิรญาณ์ คลังแก้ว
+    </div>
 
-<p>
-สวัสดีค่ะ ดิฉันชื่อ วชิรญาณ์ คลังแก้ว
-ปัจจุบันกำลังศึกษาอยู่ในระดับชั้นมัธยมศึกษาปีที่ 6
-</p>
+    <!-- แนะนำตัว -->
+    <h2>แนะนำตัว</h2>
 
-<p>
-ประวัติการศึกษา
-ประถมศึกษา : โรงเรียนบ้านเนินโมกการุณราษฏร์อุปภัมป์
-มัธยมศึกษาตอนต้น : โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-มัธยมศึกษาตอนปลาย : โรเงรียนบ้านึบงอุตสาหกรรมนุเคราะห์
-</p>
+    <p>
+        สวัสดีค่ะ ดิฉันชื่อ <strong>วชิรญาณ์ คลังแก้ว</strong>
+        ปัจจุบันกำลังศึกษาอยู่ในระดับชั้นมัธยมศึกษาปีที่ 6
+    </p>
 
-<h2>กิจกรรม/ผลงาน</h2>
+    <!-- แนะนำตัว -->
+    <h2>แนะนำตัวเอง</h2>
 
-<p>
-วิศวกรรม • เทคโนโลยี • การออกแบบ • การสร้างสรรค์ผลงาน
-</p>
+    <div class="info">
+        <p><strong>นางสาว วชิรญาณ์ คลังแก้ว ปัจจุบันศึกษาอยู่ชั้นมัธยมศึกษาปีที่6 แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์ เตรียมวิศวกรรมศาสตร์</strong><br>
+        
+    </div>
 
-<h2>การแข่งขัน/ค่ายกิจกรรม</h2>
+    <!-- ความสนใจ -->
+    <h2>ความสนใจ</h2>
 
-<p>
-ตั้งใจศึกษาต่อในด้านที่สนใจ พัฒนาความรู้และทักษะของตนเอง
-เพื่อก้าวไปสู่การทำงานในสายอาชีพที่ต้องการ
-</p>
+    <div class="skills">
+        <div class="skill">วิศวกรรม</div>
+        <div class="skill">เทคโนโลยี</div>
+        <div class="skill">การออกแบบ</div>
+        <div class="skill">การสร้างสรรค์ผลงาน</div>
+    </div>
+
+    <!-- เป้าหมาย -->
+    <h2>เป้าหมาย</h2>
+
+    <p>
+        มุ่งมั่นพัฒนาความรู้และทักษะของตนเอง
+        เพื่อศึกษาต่อและเติบโตในสายงานที่สนใจ
+    </p>
 
 </div>
+
+<footer>
+    © 2026 Wachiraya Klangkaew
+</footer>
 
 </body>
 </html>
