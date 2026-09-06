@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
+<title>My Magical Portfolio | วชิรญาณ์ คลังแก้ว</title>
 
 <style>
 * {
@@ -14,47 +14,47 @@
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background:
-        radial-gradient(circle at 20% 20%, #ffffff 0 2px, transparent 3px),
-        radial-gradient(circle at 80% 30%, #ffffff 0 2px, transparent 3px),
-        linear-gradient(135deg, #fce4f1, #eadcff, #fff0fa);
-    background-size: 120px 120px, 160px 160px, cover;
+    font-family: Arial, "Noto Sans Thai", sans-serif;
     color: #684d70;
+    background:
+        radial-gradient(circle at 15% 15%, #ffffff 0 2px, transparent 3px),
+        radial-gradient(circle at 80% 30%, #ffffff 0 2px, transparent 3px),
+        linear-gradient(135deg, #ffe5f2, #eadcff, #fff4fb);
+    background-size: 120px 120px, 170px 170px, cover;
     min-height: 100vh;
 }
 
 /* ✨ ดาวตกแต่ง */
 body::before {
-    content: "✦  ♡  ✧  ✦  ♡  ✧  ✦";
+    content: "✦  ♡  ✧  ✦  ♡  ✧  ✦  ♡";
     position: fixed;
-    top: 15px;
+    top: 12px;
     left: 0;
     width: 100%;
     text-align: center;
     color: #d99bc5;
     font-size: 20px;
-    letter-spacing: 12px;
+    letter-spacing: 10px;
     opacity: 0.7;
     pointer-events: none;
+    z-index: 10;
 }
 
-/* 🪄 หัวเว็บ */
+/* 🪄 ส่วนหัว */
 header {
     text-align: center;
-    padding: 45px 20px 25px;
+    padding: 50px 20px 25px;
 }
 
 .magic-icon {
-    font-size: 50px;
-    margin-bottom: 5px;
+    font-size: 52px;
 }
 
 h1 {
-    margin: 5px 0;
-    color: #c65c9a;
-    font-size: 40px;
-    text-shadow: 2px 2px 0 #ffffff;
+    margin: 8px 0;
+    color: #c65391;
+    font-size: 42px;
+    text-shadow: 2px 2px #ffffff;
 }
 
 .subtitle {
@@ -66,13 +66,16 @@ h1 {
 .container {
     width: 90%;
     max-width: 900px;
-    margin: 10px auto 130px;
-    background: rgba(255, 255, 255, 0.94);
+    margin: 10px auto 140px;
     padding: 40px;
-    border-radius: 35px;
+
+    background: rgba(255, 255, 255, 0.96);
+
     border: 3px solid #edb7d8;
+    border-radius: 35px;
+
     box-shadow:
-        0 10px 35px rgba(150, 90, 160, 0.18),
+        0 12px 35px rgba(140, 80, 150, 0.18),
         0 0 0 8px rgba(255, 230, 246, 0.6);
 }
 
@@ -83,13 +86,18 @@ h1 {
 }
 
 .profile img {
-    width: 220px;
-    height: 220px;
+    width: 230px;
+    height: 230px;
+
     object-fit: cover;
+
     border-radius: 50%;
+
     border: 7px solid #e9a9cf;
     padding: 6px;
+
     background: white;
+
     box-shadow:
         0 0 0 8px #fce4f3,
         0 8px 25px rgba(160, 90, 160, 0.25);
@@ -98,16 +106,62 @@ h1 {
 .profile-text {
     margin-top: 18px;
     color: #bd6e9d;
-    font-size: 15px;
+    font-size: 16px;
+}
+
+/* 🌸 ชื่อ */
+.name-card {
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f8,
+        #f5edff
+    );
+
+    border-radius: 25px;
+    padding: 22px;
+
+    margin-bottom: 35px;
+
+    border: 1px solid #edc8df;
+}
+
+.prefix {
+    font-size: 18px;
+    color: #9c7195;
+}
+
+.name {
+    margin: 5px 0;
+
+    font-size: 34px;
+    font-weight: bold;
+
+    color: #c65391;
+}
+
+.eng {
+    font-size: 18px;
+    color: #80637d;
 }
 
 /* 💗 หัวข้อ */
 h2 {
     color: #bd5d91;
+
     margin-top: 40px;
+
     padding: 13px 18px;
-    background: linear-gradient(90deg, #fff0f8, #f5edff);
+
+    background: linear-gradient(
+        90deg,
+        #fff0f8,
+        #f5edff
+    );
+
     border-radius: 18px;
+
     border-left: 5px solid #d98abd;
 }
 
@@ -122,94 +176,155 @@ p {
     color: #66586b;
 }
 
-/* 📚 กล่องข้อมูล */
+/* 📚 ข้อมูล */
 .info {
-    background: linear-gradient(135deg, #fff2f9, #f6efff);
+    background: linear-gradient(
+        135deg,
+        #fff3f9,
+        #f7f0ff
+    );
+
     padding: 22px 25px;
+
     border-radius: 20px;
+
     margin-top: 15px;
+
     border: 1px solid #edc8df;
-    box-shadow: 0 5px 15px rgba(160, 100, 160, 0.08);
+
+    box-shadow:
+        0 5px 15px rgba(160, 100, 160, 0.08);
+}
+
+.info p {
+    margin: 10px 0;
 }
 
 /* 🔮 ความสนใจ */
 .skills {
     display: flex;
     flex-wrap: wrap;
+
     justify-content: center;
+
     gap: 14px;
+
     margin-top: 20px;
 }
 
 .skill {
-    background: linear-gradient(135deg, #f8c7df, #e8d5ff);
+    background: linear-gradient(
+        135deg,
+        #f8c7df,
+        #e8d5ff
+    );
+
     color: #714d78;
+
     padding: 13px 20px;
+
     border-radius: 30px;
+
     font-size: 15px;
+
     font-weight: bold;
+
     border: 1px solid #e4b6d7;
-    box-shadow: 0 5px 12px rgba(150, 90, 160, 0.12);
+
+    box-shadow:
+        0 5px 12px rgba(150, 90, 160, 0.12);
 }
 
 /* 🏆 ผลงาน */
 .work {
     background: #fff6fb;
+
     padding: 22px;
+
     border-radius: 20px;
+
     border: 1px solid #efc9df;
+
     margin-top: 15px;
 }
 
 .work-title {
     color: #bd5d91;
+
     font-size: 19px;
+
     font-weight: bold;
 }
 
 /* 🌙 เมนูด้านล่าง */
 .bottom-menu {
     position: fixed;
+
     bottom: 15px;
+
     left: 50%;
+
     transform: translateX(-50%);
+
     width: 92%;
-    max-width: 700px;
-    background: rgba(255, 240, 249, 0.96);
+    max-width: 720px;
+
+    background: rgba(255, 240, 249, 0.97);
+
     backdrop-filter: blur(10px);
+
     border: 2px solid #e6afd0;
+
     border-radius: 25px;
+
     padding: 10px;
+
     display: flex;
-    justify-content: space-around;
-    gap: 5px;
-    box-shadow: 0 8px 25px rgba(140, 80, 150, 0.2);
+
+    gap: 6px;
+
+    box-shadow:
+        0 8px 25px rgba(140, 80, 150, 0.2);
+
     z-index: 100;
 }
 
 .bottom-menu a {
     flex: 1;
+
     text-align: center;
+
     text-decoration: none;
+
     color: #805474;
+
     font-size: 13px;
+
     font-weight: bold;
+
     padding: 10px 5px;
+
     border-radius: 18px;
+
     transition: 0.3s;
 }
 
 .bottom-menu a:hover {
     background: #f7d3e6;
+
     color: #b74f87;
+
     transform: translateY(-3px);
 }
 
-/* ส่วนท้าย */
+/* 🌸 Footer */
 footer {
     text-align: center;
+
     color: #98729a;
+
     font-size: 14px;
+
     padding: 20px;
 }
 
@@ -217,22 +332,32 @@ footer {
 @media (max-width: 600px) {
 
     header {
-        padding-top: 35px;
+        padding-top: 40px;
     }
 
     h1 {
-        font-size: 32px;
+        font-size: 31px;
     }
 
     .container {
         width: 92%;
+
         padding: 25px;
-        margin-bottom: 125px;
+
+        margin-bottom: 130px;
     }
 
     .profile img {
-        width: 180px;
-        height: 180px;
+        width: 185px;
+        height: 185px;
+    }
+
+    .name {
+        font-size: 27px;
+    }
+
+    .eng {
+        font-size: 16px;
     }
 
     p {
@@ -245,43 +370,53 @@ footer {
 
     .bottom-menu {
         width: 96%;
+
         bottom: 8px;
+
         border-radius: 20px;
     }
 
     .bottom-menu a {
         font-size: 11px;
+
         padding: 9px 2px;
     }
 }
 </style>
 </head>
 
+
 <body>
 
 <!-- 🪄 หัวเว็บ -->
 <header>
-    <div class="magic-icon">🪄✨</div>
 
-    <h1>My Magical Portfolio</h1>
+    <div class="magic-icon">
+        🪄✨
+    </div>
+
+    <h1>
+        My Magical Portfolio
+    </h1>
 
     <div class="subtitle">
-        วชิรญาณ์ คลังแก้ว 🌸
+        🌸 วชิรญาณ์ คลังแก้ว 🌸
     </div>
+
 </header>
 
 
 <div class="container">
 
-    <!-- 📸 รูป!-->
+    <!-- 📸 รูปโปรไฟล์ -->
     <div class="profile">
 
-        <!--
-        ใส่รูปชื่อ profile.jpg
-        ไว้ในโฟลเดอร์เดียวกับไฟล์ portfolio.html
-        -->
+        <!-- ต้องมีไฟล์ IMG_0665.jpg อยู่ใน Repository เดียวกับ index.html -->
 
-        <img src="IMG_0665.jpeg" alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว">
+        <img
+            src="IMG_0665.jpeg"
+            alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว"
+        >
 
         <div class="profile-text">
             🌙 Welcome to my magical world ✨
@@ -290,31 +425,53 @@ footer {
     </div>
 
 
-    <!-- 💗 แนะนำตัว -->
-    <h2>แนะนำตัว 💕</h2>
+    <!-- 🌸 ชื่อ -->
+    <div class="name-card">
+
+        <div class="prefix">
+            นางสาว
+        </div>
+
+        <div class="name">
+            วชิรญาณ์ คลังแก้ว
+        </div>
+
+        <div class="eng">
+            Wachiraya Klangkaew
+        </div>
+
+    </div>
+
+
+    <!-- 💕 แนะนำตัว -->
+    <h2>
+        แนะนำตัว 💕
+    </h2>
 
     <p>
         สวัสดีค่ะ ดิฉันชื่อ
         <strong>วชิรญาณ์ คลังแก้ว</strong>
-        ปัจจุบันกำลังศึกษาอยู่ในระดับชั้นมัธยมศึกษาปีที่ 6
+        ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
     </p>
 
 
     <!-- 📚 ประวัติการศึกษา -->
-    <h2 id="education">ประวัติการศึกษา 📚</h2>
+    <h2 id="education">
+        ประวัติการศึกษา 📚
+    </h2>
 
     <div class="info">
 
         <p>
             🎀 <strong>ระดับการศึกษา</strong>
-        </p>
-
-        <p>
+            <br>
             มัธยมศึกษาปีที่ 6
         </p>
 
         <p>
-            🔮 แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
+            🔮 <strong>แผนการเรียน</strong>
+            <br>
+            วิทยาศาสตร์และคณิตศาสตร์
             เตรียมวิศวกรรมศาสตร์
         </p>
 
@@ -322,29 +479,43 @@ footer {
 
 
     <!-- 🔮 ความสนใจ -->
-    <h2 id="interest">ความสนใจศึกษาต่อ 🔮</h2>
+    <h2 id="interest">
+        ความสนใจศึกษาต่อ 🔮
+    </h2>
 
     <p>
         มีความสนใจในการศึกษาต่อด้านวิศวกรรมศาสตร์
         เทคโนโลยี และการออกแบบ
-        พร้อมพัฒนาความรู้และทักษะเพื่อสร้างสรรค์ผลงานใหม่ ๆ
+        พร้อมพัฒนาความรู้และทักษะ
+        เพื่อสร้างสรรค์ผลงานใหม่ ๆ
     </p>
 
     <div class="skills">
 
-        <div class="skill">⚙️ วิศวกรรม</div>
+        <div class="skill">
+            ⚙️ วิศวกรรม
+        </div>
 
-        <div class="skill">💻 เทคโนโลยี</div>
+        <div class="skill">
+            💻 เทคโนโลยี
+        </div>
 
-        <div class="skill">🎨 การออกแบบ</div>
+        <div class="skill">
+            🎨 การออกแบบ
+        </div>
 
-        <div class="skill">🪄 การสร้างสรรค์</div>
+        <div class="skill">
+            🪄 การสร้างสรรค์
+        </div>
 
     </div>
 
 
     <!-- 🏆 ผลงาน -->
-    <h2 id="works">ผลงานที่ภูมิใจ 🏆</h2>
+    <h2 id="works">
+        ผลงานที่ภูมิใจ 🏆
+    </h2>
+
 
     <div class="work">
 
@@ -353,11 +524,12 @@ footer {
         </div>
 
         <p>
-            สามารถใส่รายละเอียดผลงาน กิจกรรม
+            ใส่รายละเอียดผลงาน กิจกรรม
             โครงงาน หรือรางวัลที่ภาคภูมิใจได้ที่นี่
         </p>
 
     </div>
+
 
     <div class="work">
 
@@ -366,7 +538,7 @@ footer {
         </div>
 
         <p>
-            สามารถเพิ่มผลงานหรือกิจกรรมที่เคยเข้าร่วม
+            เพิ่มผลงานหรือกิจกรรมที่เคยเข้าร่วม
             พร้อมรายละเอียดเพิ่มเติมได้ที่นี่
         </p>
 
@@ -379,17 +551,20 @@ footer {
 <div class="bottom-menu">
 
     <a href="#education">
-        📚<br>
+        📚
+        <br>
         ประวัติการศึกษา
     </a>
 
     <a href="#interest">
-        🔮<br>
+        🔮
+        <br>
         ความสนใจศึกษาต่อ
     </a>
 
     <a href="#works">
-        🏆<br>
+        🏆
+        <br>
         ผลงานที่ภูมิใจ
     </a>
 
@@ -399,6 +574,7 @@ footer {
 <footer>
     ✨ © 2026 Wachiraya Klangkaew ✨
 </footer>
+
 
 </body>
 </html>
