@@ -106,7 +106,7 @@ body {
     color: #8d6a80;
 }
 
-/* การ์ดเมนู */
+/* เมนู */
 .menu {
     width: 100%;
     max-width: 760px;
@@ -119,6 +119,7 @@ body {
 
 .card {
     display: block;
+    width: 100%;
     padding: 25px 20px;
 
     background: rgba(255, 255, 255, 0.9);
@@ -133,6 +134,9 @@ body {
 
     transition: 0.3s;
     cursor: pointer;
+
+    font-family: inherit;
+    text-align: center;
 }
 
 .card:hover {
@@ -195,8 +199,7 @@ body {
     animation: fadeIn 0.4s ease;
 }
 
-/* แสดงหน้าที่ถูกเลือก */
-.page:target {
+.page.active {
     display: block;
 }
 
@@ -270,10 +273,14 @@ body {
     background: #f0a8c9;
     color: white;
 
-    text-decoration: none;
+    border: none;
     border-radius: 25px;
 
+    font-family: inherit;
+    font-size: 16px;
     font-weight: bold;
+
+    cursor: pointer;
     transition: 0.2s;
 }
 
@@ -357,7 +364,6 @@ footer {
     </div>
 
     <div class="profile">
-        <!-- เปลี่ยนชื่อไฟล์รูปตรงนี้ -->
         <img src="IMG_0665.jpeg" alt="รูปโปรไฟล์">
     </div>
 
@@ -369,12 +375,11 @@ footer {
         แฟ้มสะสมผลงาน
     </div>
 
-
     <!-- เมนู -->
+
     <div class="menu">
 
-        <!-- เกี่ยวกับฉัน -->
-        <a href="#about" class="card">
+        <button class="card" onclick="showPage('about')">
 
             <div class="card-icon">🌷</div>
 
@@ -391,11 +396,10 @@ footer {
                 กดเพื่อดู →
             </div>
 
-        </a>
+        </button>
 
 
-        <!-- การศึกษา -->
-        <a href="#education" class="card">
+        <button class="card" onclick="showPage('education')">
 
             <div class="card-icon">🎓</div>
 
@@ -412,11 +416,10 @@ footer {
                 กดเพื่อดู →
             </div>
 
-        </a>
+        </button>
 
 
-        <!-- ผลงาน -->
-        <a href="#works" class="card">
+        <button class="card" onclick="showPage('works')">
 
             <div class="card-icon">💗</div>
 
@@ -433,11 +436,10 @@ footer {
                 กดเพื่อดู →
             </div>
 
-        </a>
+        </button>
 
 
-        <!-- ความสามารถ -->
-        <a href="#skills" class="card">
+        <button class="card" onclick="showPage('skills')">
 
             <div class="card-icon">✨</div>
 
@@ -453,7 +455,7 @@ footer {
                 กดเพื่อดู →
             </div>
 
-        </a>
+        </button>
 
     </div>
 
@@ -509,9 +511,9 @@ footer {
 
     </div>
 
-    <a href="#home" class="back">
+    <button class="back" onclick="goHome()">
         🏠 กลับหน้าแรก
-    </a>
+    </button>
 
 </div>
 
@@ -537,9 +539,9 @@ footer {
         <p>
             โรงเรียน : บ้านบึงอุตสาหกรรมนุเคราะห์
             <br>
-            ระดับมัธยมศึกษาปีที่1-3 : แผนการเรียนภาษาอังกฤษและภาษาจีน
+            ระดับมัธยมศึกษาปีที่ 1-3 : แผนการเรียนภาษาอังกฤษและภาษาจีน
             <br>
-            ระดับมัธยมศึกษาปีที่4-6 : แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
+            ระดับมัธยมศึกษาปีที่ 4-6 : แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
         </p>
 
     </div>
@@ -558,9 +560,9 @@ footer {
 
     </div>
 
-    <a href="#home" class="back">
+    <button class="back" onclick="goHome()">
         🏠 กลับหน้าแรก
-    </a>
+    </button>
 
 </div>
 
@@ -584,23 +586,18 @@ footer {
         </h2>
 
         <p>
-            • ผลงานที่ : การแข่งขันเล่านิทานคุณธรรมมัธยมศึกษาตอนปลาย ระดับเขตพื้นที่การศึกษาชลบุรีระยอง ได้รับรางวัลเหรียญทอง
+            • ผลงานที่ : การแข่งขันเล่านิทานคุณธรรมมัธยมศึกษาตอนปลาย
+            ระดับเขตพื้นที่การศึกษาชลบุรีระยอง ได้รับรางวัลเหรียญทอง
             <br><br>
-            •กิจกรรม : เข้าค่ายคอมพิวเตอร์mecanum car Iot
-            <br><br> 
-            
-        </p>
 
-        <!-- ถ้ามีรูปผลงาน ให้ใส่ชื่อไฟล์ -->
-        <!--
-        <img src="work1.jpg" class="work-image">
-        -->
+            • กิจกรรม : เข้าค่ายคอมพิวเตอร์ Mecanum Car IoT
+        </p>
 
     </div>
 
-    <a href="#home" class="back">
+    <button class="back" onclick="goHome()">
         🏠 กลับหน้าแรก
-    </a>
+    </button>
 
 </div>
 
@@ -642,18 +639,63 @@ footer {
         </h2>
 
         <p>
-            สิ่งที่สนใจ : วงrock metal 2000's
+            สิ่งที่สนใจ : วง Rock Metal 2000's
             <br>
             งานอดิเรก : ฟังเพลง
         </p>
 
     </div>
 
-    <a href="#home" class="back">
+    <button class="back" onclick="goHome()">
         🏠 กลับหน้าแรก
-    </a>
+    </button>
 
 </div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function showPage(pageId) {
+
+    // ซ่อนหน้าแรก
+    document.getElementById("home").style.display = "none";
+
+    // ซ่อนทุกหน้า
+    document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    // แสดงหน้าที่กด
+    document.getElementById(pageId).classList.add("active");
+
+    // เลื่อนขึ้นด้านบน
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function goHome() {
+
+    // ซ่อนหน้าด้านใน
+    document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    // แสดงหน้าแรก
+    document.getElementById("home").style.display = "block";
+
+    // เลื่อนขึ้นด้านบน
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+</script>
 
 </body>
 </html>
