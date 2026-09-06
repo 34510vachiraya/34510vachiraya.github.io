@@ -1,360 +1,165 @@
-* {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="th">
 
-body {
-    margin: 0;
-    font-family: "Arial", "Tahoma", sans-serif;
-    color: #704f65;
+<head>
 
-    background:
-        radial-gradient(circle at 10% 15%, #ffffff 0 3px, transparent 4px),
-        radial-gradient(circle at 85% 20%, #ffffff 0 2px, transparent 3px),
-        radial-gradient(circle at 70% 80%, #ffffff 0 3px, transparent 4px),
-        linear-gradient(135deg, #ffe8f2, #f9d4e8, #eadcff);
+<meta charset="UTF-8">
 
-    background-size:
-        150px 150px,
-        180px 180px,
-        200px 200px,
-        cover;
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    min-height: 100vh;
-}
+<title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
 
-/* ✨ ประกายด้านบน */
+<link rel="stylesheet" href="style.css">
 
-.magic {
-    text-align: center;
-    padding-top: 20px;
+</head>
 
-    color: #d879a6;
-    font-size: 22px;
-    letter-spacing: 10px;
-}
+<body>
 
-/* =========================
-   หน้าแรก
-========================= */
+<div class="magic">
+    ✦ ✧ 🪄 ✧ ♡ ✦ ✧
+</div>
 
-.home {
-    width: 92%;
-    max-width: 900px;
+<main class="home">
 
-    margin: 20px auto 50px;
+    <div class="welcome">
+        ✨ WELCOME TO MY MAGICAL WORLD ✨
+    </div>
 
-    text-align: center;
-}
+    <h1>
+        My Portfolio
+    </h1>
 
-.welcome {
-    color: #bd628f;
+    <div class="home-subtitle">
+        🌸 แฟ้มสะสมผลงานของฉัน 🌸
+    </div>
 
-    font-size: 17px;
-    font-weight: bold;
 
-    letter-spacing: 2px;
+    <!-- ==================================
+         📸 ใส่รูปตรงนี้
+         
+         ไฟล์ IMG_0665.jpg ต้องอยู่
+         ในโฟลเดอร์เดียวกับ index.html
+    =================================== -->
 
-    margin-top: 20px;
-}
+    <div class="profile-box">
 
-h1 {
-    margin: 8px 0;
+        <img
+            src="IMG_0665.jpg"
+            alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว"
+        >
 
-    color: #cf6195;
+    </div>
 
-    font-size: 46px;
 
-    text-shadow: 2px 2px #ffffff;
-}
+    <div class="my-name">
+        นางสาว วชิรญาณ์ คลังแก้ว
+    </div>
 
-.home-subtitle {
-    color: #8e6a80;
+    <div class="my-info">
+        นักเรียนชั้นมัธยมศึกษาปีที่ 6
+        🎀
+        แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
+    </div>
 
-    font-size: 18px;
 
-    margin-bottom: 25px;
-}
+    <div class="menu-title">
+        🪄 เลือกดูเรื่องราวของฉัน 🪄
+    </div>
 
-/* IMG_0665.jpeg */
 
-.profile-box {
-    margin: 25px auto;
-}
+    <!-- เมนู -->
 
-.profile-box img {
-    width: 220px;
-    height: 220px;
+    <div class="menu">
 
-    object-fit: cover;
+        <a
+            class="menu-button"
+            href="portfolio.html"
+        >
 
-    border-radius: 50%;
+            <div class="menu-icon">
+                📜
+            </div>
 
-    border: 6px solid #e9a4c6;
+            <div class="menu-name">
+                คำนำ
+            </div>
 
-    padding: 6px;
+            <div class="menu-small">
+                เรื่องราวของแฟ้มสะสมผลงาน
+            </div>
 
-    background: white;
+        </a>
 
-    box-shadow:
-        0 0 0 8px #ffeaf4,
-        0 12px 25px rgba(170, 90, 140, 0.22);
-}
 
-/* วชิรญาณ์ คลังแก้ว */
+        <a
+            class="menu-button"
+            href="education.html"
+        >
 
-.my-name {
-    color: #bd598c;
+            <div class="menu-icon">
+                🎓
+            </div>
 
-    font-size: 28px;
+            <div class="menu-name">
+                ประวัติการศึกษา
+            </div>
 
-    font-weight: bold;
+            <div class="menu-small">
+                เส้นทางการเรียนของฉัน
+            </div>
 
-    margin-top: 18px;
-}
+        </a>
 
-.my-info {
-    color: #8b6a7d;
 
-    font-size: 16px;
+        <a
+            class="menu-button"
+            href="future.html"
+        >
 
-    margin-top: 7px;
-}
+            <div class="menu-icon">
+                🔮
+            </div>
 
-/* =========================
-   เมนู
-========================= */
+            <div class="menu-name">
+                ความสนใจศึกษาต่อ
+            </div>
 
-.menu-title {
-    margin-top: 35px;
+            <div class="menu-small">
+                ความฝันและเป้าหมายในอนาคต
+            </div>
 
-    color: #bd628f;
+        </a>
 
-    font-size: 20px;
 
-    font-weight: bold;
-}
+        <a
+            class="menu-button"
+            href="proud.html"
+        >
 
-.menu {
-    max-width: 800px;
+            <div class="menu-icon">
+                👑
+            </div>
 
-    margin: 18px auto;
+            <div class="menu-name">
+                ผลงานที่ภูมิใจ
+            </div>
 
-    display: grid;
+            <div class="menu-small">
+                ผลงานและกิจกรรมของฉัน
+            </div>
 
-    grid-template-columns: repeat(2, 1fr);
+        </a>
 
-    gap: 16px;
-}
+    </div>
 
-.menu-button {
-    display: block;
+</main>
 
-    text-decoration: none;
 
-    background: rgba(255,255,255,0.92);
+<footer>
+    ✨ Made with love & magic ✨
+</footer>
 
-    border: 2px solid #edb4d0;
+</body>
 
-    border-radius: 22px;
-
-    padding: 20px 15px;
-
-    color: #76536a;
-
-    box-shadow:
-        0 7px 18px rgba(170,90,140,0.12);
-
-    transition: 0.25s;
-}
-
-.menu-button:hover {
-    transform: translateY(-5px);
-
-    background: #fff6fa;
-
-    border-color: #d978a5;
-
-    box-shadow:
-        0 12px 25px rgba(170,90,140,0.2);
-}
-
-.menu-icon {
-    font-size: 32px;
-}
-
-.menu-name {
-    margin-top: 8px;
-
-    color: #bd598c;
-
-    font-size: 18px;
-
-    font-weight: bold;
-}
-
-.menu-small {
-    margin-top: 5px;
-
-    color: #967789;
-
-    font-size: 13px;
-}
-
-/* =========================
-   หน้าด้านใน
-========================= */
-
-.page {
-    width: 92%;
-    max-width: 850px;
-
-    margin: 25px auto 50px;
-
-    background: rgba(255,255,255,0.95);
-
-    border: 2px solid #edb4d0;
-
-    border-radius: 30px;
-
-    padding: 35px;
-
-    box-shadow:
-        0 12px 30px rgba(160,90,140,0.15);
-}
-
-.page-title {
-    text-align: center;
-
-    color: #c75d91;
-
-    font-size: 36px;
-
-    margin: 0;
-}
-
-.page-subtitle {
-    text-align: center;
-
-    color: #9a7188;
-
-    margin-top: 8px;
-
-    font-size: 15px;
-}
-
-.stars {
-    text-align: center;
-
-    color: #d67ca7;
-
-    font-size: 20px;
-
-    margin: 18px 0 25px;
-}
-
-/* กล่องเนื้อหา */
-
-.content-box {
-    background:
-        linear-gradient(
-            135deg,
-            #fff0f7,
-            #f8f0ff
-        );
-
-    border: 1px solid #efc5db;
-
-    border-radius: 20px;
-
-    padding: 23px;
-
-    margin: 18px 0;
-}
-
-.content-box h2 {
-    margin-top: 0;
-
-    color: #bd5b8e;
-
-    font-size: 21px;
-}
-
-.content-box p {
-    color: #665766;
-
-    font-size: 16px;
-
-    line-height: 1.9;
-}
-
-/* ปุ่มกลับ */
-
-.back-button {
-    display: block;
-
-    width: fit-content;
-
-    margin: 30px auto 0;
-
-    padding: 12px 28px;
-
-    background: #e890b5;
-
-    color: white;
-
-    text-decoration: none;
-
-    border-radius: 25px;
-
-    font-weight: bold;
-
-    box-shadow:
-        0 5px 12px rgba(190,90,140,0.2);
-}
-
-.back-button:hover {
-    background: #d875a3;
-}
-
-/* Footer */
-
-footer {
-    text-align: center;
-
-    color: #9c7188;
-
-    padding: 20px;
-
-    font-size: 13px;
-}
-
-/* 📱 มือถือ */
-
-@media (max-width: 600px) {
-
-    h1 {
-        font-size: 35px;
-    }
-
-    .profile-box img {
-        width: 185px;
-        height: 185px;
-    }
-
-    .menu {
-        grid-template-columns: 1fr;
-    }
-
-    .page {
-        padding: 25px;
-    }
-
-    .page-title {
-        font-size: 29px;
-    }
-
-    .content-box p {
-        font-size: 15px;
-    }
-}
+</html>
