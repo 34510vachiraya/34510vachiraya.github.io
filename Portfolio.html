@@ -22,7 +22,10 @@ body {
     color: #333;
 }
 
-/* หน้าแรก */
+/* =========================
+   หน้าแรก
+========================= */
+
 #home {
     min-height: 100vh;
     display: flex;
@@ -35,7 +38,7 @@ body {
     width: 100%;
     max-width: 1000px;
     text-align: center;
-    background: rgba(255,255,255,0.9);
+    background: white;
     padding: 50px 30px;
     border-radius: 30px;
     box-shadow: 0 10px 30px rgba(100,70,150,0.15);
@@ -61,6 +64,7 @@ body {
     margin: 10px 0 25px;
 }
 
+/* รูปโปรไฟล์เท่านั้น */
 .profile-image {
     width: 180px;
     height: 180px;
@@ -84,7 +88,10 @@ body {
     margin-bottom: 30px;
 }
 
-/* ปุ่ม */
+/* =========================
+   ปุ่ม
+========================= */
+
 .buttons {
     display: flex;
     justify-content: center;
@@ -108,7 +115,10 @@ button:hover {
     transform: translateY(-3px);
 }
 
-/* หน้าต่างๆ */
+/* =========================
+   หน้าย่อย
+========================= */
+
 .page {
     display: none;
     min-height: 100vh;
@@ -148,7 +158,10 @@ button:hover {
     margin-top: 0;
 }
 
-/* ทักษะ */
+/* =========================
+   ทักษะ
+========================= */
+
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -170,7 +183,10 @@ button:hover {
     margin: 30px auto 0;
 }
 
-/* มือถือ */
+/* =========================
+   มือถือ
+========================= */
+
 @media (max-width: 600px) {
 
     .title {
@@ -193,6 +209,7 @@ button:hover {
 </head>
 
 <body>
+
 
 <!-- =========================
      หน้าแรก
@@ -217,7 +234,7 @@ button:hover {
         <!-- รูปโปรไฟล์ -->
         <img
             src="./IMG_0665.jpeg"
-            alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว"
+            alt="รูปโปรไฟล์"
             class="profile-image"
         >
 
@@ -348,6 +365,7 @@ button:hover {
 
 <!-- =========================
      ผลงาน
+     ไม่มีรูปภาพ
 ========================= -->
 
 <section id="works" class="page">
