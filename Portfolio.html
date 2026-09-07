@@ -3,16 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
 
 <style>
 * {
     box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
 }
 
 body {
@@ -21,10 +16,6 @@ body {
     background: linear-gradient(135deg, #f7f0ff, #eee3ff);
     color: #333;
 }
-
-/* =========================
-   หน้าแรก
-========================= */
 
 #home {
     min-height: 100vh;
@@ -48,49 +39,40 @@ body {
     color: #8b5fc7;
     font-size: 20px;
     letter-spacing: 2px;
-    margin-bottom: 10px;
 }
 
 .title {
     font-size: 55px;
     color: #6f42a8;
-    margin: 0;
-    font-weight: bold;
+    margin: 10px 0;
 }
 
 .english-name {
     font-size: 24px;
     color: #777;
-    margin: 10px 0 25px;
+    margin-bottom: 25px;
 }
 
-/* รูปโปรไฟล์เท่านั้น */
 .profile-image {
     width: 180px;
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
     border: 6px solid #d8bff5;
-    margin-bottom: 20px;
 }
 
 .thai-name {
     font-size: 30px;
     font-weight: bold;
     color: #5f3c91;
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 .student-info {
     font-size: 18px;
     line-height: 1.8;
-    color: #555;
     margin-bottom: 30px;
 }
-
-/* =========================
-   ปุ่ม
-========================= */
 
 .buttons {
     display: flex;
@@ -107,17 +89,11 @@ button {
     color: white;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 button:hover {
     background: #6f42a8;
-    transform: translateY(-3px);
 }
-
-/* =========================
-   หน้าย่อย
-========================= */
 
 .page {
     display: none;
@@ -158,15 +134,10 @@ button:hover {
     margin-top: 0;
 }
 
-/* =========================
-   ทักษะ
-========================= */
-
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
-    margin-top: 20px;
 }
 
 .skill {
@@ -183,12 +154,7 @@ button:hover {
     margin: 30px auto 0;
 }
 
-/* =========================
-   มือถือ
-========================= */
-
 @media (max-width: 600px) {
-
     .title {
         font-size: 38px;
     }
@@ -200,20 +166,11 @@ button:hover {
     .page-container {
         padding: 25px 18px;
     }
-
-    .page-title {
-        font-size: 28px;
-    }
 }
 </style>
 </head>
 
 <body>
-
-
-<!-- =========================
-     หน้าแรก
-========================= -->
 
 <section id="home">
 
@@ -231,7 +188,6 @@ button:hover {
             Wachiraya Klangkaew
         </div>
 
-        <!-- รูปโปรไฟล์ -->
         <img
             src="./IMG_0665.jpeg"
             alt="รูปโปรไฟล์"
@@ -267,10 +223,6 @@ button:hover {
 
 </section>
 
-
-<!-- =========================
-     ประวัติการศึกษา
-========================= -->
 
 <section id="education" class="page">
 
@@ -310,10 +262,6 @@ button:hover {
 
 </section>
 
-
-<!-- =========================
-     ความสนใจ
-========================= -->
 
 <section id="interest" class="page">
 
@@ -363,11 +311,6 @@ button:hover {
 </section>
 
 
-<!-- =========================
-     ผลงาน
-     ไม่มีรูปภาพ
-========================= -->
-
 <section id="works" class="page">
 
     <div class="page-container">
@@ -396,7 +339,6 @@ button:hover {
 
         </div>
 
-
         <div class="info-box">
 
             <h3>
@@ -411,7 +353,6 @@ button:hover {
             </p>
 
         </div>
-
 
         <div class="info-box">
 
@@ -449,7 +390,6 @@ button:hover {
 
         </div>
 
-
         <button
             class="back-button"
             onclick="goHome()">
@@ -478,7 +418,6 @@ function showPage(pageId) {
         behavior: "smooth"
     });
 }
-
 
 function goHome() {
 
