@@ -30,8 +30,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ================= ดาว ================= */
-
 .magic-stars {
     text-align: center;
     color: #b58ae8;
@@ -39,8 +37,6 @@ body {
     letter-spacing: 15px;
     padding-top: 25px;
 }
-
-/* ================= หน้าแรก ================= */
 
 .home {
     width: 92%;
@@ -71,8 +67,6 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
-
-/* ================= รูปโปรไฟล์ ================= */
 
 .profile {
     margin: 30px auto 20px;
@@ -131,8 +125,6 @@ body {
     font-size: 17px;
     color: #8d6a80;
 }
-
-/* ================= เมนู ================= */
 
 .menu {
     width: 100%;
@@ -195,8 +187,6 @@ body {
     font-size: 13px;
     font-weight: bold;
 }
-
-/* ================= หน้าด้านใน ================= */
 
 .page {
     display: none;
@@ -326,8 +316,6 @@ body {
     transform: translateY(-3px);
 }
 
-/* ================= Footer ================= */
-
 footer {
     text-align: center;
     padding: 20px;
@@ -405,8 +393,6 @@ footer {
         Wachiraya Klangkaew
     </div>
 
-    <!-- รูปโปรไฟล์ -->
-
     <div class="profile">
         <img
             src="IMG_0665.jpeg"
@@ -422,17 +408,13 @@ footer {
         แฟ้มสะสมผลงาน
     </div>
 
-    <!-- เมนู -->
-
     <div class="menu">
 
         <button
             class="card"
             onclick="showPage('education')"
         >
-            <div class="card-icon">
-                🎓
-            </div>
+            <div class="card-icon">🎓</div>
 
             <div class="card-title">
                 ประวัติการศึกษา
@@ -452,9 +434,7 @@ footer {
             class="card"
             onclick="showPage('interest')"
         >
-            <div class="card-icon">
-                🔮
-            </div>
+            <div class="card-icon">🔮</div>
 
             <div class="card-title">
                 ความสนใจในการศึกษาต่อ
@@ -474,9 +454,7 @@ footer {
             class="card"
             onclick="showPage('works')"
         >
-            <div class="card-icon">
-                🏆
-            </div>
+            <div class="card-icon">🏆</div>
 
             <div class="card-title">
                 ผลงาน
@@ -495,294 +473,4 @@ footer {
     </div>
 
     <footer>
-        ✦ ♡ ✧ © 2026 Wachiraya Klangkaew ✧ ♡ ✦
-    </footer>
-
-</div>
-
-
-<!-- ================= หน้าที่ 1 : ประวัติการศึกษา ================= -->
-
-<div id="education" class="page">
-
-    <h1 class="page-title">
-        🎓 ประวัติการศึกษา
-    </h1>
-
-    <div class="decor">
-        ✦ ───────── ♡ ───────── ✦
-    </div>
-
-    <div class="section">
-
-        <h2>
-            🏫 ระดับมัธยมศึกษา
-        </h2>
-
-        <p>
-            โรงเรียน : บ้านบึงอุตสาหกรรมนุเคราะห์
-            <br>
-            ระดับมัธยมศึกษาปีที่ 1-3 :
-            แผนการเรียนภาษาอังกฤษและภาษาจีน
-            <br>
-            ระดับมัธยมศึกษาปีที่ 4-6 :
-            แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
-        </p>
-
-    </div>
-
-    <div class="section">
-
-        <h2>
-            📚 วิชาที่สนใจ
-        </h2>
-
-        <p>
-            วิทยาศาสตร์
-            <br>
-            คณิตศาสตร์
-            <br>
-            ภาษาอังกฤษ
-        </p>
-
-    </div>
-
-    <div class="buttons">
-
-        <button
-            class="next"
-            onclick="showPage('interest')"
-        >
-            ถัดไป → ความสนใจ
-        </button>
-
-        <button
-            class="back"
-            onclick="goHome()"
-        >
-            🏠 กลับหน้าหลัก
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- ================= หน้าที่ 2 : ความสนใจ ================= -->
-
-<div id="interest" class="page">
-
-    <h1 class="page-title">
-        🔮 ความสนใจในการศึกษาต่อ
-    </h1>
-
-    <div class="decor">
-        ✦ ───────── ♡ ───────── ✦
-    </div>
-
-    <div class="section">
-
-        <h2>
-            🔬 สาขาที่สนใจ
-        </h2>
-
-        <p>
-            วิศวกรรมโยธา สาขาการขนส่ง
-            <br>
-            เหตุผล : เพราะการขนส่งเป็นสิ่งที่สำคัญที่สุด
-            ในการเดินทางต่าง ๆ
-        </p>
-
-    </div>
-
-    <div class="section">
-
-        <h2>
-            📚 สิ่งที่อยากเรียนรู้
-        </h2>
-
-        <p>
-            จินตคณิตศาสตร์
-        </p>
-
-    </div>
-
-    <div class="section">
-
-        <h2>
-            🌙 ความฝันในอนาคต
-        </h2>
-
-        <p>
-            วิศวกรโยธา
-        </p>
-
-    </div>
-
-    <div class="buttons">
-
-        <button
-            class="next"
-            onclick="showPage('works')"
-        >
-            ถัดไป → ผลงาน
-        </button>
-
-        <button
-            class="back"
-            onclick="goHome()"
-        >
-            🏠 กลับหน้าหลัก
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- ================= หน้าที่ 3 : ผลงาน ================= -->
-
-<div id="works" class="page">
-
-    <h1 class="page-title">
-        🏆 ผลงาน
-    </h1>
-
-    <div class="decor">
-        ✦ ───────── ♡ ───────── ✦
-    </div>
-
-    <!-- ผลงานที่ 1 -->
-
-    <div class="section">
-
-        <h2>
-            🏆 ผลงานที่ 1
-        </h2>
-
-        <p>
-            <b>
-                เป็นวิทยากรจัดแสดงนิทรรศการวิทยาศาสตร์และเทคโนโลยี
-            </b>
-            <br>
-            เนื่องในงานวันวิทยาศาสตร์แห่งชาติ
-            ประจำปีการศึกษา ๒๕๖๙
-        </p>
-
-        <!-- รูปเกียรติบัตร -->
-
-        <img
-            src="2159F598-DB62-4C81-B8C3-507EF204887C.jpeg"
-            onerror="this.onerror=null; this.src='2159F598-DB62-4C81-B8C3-507EF204887C(1).jpeg';"
-            alt="เกียรติบัตรวิทยากรจัดแสดงนิทรรศการวิทยาศาสตร์และเทคโนโลยี"
-            class="work-image"
-        >
-
-    </div>
-
-
-    <!-- ทักษะที่ได้รับ -->
-
-    <div class="section">
-
-        <h2>
-            ✨ ทักษะที่ได้รับ
-        </h2>
-
-        <div class="skills">
-
-            <div class="skill">
-                🔬 ทักษะด้านวิทยาศาสตร์
-            </div>
-
-            <div class="skill">
-                🎤 ทักษะการสื่อสาร
-            </div>
-
-            <div class="skill">
-                🤝 ทักษะการทำงานร่วมกับผู้อื่น
-            </div>
-
-            <div class="skill">
-                💡 ทักษะการคิดวิเคราะห์และแก้ปัญหา
-            </div>
-
-            <div class="skill">
-                📋 ทักษะการวางแผนและจัดเตรียมงาน
-            </div>
-
-            <div class="skill">
-                ⭐ ความมั่นใจและความรับผิดชอบ
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- ปุ่มกลับหน้าหลัก -->
-
-    <div class="buttons">
-
-        <button
-            class="back"
-            onclick="goHome()"
-        >
-            🏠 กลับหน้าหลัก
-        </button>
-
-    </div>
-
-</div>
-
-
-<script>
-
-/* ================= ระบบเปลี่ยนหน้า ================= */
-
-function showPage(pageId) {
-
-    // ซ่อนทุกหน้าด้านใน
-    document.querySelectorAll(".page").forEach(function(page) {
-        page.classList.remove("active");
-    });
-
-    // ซ่อนหน้าแรก
-    document.getElementById("home").style.display = "none";
-
-    // แสดงหน้าที่เลือก
-    document.getElementById(pageId).classList.add("active");
-
-    // เลื่อนขึ้นด้านบน
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-}
-
-
-/* ================= กลับหน้าหลัก ================= */
-
-function goHome() {
-
-    // ซ่อนทุกหน้าด้านใน
-    document.querySelectorAll(".page").forEach(function(page) {
-        page.classList.remove("active");
-    });
-
-    // แสดงหน้าแรก
-    document.getElementById("home").style.display = "block";
-
-    // เลื่อนขึ้นด้านบน
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-}
-
-</script>
-
-</body>
-</html>
+        ✦ ♡ ✧ ©
