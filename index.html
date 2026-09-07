@@ -361,6 +361,24 @@ h1 {
     margin: 12px 0;
 }
 
+/* ================= รูปผลงาน ================= */
+
+.work-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+
+    display: block;
+
+    margin: 20px auto;
+
+    border-radius: 20px;
+    border: 4px solid #d8c1f5;
+
+    box-shadow:
+        0 8px 20px rgba(100, 70, 170, 0.15);
+}
+
 /* ================= ปุ่มกลับ/ถัดไป ================= */
 
 .page-buttons {
@@ -480,6 +498,10 @@ h1 {
 
     .portfolio-card p {
         font-size: 15px;
+    }
+
+    .work-image {
+        max-width: 100%;
     }
 
     .page-button {
@@ -709,6 +731,14 @@ h1 {
             ผลงานและกิจกรรม
         </h2>
 
+        <!-- รูปผลงาน -->
+
+        <img
+            src="IMG_0864.JPG"
+            alt="รูปผลงาน"
+            class="work-image"
+        >
+
         <p>
             • การแข่งขันเล่านิทานคุณธรรม
             ระดับมัธยมศึกษาตอนปลาย
@@ -771,6 +801,7 @@ function showPage(pageId) {
         top: 0,
         behavior: "smooth"
     });
+
 }
 
 
