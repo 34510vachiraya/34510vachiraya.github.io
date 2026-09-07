@@ -148,17 +148,7 @@ button:hover {
     margin-top: 0;
 }
 
-.work-image {
-    display: block;
-    width: 100%;
-    max-width: 650px;
-    max-height: 500px;
-    object-fit: contain;
-    margin: 20px auto;
-    border-radius: 20px;
-    border: 5px solid #e2d0f7;
-}
-
+/* ทักษะ */
 .skills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -182,6 +172,7 @@ button:hover {
 
 /* มือถือ */
 @media (max-width: 600px) {
+
     .title {
         font-size: 38px;
     }
@@ -206,6 +197,7 @@ button:hover {
 <!-- =========================
      หน้าแรก
 ========================= -->
+
 <section id="home">
 
     <div class="home-container">
@@ -262,6 +254,7 @@ button:hover {
 <!-- =========================
      ประวัติการศึกษา
 ========================= -->
+
 <section id="education" class="page">
 
     <div class="page-container">
@@ -304,6 +297,7 @@ button:hover {
 <!-- =========================
      ความสนใจ
 ========================= -->
+
 <section id="interest" class="page">
 
     <div class="page-container">
@@ -355,6 +349,7 @@ button:hover {
 <!-- =========================
      ผลงาน
 ========================= -->
+
 <section id="works" class="page">
 
     <div class="page-container">
@@ -380,11 +375,6 @@ button:hover {
                     ได้รับรางวัลเหรียญทอง
                 </strong>
             </p>
-
-            <!-- -->
-            
-            
-            
 
         </div>
 
@@ -457,18 +447,14 @@ button:hover {
 
 function showPage(pageId) {
 
-    // ซ่อนหน้าแรก
     document.getElementById("home").style.display = "none";
 
-    // ซ่อนทุกหน้า
     document.querySelectorAll(".page").forEach(function(page) {
         page.classList.remove("active");
     });
 
-    // แสดงหน้าที่เลือก
     document.getElementById(pageId).classList.add("active");
 
-    // เลื่อนขึ้นด้านบน
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -478,15 +464,12 @@ function showPage(pageId) {
 
 function goHome() {
 
-    // ซ่อนหน้าทั้งหมด
     document.querySelectorAll(".page").forEach(function(page) {
         page.classList.remove("active");
     });
 
-    // แสดงหน้าหลัก
     document.getElementById("home").style.display = "flex";
 
-    // เลื่อนขึ้นด้านบน
     window.scrollTo({
         top: 0,
         behavior: "smooth"
@@ -496,4 +479,4 @@ function goHome() {
 </script>
 
 </body>
-</html> 
+</html>
