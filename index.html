@@ -3,626 +3,984 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
+
 <style>
+
 * {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     color: #4b315f;
+
     background:
         radial-gradient(circle at 10% 20%, rgba(255,255,255,0.8) 0 2px, transparent 3px),
         radial-gradient(circle at 80% 15%, rgba(255,255,255,0.8) 0 2px, transparent 3px),
         radial-gradient(circle at 30% 80%, rgba(255,255,255,0.7) 0 2px, transparent 3px),
         linear-gradient(135deg, #ffd9ee, #e8d4ff, #d9c2ff);
-    background-size: 180px 180px, 230px 230px, 200px 200px, cover;
+
+    background-size:
+        180px 180px,
+        230px 230px,
+        200px 200px,
+        cover;
+
     min-height: 100vh;
 }
+
+
 /* ================= PROFILE ================= */
+
 #profile {
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 30px 15px;
 }
+
 .profile-container {
     width: 100%;
     max-width: 950px;
+
     background: rgba(255,255,255,0.94);
+
     padding: 50px 35px;
+
     border-radius: 35px;
+
     text-align: center;
+
     border: 3px solid #f3b9df;
+
     box-shadow:
-        0 0 20px rgba(183, 111, 213, 0.25),
-        0 15px 40px rgba(125, 75, 150, 0.18);
+        0 0 20px rgba(183,111,213,0.25),
+        0 15px 40px rgba(125,75,150,0.18);
+
     position: relative;
+
     overflow: hidden;
 }
+
 .profile-container::before {
     content: "✦  ✧  ✦  ✧  ✦";
+
     position: absolute;
+
     top: 15px;
     left: 25px;
+
     color: #d58be8;
+
     font-size: 20px;
+
     letter-spacing: 8px;
 }
+
 .profile-container::after {
     content: "✧  ✦  ✧  ✦";
+
     position: absolute;
+
     bottom: 15px;
     right: 25px;
+
     color: #e89dcc;
+
     font-size: 20px;
+
     letter-spacing: 8px;
 }
+
 .profile-label {
     color: #c15ca8;
+
     font-size: 18px;
+
     letter-spacing: 3px;
+
     margin-bottom: 10px;
+
     font-weight: bold;
 }
+
 .profile-title {
     font-size: 52px;
+
     margin: 10px 0;
+
     background: linear-gradient(
         90deg,
         #d653a5,
         #9b5bd3,
         #d653a5
     );
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 3px 10px rgba(180, 90, 190, 0.15);
 }
+
+
 /* ================= รูปโปรไฟล์ ================= */
+
 .profile-image {
     width: 210px;
     height: 210px;
+
     object-fit: cover;
+
     border-radius: 50%;
+
     border: 8px solid #f5b9df;
+
     display: block;
+
     margin: 25px auto;
+
     box-shadow:
         0 0 0 5px #ead1ff,
-        0 0 25px rgba(197, 91, 181, 0.4);
+        0 0 25px rgba(197,91,181,0.4);
 }
+
 .profile-name {
     font-size: 34px;
+
     font-weight: bold;
+
     color: #914a9f;
+
     margin: 15px 0;
 }
+
 .profile-detail {
     font-size: 19px;
+
     line-height: 2;
+
     color: #614b68;
 }
+
 .profile-card {
     max-width: 720px;
+
     margin: 28px auto;
+
     padding: 28px;
+
     background: linear-gradient(
         135deg,
         #fff0f8,
         #f3e7ff
     );
+
     border-radius: 25px;
+
     border: 2px solid #edc5ed;
+
     line-height: 1.9;
+
     text-align: left;
-    box-shadow: 0 8px 20px rgba(170, 100, 180, 0.1);
+
+    box-shadow:
+        0 8px 20px rgba(170,100,180,0.1);
 }
+
 .profile-card h3 {
     color: #b04e9f;
+
     text-align: center;
+
     font-size: 25px;
+
     margin-top: 0;
 }
+
 .profile-card strong {
     color: #984baf;
 }
+
+
 /* ================= ปุ่ม ================= */
+
 .buttons {
     display: flex;
+
     justify-content: center;
+
     gap: 12px;
+
     flex-wrap: wrap;
+
     margin-top: 28px;
 }
+
 button {
     border: 2px solid #e9a9d6;
+
     padding: 14px 24px;
+
     border-radius: 30px;
+
     background: linear-gradient(
         135deg,
         #e889c4,
         #a66bd4
     );
+
     color: white;
+
     font-size: 16px;
+
     font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s;
-    box-shadow: 0 5px 15px rgba(150, 80, 170, 0.2);
+
+    box-shadow:
+        0 5px 15px rgba(150,80,170,0.2);
 }
+
 button:hover {
     transform: translateY(-3px) scale(1.03);
+
     background: linear-gradient(
         135deg,
         #d965b0,
         #8d55c5
     );
-    box-shadow: 0 8px 20px rgba(150, 80, 170, 0.3);
 }
+
+
 /* ================= หน้าต่าง ๆ ================= */
+
 .page {
     display: none;
+
     min-height: 100vh;
+
     padding: 50px 20px;
 }
+
 .page.active {
     display: block;
 }
+
 .page-container {
     max-width: 900px;
+
     margin: auto;
+
     background: rgba(255,255,255,0.95);
+
     padding: 40px;
+
     border-radius: 30px;
+
     border: 3px solid #efc1e5;
+
     box-shadow:
-        0 0 25px rgba(170, 90, 190, 0.2),
-        0 15px 35px rgba(120, 70, 150, 0.15);
+        0 0 25px rgba(170,90,190,0.2),
+        0 15px 35px rgba(120,70,150,0.15);
 }
+
 .page-title {
     text-align: center;
+
     font-size: 38px;
+
     color: #9a50ae;
+
     margin-bottom: 30px;
 }
+
 .info-box {
     background: linear-gradient(
         135deg,
         #fff1f8,
         #f2e6ff
     );
+
     padding: 27px;
+
     border-radius: 22px;
+
     border: 2px solid #edc8e9;
+
     margin-bottom: 20px;
+
     line-height: 1.9;
-    box-shadow: 0 5px 15px rgba(170, 90, 180, 0.08);
+
+    box-shadow:
+        0 5px 15px rgba(170,90,180,0.08);
 }
+
 .info-box h3 {
     color: #ae559f;
+
     margin-top: 0;
+
     font-size: 23px;
 }
+
 .info-box strong {
     color: #9b4daa;
 }
+
+
 /* ================= รูปผลงาน ================= */
+
 .work-image {
     width: 100%;
+
     max-width: 600px;
+
     height: 300px;
+
     object-fit: cover;
+
     display: block;
+
     margin: 0 auto 22px;
+
     border-radius: 20px;
+
     border: 4px solid #edc5ed;
+
     box-shadow:
-        0 5px 18px rgba(170, 90, 180, 0.18);
+        0 5px 18px rgba(170,90,180,0.18);
+
     transition: 0.3s;
 }
+
 .work-image:hover {
     transform: scale(1.02);
-    box-shadow:
-        0 8px 22px rgba(150, 80, 170, 0.25);
 }
+
+
 /* ================= ทักษะ ================= */
+
 .skills {
     display: grid;
+
     grid-template-columns:
         repeat(auto-fit, minmax(180px, 1fr));
+
     gap: 15px;
 }
+
 .skill {
     background: linear-gradient(
         135deg,
         #f8cce9,
         #ddc6f7
     );
+
     padding: 19px;
+
     border-radius: 18px;
+
     text-align: center;
+
     color: #754585;
+
     font-weight: bold;
+
     border: 2px solid #e8bce4;
+
     transition: 0.3s;
 }
+
 .skill:hover {
     transform: translateY(-4px) rotate(-1deg);
-    box-shadow:
-        0 7px 15px rgba(150, 80, 170, 0.18);
 }
+
+
 /* ================= ปุ่มถัดไป ================= */
+
 .next-button {
     display: block;
+
     margin: 30px auto 0;
 }
+
+
 /* ================= มือถือ ================= */
+
 @media (max-width: 600px) {
+
     #profile {
         padding: 18px 10px;
     }
+
     .profile-container {
         padding: 40px 18px;
+
         border-radius: 28px;
     }
+
     .profile-title {
         font-size: 38px;
     }
+
     .profile-image {
         width: 170px;
         height: 170px;
     }
+
     .profile-name {
         font-size: 27px;
     }
+
     .profile-detail {
         font-size: 17px;
     }
+
     .profile-card {
         padding: 20px;
     }
+
     .page {
         padding: 25px 12px;
     }
+
     .page-container {
         padding: 25px 18px;
+
         border-radius: 25px;
     }
+
     .page-title {
         font-size: 29px;
     }
+
     .work-image {
         height: 220px;
+
         border-radius: 16px;
     }
+
     button {
         width: 100%;
+
         max-width: 300px;
     }
 }
+
 </style>
 </head>
+
+
 <body>
+
+
 <!-- ==================================================
      PROFILE
 ================================================== -->
+
 <section id="profile">
-    <div class="profile-container">
-        <div class="profile-label">
-            ✦ MY MAGICAL PORTFOLIO ✦
-        </div>
-        <h1 class="profile-title">
-            PROFILE
-        </h1>
-        <img
-            src="profile.PNG"
-            alt="รูปโปรไฟล์ของวชิรญาณ์ คลังแก้ว"
-            class="profile-image"
-        >
-        <div class="profile-name">
-            วชิรญาณ์ คลังแก้ว
-        </div>
-        <div class="profile-detail">
-            ✧ ชื่อเล่น : โฟร์ท<br>
-            ✧ อายุ : 17 ปี<br>
-            ✧ ชั้นมัธยมศึกษาปีที่ 6<br>
-            ✧ แผนการเรียน : เตรียมวิศวกรรมศาสตร์
-        </div>
-        <div class="profile-card">
-            <h3>
-                🪄 แนะนำตัว 🪄
-            </h3>
-            <p>
-                สวัสดีค่ะ ดิฉันชื่อ
-                <strong>วชิรญาณ์ คลังแก้ว</strong>
-                ชื่อเล่น <strong>โฟร์ท</strong>
-                อายุ <strong>17 ปี</strong>
-                ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
-                แผนการเรียนเตรียมวิศวกรรมศาสตร์
-            </p>
-            <p>
-                ดิฉันเป็นคนที่มีความสนใจด้านวิทยาศาสตร์
-                คณิตศาสตร์ เทคโนโลยี และวิศวกรรมศาสตร์
-                ชอบเรียนรู้สิ่งใหม่ ๆ และพัฒนาความสามารถของตนเอง
-                รวมถึงมีความตั้งใจที่จะนำความรู้และประสบการณ์
-                ที่ได้รับไปใช้ในการศึกษาต่อและการทำงานในอนาคต
-            </p>
-        </div>
-        <div class="buttons">
-            <button onclick="showPage('introduction')">
-                ✦ คำนำ
-            </button>
-            <button onclick="showPage('education')">
-                ✦ ประวัติการศึกษา
-            </button>
-            <button onclick="showPage('interest')">
-                ✦ ความสนใจในการศึกษาต่อ
-            </button>
-            <button onclick="showPage('works')">
-                ✦ ผลงาน
-            </button>
-        </div>
+
+<div class="profile-container">
+
+    <div class="profile-label">
+        ✦ MY MAGICAL PORTFOLIO ✦
     </div>
+
+    <h1 class="profile-title">
+        PROFILE
+    </h1>
+
+    <!-- รูปโปรไฟล์ -->
+    <!-- ต้องใช้ชื่อ profile.png ให้ตรงกับไฟล์ใน GitHub -->
+
+    <img
+        src="profile.png"
+        alt="รูปโปรไฟล์ของวชิรญาณ์ คลังแก้ว"
+        class="profile-image"
+    >
+
+    <div class="profile-name">
+        วชิรญาณ์ คลังแก้ว
+    </div>
+
+    <div class="profile-detail">
+        ✧ ชื่อเล่น : โฟร์ท<br>
+        ✧ อายุ : 17 ปี<br>
+        ✧ ชั้นมัธยมศึกษาปีที่ 6<br>
+        ✧ แผนการเรียน : เตรียมวิศวกรรมศาสตร์
+    </div>
+
+
+    <div class="profile-card">
+
+        <h3>
+            🪄 แนะนำตัว 🪄
+        </h3>
+
+        <p>
+            สวัสดีค่ะ ดิฉันชื่อ
+            <strong>วชิรญาณ์ คลังแก้ว</strong>
+            ชื่อเล่น <strong>โฟร์ท</strong>
+            อายุ <strong>17 ปี</strong>
+            ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
+            แผนการเรียนเตรียมวิศวกรรมศาสตร์
+        </p>
+
+        <p>
+            ดิฉันเป็นคนที่มีความสนใจด้านวิทยาศาสตร์
+            คณิตศาสตร์ เทคโนโลยี และวิศวกรรมศาสตร์
+            ชอบเรียนรู้สิ่งใหม่ ๆ และพัฒนาความสามารถของตนเอง
+            รวมถึงมีความตั้งใจที่จะนำความรู้และประสบการณ์
+            ที่ได้รับไปใช้ในการศึกษาต่อและการทำงานในอนาคต
+        </p>
+
+    </div>
+
+
+    <div class="buttons">
+
+        <button onclick="showPage('introduction')">
+            ✦ คำนำ
+        </button>
+
+        <button onclick="showPage('education')">
+            ✦ ประวัติการศึกษา
+        </button>
+
+        <button onclick="showPage('interest')">
+            ✦ ความสนใจในการศึกษาต่อ
+        </button>
+
+        <button onclick="showPage('works')">
+            ✦ ผลงาน
+        </button>
+
+    </div>
+
+</div>
+
 </section>
+
+
+
 <!-- ==================================================
      คำนำ
 ================================================== -->
+
 <section id="introduction" class="page">
-    <div class="page-container">
-        <h2 class="page-title">
-            ✦ คำนำ ✦
-        </h2>
-        <div class="info-box">
-            <p>
-                แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้
-                จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
-                ประวัติการศึกษา ความสนใจ ความสามารถ
-                ทักษะ และผลงานต่าง ๆ
-                ที่ข้าพเจ้าได้เรียนรู้และสั่งสมจากการศึกษา
-                รวมถึงการเข้าร่วมกิจกรรมต่าง ๆ
-            </p>
-            <p>
-                ข้าพเจ้าชื่อ
-                <strong>วชิรญาณ์ คลังแก้ว</strong>
-                ชื่อเล่น <strong>โฟร์ท</strong>
-                อายุ <strong>17 ปี</strong>
-                ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
-                แผนการเรียนเตรียมวิศวกรรมศาสตร์
-                โดยมีความสนใจในด้านวิศวกรรมโยธา
-                และมีความตั้งใจที่จะศึกษาต่อในระดับมหาวิทยาลัย
-            </p>
-            <p>
-                ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานฉบับนี้
-                จะช่วยแสดงให้เห็นถึงความตั้งใจ
-                ความสามารถ ทักษะ ประสบการณ์
-                และความสนใจของข้าพเจ้า
-                รวมถึงสะท้อนถึงความพร้อม
-                ในการศึกษาต่อในระดับมหาวิทยาลัย
-            </p>
-        </div>
-        <button
-            class="next-button"
-            onclick="showPage('education')">
-            ถัดไป ✧
-        </button>
+
+<div class="page-container">
+
+    <h2 class="page-title">
+        ✦ คำนำ ✦
+    </h2>
+
+    <div class="info-box">
+
+        <p>
+            แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้
+            จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+            ประวัติการศึกษา ความสนใจ ความสามารถ
+            ทักษะ และผลงานต่าง ๆ
+            ที่ข้าพเจ้าได้เรียนรู้และสั่งสมจากการศึกษา
+            รวมถึงการเข้าร่วมกิจกรรมต่าง ๆ
+        </p>
+
+        <p>
+            ข้าพเจ้าชื่อ
+            <strong>วชิรญาณ์ คลังแก้ว</strong>
+            ชื่อเล่น <strong>โฟร์ท</strong>
+            อายุ <strong>17 ปี</strong>
+            ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
+            แผนการเรียนเตรียมวิศวกรรมศาสตร์
+            โดยมีความสนใจในด้านวิศวกรรมโยธา
+            และมีความตั้งใจที่จะศึกษาต่อในระดับมหาวิทยาลัย
+        </p>
+
+        <p>
+            ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานฉบับนี้
+            จะช่วยแสดงให้เห็นถึงความตั้งใจ
+            ความสามารถ ทักษะ ประสบการณ์
+            และความสนใจของข้าพเจ้า
+            รวมถึงสะท้อนถึงความพร้อม
+            ในการศึกษาต่อในระดับมหาวิทยาลัย
+        </p>
+
     </div>
+
+    <button
+        class="next-button"
+        onclick="showPage('education')">
+        ถัดไป ✧
+    </button>
+
+</div>
+
 </section>
+
+
+
 <!-- ==================================================
      ประวัติการศึกษา
 ================================================== -->
+
 <section id="education" class="page">
-    <div class="page-container">
-        <h2 class="page-title">
-            ✦ ประวัติการศึกษา ✦
-        </h2>
-        <div class="info-box">
-            <h3>
-                🪄 โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-            </h3>
-            <p>
-                <strong>ระดับมัธยมศึกษาตอนต้น</strong><br>
-                ชั้นมัธยมศึกษาปีที่ 1 - 3<br>
-                แผนการเรียนภาษาอังกฤษและภาษาจีน
-            </p>
-            <p>
-                <strong>ระดับมัธยมศึกษาตอนปลาย</strong><br>
-                ชั้นมัธยมศึกษาปีที่ 4 - 6<br>
-                แผนการเรียนเตรียมวิศวกรรมศาสตร์
-            </p>
-        </div>
-        <button
-            class="next-button"
-            onclick="showPage('interest')">
-            ถัดไป ✧
-        </button>
+
+<div class="page-container">
+
+    <h2 class="page-title">
+        ✦ ประวัติการศึกษา ✦
+    </h2>
+
+    <div class="info-box">
+
+        <h3>
+            🪄 โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+        </h3>
+
+        <p>
+
+            <strong>ระดับมัธยมศึกษาตอนต้น</strong><br>
+
+            ชั้นมัธยมศึกษาปีที่ 1 - 3<br>
+
+            แผนการเรียนภาษาอังกฤษและภาษาจีน
+
+        </p>
+
+        <p>
+
+            <strong>ระดับมัธยมศึกษาตอนปลาย</strong><br>
+
+            ชั้นมัธยมศึกษาปีที่ 4 - 6<br>
+
+            แผนการเรียนเตรียมวิศวกรรมศาสตร์
+
+        </p>
+
     </div>
+
+    <button
+        class="next-button"
+        onclick="showPage('interest')">
+
+        ถัดไป ✧
+
+    </button>
+
+</div>
+
 </section>
+
+
+
 <!-- ==================================================
      ความสนใจในการศึกษาต่อ
 ================================================== -->
+
 <section id="interest" class="page">
-    <div class="page-container">
-        <h2 class="page-title">
-            ✦ ความสนใจในการศึกษาต่อ ✦
-        </h2>
-        <div class="info-box">
-            <h3>
-                🪄 วิศวกรรมโยธา
-            </h3>
-            <p>
-                ข้าพเจ้ามีความสนใจศึกษาต่อด้านวิศวกรรมโยธา
-                โดยเฉพาะด้านการออกแบบและการคมนาคม
-                เนื่องจากการคมนาคมเป็นส่วนสำคัญ
-                ต่อการเดินทางและการพัฒนาสังคม
-            </p>
-        </div>
-        <div class="info-box">
-            <h3>
-                ✨ เป้าหมายในอนาคต
-            </h3>
-            <p>
-                ข้าพเจ้ามีความตั้งใจที่จะศึกษาต่อ
-                ในสาขาวิศวกรรมโยธา
-                และพัฒนาความรู้ความสามารถของตนเอง
-                เพื่อนำความรู้ที่ได้รับไปประยุกต์ใช้
-                และมีส่วนช่วยในการพัฒนาระบบคมนาคม
-                และสังคมให้ดียิ่งขึ้น
-            </p>
-        </div>
-        <button
-            class="next-button"
-            onclick="showPage('works')">
-            ดูผลงาน ✧
-        </button>
+
+<div class="page-container">
+
+    <h2 class="page-title">
+        ✦ ความสนใจในการศึกษาต่อ ✦
+    </h2>
+
+
+    <div class="info-box">
+
+        <h3>
+            🪄 วิศวกรรมโยธา
+        </h3>
+
+        <p>
+            ข้าพเจ้ามีความสนใจศึกษาต่อด้านวิศวกรรมโยธา
+            โดยเฉพาะด้านการออกแบบและการคมนาคม
+            เนื่องจากการคมนาคมเป็นส่วนสำคัญ
+            ต่อการเดินทางและการพัฒนาสังคม
+        </p>
+
     </div>
+
+
+    <div class="info-box">
+
+        <h3>
+            ✨ เป้าหมายในอนาคต
+        </h3>
+
+        <p>
+            ข้าพเจ้ามีความตั้งใจที่จะศึกษาต่อ
+            ในสาขาวิศวกรรมโยธา
+            และพัฒนาความรู้ความสามารถของตนเอง
+            เพื่อนำความรู้ที่ได้รับไปประยุกต์ใช้
+            และมีส่วนช่วยในการพัฒนาระบบคมนาคม
+            และสังคมให้ดียิ่งขึ้น
+        </p>
+
+    </div>
+
+
+    <button
+        class="next-button"
+        onclick="showPage('works')">
+
+        ดูผลงาน ✧
+
+    </button>
+
+</div>
+
 </section>
+
+
+
 <!-- ==================================================
      ผลงาน
 ================================================== -->
+
 <section id="works" class="page">
-    <div class="page-container">
-        <h2 class="page-title">
-            ✦ ผลงานและความสามารถ ✦
-        </h2>
-        <!-- ผลงานที่ 1 -->
-        <div class="info-box">
-            <img
-                src="storytelling.jpg"
-                alt="การแข่งขันเล่านิทานคุณธรรม"
-                class="work-image"
-            >
-            <h3>
-                🏆 การแข่งขันเล่านิทานคุณธรรม
-            </h3>
-            <p>
-                การแข่งขันเล่านิทานคุณธรรม
-                ระดับมัธยมศึกษาตอนปลาย
-                ระดับเขตพื้นที่การศึกษาชลบุรีระยอง
-            </p>
-            <p>
-                <strong>
-                    ✨ ได้รับรางวัลเหรียญทอง ✨
-                </strong>
-            </p>
-        </div>
-        <!-- ผลงานที่ 2 -->
-        <div class="info-box">
-            <img
-                src="mecanum-car.jpg"
-                alt="ค่ายคอมพิวเตอร์ Mecanum Car IoT"
-                class="work-image"
-            >
-            <h3>
-                💜 ค่ายคอมพิวเตอร์ Mecanum Car IoT
-            </h3>
-            <p>
-                เข้าร่วมกิจกรรมค่ายคอมพิวเตอร์
-                และเรียนรู้เกี่ยวกับ Mecanum Car IoT
-                ซึ่งช่วยพัฒนาทักษะด้านเทคโนโลยี
-                การคิดวิเคราะห์ และการทำงานร่วมกับผู้อื่น
-            </p>
-        </div>
-        <!-- ผลงานที่ 3 -->
-        <div class="info-box">
-            <img
-                src="civil-workshop.jpg"
-                alt="เข้าร่วมเวิร์กช็อปวิศวกรรมโยธา"
-                class="work-image"
-            >
-            <h3>
-                🏗️ เข้าร่วมเวิร์กช็อปวิศวกรรมโยธา
-            </h3>
-            <p>
-                เข้าร่วมกิจกรรมเวิร์กช็อปด้านวิศวกรรมโยธา
-                เพื่อเรียนรู้เกี่ยวกับพื้นฐานทางวิศวกรรม
-                และได้รับประสบการณ์จากการลงมือปฏิบัติจริง
-                รวมถึงได้เรียนรู้เกี่ยวกับการออกแบบ
-                การวางแผน และกระบวนการทำงานทางด้านวิศวกรรมโยธา
-            </p>
-        </div>
-        <!-- ผลงานที่ 4 -->
-        <div class="info-box">
-            <img
-                src="knowledge-test.jpg"
-                alt="เข้าร่วมการสอบวัดระดับความรู้"
-                class="work-image"
-            >
-            <h3>
-                📚 เข้าร่วมการสอบวัดระดับความรู้
-            </h3>
-            <p>
-                เข้าร่วมการสอบวัดระดับความรู้
-                เพื่อประเมินความรู้และความสามารถทางด้านวิชาการ
-                รวมถึงนำผลการสอบมาใช้ในการพัฒนาตนเอง
-                และเตรียมความพร้อมสำหรับการศึกษาต่อในระดับมหาวิทยาลัย
-            </p>
-        </div>
-        <!-- ทักษะ -->
-        <div class="info-box">
-            <h3>
-                ✨ ทักษะและความสามารถ ✨
-            </h3>
-            <div class="skills">
-                <div class="skill">
-                    🔬 วิทยาศาสตร์
-                </div>
-                <div class="skill">
-                    💬 การสื่อสาร
-                </div>
-                <div class="skill">
-                    🤝 การทำงานเป็นทีม
-                </div>
-                <div class="skill">
-                    👥 การทำงานร่วมกับคนหมู่มาก
-                </div>
-                <div class="skill">
-                    🧠 การวิเคราะห์และแก้ปัญหา
-                </div>
-                <div class="skill">
-                    📋 การวางแผน
-                </div>
-                <div class="skill">
-                    ⭐ ความรับผิดชอบ
-                </div>
-            </div>
-        </div>
-        <button
-            class="next-button"
-            onclick="goHome()">
-            ← กลับหน้าโปรไฟล์
-        </button>
+
+<div class="page-container">
+
+    <h2 class="page-title">
+        ✦ ผลงานและความสามารถ ✦
+    </h2>
+
+
+    <!-- ================= ผลงานที่ 1 ================= -->
+
+    <div class="info-box">
+
+        <h3>
+            🏆 การแข่งขันเล่านิทานคุณธรรม
+        </h3>
+
+        <p>
+            การแข่งขันเล่านิทานคุณธรรม
+            ระดับมัธยมศึกษาตอนปลาย
+            ระดับเขตพื้นที่การศึกษาชลบุรีระยอง
+        </p>
+
+        <p>
+            <strong>
+                ✨ ได้รับรางวัลเหรียญทอง ✨
+            </strong>
+        </p>
+
     </div>
+
+
+
+    <!-- ================= ผลงานที่ 2 ================= -->
+
+    <div class="info-box">
+
+        <h3>
+            💜 ค่ายคอมพิวเตอร์ Mecanum Car IoT
+        </h3>
+
+        <p>
+            เข้าร่วมกิจกรรมค่ายคอมพิวเตอร์
+            และเรียนรู้เกี่ยวกับ Mecanum Car IoT
+            ซึ่งช่วยพัฒนาทักษะด้านเทคโนโลยี
+            การคิดวิเคราะห์ และการทำงานร่วมกับผู้อื่น
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= ผลงานที่ 3 ================= -->
+
+    <div class="info-box">
+
+        <!-- รูปเวิร์กช็อป -->
+        <img
+            src="IMG_0376.png"
+            alt="เข้าร่วมเวิร์กช็อปวิศวกรรมโยธา"
+            class="work-image"
+        >
+
+        <h3>
+            🏗️ เข้าร่วมเวิร์กช็อปวิศวกรรมโยธา
+        </h3>
+
+        <p>
+            เข้าร่วมกิจกรรมเวิร์กช็อปด้านวิศวกรรมโยธา
+            เพื่อเรียนรู้เกี่ยวกับพื้นฐานทางวิศวกรรม
+            และได้รับประสบการณ์จากการลงมือปฏิบัติจริง
+            รวมถึงได้เรียนรู้เกี่ยวกับการออกแบบ
+            การวางแผน และกระบวนการทำงาน
+            ทางด้านวิศวกรรมโยธา
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= ผลงานที่ 4 ================= -->
+
+    <div class="info-box">
+
+        <!-- รูปการสอบวัดระดับความรู้ -->
+        <img
+            src="IMG_0497.png"
+            alt="การสอบวัดระดับความรู้"
+            class="work-image"
+        >
+
+        <h3>
+            📚 ผลงานการสอบวัดระดับความรู้
+        </h3>
+
+        <p>
+            เข้าร่วมการสอบวัดระดับความรู้
+            เพื่อประเมินความรู้และความสามารถทางด้านวิชาการ
+            รวมถึงนำผลการสอบมาใช้ในการพัฒนาตนเอง
+            และเตรียมความพร้อมสำหรับการศึกษาต่อ
+            ในระดับมหาวิทยาลัย
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= ผลงานที่ 5 ================= -->
+
+    <div class="info-box">
+
+        <!-- รูปเกียรติบัตรวิทยากร -->
+        <img
+            src="IMG_0864.jpeg"
+            alt="เกียรติบัตรวิทยากร"
+            class="work-image"
+        >
+
+        <h3>
+            🎤 เกียรติบัตรวิทยากร
+        </h3>
+
+        <p>
+            ได้รับเกียรติบัตรจากการปฏิบัติหน้าที่วิทยากร
+            ซึ่งเป็นประสบการณ์ที่ช่วยพัฒนาทักษะ
+            ด้านการสื่อสาร การถ่ายทอดความรู้
+            ความรับผิดชอบ และการทำงานร่วมกับผู้อื่น
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= ทักษะ ================= -->
+
+    <div class="info-box">
+
+        <h3>
+            ✨ ทักษะและความสามารถ ✨
+        </h3>
+
+        <div class="skills">
+
+            <div class="skill">
+                🔬 วิทยาศาสตร์
+            </div>
+
+            <div class="skill">
+                💬 การสื่อสาร
+            </div>
+
+            <div class="skill">
+                🤝 การทำงานเป็นทีม
+            </div>
+
+            <div class="skill">
+                👥 การทำงานร่วมกับคนหมู่มาก
+            </div>
+
+            <div class="skill">
+                🧠 การวิเคราะห์และแก้ปัญหา
+            </div>
+
+            <div class="skill">
+                📋 การวางแผน
+            </div>
+
+            <div class="skill">
+                ⭐ ความรับผิดชอบ
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="next-button"
+        onclick="goHome()">
+
+        ← กลับหน้าโปรไฟล์
+
+    </button>
+
+</div>
+
 </section>
+
+
+
 <!-- ==================================================
      JAVASCRIPT
 ================================================== -->
+
 <script>
+
 function showPage(pageId) {
+
     document.getElementById("profile").style.display = "none";
+
     document.querySelectorAll(".page").forEach(function(page) {
+
         page.classList.remove("active");
+
     });
+
     document.getElementById(pageId).classList.add("active");
+
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
 }
+
+
 function goHome() {
+
     document.querySelectorAll(".page").forEach(function(page) {
+
         page.classList.remove("active");
+
     });
+
     document.getElementById("profile").style.display = "flex";
+
     window.scrollTo({
         top: 0,
         behavior: "smooth"
     });
 }
+
 </script>
+
 </body>
 </html>
