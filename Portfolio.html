@@ -7,6 +7,7 @@
 <title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -20,15 +21,29 @@ body {
     min-height: 100vh;
     font-family: Arial, Tahoma, sans-serif;
     color: #76536b;
+
     background:
         radial-gradient(circle at 15% 20%, #ffffff 0 2px, transparent 3px),
         radial-gradient(circle at 80% 15%, #ffffff 0 2px, transparent 3px),
         radial-gradient(circle at 70% 70%, #ffffff 0 2px, transparent 3px),
-        linear-gradient(135deg, #eadcff, #d8c5ff, #f1e5ff, #d9d0ff);
-    background-size: 130px 130px, 180px 180px, 160px 160px, cover;
+        linear-gradient(
+            135deg,
+            #eadcff,
+            #d8c5ff,
+            #f1e5ff,
+            #d9d0ff
+        );
+
+    background-size:
+        130px 130px,
+        180px 180px,
+        160px 160px,
+        cover;
+
     background-attachment: fixed;
     overflow-x: hidden;
 }
+
 
 /* ================= ดาว ================= */
 
@@ -39,6 +54,7 @@ body {
     letter-spacing: 15px;
     padding-top: 25px;
 }
+
 
 /* ================= หน้าแรก ================= */
 
@@ -71,6 +87,7 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
+
 
 /* ================= รูปโปรไฟล์ ================= */
 
@@ -107,18 +124,24 @@ body {
     border: 6px solid #cdb0f5;
     padding: 6px;
     background: white;
+
     box-shadow:
         0 0 0 8px rgba(245, 238, 255, 0.9),
         0 10px 25px rgba(100, 70, 170, 0.25);
+
     transition: 0.3s;
 }
 
 .profile img:hover {
     transform: scale(1.05);
+
     box-shadow:
         0 0 0 8px rgba(245, 238, 255, 0.9),
         0 0 25px rgba(155, 110, 232, 0.5);
 }
+
+
+/* ================= ชื่อ ================= */
 
 .home-name {
     font-size: 28px;
@@ -132,12 +155,14 @@ body {
     color: #8d6a80;
 }
 
+
 /* ================= เมนู ================= */
 
 .menu {
     width: 100%;
     max-width: 760px;
     margin: 35px auto 0;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
@@ -147,12 +172,17 @@ body {
     display: block;
     width: 100%;
     padding: 25px 20px;
+
     background: rgba(255, 255, 255, 0.9);
     border: 2px solid #d8c1f5;
     border-radius: 25px;
+
     text-decoration: none;
     color: #76539b;
-    box-shadow: 0 8px 20px rgba(100, 70, 170, 0.12);
+
+    box-shadow:
+        0 8px 20px rgba(100, 70, 170, 0.12);
+
     transition: 0.3s;
     cursor: pointer;
     font-family: inherit;
@@ -163,7 +193,9 @@ body {
     transform: translateY(-6px);
     background: #faf6ff;
     border-color: #a477df;
-    box-shadow: 0 12px 25px rgba(100, 70, 170, 0.2);
+
+    box-shadow:
+        0 12px 25px rgba(100, 70, 170, 0.2);
 }
 
 .card:active {
@@ -196,18 +228,25 @@ body {
     font-weight: bold;
 }
 
+
 /* ================= หน้าด้านใน ================= */
 
 .page {
     display: none;
+
     width: 90%;
     max-width: 850px;
+
     margin: 30px auto 60px;
     padding: 40px;
+
     background: rgba(255, 255, 255, 0.95);
     border: 2px solid #d8c1f5;
     border-radius: 30px;
-    box-shadow: 0 12px 30px rgba(100, 70, 170, 0.15);
+
+    box-shadow:
+        0 12px 30px rgba(100, 70, 170, 0.15);
+
     animation: fadeIn 0.4s ease;
 }
 
@@ -241,8 +280,17 @@ body {
     margin: 15px 0 30px;
 }
 
+
+/* ================= กล่องข้อมูล ================= */
+
 .section {
-    background: linear-gradient(135deg, #f7f0ff, #eee5ff);
+    background:
+        linear-gradient(
+            135deg,
+            #f7f0ff,
+            #eee5ff
+        );
+
     padding: 22px;
     margin: 18px 0;
     border-radius: 20px;
@@ -261,6 +309,7 @@ body {
     line-height: 1.9;
 }
 
+
 /* ================= รูปผลงาน ================= */
 
 .work-image {
@@ -268,9 +317,14 @@ body {
     max-width: 500px;
     display: block;
     margin: 15px auto;
+
     border-radius: 20px;
     border: 4px solid #d8c1f5;
+
+    box-shadow:
+        0 8px 20px rgba(100, 70, 170, 0.12);
 }
+
 
 /* ================= ปุ่ม ================= */
 
@@ -286,24 +340,42 @@ body {
 .back {
     display: inline-block;
     padding: 12px 25px;
-    background: linear-gradient(135deg, #b58ae8, #8060c9);
+
+    background:
+        linear-gradient(
+            135deg,
+            #b58ae8,
+            #8060c9
+        );
+
     color: white;
     border: 2px solid white;
     border-radius: 25px;
+
     font-family: inherit;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+
     transition: 0.2s;
-    box-shadow: 0 6px 15px rgba(100, 70, 170, 0.2);
+
+    box-shadow:
+        0 6px 15px rgba(100, 70, 170, 0.2);
 }
 
 .next:hover,
 .back:hover {
-    background: linear-gradient(135deg, #a477df, #6f50b8);
+    background:
+        linear-gradient(
+            135deg,
+            #a477df,
+            #6f50b8
+        );
+
     transform: translateY(-3px);
 }
+
 
 /* ================= Footer ================= */
 
@@ -313,6 +385,7 @@ footer {
     color: #8b72a8;
     font-size: 14px;
 }
+
 
 /* ================= มือถือ ================= */
 
@@ -354,11 +427,15 @@ footer {
         width: 100%;
         text-align: center;
     }
+
 }
+
 </style>
 </head>
 
+
 <body>
+
 
 <!-- ================= หน้าแรก ================= -->
 
@@ -380,14 +457,18 @@ footer {
         Wachiraya Klangkaew
     </div>
 
-    <!-- รูปโปรไฟล์ -->
+
+    <!-- ================= รูปโปรไฟล์ ================= -->
 
     <div class="profile">
+
         <img
             src="IMG_0665.jpeg"
             alt="วชิรญาณ์ คลังแก้ว"
         >
+
     </div>
+
 
     <div class="home-name">
         วชิรญาณ์ คลังแก้ว
@@ -397,14 +478,19 @@ footer {
         แฟ้มสะสมผลงาน
     </div>
 
-    <!-- เมนู -->
+
+    <!-- ================= เมนู ================= -->
 
     <div class="menu">
+
+
+        <!-- ประวัติการศึกษา -->
 
         <button
             class="card"
             onclick="showPage('education')"
         >
+
             <div class="card-icon">
                 🎓
             </div>
@@ -421,12 +507,17 @@ footer {
             <div class="open">
                 กดเพื่อดู →
             </div>
+
         </button>
+
+
+        <!-- ความสนใจ -->
 
         <button
             class="card"
             onclick="showPage('interest')"
         >
+
             <div class="card-icon">
                 🔮
             </div>
@@ -443,12 +534,17 @@ footer {
             <div class="open">
                 กดเพื่อดู →
             </div>
+
         </button>
+
+
+        <!-- ผลงาน -->
 
         <button
             class="card"
             onclick="showPage('works')"
         >
+
             <div class="card-icon">
                 🏆
             </div>
@@ -465,15 +561,19 @@ footer {
             <div class="open">
                 กดเพื่อดู →
             </div>
+
         </button>
 
+
     </div>
+
 
     <footer>
         ✦ ♡ ✧ © 2026 Wachiraya Klangkaew ✧ ♡ ✦
     </footer>
 
 </div>
+
 
 
 <!-- ================= หน้าที่ 1 : ประวัติการศึกษา ================= -->
@@ -488,6 +588,7 @@ footer {
         ✦ ───────── ♡ ───────── ✦
     </div>
 
+
     <div class="section">
 
         <h2>
@@ -495,16 +596,23 @@ footer {
         </h2>
 
         <p>
+
             โรงเรียน : บ้านบึงอุตสาหกรรมนุเคราะห์
+
             <br>
+
             ระดับมัธยมศึกษาปีที่ 1-3 :
             แผนการเรียนภาษาอังกฤษและภาษาจีน
+
             <br>
+
             ระดับมัธยมศึกษาปีที่ 4-6 :
             แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
+
         </p>
 
     </div>
+
 
     <div class="section">
 
@@ -513,14 +621,19 @@ footer {
         </h2>
 
         <p>
+
             วิทยาศาสตร์
             <br>
+
             คณิตศาสตร์
             <br>
+
             ภาษาอังกฤษ
+
         </p>
 
     </div>
+
 
     <div class="buttons">
 
@@ -543,6 +656,7 @@ footer {
 </div>
 
 
+
 <!-- ================= หน้าที่ 2 : ความสนใจ ================= -->
 
 <div id="interest" class="page">
@@ -555,6 +669,7 @@ footer {
         ✦ ───────── ♡ ───────── ✦
     </div>
 
+
     <div class="section">
 
         <h2>
@@ -562,13 +677,18 @@ footer {
         </h2>
 
         <p>
+
             วิศวกรรมโยธา สาขาการขนส่ง
+
             <br>
+
             เหตุผล : เพราะการขนส่งเป็นสิ่งที่สำคัญที่สุด
             ในการเดินทางต่าง ๆ
+
         </p>
 
     </div>
+
 
     <div class="section">
 
@@ -582,6 +702,7 @@ footer {
 
     </div>
 
+
     <div class="section">
 
         <h2>
@@ -593,6 +714,7 @@ footer {
         </p>
 
     </div>
+
 
     <div class="buttons">
 
@@ -615,6 +737,7 @@ footer {
 </div>
 
 
+
 <!-- ================= หน้าที่ 3 : ผลงาน ================= -->
 
 <div id="works" class="page">
@@ -627,21 +750,99 @@ footer {
         ✦ ───────── ♡ ───────── ✦
     </div>
 
+
+    <!-- ================= ผลงานที่ 1 ================= -->
+
     <div class="section">
 
         <h2>
             🏆 ผลงานที่ 1
         </h2>
 
+
+        <!-- รูปเกียรติบัตร -->
+
+        <img
+            src="IMG_0864.jpeg"
+            alt="เกียรติบัตรการเป็นวิทยากรจัดแสดงนิทรรศการวิทยาศาสตร์และเทคโนโลยี"
+            class="work-image"
+        >
+
+
         <p>
-            การแข่งขันเล่านิทานคุณธรรม
-            ระดับมัธยมศึกษาตอนปลาย
-            ระดับเขตพื้นที่การศึกษาชลบุรีระยอง
-            <br>
-            ได้รับรางวัลระดับเหรียญทอง
+
+            <b>ชื่อผลงาน :</b>
+            เป็นวิทยากรจัดแสดงนิทรรศการวิทยาศาสตร์และเทคโนโลยี
+            เนื่องในงานวันวิทยาศาสตร์แห่งชาติ
+            ประจำปีการศึกษา ๒๕๖๙
+
+            <br><br>
+
+            <b>สถานที่ :</b>
+            โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
+            จังหวัดชลบุรี
+
+            <br><br>
+
+            <b>วันที่ :</b>
+            วันพฤหัสบดีที่ ๒๐ เดือน สิงหาคม พ.ศ. ๒๕๖๙
+
         </p>
 
     </div>
+
+
+
+    <!-- ================= ทักษะที่ได้รับ ================= -->
+
+    <div class="section">
+
+        <h2>
+            ✨ ทักษะที่ได้รับจากผลงาน
+        </h2>
+
+        <p>
+
+            🔬 <b>ทักษะด้านวิทยาศาสตร์</b>
+            <br>
+            ได้เรียนรู้และทบทวนความรู้ทางวิทยาศาสตร์
+            สามารถนำความรู้มาประยุกต์ใช้ในการจัดแสดงนิทรรศการ
+
+            <br><br>
+
+            💬 <b>ทักษะการสื่อสาร</b>
+            <br>
+            ได้ฝึกการอธิบายความรู้ทางวิทยาศาสตร์
+            ให้ผู้อื่นเข้าใจได้อย่างชัดเจน
+
+            <br><br>
+
+            🤝 <b>ทักษะการทำงานร่วมกับผู้อื่น</b>
+            <br>
+            ได้ฝึกการทำงานเป็นทีม
+            การแบ่งหน้าที่ และการช่วยเหลือกัน
+
+            <br><br>
+
+            🎤 <b>ทักษะการนำเสนอ</b>
+            <br>
+            ได้ฝึกความกล้าแสดงออก
+            การพูดต่อหน้าผู้อื่น และการนำเสนอผลงาน
+
+            <br><br>
+
+            ⏰ <b>ทักษะการวางแผน</b>
+            <br>
+            ได้ฝึกการเตรียมความพร้อม
+            การจัดเตรียมอุปกรณ์ และการทำงานให้เป็นระบบ
+
+        </p>
+
+    </div>
+
+
+
+    <!-- ================= ผลงานที่ 2 ================= -->
 
     <div class="section">
 
@@ -650,12 +851,20 @@ footer {
         </h2>
 
         <p>
+
             เข้าค่ายคอมพิวเตอร์
+
             <br>
+
             Mecanum Car IoT
+
         </p>
 
     </div>
+
+
+
+    <!-- ================= ผลงานที่ 3 ================= -->
 
     <div class="section">
 
@@ -668,6 +877,10 @@ footer {
         </p>
 
     </div>
+
+
+
+    <!-- ================= ปุ่มกลับหน้าหลัก ================= -->
 
     <div class="buttons">
 
@@ -683,13 +896,14 @@ footer {
 </div>
 
 
+
 <script>
 
 /* ================= ระบบเปลี่ยนหน้า ================= */
 
 function showPage(pageId) {
 
-    // ซ่อนทุกหน้า
+    // ซ่อนทุกหน้าด้านใน
     document.querySelectorAll(".page").forEach(function(page) {
         page.classList.remove("active");
     });
@@ -705,6 +919,7 @@ function showPage(pageId) {
         top: 0,
         behavior: "smooth"
     });
+
 }
 
 
@@ -725,6 +940,7 @@ function goHome() {
         top: 0,
         behavior: "smooth"
     });
+
 }
 
 </script>
