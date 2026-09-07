@@ -20,7 +20,6 @@ body {
     font-family: Arial, sans-serif;
     color: #4b315f;
 
-    /* พื้นหลังชมพูม่วง */
     background:
         radial-gradient(circle at 10% 20%, rgba(255,255,255,0.8) 0 2px, transparent 3px),
         radial-gradient(circle at 80% 15%, rgba(255,255,255,0.8) 0 2px, transparent 3px),
@@ -58,8 +57,6 @@ body {
     position: relative;
     overflow: hidden;
 }
-
-/* ดาวตกแต่ง */
 
 .profile-container::before {
     content: "✦  ✧  ✦  ✧  ✦";
@@ -124,8 +121,6 @@ body {
         0 0 25px rgba(197, 91, 181, 0.4);
 }
 
-/* ================= ชื่อ ================= */
-
 .profile-name {
     font-size: 34px;
     font-weight: bold;
@@ -139,12 +134,9 @@ body {
     color: #614b68;
 }
 
-/* ================= แนะนำตัว ================= */
-
 .profile-card {
     max-width: 720px;
     margin: 28px auto;
-
     padding: 28px;
 
     background: linear-gradient(
@@ -154,11 +146,9 @@ body {
     );
 
     border-radius: 25px;
-
     border: 2px solid #edc5ed;
 
     line-height: 1.9;
-
     text-align: left;
 
     box-shadow: 0 8px 20px rgba(170, 100, 180, 0.1);
@@ -189,7 +179,6 @@ button {
     border: 2px solid #e9a9d6;
 
     padding: 14px 24px;
-
     border-radius: 30px;
 
     background: linear-gradient(
@@ -199,12 +188,10 @@ button {
     );
 
     color: white;
-
     font-size: 16px;
     font-weight: bold;
 
     cursor: pointer;
-
     transition: 0.3s;
 
     box-shadow: 0 5px 15px rgba(150, 80, 170, 0.2);
@@ -241,7 +228,6 @@ button:hover {
     background: rgba(255,255,255,0.95);
 
     padding: 40px;
-
     border-radius: 30px;
 
     border: 3px solid #efc1e5;
@@ -253,11 +239,8 @@ button:hover {
 
 .page-title {
     text-align: center;
-
     font-size: 38px;
-
     color: #9a50ae;
-
     margin-bottom: 30px;
 }
 
@@ -269,13 +252,11 @@ button:hover {
     );
 
     padding: 27px;
-
     border-radius: 22px;
 
     border: 2px solid #edc8e9;
 
     margin-bottom: 20px;
-
     line-height: 1.9;
 
     box-shadow: 0 5px 15px rgba(170, 90, 180, 0.08);
@@ -289,6 +270,34 @@ button:hover {
 
 .info-box strong {
     color: #9b4daa;
+}
+
+/* ================= รูปผลงาน ================= */
+
+.work-image {
+    width: 100%;
+    max-width: 600px;
+    height: 300px;
+
+    object-fit: cover;
+
+    display: block;
+    margin: 0 auto 22px;
+
+    border-radius: 20px;
+    border: 4px solid #edc5ed;
+
+    box-shadow:
+        0 5px 18px rgba(170, 90, 180, 0.18);
+
+    transition: 0.3s;
+}
+
+.work-image:hover {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 8px 22px rgba(150, 80, 170, 0.25);
 }
 
 /* ================= ทักษะ ================= */
@@ -310,13 +319,11 @@ button:hover {
     );
 
     padding: 19px;
-
     border-radius: 18px;
 
     text-align: center;
 
     color: #754585;
-
     font-weight: bold;
 
     border: 2px solid #e8bce4;
@@ -385,6 +392,11 @@ button:hover {
         font-size: 29px;
     }
 
+    .work-image {
+        height: 220px;
+        border-radius: 16px;
+    }
+
     button {
         width: 100%;
         max-width: 300px;
@@ -394,7 +406,6 @@ button:hover {
 </head>
 
 <body>
-
 
 <!-- ==================================================
      PROFILE
@@ -412,7 +423,6 @@ button:hover {
             PROFILE
         </h1>
 
-        <!-- รูปโปรไฟล์ -->
         <img
             src="profile.PNG"
             alt="รูปโปรไฟล์ของวชิรญาณ์ คลังแก้ว"
@@ -646,7 +656,16 @@ button:hover {
             ✦ ผลงานและความสามารถ ✦
         </h2>
 
+
+        <!-- ผลงานที่ 1 -->
+
         <div class="info-box">
+
+            <img
+                src="storytelling.jpg"
+                alt="การแข่งขันเล่านิทานคุณธรรม"
+                class="work-image"
+            >
 
             <h3>
                 🏆 การแข่งขันเล่านิทานคุณธรรม
@@ -666,7 +685,16 @@ button:hover {
 
         </div>
 
+
+        <!-- ผลงานที่ 2 -->
+
         <div class="info-box">
+
+            <img
+                src="mecanum-car.jpg"
+                alt="ค่ายคอมพิวเตอร์ Mecanum Car IoT"
+                class="work-image"
+            >
 
             <h3>
                 💜 ค่ายคอมพิวเตอร์ Mecanum Car IoT
@@ -680,6 +708,58 @@ button:hover {
             </p>
 
         </div>
+
+
+        <!-- ผลงานที่ 3 -->
+
+        <div class="info-box">
+
+            <img
+                src="civil-workshop.jpg"
+                alt="เข้าร่วมเวิร์กช็อปวิศวกรรมโยธา"
+                class="work-image"
+            >
+
+            <h3>
+                🏗️ เข้าร่วมเวิร์กช็อปวิศวกรรมโยธา
+            </h3>
+
+            <p>
+                เข้าร่วมกิจกรรมเวิร์กช็อปด้านวิศวกรรมโยธา
+                เพื่อเรียนรู้เกี่ยวกับพื้นฐานทางวิศวกรรม
+                และได้รับประสบการณ์จากการลงมือปฏิบัติจริง
+                รวมถึงได้เรียนรู้เกี่ยวกับการออกแบบ
+                การวางแผน และกระบวนการทำงานทางด้านวิศวกรรมโยธา
+            </p>
+
+        </div>
+
+
+        <!-- ผลงานที่ 4 -->
+
+        <div class="info-box">
+
+            <img
+                src="knowledge-test.jpg"
+                alt="เข้าร่วมการสอบวัดระดับความรู้"
+                class="work-image"
+            >
+
+            <h3>
+                📚 เข้าร่วมการสอบวัดระดับความรู้
+            </h3>
+
+            <p>
+                เข้าร่วมการสอบวัดระดับความรู้
+                เพื่อประเมินความรู้และความสามารถทางด้านวิชาการ
+                รวมถึงนำผลการสอบมาใช้ในการพัฒนาตนเอง
+                และเตรียมความพร้อมสำหรับการศึกษาต่อในระดับมหาวิทยาลัย
+            </p>
+
+        </div>
+
+
+        <!-- ทักษะ -->
 
         <div class="info-box">
 
