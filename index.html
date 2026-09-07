@@ -1,841 +1,795 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
+<title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            min-height: 100vh;
-            font-family: Arial, Tahoma, sans-serif;
-            color: #76536b;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Tahoma, sans-serif;
+    color: #76536b;
 
-            background:
-                radial-gradient(circle at 10% 15%, white 0 2px, transparent 3px),
-                radial-gradient(circle at 85% 25%, white 0 2px, transparent 3px),
-                radial-gradient(circle at 25% 80%, white 0 2px, transparent 3px),
-                linear-gradient(
-                    135deg,
-                    #eadcff,
-                    #d8c5ff,
-                    #f1e5ff,
-                    #d9d0ff
-                );
+    background:
+        radial-gradient(circle at 10% 15%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 85% 25%, white 0 2px, transparent 3px),
+        radial-gradient(circle at 25% 80%, white 0 2px, transparent 3px),
+        linear-gradient(
+            135deg,
+            #eadcff,
+            #d8c5ff,
+            #f1e5ff,
+            #d9d0ff
+        );
 
-            background-size:
-                150px 150px,
-                180px 180px,
-                200px 200px,
-                cover;
-
-            background-attachment: fixed;
-            overflow-x: hidden;
-        }
-
-        /* ================= ดาวตกแต่งพื้นหลัง ================= */
-
-        body::before {
-            content: "✦  ✧  ♡  ✦  ✧  ☆  ♡  ✦";
-
-            position: fixed;
-            top: 20px;
-            left: 0;
-            width: 100%;
+    background-size:
+        150px 150px,
+        180px 180px,
+        200px 200px,
+        cover;
+
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+/* ดาวตกแต่ง */
+
+body::before {
+    content: "✦  ✧  ♡  ✦  ✧  ☆  ♡  ✦";
+
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 100%;
 
-            text-align: center;
+    text-align: center;
 
-            color: rgba(145, 100, 210, 0.35);
-            font-size: 22px;
-            letter-spacing: 18px;
+    color: rgba(145, 100, 210, 0.35);
+    font-size: 22px;
+    letter-spacing: 18px;
 
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* ================= หน้าแรก ================= */
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ================= หน้าแรก ================= */
 
-        .hero {
-            min-height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-            padding: 30px 20px;
+    padding: 30px 20px;
 
-            position: relative;
-            z-index: 1;
-        }
+    position: relative;
+    z-index: 1;
+}
 
-        .container {
-            width: 100%;
-            max-width: 750px;
+.container {
+    width: 100%;
+    max-width: 750px;
 
-            padding: 55px 35px;
+    padding: 55px 35px;
 
-            text-align: center;
+    text-align: center;
 
-            background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.92);
 
-            border: 3px solid #cdb0f5;
-            border-radius: 40px;
+    border: 3px solid #cdb0f5;
+    border-radius: 40px;
 
-            box-shadow:
-                0 15px 45px rgba(100, 70, 170, 0.2),
-                inset 0 0 25px rgba(210, 190, 255, 0.3);
+    box-shadow:
+        0 15px 45px rgba(100, 70, 170, 0.2),
+        inset 0 0 25px rgba(210, 190, 255, 0.3);
 
-            animation: appear 1s ease;
-        }
+    animation: appear 1s ease;
+}
 
-        .magic-symbol {
-            font-size: 55px;
-            color: #9b6ee8;
-            margin-bottom: 10px;
-
-            text-shadow:
-                0 0 10px #fff,
-                0 0 20px #c9a5ff;
-        }
-
-        .welcome {
-            color: #8b5fc7;
-            font-size: 17px;
-            font-weight: bold;
-            letter-spacing: 5px;
-        }
-
-        h1 {
-            margin: 12px 0 5px;
-
-            color: #8654c7;
-            font-size: 44px;
-            letter-spacing: 3px;
-
-            text-shadow: 2px 2px white;
-        }
-
-        .name {
-            color: #76539b;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        .magic-line {
-            color: #a477df;
-            font-size: 22px;
-            margin: 22px 0;
-        }
-
-        /* ================= รูปโปรไฟล์ ================= */
-
-        .profile-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            margin: 25px auto;
-        }
-
-        .profile-frame {
-            width: 190px;
-            height: 190px;
-
-            padding: 7px;
+.magic-symbol {
+    font-size: 55px;
+    color: #9b6ee8;
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 10px #fff,
+        0 0 20px #c9a5ff;
+}
+
+.welcome {
+    color: #8b5fc7;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+h1 {
+    margin: 12px 0 5px;
 
-            border-radius: 50%;
-
-            background: linear-gradient(
-                135deg,
-                #d8b8ff,
-                #9b6ee8,
-                #e8d5ff
-            );
-
-            box-shadow:
-                0 0 0 5px rgba(255, 255, 255, 0.9),
-                0 0 25px rgba(155, 110, 232, 0.5),
-                0 10px 25px rgba(100, 70, 170, 0.2);
+    color: #8654c7;
+    font-size: 44px;
+    letter-spacing: 3px;
+
+    text-shadow: 2px 2px white;
+}
+
+.name {
+    color: #76539b;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.magic-line {
+    color: #a477df;
+    font-size: 22px;
+    margin: 22px 0;
+}
 
-            animation: profileGlow 3s ease-in-out infinite;
-        }
+/* ================= รูปโปรไฟล์ ================= */
+
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 25px auto;
+}
+
+.profile-frame {
+    width: 190px;
+    height: 190px;
 
-        .profile-image {
-            width: 100%;
-            height: 100%;
+    padding: 7px;
 
-            display: block;
+    border-radius: 50%;
 
-            object-fit: cover;
-            object-position: center;
+    background: linear-gradient(
+        135deg,
+        #d8b8ff,
+        #9b6ee8,
+        #e8d5ff
+    );
+
+    box-shadow:
+        0 0 0 5px rgba(255, 255, 255, 0.9),
+        0 0 25px rgba(155, 110, 232, 0.5),
+        0 10px 25px rgba(100, 70, 170, 0.2);
 
-            border-radius: 50%;
-            border: 4px solid white;
+    animation: profileGlow 3s ease-in-out infinite;
+}
 
-            background: #f1e5ff;
-        }
+.profile-image {
+    width: 100%;
+    height: 100%;
 
-        @keyframes profileGlow {
-            0%, 100% {
-                box-shadow:
-                    0 0 0 5px rgba(255, 255, 255, 0.9),
-                    0 0 25px rgba(155, 110, 232, 0.5),
-                    0 10px 25px rgba(100, 70, 170, 0.2);
-            }
+    display: block;
 
-            50% {
-                box-shadow:
-                    0 0 0 5px rgba(255, 255, 255, 0.9),
-                    0 0 40px rgba(190, 150, 255, 0.8),
-                    0 10px 30px rgba(100, 70, 170, 0.25);
-            }
-        }
+    object-fit: cover;
+    object-position: center;
 
-        /* ================= ข้อมูลนักเรียน ================= */
+    border-radius: 50%;
+    border: 4px solid white;
 
-        .student-info {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
+    background: #f1e5ff;
+}
 
-            margin: 25px auto 30px;
-            max-width: 500px;
-        }
+@keyframes profileGlow {
 
-        .info-item {
-            padding: 15px 20px;
+    0%, 100% {
+        box-shadow:
+            0 0 0 5px rgba(255, 255, 255, 0.9),
+            0 0 25px rgba(155, 110, 232, 0.5),
+            0 10px 25px rgba(100, 70, 170, 0.2);
+    }
 
-            background: linear-gradient(
-                135deg,
-                #f7f0ff,
-                #eee4ff
-            );
+    50% {
+        box-shadow:
+            0 0 0 5px rgba(255, 255, 255, 0.9),
+            0 0 40px rgba(190, 150, 255, 0.8),
+            0 10px 30px rgba(100, 70, 170, 0.25);
+    }
+}
 
-            border: 2px solid #d8c1f5;
-            border-radius: 20px;
+/* ================= ข้อมูลนักเรียน ================= */
 
-            color: #76539b;
-            font-size: 17px;
-            font-weight: bold;
+.student-info {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 
-            box-shadow: 0 5px 15px rgba(130, 90, 190, 0.08);
-        }
+    margin: 25px auto 30px;
+    max-width: 500px;
+}
 
-        .info-item span {
-            color: #a06ed8;
-        }
+.info-item {
+    padding: 15px 20px;
 
-        .menu-title {
-            color: #8b5fc7;
-            font-weight: bold;
-            margin-bottom: 15px;
-            font-size: 17px;
-        }
+    background: linear-gradient(
+        135deg,
+        #f7f0ff,
+        #eee4ff
+    );
 
-        /* ================= ปุ่ม ================= */
+    border: 2px solid #d8c1f5;
+    border-radius: 20px;
 
-        .next-button {
-            display: inline-block;
+    color: #76539b;
+    font-size: 17px;
+    font-weight: bold;
 
-            padding: 14px 32px;
+    box-shadow: 0 5px 15px rgba(130, 90, 190, 0.08);
+}
 
-            color: white;
-            text-decoration: none;
+.info-item span {
+    color: #a06ed8;
+}
 
-            font-weight: bold;
-            font-size: 17px;
+.menu-title {
+    color: #8b5fc7;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
 
-            background: linear-gradient(
-                135deg,
-                #b58ae8,
-                #8060c9
-            );
+/* ================= ปุ่ม ================= */
 
-            border: 2px solid white;
-            border-radius: 30px;
+.next-button {
+    display: inline-block;
 
-            box-shadow: 0 6px 18px rgba(120, 80, 180, 0.25);
+    padding: 14px 32px;
 
-            transition: 0.3s;
-        }
+    color: white;
+    text-decoration: none;
 
-        .next-button:hover {
-            transform: translateY(-5px) scale(1.03);
+    font-weight: bold;
+    font-size: 17px;
 
-            box-shadow:
-                0 10px 25px rgba(120, 80, 180, 0.35);
-        }
+    background: linear-gradient(
+        135deg,
+        #b58ae8,
+        #8060c9
+    );
 
-        /* ================= หน้าด้านใน ================= */
+    border: 2px solid white;
+    border-radius: 30px;
 
-        .page {
-            display: none;
+    box-shadow: 0 6px 18px rgba(120, 80, 180, 0.25);
 
-            width: 100%;
-            max-width: 850px;
+    transition: 0.3s;
+}
 
-            margin: 30px auto 60px;
-            padding: 40px 30px;
+.next-button:hover {
+    transform: translateY(-5px) scale(1.03);
 
-            background: rgba(255, 255, 255, 0.92);
+    box-shadow:
+        0 10px 25px rgba(120, 80, 180, 0.35);
+}
 
-            border: 2px solid #d8c1f5;
-            border-radius: 35px;
+/* ================= หน้าด้านใน ================= */
 
-            box-shadow:
-                0 12px 35px rgba(100, 70, 170, 0.15);
+.page {
+    display: none;
 
-            animation: appear 0.5s ease;
-        }
+    width: 100%;
+    max-width: 850px;
 
-        .page.active {
-            display: block;
-        }
+    margin: 30px auto 60px;
+    padding: 40px 30px;
 
-        .page-title {
-            text-align: center;
+    background: rgba(255, 255, 255, 0.92);
 
-            color: #8654c7;
-            font-size: 30px;
+    border: 2px solid #d8c1f5;
+    border-radius: 35px;
 
-            margin: 0 0 10px;
-        }
+    box-shadow:
+        0 12px 35px rgba(100, 70, 170, 0.15);
 
-        .page-title span {
-            color: #a477df;
-        }
+    animation: appear 0.5s ease;
+}
 
-        .page-decor {
-            text-align: center;
+.page.active {
+    display: block;
+}
 
-            color: #a477df;
-            font-size: 22px;
+.page-title {
+    text-align: center;
 
-            margin: 15px 0 30px;
-        }
+    color: #8654c7;
+    font-size: 30px;
 
-        /* ================= กล่องเนื้อหา ================= */
+    margin: 0 0 10px;
+}
 
-        .portfolio-card {
-            padding: 35px 25px;
+.page-title span {
+    color: #a477df;
+}
 
-            text-align: center;
+.page-decor {
+    text-align: center;
 
-            background: linear-gradient(
-                145deg,
-                #faf6ff,
-                #eee5ff
-            );
+    color: #a477df;
+    font-size: 22px;
 
-            border: 2px solid #d8c1f5;
-            border-radius: 25px;
-        }
+    margin: 15px 0 30px;
+}
 
-        .portfolio-icon {
-            font-size: 55px;
-            margin-bottom: 15px;
-        }
+/* ================= กล่องเนื้อหา ================= */
 
-        .portfolio-card h2 {
-            color: #8654c7;
-            font-size: 24px;
-            margin: 10px 0 20px;
-        }
+.portfolio-card {
+    padding: 35px 25px;
 
-        .portfolio-card p {
-            color: #76539b;
-            line-height: 1.9;
-            font-size: 16px;
-            margin: 12px 0;
-        }
+    text-align: center;
 
-        /* ================= รูปผลงาน ================= */
+    background: linear-gradient(
+        145deg,
+        #faf6ff,
+        #eee5ff
+    );
 
-        .work-image {
-            width: 100%;
-            max-width: 500px;
+    border: 2px solid #d8c1f5;
+    border-radius: 25px;
+}
 
-            display: block;
-            margin: 20px auto;
+.portfolio-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
 
-            border-radius: 20px;
-            border: 4px solid #d8c1f5;
+.portfolio-card h2 {
+    color: #8654c7;
+    font-size: 24px;
+    margin: 10px 0 20px;
+}
 
-            box-shadow: 0 8px 20px rgba(100, 70, 170, 0.15);
-        }
+.portfolio-card p {
+    color: #76539b;
+    line-height: 1.9;
+    font-size: 16px;
+    margin: 12px 0;
+}
 
-        /* ================= ปุ่มกลับ ================= */
+/* ================= ปุ่มกลับ/ถัดไป ================= */
 
-        .page-buttons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
+.page-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 
-            flex-wrap: wrap;
+    flex-wrap: wrap;
 
-            margin-top: 30px;
-        }
+    margin-top: 30px;
+}
 
-        .page-button {
-            display: inline-block;
+.page-button {
+    display: inline-block;
 
-            padding: 12px 25px;
+    padding: 12px 25px;
 
-            color: white;
-            text-decoration: none;
+    color: white;
+    text-decoration: none;
 
-            background: linear-gradient(
-                135deg,
-                #b58ae8,
-                #8060c9
-            );
+    background: linear-gradient(
+        135deg,
+        #b58ae8,
+        #8060c9
+    );
 
-            border: 2px solid white;
-            border-radius: 25px;
+    border: 2px solid white;
+    border-radius: 25px;
 
-            font-weight: bold;
-            font-size: 16px;
+    font-weight: bold;
+    font-size: 16px;
 
-            box-shadow: 0 6px 18px rgba(120, 80, 180, 0.2);
+    box-shadow: 0 6px 18px rgba(120, 80, 180, 0.2);
 
-            transition: 0.3s;
-        }
+    transition: 0.3s;
+}
 
-        .page-button:hover {
-            transform: translateY(-4px);
+.page-button:hover {
+    transform: translateY(-4px);
 
-            box-shadow:
-                0 10px 25px rgba(120, 80, 180, 0.3);
-        }
+    box-shadow:
+        0 10px 25px rgba(120, 80, 180, 0.3);
+}
 
-        /* ================= Footer ================= */
+/* ================= Footer ================= */
 
-        .footer {
-            position: relative;
-            z-index: 1;
+.footer {
+    position: relative;
+    z-index: 1;
 
-            text-align: center;
+    text-align: center;
 
-            padding: 35px 20px;
+    padding: 35px 20px;
 
-            color: #8b72a8;
-            font-size: 13px;
-        }
+    color: #8b72a8;
+    font-size: 13px;
+}
 
-        /* ================= Animation ================= */
+/* ================= Animation ================= */
 
-        @keyframes appear {
-            from {
-                opacity: 0;
-                transform: translateY(25px) scale(0.97);
-            }
+@keyframes appear {
 
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
 
-        /* ================= มือถือ ================= */
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 
-        @media (max-width: 700px) {
+/* ================= มือถือ ================= */
 
-            h1 {
-                font-size: 34px;
-            }
+@media (max-width: 700px) {
 
-            .container {
-                padding: 45px 20px;
-            }
+    h1 {
+        font-size: 34px;
+    }
 
-            .name {
-                font-size: 21px;
-            }
+    .container {
+        padding: 45px 20px;
+    }
 
-            .info-item {
-                font-size: 15px;
-            }
+    .name {
+        font-size: 21px;
+    }
 
-            .profile-frame {
-                width: 160px;
-                height: 160px;
-            }
+    .info-item {
+        font-size: 15px;
+    }
 
-            .next-button {
-                width: 100%;
-                max-width: 300px;
-            }
+    .profile-frame {
+        width: 160px;
+        height: 160px;
+    }
 
-            .page {
-                width: 92%;
-                padding: 30px 20px;
-            }
+    .next-button {
+        width: 100%;
+        max-width: 300px;
+    }
 
-            .page-title {
-                font-size: 26px;
-            }
+    .page {
+        width: 92%;
+        padding: 30px 20px;
+    }
 
-            .portfolio-card {
-                padding: 30px 20px;
-            }
+    .page-title {
+        font-size: 26px;
+    }
 
-            .portfolio-card p {
-                font-size: 15px;
-            }
+    .portfolio-card {
+        padding: 30px 20px;
+    }
 
-            .page-button {
-                width: 100%;
-                max-width: 280px;
-                text-align: center;
-            }
-        }
-    </style>
+    .portfolio-card p {
+        font-size: 15px;
+    }
+
+    .page-button {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- ================================================= -->
-    <!-- ================= หน้าแรก ======================= -->
-    <!-- ================================================= -->
+<!-- ================= หน้าแรก ================= -->
 
-    <div class="hero" id="home">
+<div class="hero" id="home">
 
-        <div class="container">
+    <div class="container">
 
-            <div class="magic-symbol">
-                ✨ ♡ 🪄 ♡ ✨
-            </div>
-
-            <div class="welcome">
-                WELCOME TO
-            </div>
-
-            <h1>
-                MY PORTFOLIO
-            </h1>
-
-            <div class="name">
-                Wachiraya Klangkaew
-            </div>
-
-            <div class="magic-line">
-                ────── ✦ ♡ ✦ ──────
-            </div>
-
-            <!-- รูปโปรไฟล์ -->
-
-            <div class="profile-wrapper">
-
-                <div class="profile-frame">
-
-                    <img
-                        src="FullSizeRender.jpeg"
-                        alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว"
-                        class="profile-image"
-                    >
-
-                </div>
-
-            </div>
-
-            <!-- ข้อมูลนักเรียน -->
-
-            <div class="student-info">
-
-                <div class="info-item">
-                    <span>ชื่อ</span><br>
-                    วชิรญาณ์ คลังแก้ว
-                </div>
-
-                <div class="info-item">
-                    <span>ระดับการศึกษา</span><br>
-                    ชั้นมัธยมศึกษาปีที่ 6
-                </div>
-
-                <div class="info-item">
-                    <span>แผนการเรียน</span><br>
-                    เตรียมวิศวกรรมศาสตร์
-                </div>
-
-            </div>
-
-            <div class="menu-title">
-                ✧ พร้อมเข้าสู่แฟ้มสะสมผลงานหรือยัง? ✧
-            </div>
-
-            <!-- ปุ่มไปหน้าประวัติการศึกษา -->
-
-            <a
-                href="#education"
-                class="next-button"
-                onclick="showPage('education')"
-            >
-                ถัดไป → ประวัติการศึกษา ✨
-            </a>
-
+        <div class="magic-symbol">
+            ✨ ♡ 🪄 ♡ ✨
         </div>
 
-    </div>
+        <div class="welcome">
+            WELCOME TO
+        </div>
 
-
-    <!-- ================================================= -->
-    <!-- ============== หน้าที่ 1 : การศึกษา ============== -->
-    <!-- ================================================= -->
-
-    <div id="education" class="page">
-
-        <h1 class="page-title">
-            🎓 <span>ประวัติการศึกษา</span> 🎓
+        <h1>
+            MY PORTFOLIO
         </h1>
 
-        <div class="page-decor">
-            ✦ ───────── ♡ ───────── ✦
+        <div class="name">
+            Wachiraya Klangkaew
         </div>
 
-        <div class="portfolio-card">
+        <div class="magic-line">
+            ────── ✦ ♡ ✦ ──────
+        </div>
 
-            <div class="portfolio-icon">
-                🎓
+        <!-- รูปโปรไฟล์ -->
+
+        <div class="profile-wrapper">
+
+            <div class="profile-frame">
+
+                <img
+                    src="FullSizeRender.jpeg"
+                    alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว"
+                    class="profile-image"
+                >
+
             </div>
 
-            <h2>
-                ประวัติการศึกษา
-            </h2>
+        </div>
 
-            <p>
-                🏫 <b>โรงเรียน</b><br>
-                บ้านบึงอุตสาหกรรมนุเคราะห์
-            </p>
+        <!-- ข้อมูลนักเรียน -->
 
-            <p>
-                📚 <b>ระดับมัธยมศึกษาปีที่ 1-3</b><br>
-                แผนการเรียนภาษาอังกฤษและภาษาจีน
-            </p>
+        <div class="student-info">
 
-            <p>
-                📖 <b>ระดับมัธยมศึกษาปีที่ 4-6</b><br>
-                แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
-            </p>
+            <div class="info-item">
+                <span>ชื่อ</span><br>
+                วชิรญาณ์ คลังแก้ว
+            </div>
+
+            <div class="info-item">
+                <span>ระดับการศึกษา</span><br>
+                ชั้นมัธยมศึกษาปีที่ 6
+            </div>
+
+            <div class="info-item">
+                <span>แผนการเรียน</span><br>
+                เตรียมวิศวกรรมศาสตร์
+            </div>
 
         </div>
 
-        <div class="page-buttons">
-
-            <a
-                href="#interest"
-                class="page-button"
-                onclick="showPage('interest')"
-            >
-                ถัดไป → ความสนใจ ✨
-            </a>
-
+        <div class="menu-title">
+            ✧ พร้อมเข้าสู่แฟ้มสะสมผลงานหรือยัง? ✧
         </div>
+
+        <a
+            href="#education"
+            class="next-button"
+            onclick="showPage('education')"
+        >
+            ถัดไป → ประวัติการศึกษา ✨
+        </a>
 
     </div>
 
+</div>
 
-    <!-- ================================================= -->
-    <!-- ================ หน้าที่ 2 : ความสนใจ ============= -->
-    <!-- ================================================= -->
 
-    <div id="interest" class="page">
+<!-- ================= หน้าที่ 1 : การศึกษา ================= -->
 
-        <h1 class="page-title">
-            💕 <span>ความสนใจ</span> 💕
-        </h1>
+<div id="education" class="page">
 
-        <div class="page-decor">
-            ✦ ───────── ♡ ───────── ✦
+    <h1 class="page-title">
+        🎓 <span>ประวัติการศึกษา</span> 🎓
+    </h1>
+
+    <div class="page-decor">
+        ✦ ───────── ♡ ───────── ✦
+    </div>
+
+    <div class="portfolio-card">
+
+        <div class="portfolio-icon">
+            🎓
         </div>
 
-        <div class="portfolio-card">
+        <h2>
+            ประวัติการศึกษา
+        </h2>
 
-            <div class="portfolio-icon">
-                🔬
-            </div>
+        <p>
+            🏫 <b>โรงเรียน</b><br>
+            บ้านบึงอุตสาหกรรมนุเคราะห์
+        </p>
 
-            <h2>
-                วิชาที่สนใจ
-            </h2>
+        <p>
+            📚 <b>ระดับมัธยมศึกษาปีที่ 1-3</b><br>
+            แผนการเรียนภาษาอังกฤษและภาษาจีน
+        </p>
 
-            <p>
-                ✨ วิทยาศาสตร์
-            </p>
-
-            <p>
-                ✨ คณิตศาสตร์
-            </p>
-
-            <p>
-                ✨ ภาษาอังกฤษ
-            </p>
-
-            <div class="magic-line">
-                ✦ ♡ ✧ ✦ ♡ ✧ ✦
-            </div>
-
-            <p>
-                ความสนใจในการเรียนรู้สิ่งใหม่ ๆ
-                และการพัฒนาความสามารถของตนเอง
-            </p>
-
-        </div>
-
-        <div class="page-buttons">
-
-            <a
-                href="#works"
-                class="page-button"
-                onclick="showPage('works')"
-            >
-                ถัดไป → ผลงาน ✨
-            </a>
-
-        </div>
+        <p>
+            📖 <b>ระดับมัธยมศึกษาปีที่ 4-6</b><br>
+            แผนการเรียนวิทยาศาสตร์และคณิตศาสตร์
+        </p>
 
     </div>
 
+    <div class="page-buttons">
 
-    <!-- ================================================= -->
-    <!-- ================= หน้าที่ 3 : ผลงาน =============== -->
-    <!-- ================================================= -->
-
-    <div id="works" class="page">
-
-        <h1 class="page-title">
-            🏆 <span>ผลงาน</span> 🏆
-        </h1>
-
-        <div class="page-decor">
-            ✦ ───────── ♡ ───────── ✦
-        </div>
-
-        <div class="portfolio-card">
-
-            <div class="portfolio-icon">
-                🏆
-            </div>
-
-            <h2>
-                ผลงานและกิจกรรม
-            </h2>
-
-            <!-- ถ้าต้องการใส่รูปผลงาน -->
-            <!-- เปลี่ยน work1.jpg เป็นชื่อไฟล์รูปของตนเอง -->
-
-            <img
-                src="work1.jpg"
-                alt="รูปผลงาน"
-                class="work-image"
-            >
-
-            <p>
-                • การแข่งขันเล่านิทานคุณธรรม
-                ระดับมัธยมศึกษาตอนปลาย
-                ระดับเขตพื้นที่การศึกษาชลบุรีระยอง
-                ได้รับรางวัลเหรียญทอง
-            </p>
-
-            <p>
-                • เข้าค่ายคอมพิวเตอร์
-                Mecanum Car IoT
-            </p>
-
-            <div class="magic-line">
-                ✦ ♡ ✧ ✦ ♡ ✧ ✦
-            </div>
-
-            <p>
-                ความฝันเริ่มต้นจากความตั้งใจ
-                <br>
-                และทุกความพยายามจะพาเราไปสู่ความสำเร็จ ✨
-            </p>
-
-        </div>
-
-        <div class="page-buttons">
-
-            <a
-                href="#home"
-                class="page-button"
-                onclick="goHome()"
-            >
-                🏠 กลับหน้าหลัก
-            </a>
-
-        </div>
+        <a
+            href="#interest"
+            class="page-button"
+            onclick="showPage('interest')"
+        >
+            ถัดไป → ความสนใจ ✨
+        </a>
 
     </div>
 
+</div>
 
-    <!-- ================================================= -->
-    <!-- ===================== Footer ===================== -->
-    <!-- ================================================= -->
 
-    <div class="footer">
-        ✦ ♡ ✧ © 2026 Wachiraya Klangkaew ✧ ♡ ✦
+<!-- ================= หน้าที่ 2 : ความสนใจ ================= -->
+
+<div id="interest" class="page">
+
+    <h1 class="page-title">
+        💕 <span>ความสนใจ</span> 💕
+    </h1>
+
+    <div class="page-decor">
+        ✦ ───────── ♡ ───────── ✦
     </div>
 
+    <div class="portfolio-card">
 
-    <!-- ================================================= -->
-    <!-- ================= JavaScript ==================== -->
-    <!-- ================================================= -->
+        <div class="portfolio-icon">
+            🔬
+        </div>
 
-    <script>
+        <h2>
+            วิชาที่สนใจ
+        </h2>
 
-        function showPage(pageId) {
+        <p>
+            ✨ วิทยาศาสตร์
+        </p>
 
-            // ซ่อนหน้าแรก
-            document.getElementById("home").style.display = "none";
+        <p>
+            ✨ คณิตศาสตร์
+        </p>
 
-            // ซ่อนหน้าด้านในทั้งหมด
-            document.querySelectorAll(".page").forEach(function(page) {
-                page.classList.remove("active");
-            });
+        <p>
+            ✨ ภาษาอังกฤษ
+        </p>
 
-            // แสดงหน้าที่เลือก
-            document.getElementById(pageId).classList.add("active");
+        <div class="magic-line">
+            ✦ ♡ ✧ ✦ ♡ ✧ ✦
+        </div>
 
-            // เลื่อนขึ้นด้านบน
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+        <p>
+            ความสนใจในการเรียนรู้สิ่งใหม่ ๆ
+            และการพัฒนาความสามารถของตนเอง
+        </p>
 
-        }
+    </div>
+
+    <div class="page-buttons">
+
+        <a
+            href="#works"
+            class="page-button"
+            onclick="showPage('works')"
+        >
+            ถัดไป → ผลงาน ✨
+        </a>
+
+    </div>
+
+</div>
 
 
-        function goHome() {
+<!-- ================= หน้าที่ 3 : ผลงาน ================= -->
 
-            // ซ่อนหน้าด้านในทั้งหมด
-            document.querySelectorAll(".page").forEach(function(page) {
-                page.classList.remove("active");
-            });
+<div id="works" class="page">
 
-            // แสดงหน้าแรก
-            document.getElementById("home").style.display = "flex";
+    <h1 class="page-title">
+        🏆 <span>ผลงาน</span> 🏆
+    </h1>
 
-            // เลื่อนขึ้นด้านบน
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
+    <div class="page-decor">
+        ✦ ───────── ♡ ───────── ✦
+    </div>
 
-        }
+    <div class="portfolio-card">
 
-    </script>
+        <div class="portfolio-icon">
+            🏆
+        </div>
+
+        <h2>
+            ผลงานและกิจกรรม
+        </h2>
+
+        <p>
+            • การแข่งขันเล่านิทานคุณธรรม
+            ระดับมัธยมศึกษาตอนปลาย
+            ระดับเขตพื้นที่การศึกษาชลบุรีระยอง
+            ได้รับรางวัลเหรียญทอง
+        </p>
+
+        <p>
+            • เข้าค่ายคอมพิวเตอร์
+            Mecanum Car IoT
+        </p>
+
+        <div class="magic-line">
+            ✦ ♡ ✧ ✦ ♡ ✧ ✦
+        </div>
+
+        <p>
+            ความฝันเริ่มต้นจากความตั้งใจ
+            <br>
+            และทุกความพยายามจะพาเราไปสู่ความสำเร็จ ✨
+        </p>
+
+    </div>
+
+    <div class="page-buttons">
+
+        <a
+            href="#home"
+            class="page-button"
+            onclick="goHome()"
+        >
+            🏠 กลับหน้าหลัก
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- ================= Footer ================= -->
+
+<div class="footer">
+    ✦ ♡ ✧ © 2026 Wachiraya Klangkaew ✧ ♡ ✦
+</div>
+
+
+<script>
+
+function showPage(pageId) {
+
+    document.getElementById("home").style.display = "none";
+
+    document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    document.getElementById(pageId).classList.add("active");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+
+function goHome() {
+
+    document.querySelectorAll(".page").forEach(function(page) {
+        page.classList.remove("active");
+    });
+
+    document.getElementById("home").style.display = "flex";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+</script>
 
 </body>
 </html>
