@@ -3,87 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+
+    <title>พอร์ต | วชิรญาณ์ คลังแก้ว</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <div class="logo">MY PORTFOLIO</div>
+    <!-- Header -->
+    <header class="topbar">
 
-    <nav>
-        <a href="index.html">หน้าแรก</a>
-        <a href="portfolio.html">พอร์ต</a>
-        <a href="preface.html">คำนำ</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="works.html">ผลงาน</a>
-    </nav>
-</header>
-
-<main class="portfolio-page">
-
-    <section class="portfolio-intro">
-
-        <div>
-            <p class="small-title">PORTFOLIO</p>
-
-            <h1>วชิรญาณ์ คลังแก้ว</h1>
-
-            <h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
-
-            <p>
-                Portfolio สำหรับรวบรวมประวัติ การศึกษา
-                และผลงานที่ได้เรียนรู้และสร้างสรรค์
-                ตลอดช่วงการศึกษา
-            </p>
+        <div class="logo">
+            MY PORTFOLIO
         </div>
 
-        <div class="profile-card">
-            <img
-                src="profile.PNG"
-                alt="วชิรญาณ์ คลังแก้ว"
-            >
-        </div>
+        <nav class="menu">
+            <a href="index.html">หน้าแรก</a>
+            <a href="portfolio.html" class="active">พอร์ต</a>
+            <a href="preface.html">คำนำ</a>
+            <a href="education.html">ประวัติการศึกษา</a>
+            <a href="works.html">ผลงาน</a>
+        </nav>
 
-    </section>
+    </header>
 
-    <section class="portfolio-info">
 
-        <div class="info-card">
-            <span>01</span>
-            <h3>คำนำ</h3>
-            <p>
-                แนะนำตัวและจุดประสงค์ในการจัดทำ Portfolio
-            </p>
-            <a href="preface.html">อ่านเพิ่มเติม →</a>
-        </div>
+    <!-- Main -->
+    <main>
 
-        <div class="info-card">
-            <span>02</span>
-            <h3>ประวัติการศึกษา</h3>
-            <p>
-                ข้อมูลเกี่ยวกับการศึกษาและเส้นทางการเรียน
-            </p>
-            <a href="education.html">อ่านเพิ่มเติม →</a>
-        </div>
+        <!-- Portfolio Introduction -->
+        <section class="portfolio-intro">
 
-        <div class="info-card">
-            <span>03</span>
-            <h3>ผลงาน</h3>
-            <p>
-                รวบรวมผลงาน กิจกรรม และโครงงาน
-            </p>
-            <a href="works.html">ดูผลงาน →</a>
-        </div>
+            <div class="portfolio-text">
 
-    </section>
+                <p class="small-title">
+                    PORTFOLIO
+                </p>
 
-</main>
+                <h1>
+                    วชิรญาณ์ คลังแก้ว
+                </h1>
 
-<footer>
-    © 2026 วชิรญาณ์ คลังแก้ว
-</footer>
+                <h2>
+                    นักเรียนชั้นมัธยมศึกษาปีที่ 6
+                </h2>
+
+                <p>
+                    แฟ้มสะสมผลงานนี้จัดทำขึ้นเพื่อรวบรวม
+                    ประวัติส่วนตัว ประวัติการศึกษา ผลงาน
+                    กิจกรรม และประสบการณ์ต่าง ๆ
+                    ที่ได้เรียนรู้ตลอดช่วงการศึกษา
+                </p>
+
+            </div>
+
+
+            <!-- Profile -->
+            <div class="profile-card">
+
+                <img
+                    src="profile.PNG"
+                    alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- Information -->
+        <section class="portfolio-info">
+
+            <!-- Preface -->
+            <div class="info-card">
+
+                <span class="card-number">
+                    01
+                </span>
+
+                <h3>
+                    คำนำ
+                </h3>
+
+                <p>
+                    แนะนำตัวและจุดประสงค์
+                    ในการจัดทำแฟ้มสะสมผลงาน
+                </p>
+
+                <a href="preface.html">
+                    อ่านเพิ่มเติม →
+                </a>
+
+            </div>
+
+
+            <!-- Education -->
+            <div class="info-card">
+
+                <span class="card-number">
+                    02
+                </span>
+
+                <h3>
+                    ประวัติการศึกษา
+                </h3>
+
+                <p>
+                    ข้อมูลเกี่ยวกับการศึกษา
+                    และแผนการเรียน
+                </p>
+
+                <a href="education.html">
+                    อ่านเพิ่มเติม →
+                </a>
+
+            </div>
+
+
+            <!-- Works -->
+            <div class="info-card">
+
+                <span class="card-number">
+                    03
+                </span>
+
+                <h3>
+                    ผลงาน
+                </h3>
+
+                <p>
+                    รวบรวมผลงาน กิจกรรม
+                    และโครงงานที่เคยทำ
+                </p>
+
+                <a href="works.html">
+                    ดูผลงาน →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        © 2026 วชิรญาณ์ คลังแก้ว
+    </footer>
 
 </body>
 </html>
