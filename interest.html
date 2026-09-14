@@ -1,70 +1,174 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ความสนใจ | วชิรญาณ์ คลังแก้ว</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ความสนใจ | วชิรญาณ์ คลังแก้ว</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<nav class="topbar">
-    <div class="logo">✦ WACHIRAYA ✦</div>
+    <!-- เมนูด้านบน -->
+    <nav class="topbar">
 
-    <div class="menu">
-        <a href="portfolio.html">PORTFOLIO</a>
-        <a href="index.html">INDEX</a>
-        <a href="introduction.html">คำนำ</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="interest.html" class="active">ความสนใจ</a>
-        <a href="works.html">ผลงาน</a>
-    </div>
-</nav>
-
-<section class="page">
-
-    <div class="page-symbol">💜 🪄 💜</div>
-
-    <h1>ความสนใจในการศึกษาต่อ</h1>
-
-    <div class="content-card">
-
-        <h2>🏗️ วิศวกรรมโยธา</h2>
-
-        <p>
-            ข้าพเจ้ามีความสนใจในด้านวิศวกรรมโยธา
-            โดยเฉพาะด้านการออกแบบและงานที่เกี่ยวข้อง
-            กับการคมนาคม
-        </p>
-
-    </div>
-
-    <div class="interest-grid">
-
-        <div class="interest-card">
-            🔬
-            <h3>วิทยาศาสตร์</h3>
+        <div class="logo">
+            ✦ WACHIRAYA ✦
         </div>
 
-        <div class="interest-card">
-            📐
-            <h3>คณิตศาสตร์</h3>
+        <div class="menu">
+
+            <a href="portfolio.html">
+                PORTFOLIO
+            </a>
+
+            <a href="index.html">
+                INDEX
+            </a>
+
+            <a href="introduction.html">
+                คำนำ
+            </a>
+
+            <a href="education.html">
+                ประวัติการศึกษา
+            </a>
+
+            <a href="interest.html">
+                ความสนใจ
+            </a>
+
+            <a href="works.html">
+                ผลงาน
+            </a>
+
         </div>
 
-        <div class="interest-card">
-            🌎
-            <h3>ภาษาอังกฤษ</h3>
-        </div>
+    </nav>
 
-        <div class="interest-card">
-            💻
-            <h3>เทคโนโลยี</h3>
-        </div>
 
-    </div>
+    <!-- เนื้อหาหลัก -->
+    <main>
 
-</section>
+        <section class="page">
+
+            <div class="page-symbol">
+                💜 🪄 💜
+            </div>
+
+            <h1>
+                ความสนใจในการศึกษาต่อ
+            </h1>
+
+
+            <!-- ความสนใจหลัก -->
+            <div class="content-card">
+
+                <h2>
+                    🏗️ วิศวกรรมโยธา
+                </h2>
+
+                <p>
+                    ข้าพเจ้ามีความสนใจในด้านวิศวกรรมโยธา
+                    โดยเฉพาะด้านการออกแบบและงานที่เกี่ยวข้อง
+                    กับการคมนาคม
+                </p>
+
+            </div>
+
+
+            <!-- วิชาที่สนใจ -->
+            <div class="interest-grid">
+
+                <div class="interest-card">
+                    🔬
+                    <h3>
+                        วิทยาศาสตร์
+                    </h3>
+                </div>
+
+
+                <div class="interest-card">
+                    📐
+                    <h3>
+                        คณิตศาสตร์
+                    </h3>
+                </div>
+
+
+                <div class="interest-card">
+                    🌎
+                    <h3>
+                        ภาษาอังกฤษ
+                    </h3>
+                </div>
+
+
+                <div class="interest-card">
+                    💻
+                    <h3>
+                        เทคโนโลยี
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <!-- ปุ่มกลับ -->
+            <div class="buttons">
+
+                <a href="index.html" class="button">
+                    ← กลับหน้า INDEX
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- เปลี่ยนเมนู Active อัตโนมัติ -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const currentPage =
+                window.location.pathname
+                .split("/")
+                .pop()
+                .toLowerCase();
+
+            const menuLinks =
+                document.querySelectorAll(".menu a");
+
+            menuLinks.forEach(function (link) {
+
+                const linkPage =
+                    link.getAttribute("href")
+                    .split("/")
+                    .pop()
+                    .toLowerCase();
+
+                if (linkPage === currentPage) {
+
+                    link.classList.add("active");
+
+                } else {
+
+                    link.classList.remove("active");
+
+                }
+
+            });
+
+        });
+
+    </script>
 
 </body>
+
 </html>
