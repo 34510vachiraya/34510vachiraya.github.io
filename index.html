@@ -1,68 +1,267 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Index | วชิรญาณ์ คลังแก้ว</title>
-<link rel="stylesheet" href="style.css">
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Index | วชิรญาณ์ คลังแก้ว</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-<nav class="topbar">
-    <div class="logo">✦ WACHIRAYA ✦</div>
 
-    <div class="menu">
-        <a href="portfolio.html">PORTFOLIO</a>
-        <a href="index.html" class="active">INDEX</a>
-        <a href="introduction.html">คำนำ</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="interest.html">ความสนใจ</a>
-        <a href="works.html">ผลงาน</a>
-    </div>
-</nav>
+    <!-- =========================
+         Navigation
+    ========================== -->
 
-<section class="page">
+    <nav class="topbar">
 
-    <div class="page-symbol">
-        ✨ 🪄 ✨
-    </div>
+        <div class="logo">
+            ✦ WACHIRAYA ✦
+        </div>
 
-    <h1>INDEX</h1>
 
-    <div class="index-grid">
+        <div class="menu">
 
-        <a href="introduction.html" class="index-card">
-            <span>🪄</span>
-            <h2>คำนำ</h2>
-            <p>บทนำของแฟ้มสะสมผลงาน</p>
-        </a>
+            <a href="portfolio.html">
+                PORTFOLIO
+            </a>
 
-        <a href="education.html" class="index-card">
-            <span>🎓</span>
-            <h2>ประวัติการศึกษา</h2>
-            <p>ประวัติและแผนการเรียน</p>
-        </a>
+            <a
+                href="index.html"
+                class="active"
+            >
+                INDEX
+            </a>
 
-        <a href="interest.html" class="index-card">
-            <span>💜</span>
-            <h2>ความสนใจ</h2>
-            <p>ความสนใจในการศึกษาต่อ</p>
-        </a>
+            <a href="introduction.html">
+                คำนำ
+            </a>
 
-        <a href="works.html" class="index-card">
-            <span>🏆</span>
-            <h2>ผลงาน</h2>
-            <p>กิจกรรมและผลงานต่าง ๆ</p>
-        </a>
+            <a href="education.html">
+                ประวัติการศึกษา
+            </a>
 
-    </div>
+            <a href="interest.html">
+                ความสนใจ
+            </a>
 
-    <a href="portfolio.html" class="back-button">
-        ← กลับหน้า PORTFOLIO
-    </a>
+            <a href="works.html">
+                ผลงาน
+            </a>
 
-</section>
+        </div>
+
+    </nav>
+
+
+
+    <!-- =========================
+         INDEX
+    ========================== -->
+
+    <main>
+
+        <section class="page">
+
+
+            <div class="page-symbol">
+                ✨ 🪄 ✨
+            </div>
+
+
+            <h1>
+                INDEX
+            </h1>
+
+
+            <div class="index-grid">
+
+
+                <!-- คำนำ -->
+
+                <a
+                    href="introduction.html"
+                    class="index-card"
+                >
+
+                    <span>
+                        🪄
+                    </span>
+
+                    <h2>
+                        คำนำ
+                    </h2>
+
+                    <p>
+                        บทนำของแฟ้มสะสมผลงาน
+                    </p>
+
+                </a>
+
+
+
+                <!-- ประวัติการศึกษา -->
+
+                <a
+                    href="education.html"
+                    class="index-card"
+                >
+
+                    <span>
+                        🎓
+                    </span>
+
+                    <h2>
+                        ประวัติการศึกษา
+                    </h2>
+
+                    <p>
+                        ประวัติและแผนการเรียน
+                    </p>
+
+                </a>
+
+
+
+                <!-- ความสนใจ -->
+
+                <a
+                    href="interest.html"
+                    class="index-card"
+                >
+
+                    <span>
+                        💜
+                    </span>
+
+                    <h2>
+                        ความสนใจ
+                    </h2>
+
+                    <p>
+                        ความสนใจในการศึกษาต่อ
+                    </p>
+
+                </a>
+
+
+
+                <!-- ผลงาน -->
+
+                <a
+                    href="works.html"
+                    class="index-card"
+                >
+
+                    <span>
+                        🏆
+                    </span>
+
+                    <h2>
+                        ผลงาน
+                    </h2>
+
+                    <p>
+                        กิจกรรมและผลงานต่าง ๆ
+                    </p>
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- กลับ Portfolio -->
+
+            <a
+                href="portfolio.html"
+                class="back-button"
+            >
+                ← กลับหน้า PORTFOLIO
+            </a>
+
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         Active Menu
+    ========================== -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+                const currentPage =
+                    window.location.pathname
+                        .split("/")
+                        .pop()
+                        .toLowerCase();
+
+
+                const menuLinks =
+                    document.querySelectorAll(
+                        ".menu a"
+                    );
+
+
+                menuLinks.forEach(
+                    function (link) {
+
+                        const linkPage =
+                            link
+                                .getAttribute("href")
+                                .split("/")
+                                .pop()
+                                .toLowerCase();
+
+
+                        if (
+                            linkPage ===
+                            currentPage
+                        ) {
+
+                            link.classList.add(
+                                "active"
+                            );
+
+                        } else {
+
+                            link.classList.remove(
+                                "active"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
 
 </body>
+
 </html>
