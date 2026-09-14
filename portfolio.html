@@ -549,8 +549,9 @@
 
             <div class="profile">
 
+                <!-- รูปของมึง -->
                 <img
-                    src="profile.PNG"
+                    src="FullSizeRender.jpg"
                     alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว"
                 >
 
@@ -905,7 +906,6 @@
 
 function showPage(pageName) {
 
-    // ซ่อนทุกหน้า
     const pages = document.querySelectorAll(".page");
 
     pages.forEach(function(page) {
@@ -913,7 +913,6 @@ function showPage(pageName) {
     });
 
 
-    // แสดงหน้าที่เลือก
     const selectedPage = document.getElementById(pageName);
 
     if (selectedPage) {
@@ -921,7 +920,6 @@ function showPage(pageName) {
     }
 
 
-    // เอา active ออกจากเมนูทั้งหมด
     const navLinks = document.querySelectorAll("nav a");
 
     navLinks.forEach(function(link) {
@@ -929,7 +927,6 @@ function showPage(pageName) {
     });
 
 
-    // ใส่ active ให้เมนูที่เลือก
     const selectedNav = document.getElementById("nav-" + pageName);
 
     if (selectedNav) {
@@ -937,7 +934,6 @@ function showPage(pageName) {
     }
 
 
-    // กลับไปด้านบน
     window.scrollTo({
         top: 0,
         behavior: "smooth"
