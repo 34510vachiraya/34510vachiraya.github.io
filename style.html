@@ -1,0 +1,607 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: "Prompt", sans-serif;
+
+    background: #f4f7fb;
+
+    color: #18212f;
+
+}
+
+/* HEADER */
+
+header {
+
+    width: 100%;
+
+    min-height: 75px;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 8%;
+
+    border-bottom: 1px solid #e5e9ef;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 100;
+
+}
+
+.logo {
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #1769aa;
+
+}
+
+nav {
+
+    display: flex;
+
+    gap: 28px;
+
+}
+
+nav a {
+
+    color: #263445;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+
+}
+
+nav a:hover {
+
+    color: #1769aa;
+
+}
+
+/* HOME */
+
+.home {
+
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding: 70px 10%;
+
+    background:
+
+        linear-gradient(120deg, #eef7ff, #ffffff);
+
+}
+
+.home-text {
+
+    max-width: 650px;
+
+}
+
+.small-title {
+
+    color: #1769aa;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+.home h1 {
+
+    font-size: 64px;
+
+    line-height: 1.15;
+
+    margin-bottom: 20px;
+
+}
+
+.home-text > p:not(.small-title) {
+
+    font-size: 20px;
+
+    color: #596575;
+
+    margin-bottom: 30px;
+
+}
+
+.button {
+
+    display: inline-block;
+
+    background: #1769aa;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 28px;
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+
+}
+
+.button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+.home-image {
+
+    width: 310px;
+
+    height: 390px;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    background: white;
+
+    box-shadow: 0 15px 40px rgba(30, 70, 100, 0.18);
+
+}
+
+.home-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+/* PORTFOLIO */
+
+.portfolio-page {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+}
+
+.portfolio-intro {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 70px;
+
+    padding: 50px;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+
+}
+
+.portfolio-intro h1 {
+
+    font-size: 45px;
+
+    margin-bottom: 8px;
+
+}
+
+.portfolio-intro h2 {
+
+    font-size: 22px;
+
+    font-weight: 400;
+
+    color: #1769aa;
+
+    margin-bottom: 20px;
+
+}
+
+.portfolio-intro p:not(.small-title) {
+
+    color: #626d7a;
+
+    line-height: 1.9;
+
+}
+
+.profile-card {
+
+    width: 260px;
+
+    height: 330px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    flex-shrink: 0;
+
+}
+
+.profile-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+/* CARDS */
+
+.portfolio-info {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+}
+
+.info-card,
+
+.work-card,
+
+.education-card {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+}
+
+.info-card span {
+
+    color: #1769aa;
+
+    font-weight: bold;
+
+}
+
+.info-card h3 {
+
+    margin: 15px 0 10px;
+
+    font-size: 22px;
+
+}
+
+.info-card p {
+
+    color: #687383;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+
+}
+
+.info-card a {
+
+    text-decoration: none;
+
+    color: #1769aa;
+
+}
+
+/* CONTENT PAGE */
+
+.content-page {
+
+    max-width: 1050px;
+
+    min-height: calc(100vh - 140px);
+
+    margin: auto;
+
+    padding: 80px 30px;
+
+}
+
+.content-page h1 {
+
+    font-size: 45px;
+
+    margin-bottom: 40px;
+
+}
+
+.content-box {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    line-height: 2;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+
+}
+
+.content-box p {
+
+    margin-bottom: 25px;
+
+}
+
+.signature {
+
+    text-align: right;
+
+    margin-top: 50px;
+
+}
+
+/* EDUCATION */
+
+.timeline {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+.education-card {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+}
+
+.number {
+
+    min-width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #e9f4ff;
+
+    color: #1769aa;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: bold;
+
+}
+
+.education-card h2 {
+
+    margin-bottom: 10px;
+
+}
+
+.education-card p {
+
+    color: #687383;
+
+    line-height: 1.8;
+
+}
+
+/* WORKS */
+
+.works-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+.work-card {
+
+    min-height: 220px;
+
+}
+
+.work-number {
+
+    color: #1769aa;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+.work-card h2 {
+
+    margin-bottom: 12px;
+
+}
+
+.work-card p {
+
+    color: #687383;
+
+    line-height: 1.8;
+
+}
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    padding: 22px;
+
+    background: #172b3d;
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    header {
+
+        padding: 15px 5%;
+
+        flex-direction: column;
+
+        gap: 12px;
+
+    }
+
+    nav {
+
+        gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+    }
+
+    nav a {
+
+        font-size: 13px;
+
+    }
+
+    .home {
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding: 60px 6%;
+
+    }
+
+    .home h1 {
+
+        font-size: 42px;
+
+    }
+
+    .home-image {
+
+        width: 240px;
+
+        height: 300px;
+
+    }
+
+    .portfolio-intro {
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        padding: 30px;
+
+    }
+
+    .portfolio-intro h1 {
+
+        font-size: 35px;
+
+    }
+
+    .portfolio-info {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .works-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .content-page h1 {
+
+        font-size: 35px;
+
+    }
+
+}
