@@ -4,45 +4,529 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>พอร์ต | วชิรญาณ์ คลังแก้ว</title>
+    <title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
 
-    <link rel="stylesheet" href="style.css">
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, "Noto Sans Thai", sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            width: 100%;
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 20px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #777;
+        }
+
+        nav a.active {
+            font-weight: bold;
+            border-bottom: 2px solid #222;
+            padding-bottom: 5px;
+        }
+
+
+        /* =========================
+           PAGE
+        ========================= */
+
+        .page {
+            display: none;
+            min-height: calc(100vh - 80px);
+        }
+
+        .page.active-page {
+            display: block;
+        }
+
+
+        /* =========================
+           HOME
+        ========================= */
+
+        .home {
+            max-width: 1200px;
+            margin: auto;
+            min-height: calc(100vh - 80px);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home-content {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 70px;
+        }
+
+        .home-text {
+            flex: 1;
+        }
+
+        .small-title {
+            font-size: 14px;
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .home-text h1 {
+            font-size: 65px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .home-text h2 {
+            font-size: 22px;
+            font-weight: normal;
+            margin-bottom: 25px;
+            color: #555;
+        }
+
+        .home-text p {
+            line-height: 1.9;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #222;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background: #555;
+        }
+
+        .profile {
+            width: 380px;
+        }
+
+        .profile img {
+            width: 100%;
+            display: block;
+            border-radius: 5px;
+        }
+
+
+        /* =========================
+           GENERAL TITLE
+        ========================= */
+
+        .title {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 30px 50px;
+        }
+
+        .title p {
+            font-size: 13px;
+            letter-spacing: 4px;
+            margin-bottom: 15px;
+        }
+
+        .title h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .title span {
+            color: #777;
+        }
+
+
+        /* =========================
+           PORTFOLIO PAGE
+        ========================= */
+
+        .portfolio-container {
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            padding: 50px;
+
+            background: white;
+            border: 1px solid #ddd;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .portfolio-text {
+            flex: 1;
+        }
+
+        .portfolio-text h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .portfolio-text p {
+            color: #666;
+            line-height: 2;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-symbol {
+            width: 230px;
+            border-left: 1px solid #ddd;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding-left: 40px;
+        }
+
+        .portfolio-symbol strong {
+            font-size: 50px;
+        }
+
+        .portfolio-symbol span {
+            letter-spacing: 3px;
+        }
+
+        .portfolio-symbol small {
+            margin-top: 20px;
+            color: #777;
+        }
+
+
+        /* =========================
+           PREFACE PAGE
+        ========================= */
+
+        .preface-container {
+            max-width: 850px;
+            margin: 0 auto 100px;
+
+            background: white;
+            border: 1px solid #ddd;
+
+            padding: 60px;
+        }
+
+        .preface-container h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .preface-container p {
+            line-height: 2;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .signature {
+            text-align: right;
+            margin-top: 60px;
+        }
+
+        .signature p {
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .signature span {
+            color: #777;
+        }
+
+
+        /* =========================
+           EDUCATION PAGE
+        ========================= */
+
+        .education-container {
+            max-width: 1000px;
+            margin: 0 auto 100px;
+        }
+
+        .education-box {
+            background: white;
+            border: 1px solid #ddd;
+
+            padding: 35px 40px;
+            margin-bottom: 20px;
+
+            display: flex;
+            gap: 50px;
+        }
+
+        .education-year {
+            width: 190px;
+            font-weight: bold;
+        }
+
+        .education-content {
+            flex: 1;
+        }
+
+        .education-content h2 {
+            margin-bottom: 12px;
+        }
+
+        .education-content p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           WORK PAGE
+        ========================= */
+
+        .works-container {
+            max-width: 1000px;
+            margin: 0 auto 100px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .work-box {
+            background: white;
+            border: 1px solid #ddd;
+
+            padding: 35px;
+            min-height: 280px;
+        }
+
+        .work-number {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 50px;
+        }
+
+        .work-box h2 {
+            margin-bottom: 20px;
+        }
+
+        .work-box p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .home {
+                padding: 60px 20px;
+            }
+
+            .home-content {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-text h1 {
+                font-size: 43px;
+            }
+
+            .home-text h2 {
+                font-size: 18px;
+            }
+
+            .profile {
+                width: 280px;
+            }
+
+            .title {
+                padding: 50px 25px 35px;
+            }
+
+            .title h1 {
+                font-size: 36px;
+            }
+
+            .portfolio-container {
+                margin: 0 20px 70px;
+                padding: 30px;
+                flex-direction: column;
+            }
+
+            .portfolio-symbol {
+                width: 100%;
+                border-left: none;
+                border-top: 1px solid #ddd;
+                padding-left: 0;
+                padding-top: 30px;
+            }
+
+            .preface-container {
+                margin: 0 20px 70px;
+                padding: 30px;
+            }
+
+            .education-container {
+                margin: 0 20px 70px;
+            }
+
+            .education-box {
+                flex-direction: column;
+                gap: 20px;
+                padding: 30px;
+            }
+
+            .education-year {
+                width: auto;
+            }
+
+            .works-container {
+                grid-template-columns: 1fr;
+                margin: 0 20px 70px;
+            }
+
+        }
+
+    </style>
 </head>
+
 
 <body>
 
-    <!-- Header -->
-    <header class="topbar">
 
-        <div class="logo">
-            MY PORTFOLIO
-        </div>
+<!-- =========================
+     HEADER
+========================= -->
 
-        <nav class="menu">
-            <a href="index.html">หน้าแรก</a>
-            <a href="portfolio.html" class="active">พอร์ต</a>
-            <a href="preface.html">คำนำ</a>
-            <a href="education.html">ประวัติการศึกษา</a>
-            <a href="works.html">ผลงาน</a>
-        </nav>
+<header>
 
-    </header>
+    <div class="logo">
+        MY PORTFOLIO
+    </div>
+
+    <nav>
+
+        <a onclick="showPage('home')" id="nav-home" class="active">
+            หน้าแรก
+        </a>
+
+        <a onclick="showPage('portfolio')" id="nav-portfolio">
+            พอร์ต
+        </a>
+
+        <a onclick="showPage('preface')" id="nav-preface">
+            คำนำ
+        </a>
+
+        <a onclick="showPage('education')" id="nav-education">
+            ประวัติการศึกษา
+        </a>
+
+        <a onclick="showPage('works')" id="nav-works">
+            ผลงาน
+        </a>
+
+    </nav>
+
+</header>
 
 
-    <!-- Main -->
-    <main>
 
-        <!-- Portfolio Introduction -->
-        <section class="portfolio-intro">
+<!-- =========================
+     HOME PAGE
+========================= -->
 
-            <div class="portfolio-text">
+<section id="home" class="page active-page">
 
-                <p class="small-title">
-                    PORTFOLIO
-                </p>
+    <div class="home">
+
+        <div class="home-content">
+
+            <div class="home-text">
+
+                <div class="small-title">
+                    WELCOME TO MY PORTFOLIO
+                </div>
 
                 <h1>
-                    วชิรญาณ์ คลังแก้ว
+                    วชิรญาณ์<br>
+                    คลังแก้ว
                 </h1>
 
                 <h2>
@@ -50,17 +534,20 @@
                 </h2>
 
                 <p>
-                    แฟ้มสะสมผลงานนี้จัดทำขึ้นเพื่อรวบรวม
-                    ประวัติส่วนตัว ประวัติการศึกษา ผลงาน
-                    กิจกรรม และประสบการณ์ต่าง ๆ
-                    ที่ได้เรียนรู้ตลอดช่วงการศึกษา
+                    ยินดีต้อนรับเข้าสู่แฟ้มสะสมผลงาน
+                    <br>
+                    เว็บไซต์รวบรวมประวัติ การศึกษา
+                    ผลงาน และกิจกรรมต่าง ๆ
                 </p>
+
+                <a class="button" onclick="showPage('portfolio')">
+                    ดูพอร์ต →
+                </a>
 
             </div>
 
 
-            <!-- Profile -->
-            <div class="profile-card">
+            <div class="profile">
 
                 <img
                     src="profile.PNG"
@@ -69,89 +556,397 @@
 
             </div>
 
-        </section>
+        </div>
+
+    </div>
+
+</section>
 
 
-        <!-- Information -->
-        <section class="portfolio-info">
 
-            <!-- Preface -->
-            <div class="info-card">
+<!-- =========================
+     PORTFOLIO PAGE
+========================= -->
 
-                <span class="card-number">
-                    01
-                </span>
+<section id="portfolio" class="page">
 
-                <h3>
-                    คำนำ
-                </h3>
+    <div class="title">
+
+        <p>PORTFOLIO</p>
+
+        <h1>
+            แฟ้มสะสมผลงาน
+        </h1>
+
+        <span>
+            วชิรญาณ์ คลังแก้ว
+        </span>
+
+    </div>
+
+
+    <div class="portfolio-container">
+
+        <div class="portfolio-text">
+
+            <h2>
+                เกี่ยวกับแฟ้มสะสมผลงาน
+            </h2>
+
+            <p>
+                แฟ้มสะสมผลงานนี้จัดทำขึ้นเพื่อรวบรวม
+                ประวัติส่วนตัว ประวัติการศึกษา ผลงาน
+                กิจกรรม และประสบการณ์ต่าง ๆ
+                ที่ได้เรียนรู้ตลอดช่วงการศึกษา
+            </p>
+
+            <p>
+                เว็บไซต์นี้จัดทำขึ้นเพื่อแสดงข้อมูล
+                และผลงานของผู้จัดทำในรูปแบบที่สามารถ
+                เข้าถึงข้อมูลแต่ละส่วนได้อย่างสะดวก
+            </p>
+
+        </div>
+
+
+        <div class="portfolio-symbol">
+
+            <strong>MY</strong>
+
+            <span>
+                PORTFOLIO
+            </span>
+
+            <small>
+                2026
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PREFACE PAGE
+========================= -->
+
+<section id="preface" class="page">
+
+    <div class="title">
+
+        <p>PREFACE</p>
+
+        <h1>
+            คำนำ
+        </h1>
+
+        <span>
+            แฟ้มสะสมผลงาน
+        </span>
+
+    </div>
+
+
+    <div class="preface-container">
+
+        <h2>
+            คำนำ
+        </h2>
+
+        <p>
+            แฟ้มสะสมผลงานฉบับนี้จัดทำขึ้นเพื่อรวบรวม
+            ประวัติส่วนตัว ประวัติการศึกษา ผลงาน
+            กิจกรรม และประสบการณ์ต่าง ๆ ของข้าพเจ้า
+        </p>
+
+        <p>
+            เนื้อหาภายในแฟ้มสะสมผลงานสะท้อนให้เห็นถึง
+            ความรู้ ความสามารถ ทักษะ และประสบการณ์
+            ที่ข้าพเจ้าได้เรียนรู้จากการศึกษา
+            และการเข้าร่วมกิจกรรมต่าง ๆ
+        </p>
+
+        <p>
+            ข้าพเจ้าหวังเป็นอย่างยิ่งว่าแฟ้มสะสมผลงาน
+            ฉบับนี้จะช่วยให้ผู้อ่านได้รู้จักตัวตน
+            ความสนใจ และความสามารถของข้าพเจ้า
+            มากยิ่งขึ้น
+        </p>
+
+
+        <div class="signature">
+
+            <p>
+                วชิรญาณ์ คลังแก้ว
+            </p>
+
+            <span>
+                ผู้จัดทำ
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     EDUCATION PAGE
+========================= -->
+
+<section id="education" class="page">
+
+    <div class="title">
+
+        <p>EDUCATION</p>
+
+        <h1>
+            ประวัติการศึกษา
+        </h1>
+
+        <span>
+            เส้นทางการศึกษา
+        </span>
+
+    </div>
+
+
+    <div class="education-container">
+
+
+        <div class="education-box">
+
+            <div class="education-year">
+                ระดับประถมศึกษา
+            </div>
+
+            <div class="education-content">
+
+                <h2>
+                    ประถมศึกษา
+                </h2>
 
                 <p>
-                    แนะนำตัวและจุดประสงค์
-                    ในการจัดทำแฟ้มสะสมผลงาน
+                    ศึกษาระดับประถมศึกษา
+                    และพัฒนาความรู้พื้นฐาน
+                    ในด้านต่าง ๆ
                 </p>
-
-                <a href="preface.html">
-                    อ่านเพิ่มเติม →
-                </a>
 
             </div>
 
+        </div>
 
-            <!-- Education -->
-            <div class="info-card">
 
-                <span class="card-number">
-                    02
-                </span>
 
-                <h3>
-                    ประวัติการศึกษา
-                </h3>
+        <div class="education-box">
+
+            <div class="education-year">
+                ระดับมัธยมศึกษาตอนต้น
+            </div>
+
+            <div class="education-content">
+
+                <h2>
+                    มัธยมศึกษาตอนต้น
+                </h2>
 
                 <p>
-                    ข้อมูลเกี่ยวกับการศึกษา
-                    และแผนการเรียน
+                    ศึกษาระดับมัธยมศึกษาตอนต้น
+                    พร้อมพัฒนาทักษะด้านวิชาการ
+                    และกิจกรรมต่าง ๆ
                 </p>
-
-                <a href="education.html">
-                    อ่านเพิ่มเติม →
-                </a>
 
             </div>
 
+        </div>
 
-            <!-- Works -->
-            <div class="info-card">
 
-                <span class="card-number">
-                    03
-                </span>
 
-                <h3>
-                    ผลงาน
-                </h3>
+        <div class="education-box">
+
+            <div class="education-year">
+                ระดับมัธยมศึกษาตอนปลาย
+            </div>
+
+            <div class="education-content">
+
+                <h2>
+                    มัธยมศึกษาปีที่ 6
+                </h2>
 
                 <p>
-                    รวบรวมผลงาน กิจกรรม
-                    และโครงงานที่เคยทำ
+                    ปัจจุบันกำลังศึกษาอยู่ในระดับ
+                    มัธยมศึกษาปีที่ 6 และเตรียมความพร้อม
+                    สำหรับการศึกษาต่อระดับมหาวิทยาลัย
                 </p>
-
-                <a href="works.html">
-                    ดูผลงาน →
-                </a>
 
             </div>
 
-        </section>
-
-    </main>
+        </div>
 
 
-    <!-- Footer -->
-    <footer>
-        © 2026 วชิรญาณ์ คลังแก้ว
-    </footer>
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WORKS PAGE
+========================= -->
+
+<section id="works" class="page">
+
+    <div class="title">
+
+        <p>MY WORKS</p>
+
+        <h1>
+            ผลงาน
+        </h1>
+
+        <span>
+            ผลงานและกิจกรรมที่เคยทำ
+        </span>
+
+    </div>
+
+
+    <div class="works-container">
+
+
+        <div class="work-box">
+
+            <div class="work-number">
+                01
+            </div>
+
+            <h2>
+                ผลงานที่ 1
+            </h2>
+
+            <p>
+                ใส่รายละเอียดเกี่ยวกับผลงาน
+                กิจกรรม หรือโครงงานที่เคยทำ
+                สามารถเพิ่มรูปภาพของผลงานได้
+            </p>
+
+        </div>
+
+
+
+        <div class="work-box">
+
+            <div class="work-number">
+                02
+            </div>
+
+            <h2>
+                ผลงานที่ 2
+            </h2>
+
+            <p>
+                ใส่รายละเอียดเกี่ยวกับผลงาน
+                หรือกิจกรรมที่เคยเข้าร่วม
+                พร้อมรายละเอียดเพิ่มเติม
+            </p>
+
+        </div>
+
+
+
+        <div class="work-box">
+
+            <div class="work-number">
+                03
+            </div>
+
+            <h2>
+                ผลงานที่ 3
+            </h2>
+
+            <p>
+                ใส่รายละเอียดเกี่ยวกับโครงงาน
+                ผลงาน หรือประสบการณ์
+                ที่ภาคภูมิใจ
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    © 2026 วชิรญาณ์ คลังแก้ว
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function showPage(pageName) {
+
+    // ซ่อนทุกหน้า
+    const pages = document.querySelectorAll(".page");
+
+    pages.forEach(function(page) {
+        page.classList.remove("active-page");
+    });
+
+
+    // แสดงหน้าที่เลือก
+    const selectedPage = document.getElementById(pageName);
+
+    if (selectedPage) {
+        selectedPage.classList.add("active-page");
+    }
+
+
+    // เอา active ออกจากเมนูทั้งหมด
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(function(link) {
+        link.classList.remove("active");
+    });
+
+
+    // ใส่ active ให้เมนูที่เลือก
+    const selectedNav = document.getElementById("nav-" + pageName);
+
+    if (selectedNav) {
+        selectedNav.classList.add("active");
+    }
+
+
+    // กลับไปด้านบน
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+}
+
+</script>
+
 
 </body>
 </html>
