@@ -11,173 +11,417 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: Arial, "Tahoma", sans-serif;
+    font-family: Arial, "Noto Sans Thai", "Tahoma", sans-serif;
     color: #5d4560;
-    background:
-        radial-gradient(circle at 10% 15%, white 0 4px, transparent 5px),
-        radial-gradient(circle at 90% 20%, white 0 5px, transparent 6px),
-        linear-gradient(135deg, #fff4c9, #ffdceb, #e9ddff);
     min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 8% 12%, rgba(255,255,255,.95) 0 4px, transparent 5px),
+        radial-gradient(circle at 88% 18%, rgba(255,255,255,.9) 0 5px, transparent 6px),
+        radial-gradient(circle at 18% 82%, rgba(255,255,255,.85) 0 3px, transparent 4px),
+        radial-gradient(circle at 75% 75%, rgba(255,255,255,.8) 0 4px, transparent 5px),
+        linear-gradient(135deg, #fff1c9, #ffdbea, #e9ddff);
+
+    background-size:
+        150px 150px,
+        190px 190px,
+        130px 130px,
+        170px 170px,
+        cover;
 }
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 15px;
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 3px 15px rgba(120,80,120,0.12);
+
+    padding: 14px;
+
+    background: rgba(255,255,255,.93);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 2px solid #efc9dd;
+    box-shadow: 0 5px 20px rgba(120,80,120,.12);
 }
 
 nav a {
     text-decoration: none;
     color: #76536f;
-    background: white;
-    padding: 11px 20px;
+
+    background: #ffffff;
+
+    padding: 10px 19px;
+
     border-radius: 25px;
-    font-weight: bold;
     border: 2px solid #f0cfe0;
-    transition: 0.25s;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: .25s;
 }
 
-nav a:hover,
-nav a.active {
-    background: #ffd4e7;
+nav a:hover {
+    background: #ffe0ec;
     transform: translateY(-3px);
 }
 
-.container {
-    max-width: 1100px;
-    margin: 45px auto;
-    padding: 20px;
+nav a.active {
+    background: linear-gradient(135deg, #ffd1e4, #ead9ff);
+    border-color: #dfa9cc;
+    color: #714c6c;
 }
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 45px auto 70px;
+}
+
+/* =========================
+   TITLE
+========================= */
 
 .title {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .title .icon {
-    font-size: 60px;
+    font-size: 58px;
+    margin-bottom: 8px;
 }
 
 .title h1 {
-    color: #805675;
+    margin: 0;
+
+    color: #a85d88;
+
     font-size: 44px;
-    margin: 10px;
+
+    text-shadow:
+        2px 2px rgba(255,255,255,.9);
 }
 
 .title p {
+    margin-top: 10px;
+
     color: #98738e;
+
+    font-size: 16px;
+    letter-spacing: 2px;
 }
+
+/* =========================
+   WORK GRID
+========================= */
 
 .works {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+
+    gap: 28px;
 }
 
+/* =========================
+   WORK CARD
+========================= */
+
 .work {
-    background: rgba(255,255,255,0.9);
-    border: 3px solid #f2d0e2;
+    position: relative;
+
+    overflow: hidden;
+
+    background: rgba(255,255,255,.94);
+
+    border: 3px solid #f0cddd;
+
     border-radius: 30px;
-    padding: 22px;
-    box-shadow: 0 12px 28px rgba(120,80,120,0.12);
-    transition: 0.25s;
+
+    padding: 20px;
+
+    box-shadow:
+        0 12px 28px rgba(120,80,120,.12),
+        0 0 0 6px rgba(255,255,255,.35);
+
+    transition: .25s;
 }
 
 .work:hover {
-    transform: translateY(-5px);
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 35px rgba(120,80,120,.18),
+        0 0 0 6px rgba(255,255,255,.45);
 }
+
+/* =========================
+   IMAGE
+========================= */
 
 .work img {
     width: 100%;
     height: 250px;
+
     object-fit: cover;
-    border-radius: 22px;
+
     display: block;
+
+    border-radius: 22px;
+
     margin-bottom: 18px;
+
+    border: 2px solid #f4d8e5;
 }
 
+/* =========================
+   NO IMAGE
+========================= */
+
 .no-image {
-    height: 180px;
-    border-radius: 22px;
-    background: linear-gradient(135deg, #fff5d7, #f2dff2);
+    min-height: 120px;
+
+    margin-bottom: 18px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 60px;
-    margin-bottom: 18px;
+
+    background:
+        radial-gradient(circle, rgba(255,255,255,.8) 2px, transparent 3px),
+        linear-gradient(135deg, #fff4d7, #f4e3f4);
+
+    background-size: 35px 35px;
+
+    border: 2px dashed #e1bfd3;
+
+    border-radius: 22px;
+
+    color: #c27a9d;
+
+    font-size: 45px;
 }
+
+/* =========================
+   NUMBER
+========================= */
 
 .number {
     display: inline-block;
-    background: #fff0ba;
+
+    background: linear-gradient(135deg, #fff0b9, #ffe5ef);
+
+    color: #8a6378;
+
     padding: 6px 13px;
+
     border-radius: 20px;
+
     font-weight: bold;
+    font-size: 14px;
+
+    border: 1px solid #f0d1d8;
 }
 
+/* =========================
+   TEXT
+========================= */
+
 .work h2 {
+    margin: 14px 0 10px;
+
     color: #805675;
+
     font-size: 22px;
+
+    line-height: 1.5;
 }
 
 .work p {
-    line-height: 1.8;
+    margin: 0;
+
+    color: #69576a;
+
+    font-size: 16px;
+
+    line-height: 1.9;
 }
 
+.work strong {
+    color: #bd5d91;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
 .skills {
-    margin-top: 35px;
+    margin-top: 40px;
+
     padding: 30px;
-    background: rgba(255,255,255,0.9);
-    border: 3px solid #f2d0e2;
+
+    background: rgba(255,255,255,.94);
+
+    border: 3px solid #f0cddd;
+
     border-radius: 30px;
+
     text-align: center;
+
+    box-shadow:
+        0 12px 28px rgba(120,80,120,.12);
 }
 
 .skills h2 {
-    color: #805675;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: #9f5a83;
+
+    font-size: 27px;
 }
 
 .skill {
     display: inline-block;
-    background: #ffe0ec;
-    border: 1px solid #efc2d6;
+
+    background: linear-gradient(135deg, #ffe1ec, #f0e3ff);
+
+    color: #76536f;
+
+    border: 1px solid #e8c5d8;
+
     padding: 10px 16px;
+
     margin: 5px;
-    border-radius: 20px;
+
+    border-radius: 22px;
+
+    font-weight: bold;
+
+    transition: .2s;
 }
+
+.skill:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #ffd5e5, #e8d8ff);
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     text-align: center;
+
     padding: 30px;
+
     color: #8b6d85;
+
+    font-size: 14px;
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 750px) {
-    .works {
-        grid-template-columns: 1fr;
+
+    nav {
+        gap: 6px;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+    .container {
+        width: 92%;
+        margin-top: 35px;
+    }
+
+    .title .icon {
+        font-size: 48px;
     }
 
     .title h1 {
-        font-size: 35px;
+        font-size: 34px;
+    }
+
+    .title p {
+        font-size: 13px;
+    }
+
+    .works {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .work {
+        padding: 17px;
+        border-radius: 25px;
     }
 
     .work img {
         height: 220px;
+    }
+
+    .work h2 {
+        font-size: 20px;
+    }
+
+    .work p {
+        font-size: 15px;
+    }
+
+    .no-image {
+        min-height: 100px;
+    }
+
+    .skills {
+        padding: 23px 15px;
+    }
+
+    .skills h2 {
+        font-size: 23px;
+    }
+
+    .skill {
+        font-size: 14px;
+        padding: 9px 13px;
     }
 }
 </style>
 </head>
 
 <body>
+
+<!-- =========================
+     MENU
+========================= -->
 
 <nav>
     <a href="portfolio.html">🌸 Portfolio</a>
@@ -186,11 +430,16 @@ footer {
     <a href="works.html" class="active">🏆 ผลงาน</a>
 </nav>
 
+
+<!-- =========================
+     CONTENT
+========================= -->
+
 <main class="container">
 
     <section class="title">
 
-        <div class="icon">🏆</div>
+        <div class="icon">🏆✨</div>
 
         <h1>ผลงานและกิจกรรม</h1>
 
@@ -198,13 +447,20 @@ footer {
 
     </section>
 
+
     <section class="works">
 
-        <!-- 01 -->
+
+        <!-- =====================
+             01
+        ====================== -->
+
         <article class="work">
 
-            <img src="IMG_0376.png"
-                 alt="เวิร์กช็อปวิศวกรรมโยธา">
+            <img
+                src="IMG_0376.png"
+                alt="เวิร์กช็อปวิศวกรรมโยธา"
+            >
 
             <span class="number">01</span>
 
@@ -213,16 +469,22 @@ footer {
             <p>
                 เข้าร่วมกิจกรรมเวิร์กช็อปด้านวิศวกรรมโยธา
                 ได้เรียนรู้แนวคิดพื้นฐานเกี่ยวกับงานวิศวกรรม
-                และได้รับประสบการณ์จากกิจกรรมจริง
+                และได้รับประสบการณ์จากการลงมือปฏิบัติจริง
             </p>
 
         </article>
 
-        <!-- 02 -->
+
+        <!-- =====================
+             02
+        ====================== -->
+
         <article class="work">
 
-            <img src="IMG_0497.png"
-                 alt="สอบวัดระดับความรู้">
+            <img
+                src="IMG_0497.png"
+                alt="สอบวัดระดับความรู้"
+            >
 
             <span class="number">02</span>
 
@@ -230,17 +492,23 @@ footer {
 
             <p>
                 เข้าร่วมการสอบวัดระดับความรู้
-                เพื่อทดสอบความรู้และพัฒนาตนเอง
-                รวมถึงฝึกการเตรียมตัวก่อนการสอบ
+                เพื่อทดสอบความรู้และความพร้อมของตนเอง
+                รวมถึงฝึกการเตรียมตัวและการจัดการเวลาในการสอบ
             </p>
 
         </article>
 
-        <!-- 03 -->
+
+        <!-- =====================
+             03
+        ====================== -->
+
         <article class="work">
 
-            <img src="IMG_0864.jpeg"
-                 alt="วิทยากรวันวิทยาศาสตร์">
+            <img
+                src="IMG_0864.jpeg"
+                alt="วิทยากรวันวิทยาศาสตร์"
+            >
 
             <span class="number">03</span>
 
@@ -254,29 +522,42 @@ footer {
 
         </article>
 
-        <!-- 04 -->
+
+        <!-- =====================
+             04
+        ====================== -->
+
         <article class="work">
 
-            <img src="images/mecanum-iot.jpg"
-                 alt="ค่าย Mecanum IoT">
+            <img
+                src="images/mecanum-iot.jpg"
+                alt="ค่าย Mecanum IoT"
+            >
 
             <span class="number">04</span>
 
             <h2>🤖 ค่าย Mecanum IoT</h2>
 
             <p>
-                เข้าร่วมค่ายคอมพิวเตอร์ Mecanum IoT
-                ได้เรียนรู้เทคโนโลยี ระบบควบคุม
+                เข้าร่วมค่าย Mecanum IoT
+                ได้เรียนรู้เกี่ยวกับเทคโนโลยี ระบบควบคุม
                 และการทำงานของอุปกรณ์
+                พร้อมทั้งได้ฝึกการเรียนรู้ผ่านกิจกรรม
             </p>
 
         </article>
 
-        <!-- 05 -->
+
+        <!-- =====================
+             05
+        ====================== -->
+
         <article class="work">
 
-            <img src="images/math-week.jpg"
-                 alt="สตาฟสัปดาห์คณิตศาสตร์">
+            <img
+                src="images/math-week.jpg"
+                alt="สตาฟสัปดาห์คณิตศาสตร์"
+            >
 
             <span class="number">05</span>
 
@@ -285,12 +566,16 @@ footer {
             <p>
                 ทำหน้าที่สตาฟในกิจกรรมสัปดาห์คณิตศาสตร์
                 ฝึกการทำงานเป็นทีม การวางแผน
-                และการทำงานร่วมกับคนหมู่มาก
+                การประสานงาน และการทำงานร่วมกับคนหมู่มาก
             </p>
 
         </article>
 
-        <!-- 06 ไม่มีรูป -->
+
+        <!-- =====================
+             06
+        ====================== -->
+
         <article class="work">
 
             <div class="no-image">
@@ -304,7 +589,7 @@ footer {
             <p>
                 เข้าร่วมการแข่งขันเล่านิทานคุณธรรม
                 ระดับมัธยมศึกษาตอนปลาย
-                ระดับเขตพื้นที่การศึกษาชลบุรีระยอง
+                ในระดับเขตพื้นที่การศึกษาชลบุรีระยอง
                 และได้รับ <strong>รางวัลเหรียญทอง</strong>
             </p>
 
@@ -312,21 +597,33 @@ footer {
 
     </section>
 
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
     <section class="skills">
 
         <h2>✨ ความสามารถ</h2>
 
         <span class="skill">🔬 วิทยาศาสตร์</span>
+
         <span class="skill">💬 การสื่อสาร</span>
+
         <span class="skill">🤝 การทำงานเป็นทีม</span>
+
         <span class="skill">👥 การทำงานร่วมกับคนหมู่มาก</span>
+
         <span class="skill">🧠 การวิเคราะห์และแก้ปัญหา</span>
+
         <span class="skill">📋 การวางแผน</span>
+
         <span class="skill">⭐ ความรับผิดชอบ</span>
 
     </section>
 
 </main>
+
 
 <footer>
     ✦ วชิรญาณ์ คลังแก้ว | ผลงานและกิจกรรม ✦
