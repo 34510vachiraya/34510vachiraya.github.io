@@ -3,388 +3,298 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="ผลงานและกิจกรรม - วชิรญาณ์ คลังแก้ว">
 <title>ผลงาน | วชิรญาณ์ คลังแก้ว</title>
-
 <style>
 * {
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     margin: 0;
     font-family: Arial, "Noto Sans Thai", Tahoma, sans-serif;
     color: #5d4560;
     min-height: 100vh;
-
+    /* พื้นหลังเหมือนหน้าแรกเป๊ะ */
     background:
-        radial-gradient(circle at 8% 12%, rgba(255,255,255,.95) 0 4px, transparent 5px),
-        radial-gradient(circle at 88% 18%, rgba(255,255,255,.9) 0 5px, transparent 6px),
-        radial-gradient(circle at 18% 82%, rgba(255,255,255,.85) 0 3px, transparent 4px),
-        radial-gradient(circle at 75% 75%, rgba(255,255,255,.8) 0 4px, transparent 5px),
-        linear-gradient(135deg, #fff4c9, #ffdceb, #e9ddff);
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,0.9) 0 4px, transparent 5px),
+        radial-gradient(circle at 85% 15%, rgba(255,255,255,0.9) 0 4px, transparent 5px),
+        radial-gradient(circle at 75% 75%, rgba(255,255,255,0.7) 0 3px, transparent 4px),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.7) 0 3px, transparent 4px),
+        linear-gradient(135deg, #fff4c7, #ffdff0, #e8ddff);
+    background-attachment: fixed;
+    line-height: 1.6;
 }
-
 /* =========================
-   NAVIGATION
+   NAVIGATION - เหมือนหน้าแรกเป๊ะ
 ========================= */
-
 .navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
-
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-
-    padding: 14px;
-
-    background: rgba(255,255,255,.93);
-    backdrop-filter: blur(10px);
-
-    border-bottom: 2px solid #efc9dd;
-    box-shadow: 0 5px 20px rgba(120,80,120,.12);
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 35px;
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid rgba(242,207,225,0.8);
+    box-shadow: 0 4px 18px rgba(130,90,130,0.14);
 }
-
-.navbar a {
+.logo {
     text-decoration: none;
-    color: #76536f;
-
-    background: #ffffff;
-
-    padding: 10px 19px;
-
-    border-radius: 25px;
-    border: 2px solid #f0cfe0;
-
+    color: #9b5f91;
+    font-size: 24px;
     font-weight: bold;
-    font-size: 15px;
-
-    transition: .25s;
+    white-space: nowrap;
 }
-
-.navbar a:hover {
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.navbar nav a {
+    text-decoration: none;
+    color: #76516f;
+    background: #ffffff;
+    padding: 9px 15px;
+    border-radius: 25px;
+    border: 2px solid #f2cfe1;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+.navbar nav a:hover {
+    color: #704565;
     background: #ffe0ec;
-    transform: translateY(-3px);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(180,120,160,0.15);
 }
-
-.navbar a.active {
-    background: linear-gradient(135deg, #ffd1e4, #ead9ff);
-    border-color: #dfa9cc;
-    color: #714c6c;
+.navbar nav a.active {
+    color: #704565;
+    background: linear-gradient(135deg, #ffd0e5, #e4d2ff);
+    border-color: #e5bcd5;
+    box-shadow: 0 5px 14px rgba(170,105,175,0.25);
 }
-
 /* =========================
    MAIN
 ========================= */
-
 .container {
     width: 90%;
     max-width: 1100px;
     margin: 45px auto 70px;
 }
-
 /* =========================
    TITLE
 ========================= */
-
 .title {
     text-align: center;
     margin-bottom: 40px;
 }
-
 .title .icon {
     font-size: 58px;
     margin-bottom: 8px;
 }
-
 .title h1 {
     margin: 0;
-    color: #a85d88;
+    color: #815878;
     font-size: 44px;
-    text-shadow: 2px 2px rgba(255,255,255,.9);
+    text-shadow: 2px 2px 0 rgba(255,255,255,0.8);
 }
-
 .title p {
     margin-top: 10px;
-    color: #98738e;
+    color: #a27699;
     font-size: 16px;
     letter-spacing: 2px;
+    font-weight: bold;
 }
-
 /* =========================
    WORK GRID
 ========================= */
-
 .works {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
 }
-
 /* =========================
-   WORK CARD
+   WORK CARD - ปรับขอบให้เหมือนกัน
 ========================= */
-
 .work {
     position: relative;
     overflow: hidden;
-
-    background: rgba(255,255,255,.94);
-
-    border: 3px solid #f0cddd;
+    background: rgba(255,255,255,0.88);
+    border: 3px solid #f2d0e2;
     border-radius: 30px;
-
     padding: 20px;
-
-    box-shadow:
-        0 12px 28px rgba(120,80,120,.12),
-        0 0 0 6px rgba(255,255,255,.35);
-
-    transition: .25s;
+    box-shadow: 0 8px 22px rgba(105,65,120,0.12);
+    transition: all 0.25s ease;
 }
-
 .work:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 18px 35px rgba(120,80,120,.18),
-        0 0 0 6px rgba(255,255,255,.45);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 26px rgba(105,65,120,0.18);
 }
-
 /* =========================
    IMAGE
 ========================= */
-
 .work img {
     width: 100%;
     height: 250px;
-
     object-fit: cover;
-
     display: block;
-
     border-radius: 22px;
-
     margin-bottom: 18px;
-
-    border: 2px solid #f4d8e5;
+    border: 2px solid #f2d0e2;
 }
-
 /* =========================
    NO IMAGE
 ========================= */
-
 .no-image {
     min-height: 250px;
-
     margin-bottom: 18px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background:
-        radial-gradient(circle, rgba(255,255,255,.8) 2px, transparent 3px),
-        linear-gradient(135deg, #fff4d7, #f4e3f4);
-
-    background-size: 35px 35px;
-
-    border: 2px dashed #e1bfd3;
+    background: linear-gradient(135deg, #fff4d7, #f4e3f4);
+    border: 2px dashed #f2d0e2;
     border-radius: 22px;
-
-    color: #c27a9d;
+    color: #bd7a9d;
     font-size: 55px;
 }
-
 /* =========================
    NUMBER
 ========================= */
-
 .number {
     display: inline-block;
-
     background: linear-gradient(135deg, #fff0b9, #ffe5ef);
-
     color: #8a6378;
-
     padding: 6px 13px;
-
     border-radius: 20px;
-
     font-weight: bold;
     font-size: 14px;
-
-    border: 1px solid #f0d1d8;
+    border: 1px solid #f2d0e2;
 }
-
 /* =========================
    TEXT
 ========================= */
-
 .work h2 {
     margin: 14px 0 10px;
-
-    color: #805675;
-
+    color: #815878;
     font-size: 22px;
     line-height: 1.5;
 }
-
 .work p {
     margin: 0;
-
     color: #69576a;
-
     font-size: 16px;
     line-height: 1.9;
 }
-
 .work strong {
-    color: #bd5d91;
+    color: #a05e91;
 }
-
 /* =========================
    SKILLS
 ========================= */
-
 .skills {
     margin-top: 40px;
-
     padding: 30px;
-
-    background: rgba(255,255,255,.94);
-
-    border: 3px solid #f0cddd;
+    background: rgba(255,255,255,0.88);
+    border: 3px solid #f2d0e2;
     border-radius: 30px;
-
     text-align: center;
-
-    box-shadow:
-        0 12px 28px rgba(120,80,120,.12);
+    box-shadow: 0 8px 22px rgba(105,65,120,0.12);
 }
-
 .skills h2 {
     margin-top: 0;
     margin-bottom: 20px;
-
-    color: #9f5a83;
+    color: #815878;
     font-size: 27px;
 }
-
 .skill {
     display: inline-block;
-
     background: linear-gradient(135deg, #ffe1ec, #f0e3ff);
-
-    color: #76536f;
-
-    border: 1px solid #e8c5d8;
-
+    color: #76516f;
+    border: 2px solid #f2cfe1;
     padding: 10px 16px;
     margin: 5px;
-
-    border-radius: 22px;
-
+    border-radius: 25px;
     font-weight: bold;
-
-    transition: .2s;
+    transition: all 0.25s ease;
 }
-
 .skill:hover {
     transform: translateY(-3px);
-
-    background: linear-gradient(135deg, #ffd5e5, #e8d8ff);
+    box-shadow: 0 5px 12px rgba(180,120,160,0.15);
 }
-
 /* =========================
    FOOTER
 ========================= */
-
 footer {
     text-align: center;
-
-    padding: 30px;
-
-    color: #8b6d85;
-
+    padding: 30px 20px;
+    margin-top: 20px;
+    color: #8b6b85;
     font-size: 14px;
 }
-
 /* =========================
    MOBILE
 ========================= */
-
-@media (max-width: 750px) {
-
+@media (max-width: 800px) {
     .navbar {
-        gap: 6px;
-        padding: 10px;
+        flex-direction: column;
+        padding: 12px 15px;
+        gap: 10px;
     }
-
-    .navbar a {
-        font-size: 12px;
-        padding: 9px 12px;
+    .navbar nav {
+        width: 100%;
     }
-
+    .navbar nav a {
+        font-size: 13px;
+        padding: 8px 11px;
+    }
     .container {
         width: 92%;
         margin-top: 35px;
     }
-
     .title .icon {
         font-size: 48px;
     }
-
     .title h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
-
     .title p {
-        font-size: 13px;
+        font-size: 14px;
     }
-
     .works {
         grid-template-columns: 1fr;
         gap: 22px;
     }
-
     .work {
         padding: 17px;
         border-radius: 25px;
     }
-
     .work img {
         height: 220px;
     }
-
     .no-image {
         min-height: 180px;
     }
-
     .work h2 {
         font-size: 20px;
     }
-
     .work p {
         font-size: 15px;
     }
-
     .skills {
         padding: 23px 15px;
     }
-
     .skills h2 {
         font-size: 23px;
     }
-
     .skill {
         font-size: 14px;
         padding: 9px 13px;
@@ -392,200 +302,126 @@ footer {
 }
 </style>
 </head>
-
 <body>
-
 <!-- =========================
-     MENU
+     MENU - แก้ชื่อไฟล์ให้ตรงกัน
 ========================= -->
-
 <header class="navbar">
-
-    <a href="index.html">
-        🌸 Portfolio
-    </a>
-
-    <a href="preface.html">
-        📖 คำนำ
-    </a>
-
-    <a href="education.html">
-        🎓 ประวัติการศึกษา
-    </a>
-
-    <a href="interest.html">
-        💡 ความสนใจ
-    </a>
-
-    <a href="work.html" class="active">
-        🏆 ผลงาน
-    </a>
-
+    <a href="index.html" class="logo">W.K.</a>
+    <nav>
+        <a href="index.html">🌸 Portfolio</a>
+        <a href="preface.html">📖 คำนำ</a>
+        <a href="education.html">🎓 ประวัติการศึกษา</a>
+        <a href="interest.html">💡 ความสนใจ</a>
+        <a href="work.html" class="active">🏆 ผลงาน</a>
+    </nav>
 </header>
-
 
 <!-- =========================
      CONTENT
 ========================= -->
-
 <main class="container">
-
     <section class="title">
-
-        <div class="icon">
-            🏆✨
-        </div>
-
-        <h1>
-            ผลงานและกิจกรรม
-        </h1>
-
-        <p>
-            ✦ MY WORKS & ACTIVITIES ✦
-        </p>
-
+        <div class="icon">🏆✨</div>
+        <h1>ผลงานและกิจกรรม</h1>
+        <p>✦ MY WORKS & ACTIVITIES ✦</p>
     </section>
 
-
     <section class="works">
-
         <!-- 01 -->
         <article class="work">
-
-            <img
-                src="IMG_0376.png"
-                alt="เวิร์กช็อปวิศวกรรมโยธา"
-            >
-
+            <img src="IMG_0376.png" alt="เวิร์กช็อปวิศวกรรมโยธา">
             <span class="number">01</span>
-
-            <h2>
-                🏗️ เวิร์กช็อปวิศวกรรมโยธา สจล.
-            </h2>
-
+            <h2>🏗️ เวิร์กช็อปวิศวกรรมโยธา สจล.</h2>
             <p>
                 เข้าร่วมกิจกรรมเวิร์กช็อปด้านวิศวกรรมโยธา
                 ได้เรียนรู้แนวคิดพื้นฐานเกี่ยวกับงานวิศวกรรม
                 และได้รับประสบการณ์จากการลงมือปฏิบัติจริง
             </p>
-
         </article>
-
 
         <!-- 02 -->
         <article class="work">
-
-            <img
-                src="IMG_0497.png"
-                alt="สอบวัดระดับความรู้"
-            >
-
+            <img src="IMG_0497.png" alt="สอบวัดระดับความรู้">
             <span class="number">02</span>
-
-            <h2>
-                📚 สอบวัดระดับความรู้
-            </h2>
-
+            <h2>📚 สอบวัดระดับความรู้</h2>
             <p>
                 เข้าร่วมการสอบวัดระดับความรู้
                 เพื่อทดสอบความรู้และความพร้อมของตนเอง
                 รวมถึงฝึกการเตรียมตัวและการจัดการเวลาในการสอบ
             </p>
-
         </article>
-
 
         <!-- 03 -->
         <article class="work">
-
-            <img
-                src="IMG_0864.jpeg"
-                alt="วิทยากรวันวิทยาศาสตร์"
-            >
-
+            <img src="IMG_0864.jpeg" alt="วิทยากรวันวิทยาศาสตร์">
             <span class="number">03</span>
-
-            <h2>
-                🔬 วิทยากรวันวิทยาศาสตร์
-            </h2>
-
+            <h2>🔬 วิทยากรวันวิทยาศาสตร์</h2>
             <p>
                 มีส่วนร่วมเป็นวิทยากรในกิจกรรมวันวิทยาศาสตร์
                 ได้ฝึกทักษะการสื่อสาร การนำเสนอ
                 และการทำงานร่วมกับผู้อื่น
             </p>
-
         </article>
-
 
         <!-- 04 -->
         <article class="work">
-
-            <div class="no-image">
-                🤖
-            </div>
-
+            <div class="no-image">🤖</div>
             <span class="number">04</span>
-
-            <h2>
-                🤖 ค่าย Mecanum IoT
-            </h2>
-
+            <h2>🤖 ค่าย Mecanum IoT</h2>
             <p>
                 เข้าร่วมค่าย Mecanum IoT
                 ได้เรียนรู้เกี่ยวกับเทคโนโลยี ระบบควบคุม
                 และการทำงานของอุปกรณ์
                 พร้อมทั้งได้ฝึกการเรียนรู้ผ่านกิจกรรม
             </p>
-
         </article>
-
 
         <!-- 05 -->
         <article class="work">
-
-            <div class="no-image">
-                🧮
-            </div>
-
+            <div class="no-image">🧮</div>
             <span class="number">05</span>
-
-            <h2>
-                🧮 สตาฟสัปดาห์คณิตศาสตร์
-            </h2>
-
+            <h2>🧮 สตาฟสัปดาห์คณิตศาสตร์</h2>
             <p>
                 ทำหน้าที่สตาฟในกิจกรรมสัปดาห์คณิตศาสตร์
                 ฝึกการทำงานเป็นทีม การวางแผน
                 การประสานงาน และการทำงานร่วมกับคนหมู่มาก
             </p>
-
         </article>
-
 
         <!-- 06 -->
         <article class="work">
-
-            <div class="no-image">
-                🏅
-            </div>
-
+            <div class="no-image">🏅</div>
             <span class="number">06</span>
-
-            <h2>
-                🏅 กิจกรรมและประสบการณ์
-            </h2>
-
+            <h2>🏅 กิจกรรมและประสบการณ์</h2>
             <p>
                 รวบรวมกิจกรรมและประสบการณ์ที่ได้เข้าร่วม
                 ซึ่งช่วยพัฒนาความรับผิดชอบ
                 ความกล้าแสดงออก การทำงานเป็นทีม
                 และทักษะต่าง ๆ ที่สามารถนำไปใช้ในอนาคต
             </p>
-
         </article>
-
     </section>
 
+    <!-- =========================
+         ทักษะและความสามารถ
+    ========================= -->
+    <section class="skills">
+        <h2>✧ ทักษะและความสามารถ ✧</h2>
+        <span class="skill">🔬 วิทยาศาสตร์</span>
+        <span class="skill">📐 คณิตศาสตร์</span>
+        <span class="skill">🌐 ภาษาอังกฤษ</span>
+        <span class="skill">💻 คอมพิวเตอร์</span>
+        <span class="skill">🤝 การทำงานเป็นทีม</span>
+        <span class="skill">📢 การนำเสนอ</span>
+    </section>
+</main>
 
-    <!-- ==================
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+    ✦ © 2026 วชิรญาณ์ คลังแก้ว | ผลงานและกิจกรรม ✦
+</footer>
+</body>
+</html>
