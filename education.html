@@ -3,90 +3,563 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>ประวัติการศึกษา | วชิรญาณ์ คลังแก้ว</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Arial", "Tahoma", sans-serif;
+            color: #56345f;
+            background:
+                radial-gradient(circle at 10% 20%, rgba(255,255,255,.8) 0 3px, transparent 4px),
+                radial-gradient(circle at 80% 15%, rgba(255,255,255,.7) 0 2px, transparent 3px),
+                radial-gradient(circle at 25% 80%, rgba(255,255,255,.7) 0 3px, transparent 4px),
+                linear-gradient(135deg, #ffe3f2, #eadcff, #dcd0ff);
+            background-size: 120px 120px, 170px 170px, 150px 150px, auto;
+            min-height: 100vh;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            width: 100%;
+            padding: 16px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+
+            background: rgba(255, 255, 255, 0.88);
+            border-bottom: 2px solid #f3c6e2;
+            box-shadow: 0 5px 20px rgba(143, 91, 153, 0.12);
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            backdrop-filter: blur(12px);
+        }
+
+        .logo {
+            text-decoration: none;
+            color: #a34f91;
+            font-size: 25px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .logo::before {
+            content: "✦ ";
+            color: #d58bc4;
+        }
+
+        .logo::after {
+            content: " ✦";
+            color: #d58bc4;
+        }
+
+        .navbar nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .navbar nav a {
+            text-decoration: none;
+            color: #704d77;
+            font-size: 14px;
+            font-weight: bold;
+
+            padding: 10px 15px;
+            border-radius: 20px;
+
+            transition: .25s ease;
+        }
+
+        .navbar nav a:hover {
+            color: #9b4f8e;
+            background: #ffe5f3;
+            transform: translateY(-2px);
+        }
+
+        /* แถบหน้าปัจจุบัน */
+        .navbar nav a.active {
+            color: white;
+            background: linear-gradient(135deg, #d88bc4, #a989dc);
+            box-shadow: 0 5px 15px rgba(177, 112, 179, .3);
+        }
+
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        .container {
+            width: min(1100px, 90%);
+            margin: auto;
+            padding: 55px 0 70px;
+        }
+
+
+        /* =========================
+           PAGE TITLE
+        ========================= */
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .page-title p {
+            margin: 0 0 8px;
+            color: #b56ca5;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .page-title h1 {
+            margin: 0;
+            font-size: clamp(30px, 5vw, 48px);
+            color: #663d70;
+        }
+
+        .page-title h1::before {
+            content: "✦ ";
+            color: #d78ac3;
+        }
+
+        .page-title h1::after {
+            content: " ✦";
+            color: #d78ac3;
+        }
+
+        .page-title span {
+            display: block;
+            margin-top: 12px;
+            color: #85688b;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           EDUCATION CARDS
+        ========================= */
+
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            margin-bottom: 45px;
+        }
+
+        .education-card {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            padding: 25px 30px;
+
+            background: rgba(255, 255, 255, .82);
+            border: 2px solid rgba(255, 255, 255, .9);
+            border-radius: 28px;
+
+            box-shadow: 0 10px 25px rgba(125, 77, 137, .12);
+
+            transition: .3s ease;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(125, 77, 137, .18);
+        }
+
+        .edu-number {
+            min-width: 70px;
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+
+            background: linear-gradient(135deg, #e99bcf, #a993df);
+            box-shadow: 0 7px 15px rgba(177, 112, 179, .25);
+        }
+
+        .edu-content p {
+            margin: 0 0 6px;
+            color: #b2639f;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .edu-content h2 {
+            margin: 0 0 8px;
+            color: #583d62;
+            font-size: 22px;
+        }
+
+        .edu-content span {
+            color: #806987;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           FUTURE STUDY
+        ========================= */
+
+        .goal-card {
+            position: relative;
+            overflow: hidden;
+
+            padding: 38px 40px;
+
+            background: linear-gradient(
+                135deg,
+                rgba(255, 240, 249, .95),
+                rgba(239, 231, 255, .95)
+            );
+
+            border: 2px solid rgba(255,255,255,.9);
+            border-radius: 32px;
+
+            box-shadow: 0 12px 30px rgba(125, 77, 137, .15);
+        }
+
+        .goal-card::before {
+            content: "✦";
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 45px;
+            color: rgba(211, 132, 194, .35);
+        }
+
+        .goal-card::after {
+            content: "♡";
+            position: absolute;
+            bottom: 10px;
+            right: 65px;
+            font-size: 55px;
+            color: rgba(169, 137, 220, .25);
+        }
+
+        .section-label {
+            margin: 0 0 8px;
+            color: #ad629f;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .goal-card h2 {
+            margin: 0 0 8px;
+            color: #633d6c;
+            font-size: 32px;
+        }
+
+        .goal-card h3 {
+            margin: 0 0 18px;
+            color: #8a6091;
+            font-size: 17px;
+        }
+
+        .goal-card > p:last-child {
+            max-width: 800px;
+            margin: 0;
+            line-height: 1.9;
+            color: #654d6c;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 25px 20px;
+            text-align: center;
+
+            background: rgba(255, 255, 255, .75);
+            border-top: 2px solid rgba(255,255,255,.8);
+        }
+
+        footer p {
+            margin: 0;
+            color: #806080;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                padding: 14px 12px;
+                gap: 12px;
+            }
+
+            .navbar nav {
+                width: 100%;
+                gap: 5px;
+            }
+
+            .navbar nav a {
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+
+            .container {
+                width: 92%;
+                padding: 40px 0 55px;
+            }
+
+            .page-title {
+                margin-bottom: 30px;
+            }
+
+            .education-card {
+                padding: 20px;
+                gap: 16px;
+            }
+
+            .edu-number {
+                min-width: 55px;
+                width: 55px;
+                height: 55px;
+                font-size: 16px;
+            }
+
+            .edu-content h2 {
+                font-size: 17px;
+                line-height: 1.5;
+            }
+
+            .edu-content p,
+            .edu-content span {
+                font-size: 13px;
+            }
+
+            .goal-card {
+                padding: 28px 23px;
+            }
+
+            .goal-card h2 {
+                font-size: 26px;
+            }
+
+            .goal-card h3 {
+                font-size: 15px;
+                line-height: 1.6;
+            }
+
+            .goal-card > p:last-child {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+        }
+    </style>
 </head>
+
 
 <body>
 
-<header class="navbar">
-    <a href="index.html" class="logo">W.K.</a>
+    <!-- =========================
+         แถบเมนู
+    ========================== -->
 
-    <nav>
-        <a href="index.html">หน้าปก</a>
-        <a href="portfolio.html">พอร์ต</a>
-        <a href="introduction.html">คำนำ</a>
-        <a href="education.html" class="active">ประวัติการศึกษา</a>
-        <a href="works.html">ผลงาน</a>
-        <a href="interest.html">ความสนใจ</a>
-    </nav>
-</header>
+    <header class="navbar">
 
-<main class="container">
+        <a href="portfolio.html" class="logo">
+            W.K.
+        </a>
 
-    <section class="page-title">
-        <p>EDUCATION</p>
-        <h1>ประวัติการศึกษา</h1>
-    </section>
+        <nav>
 
-    <section class="education-list">
+            <a href="portfolio.html">
+                🌸 Portfolio
+            </a>
 
-        <article class="education-card">
-            <div class="edu-number">01</div>
+            <a href="introduction.html">
+                📖 คำนำ
+            </a>
 
-            <div class="edu-content">
-                <p>ระดับประถมศึกษา</p>
-                <h2>โรงเรียนบ้านเนินโมกการุณราษฎร์อุปถัมป์</h2>
-                <span>ระดับประถมศึกษา</span>
-            </div>
-        </article>
+            <a href="education.html" class="active">
+                🎓 ประวัติการศึกษา
+            </a>
 
-        <article class="education-card">
-            <div class="edu-number">02</div>
+            <a href="interest.html">
+                💡 ความสนใจ
+            </a>
 
-            <div class="edu-content">
-                <p>ระดับมัธยมศึกษาตอนต้น</p>
-                <h2>โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์</h2>
-                <span>แผนการเรียนภาษาอังกฤษและภาษาจีน</span>
-            </div>
-        </article>
+            <a href="works.html">
+                🏆 ผลงาน
+            </a>
 
-        <article class="education-card">
-            <div class="edu-number">03</div>
+        </nav>
 
-            <div class="edu-content">
-                <p>ระดับมัธยมศึกษาตอนปลาย</p>
-                <h2>โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์</h2>
-                <span>แผนการเรียนเตรียมวิศวกรรมศาสตร์</span>
-            </div>
-        </article>
+    </header>
 
-    </section>
 
-    <section class="goal-card">
+    <!-- =========================
+         เนื้อหา
+    ========================== -->
 
-        <p class="section-label">MY GOAL</p>
+    <main class="container">
 
-        <h2>วิศวกรรมโยธา</h2>
+        <section class="page-title">
 
-        <h3>
-            สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (สจล.)
-        </h3>
+            <p>EDUCATION</p>
+
+            <h1>ประวัติการศึกษา</h1>
+
+            <span>
+                เส้นทางการศึกษาและเป้าหมายในอนาคต
+            </span>
+
+        </section>
+
+
+        <!-- ประวัติการศึกษา -->
+
+        <section class="education-list">
+
+            <article class="education-card">
+
+                <div class="edu-number">
+                    01
+                </div>
+
+                <div class="edu-content">
+
+                    <p>ระดับประถมศึกษา</p>
+
+                    <h2>
+                        โรงเรียนบ้านเนินโมกการุณราษฎร์อุปถัมป์
+                    </h2>
+
+                    <span>
+                        ระดับประถมศึกษา
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="education-card">
+
+                <div class="edu-number">
+                    02
+                </div>
+
+                <div class="edu-content">
+
+                    <p>ระดับมัธยมศึกษาตอนต้น</p>
+
+                    <h2>
+                        โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+                    </h2>
+
+                    <span>
+                        แผนการเรียนภาษาอังกฤษและภาษาจีน
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="education-card">
+
+                <div class="edu-number">
+                    03
+                </div>
+
+                <div class="edu-content">
+
+                    <p>ระดับมัธยมศึกษาตอนปลาย</p>
+
+                    <h2>
+                        โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+                    </h2>
+
+                    <span>
+                        แผนการเรียนเตรียมวิศวกรรมศาสตร์
+                    </span>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- เป้าหมายการศึกษาต่อ -->
+
+        <section class="goal-card">
+
+            <p class="section-label">
+                ✦ MY FUTURE STUDY ✦
+            </p>
+
+            <h2>
+                วิศวกรรมโยธา
+            </h2>
+
+            <h3>
+                สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (สจล.)
+            </h3>
+
+            <p>
+                ข้าพเจ้ามีเป้าหมายในการศึกษาต่อด้านวิศวกรรมโยธา
+                เพื่อพัฒนาความรู้และทักษะด้านวิศวกรรม
+                และนำความรู้ไปใช้ในการออกแบบและพัฒนา
+                โครงสร้างพื้นฐานและระบบการคมนาคมในอนาคต
+                รวมถึงมีส่วนร่วมในการพัฒนาสังคมให้ก้าวหน้า
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
 
         <p>
-            ข้าพเจ้ามีเป้าหมายในการศึกษาต่อด้านวิศวกรรมโยธา
-            เพื่อพัฒนาความรู้และทักษะด้านวิศวกรรม
-            และนำความรู้ไปใช้ในการออกแบบและพัฒนา
-            โครงสร้างพื้นฐานและระบบการคมนาคมในอนาคต
+            © 2026 วชิรญาณ์ คลังแก้ว
         </p>
 
-    </section>
-
-</main>
-
-<footer>
-    <p>© 2026 วชิรญาณ์ คลังแก้ว</p>
-</footer>
+    </footer>
 
 </body>
 </html>
