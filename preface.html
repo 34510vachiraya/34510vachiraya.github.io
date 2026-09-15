@@ -1,204 +1,177 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>คำนำ | วชิรญาณ์ คลังแก้ว</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<title>คำนำ | วชิรญาณ์ คลังแก้ว</title>
 
-        body {
-            margin: 0;
-            font-family: Arial, "Tahoma", sans-serif;
-            color: #60415f;
-            background:
-                radial-gradient(circle at 12% 15%, #fff 0 5px, transparent 6px),
-                radial-gradient(circle at 88% 25%, #fff 0 4px, transparent 5px),
-                linear-gradient(135deg, #fff4c7, #ffdff0, #e8ddff);
-            min-height: 100vh;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px;
-            background: rgba(255,255,255,0.9);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 3px 15px rgba(130,90,130,0.12);
-        }
+body {
+    margin: 0;
+    font-family: Arial, "Tahoma", sans-serif;
+    color: #5d4560;
+    background:
+        radial-gradient(circle at 12% 18%, white 0 4px, transparent 5px),
+        radial-gradient(circle at 88% 20%, white 0 5px, transparent 6px),
+        linear-gradient(135deg, #fff4c9, #ffdceb, #e9ddff);
+    min-height: 100vh;
+}
 
-        nav a {
-            text-decoration: none;
-            color: #76516f;
-            background: #fff;
-            padding: 10px 18px;
-            border-radius: 25px;
-            font-weight: bold;
-            border: 2px solid #f2cfe1;
-            transition: 0.25s;
-        }
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 3px 15px rgba(120,80,120,0.12);
+}
 
-        nav a:hover,
-        nav a.active {
-            background: #ffd9ea;
-            transform: translateY(-2px);
-        }
+nav a {
+    text-decoration: none;
+    color: #76536f;
+    background: white;
+    padding: 11px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #f0cfe0;
+    transition: 0.25s;
+}
 
-        .container {
-            max-width: 950px;
-            margin: 50px auto;
-            padding: 20px;
-        }
+nav a:hover,
+nav a.active {
+    background: #ffd4e7;
+    transform: translateY(-3px);
+}
 
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
+.container {
+    max-width: 950px;
+    margin: 50px auto;
+    padding: 20px;
+}
 
-        .header h1 {
-            font-size: 42px;
-            color: #815878;
-            margin: 10px;
-        }
+.title {
+    text-align: center;
+}
 
-        .header p {
-            color: #98718f;
-            font-size: 17px;
-        }
+.title .icon {
+    font-size: 65px;
+}
 
-        .book {
-            width: 110px;
-            height: 90px;
-            margin: 0 auto 20px;
-            background: #ffd1e4;
-            border-radius: 15px 15px 25px 25px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 45px;
-            box-shadow: 8px 8px 0 #ead4f5;
-        }
+.title h1 {
+    color: #805675;
+    font-size: 44px;
+    margin: 10px;
+}
 
-        .intro-card {
-            background: rgba(255,255,255,0.88);
-            border: 3px solid #f1d1e2;
-            border-radius: 35px;
-            padding: 40px;
-            box-shadow: 0 12px 30px rgba(130,90,130,0.13);
-            line-height: 1.9;
-            font-size: 17px;
-        }
+.title p {
+    color: #98738e;
+}
 
-        .intro-card h2 {
-            text-align: center;
-            color: #815878;
-            margin-top: 0;
-        }
+.content {
+    margin-top: 35px;
+    background: rgba(255,255,255,0.9);
+    border: 3px solid #f2d0e2;
+    border-radius: 35px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(120,80,120,0.13);
+    line-height: 2;
+    font-size: 17px;
+}
 
-        .goal {
-            margin-top: 30px;
-            padding: 25px;
-            border-radius: 25px;
-            background: #fff8df;
-            border: 2px dashed #e2bfd3;
-        }
+.content h2 {
+    text-align: center;
+    color: #805675;
+}
 
-        .goal h3 {
-            color: #815878;
-            margin-top: 0;
-        }
+.goal {
+    margin-top: 30px;
+    padding: 25px;
+    background: #fff7d8;
+    border: 2px dashed #dfbfd0;
+    border-radius: 25px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 25px;
-        }
+.goal h3 {
+    color: #805675;
+    margin-top: 0;
+}
 
-        .card {
-            padding: 25px 18px;
-            background: #fff;
-            border-radius: 25px;
-            text-align: center;
-            border: 2px solid #efd4e2;
-        }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
 
-        .card .icon {
-            font-size: 35px;
-        }
+.card {
+    background: white;
+    border: 2px solid #efd2e1;
+    border-radius: 25px;
+    padding: 22px;
+    text-align: center;
+}
 
-        .card h3 {
-            color: #815878;
-        }
+.card .icon {
+    font-size: 38px;
+}
 
-        .back {
-            display: block;
-            width: fit-content;
-            margin: 30px auto 0;
-            text-decoration: none;
-            background: linear-gradient(135deg, #d99bc4, #b99be8);
-            color: white;
-            padding: 13px 25px;
-            border-radius: 30px;
-            font-weight: bold;
-        }
+.card h3 {
+    color: #805675;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #8b6b85;
-        }
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #8b6d85;
+}
 
-        @media (max-width: 700px) {
-            .cards {
-                grid-template-columns: 1fr;
-            }
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
 
-            .intro-card {
-                padding: 25px 20px;
-            }
+    .content {
+        padding: 25px 20px;
+    }
 
-            .header h1 {
-                font-size: 34px;
-            }
-        }
-    </style>
+    .title h1 {
+        font-size: 35px;
+    }
+}
+</style>
 </head>
 
 <body>
 
 <nav>
-    <a href="index.html">🏠 หน้าหลัก</a>
     <a href="portfolio.html">🌸 Portfolio</a>
     <a href="introduction.html" class="active">📖 คำนำ</a>
-    <a href="education.html">🎓 การศึกษา</a>
     <a href="interest.html">💡 ความสนใจ</a>
     <a href="works.html">🏆 ผลงาน</a>
 </nav>
 
 <main class="container">
 
-    <header class="header">
+    <section class="title">
 
-        <div class="book">📖</div>
+        <div class="icon">📖</div>
 
         <h1>คำนำ</h1>
 
-        <p>
-            ✦ Introduction ✦
-        </p>
+        <p>✦ INTRODUCTION ✦</p>
 
-    </header>
+    </section>
 
-    <section class="intro-card">
+    <section class="content">
 
         <h2>🪄 แนะนำตัว 🪄</h2>
 
@@ -237,7 +210,7 @@
             <div class="card">
                 <div class="icon">🔬</div>
                 <h3>วิทยาศาสตร์</h3>
-                <p>ชอบเรียนรู้และทดลองสิ่งใหม่ ๆ</p>
+                <p>เรียนรู้ ทดลอง และค้นหาสิ่งใหม่</p>
             </div>
 
             <div class="card">
@@ -253,11 +226,6 @@
             </div>
 
         </div>
-
-        <!-- กลับไป index -->
-        <a href="index.html" class="back">
-            🏠 กลับหน้าหลัก
-        </a>
 
     </section>
 
