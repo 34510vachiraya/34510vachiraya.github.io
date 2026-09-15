@@ -11,122 +11,110 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             margin: 0;
-            font-family: "Arial", "Tahoma", sans-serif;
-            color: #56345f;
-            background:
-                radial-gradient(circle at 10% 20%, rgba(255,255,255,.8) 0 3px, transparent 4px),
-                radial-gradient(circle at 80% 15%, rgba(255,255,255,.7) 0 2px, transparent 3px),
-                radial-gradient(circle at 25% 80%, rgba(255,255,255,.7) 0 3px, transparent 4px),
-                linear-gradient(135deg, #ffe3f2, #eadcff, #dcd0ff);
-            background-size: 120px 120px, 170px 170px, 150px 150px, auto;
+            font-family: Arial, Tahoma, sans-serif;
+            color: #5b3b68;
+            background: linear-gradient(135deg, #ffdff0, #eadfff, #dcd2ff);
             min-height: 100vh;
         }
 
-
         /* =========================
-           NAVBAR
+           แถบเมนู
         ========================= */
 
         .navbar {
-            width: 100%;
-            padding: 16px 6%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-
-            background: rgba(255, 255, 255, 0.88);
-            border-bottom: 2px solid #f3c6e2;
-            box-shadow: 0 5px 20px rgba(143, 91, 153, 0.12);
-
             position: sticky;
             top: 0;
             z-index: 1000;
 
-            backdrop-filter: blur(12px);
+            width: 100%;
+            padding: 15px 5%;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            background: rgba(255, 255, 255, 0.94);
+            border-bottom: 2px solid #efc5e2;
+            box-shadow: 0 4px 18px rgba(100, 60, 120, 0.12);
         }
 
         .logo {
+            color: #a65396;
             text-decoration: none;
-            color: #a34f91;
-            font-size: 25px;
+            font-size: 24px;
             font-weight: bold;
             white-space: nowrap;
         }
 
         .logo::before {
             content: "✦ ";
-            color: #d58bc4;
         }
 
         .logo::after {
             content: " ✦";
-            color: #d58bc4;
         }
 
         .navbar nav {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 7px;
             flex-wrap: wrap;
         }
 
         .navbar nav a {
+            padding: 10px 14px;
+            border-radius: 22px;
+
+            color: #704d78;
             text-decoration: none;
-            color: #704d77;
             font-size: 14px;
             font-weight: bold;
 
-            padding: 10px 15px;
-            border-radius: 20px;
-
-            transition: .25s ease;
+            transition: 0.25s;
         }
 
         .navbar nav a:hover {
-            color: #9b4f8e;
-            background: #ffe5f3;
-            transform: translateY(-2px);
+            background: #ffe4f2;
+            color: #a04f8f;
         }
 
-        /* แถบหน้าปัจจุบัน */
+        /* เมนูหน้าปัจจุบัน */
         .navbar nav a.active {
             color: white;
-            background: linear-gradient(135deg, #d88bc4, #a989dc);
-            box-shadow: 0 5px 15px rgba(177, 112, 179, .3);
+            background: linear-gradient(135deg, #d98bc5, #a98bdf);
+            box-shadow: 0 5px 14px rgba(170, 105, 175, 0.25);
         }
 
 
         /* =========================
-           MAIN
+           เนื้อหาหลัก
         ========================= */
 
         .container {
-            width: min(1100px, 90%);
-            margin: auto;
+            width: 90%;
+            max-width: 1050px;
+            margin: 0 auto;
             padding: 55px 0 70px;
         }
 
 
         /* =========================
-           PAGE TITLE
+           หัวข้อ
         ========================= */
 
         .page-title {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
         .page-title p {
             margin: 0 0 8px;
-            color: #b56ca5;
+
+            color: #ad68a0;
             font-size: 14px;
             font-weight: bold;
             letter-spacing: 4px;
@@ -134,36 +122,37 @@
 
         .page-title h1 {
             margin: 0;
-            font-size: clamp(30px, 5vw, 48px);
-            color: #663d70;
+
+            color: #633c6e;
+            font-size: 42px;
         }
 
         .page-title h1::before {
             content: "✦ ";
-            color: #d78ac3;
+            color: #d98bc5;
         }
 
         .page-title h1::after {
             content: " ✦";
-            color: #d78ac3;
+            color: #d98bc5;
         }
 
         .page-title span {
             display: block;
             margin-top: 12px;
-            color: #85688b;
+            color: #806487;
             font-size: 15px;
         }
 
 
         /* =========================
-           EDUCATION CARDS
+           ประวัติการศึกษา
         ========================= */
 
         .education-list {
             display: flex;
             flex-direction: column;
-            gap: 22px;
+            gap: 20px;
             margin-bottom: 45px;
         }
 
@@ -174,23 +163,25 @@
 
             padding: 25px 30px;
 
-            background: rgba(255, 255, 255, .82);
-            border: 2px solid rgba(255, 255, 255, .9);
-            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.88);
+            border: 2px solid rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
 
-            box-shadow: 0 10px 25px rgba(125, 77, 137, .12);
+            box-shadow: 0 8px 22px rgba(105, 65, 120, 0.12);
 
-            transition: .3s ease;
+            transition: 0.25s;
         }
 
         .education-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(125, 77, 137, .18);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 26px rgba(105, 65, 120, 0.18);
         }
 
         .edu-number {
-            min-width: 70px;
-            height: 70px;
+            flex-shrink: 0;
+
+            width: 68px;
+            height: 68px;
 
             display: flex;
             align-items: center;
@@ -199,24 +190,30 @@
             border-radius: 50%;
 
             color: white;
-            font-size: 20px;
+            font-size: 19px;
             font-weight: bold;
 
-            background: linear-gradient(135deg, #e99bcf, #a993df);
-            box-shadow: 0 7px 15px rgba(177, 112, 179, .25);
+            background: linear-gradient(135deg, #e99bd0, #a993df);
+        }
+
+        .edu-content {
+            min-width: 0;
         }
 
         .edu-content p {
-            margin: 0 0 6px;
-            color: #b2639f;
+            margin: 0 0 7px;
+
+            color: #ae619f;
             font-size: 14px;
             font-weight: bold;
         }
 
         .edu-content h2 {
-            margin: 0 0 8px;
-            color: #583d62;
-            font-size: 22px;
+            margin: 0 0 7px;
+
+            color: #583c62;
+            font-size: 21px;
+            line-height: 1.5;
         }
 
         .edu-content span {
@@ -226,48 +223,41 @@
 
 
         /* =========================
-           FUTURE STUDY
+           เป้าหมายศึกษาต่อ
         ========================= */
 
         .goal-card {
             position: relative;
             overflow: hidden;
 
-            padding: 38px 40px;
+            padding: 35px 38px;
 
             background: linear-gradient(
                 135deg,
-                rgba(255, 240, 249, .95),
-                rgba(239, 231, 255, .95)
+                rgba(255, 241, 249, 0.95),
+                rgba(239, 232, 255, 0.95)
             );
 
-            border: 2px solid rgba(255,255,255,.9);
-            border-radius: 32px;
+            border: 2px solid white;
+            border-radius: 28px;
 
-            box-shadow: 0 12px 30px rgba(125, 77, 137, .15);
+            box-shadow: 0 10px 25px rgba(105, 65, 120, 0.14);
         }
 
         .goal-card::before {
             content: "✦";
             position: absolute;
-            top: 15px;
+            top: 10px;
             right: 25px;
-            font-size: 45px;
-            color: rgba(211, 132, 194, .35);
-        }
 
-        .goal-card::after {
-            content: "♡";
-            position: absolute;
-            bottom: 10px;
-            right: 65px;
-            font-size: 55px;
-            color: rgba(169, 137, 220, .25);
+            color: rgba(210, 130, 195, 0.35);
+            font-size: 45px;
         }
 
         .section-label {
-            margin: 0 0 8px;
-            color: #ad629f;
+            margin: 0 0 10px;
+
+            color: #ac609e;
             font-size: 13px;
             font-weight: bold;
             letter-spacing: 3px;
@@ -275,21 +265,25 @@
 
         .goal-card h2 {
             margin: 0 0 8px;
+
             color: #633d6c;
-            font-size: 32px;
+            font-size: 31px;
         }
 
         .goal-card h3 {
             margin: 0 0 18px;
-            color: #8a6091;
+
+            color: #85618d;
             font-size: 17px;
+            line-height: 1.6;
         }
 
-        .goal-card > p:last-child {
-            max-width: 800px;
+        .goal-text {
             margin: 0;
+
+            color: #654e6d;
+            font-size: 15px;
             line-height: 1.9;
-            color: #654d6c;
         }
 
 
@@ -298,11 +292,11 @@
         ========================= */
 
         footer {
-            padding: 25px 20px;
+            padding: 22px;
             text-align: center;
 
-            background: rgba(255, 255, 255, .75);
-            border-top: 2px solid rgba(255,255,255,.8);
+            background: rgba(255, 255, 255, 0.75);
+            border-top: 2px solid rgba(255, 255, 255, 0.9);
         }
 
         footer p {
@@ -313,25 +307,24 @@
 
 
         /* =========================
-           MOBILE
+           โทรศัพท์
         ========================= */
 
         @media (max-width: 768px) {
 
             .navbar {
+                position: relative;
                 flex-direction: column;
-                padding: 14px 12px;
-                gap: 12px;
+                padding: 15px 10px;
             }
 
             .navbar nav {
                 width: 100%;
-                gap: 5px;
             }
 
             .navbar nav a {
+                padding: 8px 9px;
                 font-size: 12px;
-                padding: 8px 10px;
             }
 
             .container {
@@ -339,25 +332,24 @@
                 padding: 40px 0 55px;
             }
 
-            .page-title {
-                margin-bottom: 30px;
+            .page-title h1 {
+                font-size: 31px;
             }
 
             .education-card {
+                align-items: flex-start;
                 padding: 20px;
-                gap: 16px;
+                gap: 15px;
             }
 
             .edu-number {
-                min-width: 55px;
-                width: 55px;
-                height: 55px;
-                font-size: 16px;
+                width: 52px;
+                height: 52px;
+                font-size: 15px;
             }
 
             .edu-content h2 {
                 font-size: 17px;
-                line-height: 1.5;
             }
 
             .edu-content p,
@@ -366,7 +358,7 @@
             }
 
             .goal-card {
-                padding: 28px 23px;
+                padding: 27px 22px;
             }
 
             .goal-card h2 {
@@ -375,12 +367,10 @@
 
             .goal-card h3 {
                 font-size: 15px;
-                line-height: 1.6;
             }
 
-            .goal-card > p:last-child {
+            .goal-text {
                 font-size: 14px;
-                line-height: 1.8;
             }
         }
     </style>
@@ -390,8 +380,8 @@
 <body>
 
     <!-- =========================
-         แถบเมนู
-    ========================== -->
+         NAVIGATION
+    ========================= -->
 
     <header class="navbar">
 
@@ -427,8 +417,8 @@
 
 
     <!-- =========================
-         เนื้อหา
-    ========================== -->
+         MAIN
+    ========================= -->
 
     <main class="container">
 
@@ -445,9 +435,12 @@
         </section>
 
 
-        <!-- ประวัติการศึกษา -->
+        <!-- =========================
+             EDUCATION LIST
+        ========================= -->
 
         <section class="education-list">
+
 
             <article class="education-card">
 
@@ -457,7 +450,9 @@
 
                 <div class="edu-content">
 
-                    <p>ระดับประถมศึกษา</p>
+                    <p>
+                        ระดับประถมศึกษา
+                    </p>
 
                     <h2>
                         โรงเรียนบ้านเนินโมกการุณราษฎร์อุปถัมป์
@@ -480,7 +475,9 @@
 
                 <div class="edu-content">
 
-                    <p>ระดับมัธยมศึกษาตอนต้น</p>
+                    <p>
+                        ระดับมัธยมศึกษาตอนต้น
+                    </p>
 
                     <h2>
                         โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
@@ -503,7 +500,9 @@
 
                 <div class="edu-content">
 
-                    <p>ระดับมัธยมศึกษาตอนปลาย</p>
+                    <p>
+                        ระดับมัธยมศึกษาตอนปลาย
+                    </p>
 
                     <h2>
                         โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
@@ -517,10 +516,13 @@
 
             </article>
 
+
         </section>
 
 
-        <!-- เป้าหมายการศึกษาต่อ -->
+        <!-- =========================
+             FUTURE STUDY
+        ========================= -->
 
         <section class="goal-card">
 
@@ -536,12 +538,12 @@
                 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง (สจล.)
             </h3>
 
-            <p>
+            <p class="goal-text">
                 ข้าพเจ้ามีเป้าหมายในการศึกษาต่อด้านวิศวกรรมโยธา
                 เพื่อพัฒนาความรู้และทักษะด้านวิศวกรรม
                 และนำความรู้ไปใช้ในการออกแบบและพัฒนา
                 โครงสร้างพื้นฐานและระบบการคมนาคมในอนาคต
-                รวมถึงมีส่วนร่วมในการพัฒนาสังคมให้ก้าวหน้า
+                รวมถึงมีส่วนร่วมในการพัฒนาสังคม
             </p>
 
         </section>
@@ -551,7 +553,7 @@
 
     <!-- =========================
          FOOTER
-    ========================== -->
+    ========================= -->
 
     <footer>
 
