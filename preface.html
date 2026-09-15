@@ -17,7 +17,7 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, "Noto Sans Thai", "Tahoma", sans-serif;
+    font-family: Arial, "Tahoma", sans-serif;
     color: #5d4560;
     min-height: 100vh;
 
@@ -26,7 +26,7 @@ body {
         radial-gradient(circle at 90% 20%, rgba(255,255,255,.9) 0 5px, transparent 6px),
         radial-gradient(circle at 18% 80%, rgba(255,255,255,.85) 0 3px, transparent 4px),
         radial-gradient(circle at 78% 75%, rgba(255,255,255,.8) 0 4px, transparent 5px),
-        linear-gradient(135deg, #fff0c9, #ffdbea, #e9ddff);
+        linear-gradient(135deg, #fff4c9, #ffdceb, #e9ddff);
 
     background-size:
         150px 150px,
@@ -40,7 +40,7 @@ body {
    NAVIGATION
 ========================= */
 
-nav {
+.navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -51,24 +51,23 @@ nav {
     flex-wrap: wrap;
     gap: 10px;
 
-    padding: 14px;
+    padding: 15px 20px;
 
-    background: rgba(255,255,255,.94);
+    background: rgba(255,255,255,0.92);
     backdrop-filter: blur(10px);
 
     border-bottom: 2px solid #efc9dd;
 
-    box-shadow:
-        0 5px 20px rgba(120,80,120,.12);
+    box-shadow: 0 4px 18px rgba(120,80,120,0.12);
 }
 
-nav a {
+.navbar a {
     text-decoration: none;
 
     color: #76536f;
     background: #ffffff;
 
-    padding: 10px 19px;
+    padding: 11px 18px;
 
     border-radius: 25px;
     border: 2px solid #f0cfe0;
@@ -76,23 +75,25 @@ nav a {
     font-weight: bold;
     font-size: 15px;
 
-    transition: .25s;
+    transition: 0.25s ease;
 }
 
-nav a:hover {
+.navbar a:hover {
     background: #ffe0ec;
     transform: translateY(-3px);
+
+    box-shadow: 0 5px 12px rgba(170,110,150,0.15);
 }
 
-nav a.active {
+.navbar a.active {
     background: linear-gradient(
         135deg,
-        #ffd1e4,
-        #ead9ff
+        #ffd0e5,
+        #e4d2ff
     );
 
-    border-color: #dfa9cc;
-    color: #714c6c;
+    border-color: #e5bcd5;
+    color: #704b69;
 }
 
 /* =========================
@@ -100,10 +101,11 @@ nav a.active {
 ========================= */
 
 .container {
-    width: 90%;
     max-width: 950px;
 
-    margin: 45px auto 70px;
+    margin: 0 auto;
+
+    padding: 45px 20px 20px;
 }
 
 /* =========================
@@ -112,23 +114,24 @@ nav a.active {
 
 .title {
     text-align: center;
+
     margin-bottom: 35px;
 }
 
 .title .symbol {
-    font-size: 52px;
+    font-size: 50px;
+
     margin-bottom: 8px;
 }
 
 .title h1 {
     margin: 0;
 
-    font-size: 44px;
+    font-size: 46px;
 
     color: #a85d88;
 
-    text-shadow:
-        2px 2px rgba(255,255,255,.9);
+    text-shadow: 2px 2px rgba(255,255,255,.9);
 }
 
 .title .english {
@@ -137,6 +140,7 @@ nav a.active {
     color: #98739a;
 
     font-size: 15px;
+
     letter-spacing: 3px;
 }
 
@@ -147,22 +151,22 @@ nav a.active {
 .preface {
     position: relative;
 
-    background: rgba(255,255,255,.95);
+    background: rgba(255,255,255,0.94);
 
     border: 3px solid #edbfd8;
 
-    border-radius: 35px;
+    border-radius: 38px;
 
-    padding: 45px 55px;
+    padding: 45px 50px;
 
     box-shadow:
-        0 15px 35px rgba(120,70,120,.14),
-        0 0 0 7px rgba(255,255,255,.4);
+        0 15px 35px rgba(120,70,120,0.14),
+        0 0 0 7px rgba(255,255,255,0.4);
 
     overflow: hidden;
 }
 
-/* ตกแต่งมุม */
+/* ดาวตกแต่ง */
 
 .preface::before {
     content: "✦";
@@ -191,7 +195,7 @@ nav a.active {
 }
 
 /* =========================
-   PREFACE HEADER
+   HEADER
 ========================= */
 
 .preface-header {
@@ -243,12 +247,11 @@ nav a.active {
 
     padding: 25px 28px;
 
-    background:
-        linear-gradient(
-            135deg,
-            #fff3f8,
-            #f5edff
-        );
+    background: linear-gradient(
+        135deg,
+        #fff3f8,
+        #f5edff
+    );
 
     border: 2px dashed #ddb6d2;
 
@@ -311,6 +314,10 @@ nav a.active {
     line-height: 1.9;
 }
 
+.goal-text strong {
+    color: #a65383;
+}
+
 /* =========================
    SIGNATURE
 ========================= */
@@ -348,9 +355,9 @@ nav a.active {
 footer {
     text-align: center;
 
-    padding: 30px;
+    padding: 30px 20px;
 
-    color: #92718e;
+    color: #8b6d85;
 
     font-size: 14px;
 }
@@ -361,27 +368,26 @@ footer {
 
 @media (max-width: 700px) {
 
-    nav {
-        gap: 6px;
-        padding: 10px;
+    .navbar {
+        gap: 7px;
+        padding: 12px 10px;
     }
 
-    nav a {
-        font-size: 12px;
+    .navbar a {
         padding: 9px 12px;
+        font-size: 13px;
     }
 
     .container {
-        width: 92%;
-        margin-top: 35px;
+        padding: 30px 15px 15px;
     }
 
     .title .symbol {
-        font-size: 45px;
+        font-size: 42px;
     }
 
     .title h1 {
-        font-size: 35px;
+        font-size: 36px;
     }
 
     .title .english {
@@ -390,8 +396,9 @@ footer {
     }
 
     .preface {
-        padding: 32px 22px;
-        border-radius: 28px;
+        padding: 32px 20px;
+
+        border-radius: 30px;
     }
 
     .preface-header h2 {
@@ -400,13 +407,15 @@ footer {
 
     .preface-text {
         font-size: 16px;
+
         line-height: 1.9;
+
         text-align: left;
     }
 
     .purpose,
     .goal {
-        padding: 21px 19px;
+        padding: 21px 18px;
     }
 
     .purpose-text,
@@ -424,10 +433,10 @@ footer {
 <body>
 
 <!-- =========================
-     MENU
+     MENU 5 หน้า
 ========================= -->
 
-<nav>
+<header class="navbar">
 
     <a href="portfolio.html">
         🌸 Portfolio
@@ -435,6 +444,10 @@ footer {
 
     <a href="introduction.html" class="active">
         📖 คำนำ
+    </a>
+
+    <a href="education.html">
+        🎓 ประวัติการศึกษา
     </a>
 
     <a href="interest.html">
@@ -445,7 +458,7 @@ footer {
         🏆 ผลงาน
     </a>
 
-</nav>
+</header>
 
 
 <!-- =========================
@@ -473,7 +486,7 @@ footer {
 
     <!-- =========================
          PREFACE
-    ========================== -->
+    ========================= -->
 
     <section class="preface">
 
@@ -516,7 +529,9 @@ footer {
         </p>
 
 
-        <!-- PURPOSE -->
+        <!-- =========================
+             PURPOSE
+        ========================= -->
 
         <div class="purpose">
 
@@ -537,7 +552,9 @@ footer {
         </div>
 
 
-        <!-- GOAL -->
+        <!-- =========================
+             GOAL
+        ========================= -->
 
         <div class="goal">
 
@@ -559,7 +576,9 @@ footer {
         </div>
 
 
-        <!-- SIGNATURE -->
+        <!-- =========================
+             SIGNATURE
+        ========================= -->
 
         <div class="signature">
 
@@ -579,7 +598,7 @@ footer {
 
 
 <footer>
-    ✦ วชิรญาณ์ คลังแก้ว | Portfolio ✦
+    ✦ วชิรญาณ์ คลังแก้ว | My Portfolio ✦
 </footer>
 
 </body>
