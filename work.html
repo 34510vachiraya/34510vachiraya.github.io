@@ -1,690 +1,335 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>ผลงาน | วชิรญาณ์ คลังแก้ว</title>
 
+    <!-- CSS กลาง -->
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* ================================
-           WORKS PAGE
-        ================================= */
-
-        .works-page {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 55px 25px 90px;
-        }
-
-        .works-header {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .works-header .small-title {
-            display: inline-block;
-            margin-bottom: 10px;
-            padding: 8px 18px;
-            border-radius: 50px;
-            background: #fff0b8;
-            color: #72536b;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .works-header h1 {
-            margin: 0;
-            color: #654866;
-            font-size: clamp(38px, 6vw, 62px);
-        }
-
-        .works-header p {
-            margin-top: 12px;
-            color: #806c7e;
-            font-size: 17px;
-        }
-
-        /* decorative stars */
-
-        .works-decoration {
-            position: relative;
-        }
-
-        .works-decoration::before {
-            content: "✦";
-            position: absolute;
-            left: 5%;
-            top: 10px;
-            color: #f1c85b;
-            font-size: 28px;
-        }
-
-        .works-decoration::after {
-            content: "✧";
-            position: absolute;
-            right: 6%;
-            top: 40px;
-            color: #d795c6;
-            font-size: 35px;
-        }
-
-        /* ================================
-           FEATURED WORK
-        ================================= */
-
-        .featured-work {
-            position: relative;
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 35px;
-            align-items: center;
-
-            margin-bottom: 55px;
-            padding: 30px;
-
-            background: #fffdf5;
-            border: 2px solid #f1dce8;
-            border-radius: 35px;
-
-            box-shadow: 0 15px 40px rgba(151, 104, 139, 0.12);
-        }
-
-        .featured-image {
-            overflow: hidden;
-            border-radius: 25px;
-            background: #f9eaf2;
-            min-height: 330px;
-        }
-
-        .featured-image img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            min-height: 330px;
-            object-fit: contain;
-            background: #fff;
-        }
-
-        .featured-info {
-            padding: 15px 10px;
-        }
-
-        .number {
-            display: inline-block;
-            margin-bottom: 12px;
-            color: #bd7aa9;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .work-tag {
-            display: inline-block;
-            padding: 7px 14px;
-            margin-bottom: 12px;
-
-            border-radius: 30px;
-            background: #ffe8a9;
-            color: #70566a;
-
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        .featured-info h2 {
-            margin: 5px 0 15px;
-            color: #654866;
-            font-size: 30px;
-        }
-
-        .featured-info p {
-            line-height: 1.9;
-            color: #776875;
-            font-size: 16px;
-        }
-
-        /* ================================
-           WORK GRID
-        ================================= */
-
-        .works-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-        }
-
-        .work-card {
-            position: relative;
-            overflow: hidden;
-
-            background: rgba(255, 253, 248, 0.95);
-            border: 2px solid #f0dce8;
-            border-radius: 30px;
-
-            box-shadow: 0 12px 30px rgba(151, 104, 139, 0.10);
-
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-
-        .work-card:hover {
-            transform: translateY(-7px) rotate(-0.5deg);
-            box-shadow: 0 18px 38px rgba(151, 104, 139, 0.18);
-        }
-
-        .card-number {
-            position: absolute;
-            z-index: 2;
-            top: 15px;
-            left: 15px;
-
-            width: 42px;
-            height: 42px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #fff6cf;
-            color: #76566e;
-
-            font-weight: bold;
-
-            box-shadow: 0 5px 12px rgba(100, 70, 90, 0.12);
-        }
-
-        .work-image {
-            width: 100%;
-            height: 300px;
-            background: #faf2f7;
-            overflow: hidden;
-        }
-
-        .work-image img {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: contain;
-            background: #fff;
-        }
-
-        .work-info {
-            padding: 23px 25px 27px;
-        }
-
-        .work-info .work-tag {
-            margin-bottom: 7px;
-        }
-
-        .work-info h2 {
-            margin: 3px 0 10px;
-            color: #654866;
-            font-size: 23px;
-        }
-
-        .work-info p {
-            margin: 0;
-            color: #776875;
-            line-height: 1.8;
-            font-size: 15px;
-        }
-
-        /* ================================
-           NO IMAGE CARD
-        ================================= */
-
-        .text-only {
-            min-height: 100%;
-        }
-
-        .text-only-content {
-            min-height: 300px;
-            padding: 55px 30px 35px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            background:
-                radial-gradient(circle at 90% 15%, #ffeeb0 0 6px, transparent 7px),
-                radial-gradient(circle at 10% 80%, #efcce3 0 5px, transparent 6px),
-                #fffdf5;
-        }
-
-        .story-icon {
-            width: 75px;
-            height: 75px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            margin-bottom: 20px;
-
-            border-radius: 24px;
-            background: #ffe9a8;
-
-            font-size: 36px;
-
-            box-shadow: 0 8px 20px rgba(190, 150, 70, 0.12);
-        }
-
-        /* ================================
-           BOTTOM NOTE
-        ================================= */
-
-        .works-note {
-            margin-top: 45px;
-            padding: 22px 28px;
-
-            border-radius: 24px;
-            background: #fff4d2;
-            border: 2px dashed #e5c983;
-
-            text-align: center;
-            color: #765f68;
-            line-height: 1.8;
-        }
-
-        /* ================================
-           MOBILE
-        ================================= */
-
-        @media (max-width: 800px) {
-
-            .works-page {
-                padding: 35px 17px 70px;
-            }
-
-            .featured-work {
-                grid-template-columns: 1fr;
-                padding: 18px;
-                gap: 20px;
-                border-radius: 27px;
-            }
-
-            .featured-image,
-            .featured-image img {
-                min-height: 250px;
-            }
-
-            .featured-info {
-                padding: 5px 5px 12px;
-            }
-
-            .featured-info h2 {
-                font-size: 25px;
-            }
-
-            .works-grid {
-                grid-template-columns: 1fr;
-                gap: 22px;
-            }
-
-            .work-image {
-                height: 260px;
-            }
-
-            .works-decoration::before,
-            .works-decoration::after {
-                display: none;
-            }
-        }
-
-        @media (max-width: 480px) {
-
-            .works-header h1 {
-                font-size: 40px;
-            }
-
-            .works-header p {
-                font-size: 15px;
-            }
-
-            .work-image {
-                height: 230px;
-            }
-
-            .work-info {
-                padding: 20px;
-            }
-
-            .work-info h2 {
-                font-size: 21px;
-            }
-
-            .text-only-content {
-                min-height: 270px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-<!-- ================================
-     NAVBAR
-================================= -->
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-<header class="navbar">
+    <header class="navbar">
 
-    <a href="index.html" class="logo">
-        W.K. Portfolio
-    </a>
-
-    <nav class="menu">
-
-        <a href="portfolio.html">
-            พอร์ต
+        <a href="index.html" class="logo">
+            W.K. Portfolio
         </a>
 
-        <a href="introduction.html">
-            คำนำ
-        </a>
+        <nav>
 
-        <a href="education.html">
-            ประวัติการศึกษา
-        </a>
+            <a href="portfolio.html">
+                พอร์ต
+            </a>
 
-        <a href="interest.html">
-            ความสนใจ
-        </a>
+            <a href="introduction.html">
+                คำนำ
+            </a>
 
-        <a href="works.html" class="active">
-            ผลงาน
-        </a>
+            <a href="education.html">
+                ประวัติการศึกษา
+            </a>
 
-    </nav>
+            <a href="interest.html">
+                ความสนใจ
+            </a>
 
-</header>
+            <a href="works.html" class="active">
+                ผลงาน
+            </a>
 
+        </nav>
 
-<!-- ================================
-     MAIN
-================================= -->
-
-<main>
-
-<section class="works-page works-decoration">
-
-    <!-- HEADER -->
-
-    <div class="works-header">
-
-        <span class="small-title">
-            MY PORTFOLIO
-        </span>
-
-        <h1>
-            ผลงานและกิจกรรม
-        </h1>
-
-        <p>
-            ประสบการณ์ที่ได้เรียนรู้ ลงมือทำ และพัฒนาตัวเอง
-        </p>
-
-    </div>
+    </header>
 
 
-    <!-- ================================
-         FEATURED : WORKSHOP
-    ================================= -->
+    <!-- =========================
+         MAIN
+    ========================== -->
 
-    <article class="featured-work">
+    <main>
 
-        <div class="featured-image">
+        <section class="container">
 
-            <img
-                src="IMG_0376.png"
-                alt="เกียรติบัตรเวิร์กชอปวิศวกรรมโยธา"
-            >
+            <!-- PAGE TITLE -->
 
-        </div>
+            <div class="page-title">
 
-        <div class="featured-info">
+                <p>MY PORTFOLIO</p>
 
-            <span class="number">
-                01 / FEATURED
-            </span>
+                <h1>
+                    ผลงานและกิจกรรม
+                </h1>
 
-            <br>
-
-            <span class="work-tag">
-                CIVIL ENGINEERING
-            </span>
-
-            <h2>
-                เวิร์กช็อปวิศวกรรมโยธา สจล.
-            </h2>
-
-            <p>
-                เข้าร่วมกิจกรรมเวิร์กช็อปด้านวิศวกรรมโยธา
-                ณ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-                ได้เรียนรู้เกี่ยวกับงานด้านวิศวกรรมและประสบการณ์
-                ที่เกี่ยวข้องกับสาขาที่สนใจศึกษาต่อ
-            </p>
-
-        </div>
-
-    </article>
-
-
-    <!-- ================================
-         OTHER WORKS
-    ================================= -->
-
-    <div class="works-grid">
-
-
-        <!-- 02 สอบแข่งขัน -->
-
-        <article class="work-card">
-
-            <span class="card-number">
-                02
-            </span>
-
-            <div class="work-image">
-
-                <img
-                    src="IMG_0497.png"
-                    alt="เกียรติบัตรสอบแข่งขัน"
-                >
-
-            </div>
-
-            <div class="work-info">
-
-                <span class="work-tag">
-                    COMPETITION
+                <span>
+                    ประสบการณ์ที่ได้เรียนรู้ ลงมือทำ และพัฒนาตัวเอง
                 </span>
 
-                <h2>
-                    เข้าร่วมสอบวัดระดับความรู้
-                </h2>
-
-                <p>
-                    เข้าร่วมการสอบแข่งขันเพื่อวัดระดับความรู้
-                    และประเมินความสามารถของตนเอง
-                    พร้อมนำประสบการณ์มาพัฒนาการเรียนรู้
-                </p>
-
             </div>
 
-        </article>
 
+            <!-- =========================
+                 FEATURED WORK
+            ========================== -->
 
-        <!-- 03 วิทยากร -->
+            <article class="work-card">
 
-        <article class="work-card">
+                <div class="work-image">
 
-            <span class="card-number">
-                03
-            </span>
+                    <img
+                        src="IMG_0376.png"
+                        alt="เกียรติบัตรเวิร์กชอปวิศวกรรมโยธา"
+                    >
 
-            <div class="work-image">
-
-                <img
-                    src="IMG_0864.jpeg"
-                    alt="เกียรติบัตรวิทยากรวันวิทยาศาสตร์"
-                >
-
-            </div>
-
-            <div class="work-info">
-
-                <span class="work-tag">
-                    SCIENCE DAY
-                </span>
-
-                <h2>
-                    เป็นวิทยากรวันวิทยาศาสตร์
-                </h2>
-
-                <p>
-                    มีส่วนร่วมในการถ่ายทอดความรู้
-                    และทำกิจกรรมในวันวิทยาศาสตร์
-                    ได้ฝึกทักษะการสื่อสาร การนำเสนอ
-                    และการทำงานร่วมกับผู้อื่น
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 04 Mecanum -->
-
-        <article class="work-card">
-
-            <span class="card-number">
-                04
-            </span>
-
-            <div class="work-image">
-
-                <img
-                    src="images/mecanum-iot.jpg"
-                    alt="เข้าค่าย Mecanum IoT"
-                >
-
-            </div>
-
-            <div class="work-info">
-
-                <span class="work-tag">
-                    IOT CAMP
-                </span>
-
-                <h2>
-                    เข้าค่าย Mecanum IoT
-                </h2>
-
-                <p>
-                    เรียนรู้เกี่ยวกับเทคโนโลยี IoT
-                    และการทำงานของ Mecanum
-                    พร้อมฝึกการทำงานเป็นทีมและการแก้ปัญหา
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 05 สตาฟคณิต -->
-
-        <article class="work-card">
-
-            <span class="card-number">
-                05
-            </span>
-
-            <div class="work-image">
-
-                <img
-                    src="images/math-week.jpg"
-                    alt="สตาฟสัปดาห์คณิตศาสตร์"
-                >
-
-            </div>
-
-            <div class="work-info">
-
-                <span class="work-tag">
-                    ACTIVITY STAFF
-                </span>
-
-                <h2>
-                    สตาฟสัปดาห์คณิตศาสตร์
-                </h2>
-
-                <p>
-                    ร่วมทำงานและช่วยดูแลกิจกรรม
-                    ในสัปดาห์คณิตศาสตร์
-                    ได้ฝึกความรับผิดชอบ การวางแผน
-                    และการทำงานร่วมกับคนหมู่มาก
-                </p>
-
-            </div>
-
-        </article>
-
-
-        <!-- 06 เล่านิทานคุณธรรม
-             ไม่มีรูปตามที่กำหนด -->
-
-        <article class="work-card text-only">
-
-            <span class="card-number">
-                06
-            </span>
-
-            <div class="text-only-content">
-
-                <div class="story-icon">
-                    🏆
                 </div>
 
-                <span class="work-tag">
-                    GOLD AWARD
-                </span>
+                <div class="work-body">
+
+                    <span class="work-number">
+                        01 / FEATURED
+                    </span>
+
+                    <h2>
+                        เวิร์กช็อปวิศวกรรมโยธา สจล.
+                    </h2>
+
+                    <p>
+                        เข้าร่วมกิจกรรมเวิร์กช็อปด้านวิศวกรรมโยธา
+                        ณ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                        ได้เรียนรู้เกี่ยวกับงานด้านวิศวกรรม
+                        และได้รับประสบการณ์ที่เกี่ยวข้องกับสาขาที่สนใจศึกษาต่อ
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 WORKS
+            ========================== -->
+
+            <div class="works-grid">
+
+
+                <!-- WORK 02 -->
+
+                <article class="work-card">
+
+                    <div class="work-image">
+
+                        <img
+                            src="IMG_0497.png"
+                            alt="เกียรติบัตรสอบแข่งขัน"
+                        >
+
+                    </div>
+
+                    <div class="work-body">
+
+                        <span class="work-number">
+                            02 / COMPETITION
+                        </span>
+
+                        <h2>
+                            เข้าร่วมสอบวัดระดับความรู้
+                        </h2>
+
+                        <p>
+                            เข้าร่วมการสอบแข่งขันเพื่อวัดระดับความรู้
+                            และประเมินความสามารถของตนเอง
+                            พร้อมนำประสบการณ์ที่ได้รับมาพัฒนาการเรียนรู้
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- WORK 03 -->
+
+                <article class="work-card">
+
+                    <div class="work-image">
+
+                        <img
+                            src="IMG_0864.jpeg"
+                            alt="เกียรติบัตรวิทยากรวันวิทยาศาสตร์"
+                        >
+
+                    </div>
+
+                    <div class="work-body">
+
+                        <span class="work-number">
+                            03 / SCIENCE DAY
+                        </span>
+
+                        <h2>
+                            เป็นวิทยากรวันวิทยาศาสตร์
+                        </h2>
+
+                        <p>
+                            มีส่วนร่วมในการถ่ายทอดความรู้
+                            และทำกิจกรรมในวันวิทยาศาสตร์
+                            ได้ฝึกทักษะการสื่อสาร การนำเสนอ
+                            และการทำงานร่วมกับผู้อื่น
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- WORK 04 -->
+
+                <article class="work-card">
+
+                    <div class="work-image">
+
+                        <img
+                            src="images/mecanum-iot.jpg"
+                            alt="เข้าค่าย Mecanum IoT"
+                        >
+
+                    </div>
+
+                    <div class="work-body">
+
+                        <span class="work-number">
+                            04 / IOT CAMP
+                        </span>
+
+                        <h2>
+                            เข้าค่าย Mecanum IoT
+                        </h2>
+
+                        <p>
+                            เรียนรู้เกี่ยวกับเทคโนโลยี IoT
+                            และการทำงานของ Mecanum
+                            พร้อมฝึกการทำงานเป็นทีม
+                            และการวิเคราะห์แก้ไขปัญหา
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- WORK 05 -->
+
+                <article class="work-card">
+
+                    <div class="work-image">
+
+                        <img
+                            src="images/math-week.jpg"
+                            alt="สตาฟสัปดาห์คณิตศาสตร์"
+                        >
+
+                    </div>
+
+                    <div class="work-body">
+
+                        <span class="work-number">
+                            05 / ACTIVITY STAFF
+                        </span>
+
+                        <h2>
+                            สตาฟสัปดาห์คณิตศาสตร์
+                        </h2>
+
+                        <p>
+                            ร่วมทำงานและช่วยดูแลกิจกรรม
+                            ในสัปดาห์คณิตศาสตร์
+                            ได้ฝึกความรับผิดชอบ การวางแผน
+                            และการทำงานร่วมกับคนหมู่มาก
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- WORK 06
+                     ไม่มีรูป -->
+
+                <article class="work-card">
+
+                    <div class="image-placeholder">
+
+                        <span>🏆</span>
+
+                        <p>
+                            GOLD AWARD
+                        </p>
+
+                    </div>
+
+                    <div class="work-body">
+
+                        <span class="work-number">
+                            06 / GOLD AWARD
+                        </span>
+
+                        <h2>
+                            การแข่งขันเล่านิทานคุณธรรม
+                        </h2>
+
+                        <p>
+                            ระดับมัธยมศึกษาตอนปลาย
+                            ระดับเขตพื้นที่การศึกษาชลบุรีระยอง
+                            ได้รับรางวัลเหรียญทอง
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- =========================
+                 NOTE
+            ========================== -->
+
+            <div class="goal-card">
 
                 <h2>
-                    การแข่งขันเล่านิทานคุณธรรม
+                    ✦ My Experience
                 </h2>
 
                 <p>
-                    ระดับมัธยมศึกษาตอนปลาย
-                    ระดับเขตพื้นที่การศึกษาชลบุรีระยอง
-                    ได้รับรางวัลเหรียญทอง
+                    ผลงานและกิจกรรมเหล่านี้สะท้อนถึงการเรียนรู้
+                    ความรับผิดชอบ การทำงานร่วมกับผู้อื่น
+                    การสื่อสาร การวิเคราะห์และแก้ปัญหา
+                    รวมถึงความสนใจด้านวิทยาศาสตร์ เทคโนโลยี
+                    และวิศวกรรมศาสตร์
                 </p>
 
             </div>
 
-        </article>
+        </section>
+
+    </main>
 
 
-    </div>
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-
-    <!-- NOTE -->
-
-    <div class="works-note">
-
-        ✦ ผลงานแต่ละชิ้นสะท้อนถึงการเรียนรู้
-        ความรับผิดชอบ การทำงานร่วมกับผู้อื่น
-        และความสนใจด้านวิทยาศาสตร์และวิศวกรรมศาสตร์ ✦
-
-    </div>
-
-</section>
-
-</main>
+    <footer>
+        ✦ © 2026 Wachiraya Klangkaew ✦
+    </footer>
 
 </body>
+
 </html>
