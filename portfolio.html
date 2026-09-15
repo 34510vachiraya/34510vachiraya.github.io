@@ -1,282 +1,292 @@
 <!DOCTYPE html>
 <html lang="th">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>พอร์ต | วชิรญาณ์ คลังแก้ว</title>
+<title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
 
-    <!-- เชื่อม CSS หลัก -->
-    <link rel="stylesheet" href="style.css">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Tahoma", sans-serif;
+    color: #5d4560;
+    background:
+        radial-gradient(circle at 10% 15%, white 0 4px, transparent 5px),
+        radial-gradient(circle at 90% 25%, white 0 5px, transparent 6px),
+        linear-gradient(135deg, #fff4c9, #ffdceb, #e9ddff);
+    min-height: 100vh;
+}
+
+/* เมนู */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 3px 15px rgba(120,80,120,0.12);
+}
+
+nav a {
+    text-decoration: none;
+    color: #76536f;
+    background: white;
+    padding: 11px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #f0cfe0;
+    transition: 0.25s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #ffd4e7;
+    transform: translateY(-3px);
+}
+
+/* หน้าหลัก */
+.container {
+    max-width: 1050px;
+    margin: 45px auto;
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+}
+
+.magic {
+    font-size: 28px;
+    letter-spacing: 8px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin: 15px 0 5px;
+    color: #825879;
+}
+
+.hero .subtitle {
+    font-size: 19px;
+    color: #98738e;
+}
+
+/* โปรไฟล์ */
+.profile {
+    margin: 35px auto;
+    max-width: 850px;
+    padding: 40px;
+    background: rgba(255,255,255,0.9);
+    border: 3px solid #f2d0e2;
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(120,80,120,0.14);
+    text-align: center;
+}
+
+.profile img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid white;
+    box-shadow: 0 8px 20px rgba(100,70,100,0.2);
+}
+
+.name {
+    margin-top: 22px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #805675;
+}
+
+.nickname {
+    color: #a47796;
+    margin-top: 8px;
+}
+
+.info {
+    line-height: 2;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+/* ปุ่ม */
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #d99bc3, #b89be5);
+    padding: 14px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(130,90,140,0.18);
+    transition: 0.25s;
+}
+
+.button:hover {
+    transform: translateY(-4px);
+}
+
+/* จุดเด่น */
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.highlight {
+    background: rgba(255,255,255,0.82);
+    border: 2px solid #efd2e1;
+    border-radius: 28px;
+    padding: 25px 18px;
+    text-align: center;
+}
+
+.highlight .icon {
+    font-size: 40px;
+}
+
+.highlight h3 {
+    color: #805675;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #8b6d85;
+}
+
+@media (max-width: 700px) {
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .profile {
+        padding: 25px 18px;
+    }
+
+    .profile img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        padding: 9px 13px;
+        font-size: 14px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+<nav>
+    <a href="portfolio.html" class="active">🌸 Portfolio</a>
+    <a href="introduction.html">📖 คำนำ</a>
+    <a href="interest.html">💡 ความสนใจ</a>
+    <a href="works.html">🏆 ผลงาน</a>
+</nav>
 
-    <header class="navbar">
+<main class="container">
 
-        <a href="index.html" class="logo">
-            W.K.
-        </a>
+    <section class="hero">
 
-        <nav>
-            <a href="index.html">
-                หน้าปก
-            </a>
+        <div class="magic">✦ ✧ ✦ ✧ ✦</div>
 
-            <a href="portfolio.html" class="active">
-                พอร์ต
-            </a>
+        <h1>MY PORTFOLIO</h1>
 
-            <a href="introduction.html">
-                คำนำ
-            </a>
-
-            <a href="education.html">
-                ประวัติการศึกษา
-            </a>
-
-            <a href="works.html">
-                ผลงาน
-            </a>
-
-            <a href="interest.html">
-                ความสนใจ
-            </a>
-        </nav>
-
-    </header>
-
-
-    <!-- =========================
-         MAIN
-    ========================== -->
-
-    <main class="container">
-
-        <!-- หัวข้อหน้า -->
-
-        <section class="page-title">
-
-            <p>MY PORTFOLIO</p>
-
-            <h1>
-                พอร์ตโฟลิโอ
-            </h1>
-
-            <span>
-                วชิรญาณ์ คลังแก้ว
-            </span>
-
-        </section>
-
-
-        <!-- =========================
-             PROFILE
-        ========================== -->
-
-        <section class="profile-card">
-
-            <div class="profile-photo">
-
-                <!--
-                    รูปตัวเองใส่ไว้ที่
-
-                    images/profile.jpg
-
-                    ถ้าชื่อไฟล์เป็นอย่างอื่น
-                    ให้เปลี่ยนชื่อใน src ให้ตรงกับไฟล์
-                -->
-
-                <img
-                    src="profile.png"
-                    alt="รูปโปรไฟล์ของวชิรญาณ์ คลังแก้ว"
-                >
-
-            </div>
-
-
-            <div class="profile-detail">
-
-                <p class="section-label">
-                    PROFILE
-                </p>
-
-                <h2>
-                    วชิรญาณ์ คลังแก้ว
-                </h2>
-
-                <p class="intro-text">
-                    เป็นนักเรียนที่มีความสนใจในด้านวิทยาศาสตร์
-                    คณิตศาสตร์ เทคโนโลยี และวิศวกรรมศาสตร์
-                    พร้อมเรียนรู้สิ่งใหม่และพัฒนาตนเองอยู่เสมอ
-                </p>
-
-
-                <!-- ข้อมูลส่วนตัว -->
-
-                <div class="info-list">
-
-                    <div>
-                        <strong>
-                            ชื่อเล่น
-                        </strong>
-
-                        <span>
-                            โฟร์ท
-                        </span>
-                    </div>
-
-
-                    <div>
-                        <strong>
-                            วันเกิด
-                        </strong>
-
-                        <span>
-                            6 ตุลาคม พ.ศ. 2551
-                        </span>
-                    </div>
-
-
-                    <div>
-                        <strong>
-                            ระดับการศึกษา
-                        </strong>
-
-                        <span>
-                            มัธยมศึกษาปีที่ 6
-                        </span>
-                    </div>
-
-
-                    <div>
-                        <strong>
-                            แผนการเรียน
-                        </strong>
-
-                        <span>
-                            เตรียมวิศวกรรมศาสตร์
-                        </span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             MENU
-        ========================== -->
-
-        <section class="menu-grid">
-
-            <a
-                href="introduction.html"
-                class="menu-card"
-            >
-
-                <span>
-                    01
-                </span>
-
-                <h3>
-                    คำนำ
-                </h3>
-
-                <p>
-                    แนวคิดและจุดประสงค์
-                    ในการจัดทำ Portfolio
-                </p>
-
-            </a>
-
-
-            <a
-                href="education.html"
-                class="menu-card"
-            >
-
-                <span>
-                    02
-                </span>
-
-                <h3>
-                    ประวัติการศึกษา
-                </h3>
-
-                <p>
-                    เส้นทางการศึกษา
-                    และแผนการเรียน
-                </p>
-
-            </a>
-
-
-            <a
-                href="works.html"
-                class="menu-card"
-            >
-
-                <span>
-                    03
-                </span>
-
-                <h3>
-                    ผลงานและกิจกรรม
-                </h3>
-
-                <p>
-                    ผลงาน ประสบการณ์
-                    และกิจกรรมที่เข้าร่วม
-                </p>
-
-            </a>
-
-
-            <a
-                href="interest.html"
-                class="menu-card"
-            >
-
-                <span>
-                    04
-                </span>
-
-                <h3>
-                    ความสนใจ
-                </h3>
-
-                <p>
-                    ความสนใจและเป้าหมาย
-                    ในการศึกษาต่อ
-                </p>
-
-            </a>
-
-        </section>
-
-    </main>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <p>
-            © 2026 วชิรญาณ์ คลังแก้ว
+        <p class="subtitle">
+            ✨ แฟ้มสะสมผลงานของ วชิรญาณ์ คลังแก้ว ✨
         </p>
 
-    </footer>
+    </section>
+
+    <section class="profile">
+
+        <img src="IMG_0665.jpg"
+             alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว">
+
+        <div class="name">
+            วชิรญาณ์ คลังแก้ว
+        </div>
+
+        <div class="nickname">
+            ✿ ชื่อเล่น โฟร์ท ✿
+        </div>
+
+        <div class="info">
+            นักเรียนชั้นมัธยมศึกษาปีที่ 6<br>
+            แผนการเรียนเตรียมวิศวกรรมศาสตร์<br>
+            โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+        </div>
+
+        <div class="buttons">
+
+            <a href="introduction.html" class="button">
+                📖 คำนำ
+            </a>
+
+            <a href="interest.html" class="button">
+                💡 ความสนใจ
+            </a>
+
+            <a href="works.html" class="button">
+                🏆 ผลงาน
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="highlights">
+
+        <div class="highlight">
+            <div class="icon">🔬</div>
+            <h3>วิทยาศาสตร์</h3>
+            <p>สนใจการเรียนรู้และการทดลอง</p>
+        </div>
+
+        <div class="highlight">
+            <div class="icon">⚙️</div>
+            <h3>วิศวกรรมศาสตร์</h3>
+            <p>สนใจการออกแบบและแก้ไขปัญหา</p>
+        </div>
+
+        <div class="highlight">
+            <div class="icon">🚆</div>
+            <h3>วิศวกรรมโยธา</h3>
+            <p>สนใจด้านการออกแบบและการคมนาคม</p>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    ✦ วชิรญาณ์ คลังแก้ว | My Portfolio ✦
+</footer>
 
 </body>
-
 </html>
