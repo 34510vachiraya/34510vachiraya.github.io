@@ -11,153 +11,288 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, "Tahoma", sans-serif;
     color: #5d4560;
-    background:
-        radial-gradient(circle at 10% 15%, white 0 4px, transparent 5px),
-        radial-gradient(circle at 90% 25%, white 0 5px, transparent 6px),
-        linear-gradient(135deg, #fff4c9, #ffdceb, #e9ddff);
     min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 10% 15%, rgba(255,255,255,0.9) 0 4px, transparent 5px),
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,0.8) 0 5px, transparent 6px),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.7) 0 3px, transparent 4px),
+        radial-gradient(circle at 90% 75%, rgba(255,255,255,0.8) 0 4px, transparent 5px),
+        linear-gradient(135deg, #fff4c9, #ffdceb, #e9ddff);
 }
 
-/* เมนู */
-nav {
+/* =========================
+   เมนูด้านบน
+========================= */
+
+.navbar {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 15px;
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 3px 15px rgba(120,80,120,0.12);
+
+    padding: 15px 20px;
+
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 4px 18px rgba(120,80,120,0.12);
 }
 
-nav a {
+.navbar a {
     text-decoration: none;
     color: #76536f;
-    background: white;
-    padding: 11px 20px;
+
+    background: #ffffff;
+
+    padding: 11px 18px;
+
     border-radius: 25px;
-    font-weight: bold;
     border: 2px solid #f0cfe0;
-    transition: 0.25s;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: 0.25s ease;
 }
 
-nav a:hover,
-nav a.active {
-    background: #ffd4e7;
+.navbar a:hover {
+    background: #ffe0ec;
     transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(170,110,150,0.15);
 }
 
-/* หน้าหลัก */
+.navbar a.active {
+    background: linear-gradient(135deg, #ffd0e5, #e4d2ff);
+    border-color: #e5bcd5;
+    color: #704b69;
+}
+
+/* =========================
+   เนื้อหา
+========================= */
+
 .container {
     max-width: 1050px;
-    margin: 45px auto;
-    padding: 20px;
+    margin: 0 auto;
+    padding: 45px 20px 20px;
 }
+
+/* หัวเว็บ */
 
 .hero {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .magic {
-    font-size: 28px;
+    font-size: 27px;
     letter-spacing: 8px;
+    color: #b978a1;
 }
 
 .hero h1 {
-    font-size: 52px;
     margin: 15px 0 5px;
+
+    font-size: 52px;
+    letter-spacing: 2px;
+
     color: #825879;
 }
 
 .hero .subtitle {
+    margin-top: 10px;
+
     font-size: 19px;
     color: #98738e;
 }
 
-/* โปรไฟล์ */
+/* =========================
+   โปรไฟล์
+========================= */
+
 .profile {
-    margin: 35px auto;
+    position: relative;
+
     max-width: 850px;
-    padding: 40px;
+    margin: 35px auto;
+
+    padding: 42px 35px;
+
     background: rgba(255,255,255,0.9);
+
     border: 3px solid #f2d0e2;
     border-radius: 40px;
-    box-shadow: 0 15px 35px rgba(120,80,120,0.14);
+
+    box-shadow:
+        0 15px 35px rgba(120,80,120,0.14),
+        0 0 0 8px rgba(255,255,255,0.35);
+
     text-align: center;
 }
 
+/* ดาวตกแต่ง */
+
+.profile::before {
+    content: "✦";
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
+    font-size: 28px;
+    color: #d89abd;
+}
+
+.profile::after {
+    content: "✧";
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+
+    font-size: 32px;
+    color: #b89be5;
+}
+
+/* =========================
+   รูปโปรไฟล์
+========================= */
+
 .profile img {
+    display: block;
+
     width: 230px;
     height: 230px;
+
+    margin: 0 auto;
+
     object-fit: cover;
+
     border-radius: 50%;
-    border: 8px solid white;
-    box-shadow: 0 8px 20px rgba(100,70,100,0.2);
+
+    border: 8px solid #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(100,70,100,0.2),
+        0 0 0 5px #f4d6e6;
+
+    transition: 0.3s ease;
 }
+
+.profile img:hover {
+    transform: scale(1.03);
+}
+
+/* ชื่อ */
 
 .name {
     margin-top: 22px;
+
     font-size: 30px;
     font-weight: bold;
+
     color: #805675;
 }
 
 .nickname {
-    color: #a47796;
     margin-top: 8px;
+
+    color: #a47796;
+    font-size: 17px;
 }
 
 .info {
+    margin-top: 20px;
+
     line-height: 2;
     font-size: 17px;
-    margin-top: 20px;
 }
 
-/* ปุ่ม */
+/* =========================
+   ปุ่มไปแต่ละหน้า
+========================= */
+
 .buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
     gap: 15px;
+
     margin-top: 30px;
 }
 
 .button {
     display: inline-block;
+
     text-decoration: none;
     color: white;
+
     background: linear-gradient(135deg, #d99bc3, #b89be5);
+
     padding: 14px 25px;
+
     border-radius: 30px;
+
     font-weight: bold;
+
     box-shadow: 0 6px 15px rgba(130,90,140,0.18);
-    transition: 0.25s;
+
+    transition: 0.25s ease;
 }
 
 .button:hover {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scale(1.02);
+
+    box-shadow: 0 9px 18px rgba(130,90,140,0.25);
 }
 
-/* จุดเด่น */
+/* =========================
+   จุดเด่น
+========================= */
+
 .highlights {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 20px;
+
     margin-top: 30px;
 }
 
 .highlight {
-    background: rgba(255,255,255,0.82);
+    background: rgba(255,255,255,0.85);
+
     border: 2px solid #efd2e1;
+
     border-radius: 28px;
+
     padding: 25px 18px;
+
     text-align: center;
+
+    box-shadow: 0 8px 20px rgba(120,80,120,0.08);
+
+    transition: 0.25s ease;
+}
+
+.highlight:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 25px rgba(120,80,120,0.14);
 }
 
 .highlight .icon {
@@ -165,22 +300,63 @@ nav a.active {
 }
 
 .highlight h3 {
+    margin-bottom: 8px;
     color: #805675;
 }
 
+.highlight p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* =========================
+   Footer
+========================= */
+
 footer {
     text-align: center;
-    padding: 30px;
+
+    padding: 30px 20px;
+
     color: #8b6d85;
 }
 
+/* =========================
+   มือถือ
+========================= */
+
 @media (max-width: 700px) {
+
+    .navbar {
+        padding: 12px 10px;
+        gap: 7px;
+    }
+
+    .navbar a {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 30px 15px 15px;
+    }
+
     .hero h1 {
         font-size: 38px;
     }
 
+    .hero .subtitle {
+        font-size: 16px;
+    }
+
+    .magic {
+        font-size: 22px;
+        letter-spacing: 5px;
+    }
+
     .profile {
-        padding: 25px 18px;
+        padding: 30px 18px;
+        border-radius: 30px;
     }
 
     .profile img {
@@ -188,13 +364,25 @@ footer {
         height: 180px;
     }
 
-    .highlights {
-        grid-template-columns: 1fr;
+    .name {
+        font-size: 25px;
     }
 
-    nav a {
-        padding: 9px 13px;
-        font-size: 14px;
+    .info {
+        font-size: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .button {
+        text-align: center;
+    }
+
+    .highlights {
+        grid-template-columns: 1fr;
     }
 }
 </style>
@@ -202,20 +390,50 @@ footer {
 
 <body>
 
-<nav>
-    <a href="portfolio.html" class="active">🌸 Portfolio</a>
-    <a href="introduction.html">📖 คำนำ</a>
-    <a href="interest.html">💡 ความสนใจ</a>
-    <a href="works.html">🏆 ผลงาน</a>
-</nav>
+<!-- =========================
+     เมนู 5 หน้า
+========================= -->
+
+<header class="navbar">
+
+    <a href="portfolio.html" class="active">
+        🌸 Portfolio
+    </a>
+
+    <a href="introduction.html">
+        📖 คำนำ
+    </a>
+
+    <a href="education.html">
+        🎓 ประวัติการศึกษา
+    </a>
+
+    <a href="interest.html">
+        💡 ความสนใจ
+    </a>
+
+    <a href="works.html">
+        🏆 ผลงาน
+    </a>
+
+</header>
+
 
 <main class="container">
 
+    <!-- =========================
+         หัวเว็บ
+    ========================= -->
+
     <section class="hero">
 
-        <div class="magic">✦ ✧ ✦ ✧ ✦</div>
+        <div class="magic">
+            ✦ ✧ ✦ ✧ ✦
+        </div>
 
-        <h1>MY PORTFOLIO</h1>
+        <h1>
+            MY PORTFOLIO
+        </h1>
 
         <p class="subtitle">
             ✨ แฟ้มสะสมผลงานของ วชิรญาณ์ คลังแก้ว ✨
@@ -223,10 +441,18 @@ footer {
 
     </section>
 
+
+    <!-- =========================
+         โปรไฟล์
+    ========================= -->
+
     <section class="profile">
 
-        <img src="IMG_0665.jpg"
-             alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว">
+        <!-- รูปโปรไฟล์ -->
+        <img
+            src="profile.png"
+            alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว"
+        >
 
         <div class="name">
             วชิรญาณ์ คลังแก้ว
@@ -237,22 +463,45 @@ footer {
         </div>
 
         <div class="info">
+
             นักเรียนชั้นมัธยมศึกษาปีที่ 6<br>
+
             แผนการเรียนเตรียมวิศวกรรมศาสตร์<br>
+
             โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+
         </div>
+
+
+        <!-- ปุ่มเข้าสู่แต่ละหน้า -->
 
         <div class="buttons">
 
-            <a href="introduction.html" class="button">
+            <a
+                href="introduction.html"
+                class="button"
+            >
                 📖 คำนำ
             </a>
 
-            <a href="interest.html" class="button">
+            <a
+                href="education.html"
+                class="button"
+            >
+                🎓 ประวัติการศึกษา
+            </a>
+
+            <a
+                href="interest.html"
+                class="button"
+            >
                 💡 ความสนใจ
             </a>
 
-            <a href="works.html" class="button">
+            <a
+                href="works.html"
+                class="button"
+            >
                 🏆 ผลงาน
             </a>
 
@@ -260,29 +509,70 @@ footer {
 
     </section>
 
+
+    <!-- =========================
+         จุดเด่น
+    ========================= -->
+
     <section class="highlights">
 
         <div class="highlight">
-            <div class="icon">🔬</div>
-            <h3>วิทยาศาสตร์</h3>
-            <p>สนใจการเรียนรู้และการทดลอง</p>
+
+            <div class="icon">
+                🔬
+            </div>
+
+            <h3>
+                วิทยาศาสตร์
+            </h3>
+
+            <p>
+                สนใจการเรียนรู้ การทดลอง
+                และการค้นหาคำตอบ
+            </p>
+
         </div>
 
-        <div class="highlight">
-            <div class="icon">⚙️</div>
-            <h3>วิศวกรรมศาสตร์</h3>
-            <p>สนใจการออกแบบและแก้ไขปัญหา</p>
-        </div>
 
         <div class="highlight">
-            <div class="icon">🚆</div>
-            <h3>วิศวกรรมโยธา</h3>
-            <p>สนใจด้านการออกแบบและการคมนาคม</p>
+
+            <div class="icon">
+                ⚙️
+            </div>
+
+            <h3>
+                วิศวกรรมศาสตร์
+            </h3>
+
+            <p>
+                สนใจการออกแบบ
+                และการแก้ไขปัญหา
+            </p>
+
+        </div>
+
+
+        <div class="highlight">
+
+            <div class="icon">
+                🚆
+            </div>
+
+            <h3>
+                วิศวกรรมโยธา
+            </h3>
+
+            <p>
+                สนใจด้านการออกแบบ
+                โครงสร้าง และการคมนาคม
+            </p>
+
         </div>
 
     </section>
 
 </main>
+
 
 <footer>
     ✦ วชิรญาณ์ คลังแก้ว | My Portfolio ✦
