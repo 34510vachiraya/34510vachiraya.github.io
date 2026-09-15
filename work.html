@@ -26,7 +26,7 @@ body {
         radial-gradient(circle at 88% 18%, rgba(255,255,255,.9) 0 5px, transparent 6px),
         radial-gradient(circle at 18% 82%, rgba(255,255,255,.85) 0 3px, transparent 4px),
         radial-gradient(circle at 75% 75%, rgba(255,255,255,.8) 0 4px, transparent 5px),
-        linear-gradient(135deg, #fff1c9, #ffdbea, #e9ddff);
+        linear-gradient(135deg, #fff4c9, #ffdceb, #e9ddff);
 
     background-size:
         150px 150px,
@@ -40,7 +40,7 @@ body {
    NAVIGATION
 ========================= */
 
-nav {
+.navbar {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -60,7 +60,7 @@ nav {
     box-shadow: 0 5px 20px rgba(120,80,120,.12);
 }
 
-nav a {
+.navbar a {
     text-decoration: none;
     color: #76536f;
 
@@ -77,12 +77,12 @@ nav a {
     transition: .25s;
 }
 
-nav a:hover {
+.navbar a:hover {
     background: #ffe0ec;
     transform: translateY(-3px);
 }
 
-nav a.active {
+.navbar a.active {
     background: linear-gradient(135deg, #ffd1e4, #ead9ff);
     border-color: #dfa9cc;
     color: #714c6c;
@@ -139,9 +139,7 @@ nav a.active {
 
 .works {
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 28px;
 }
 
@@ -151,13 +149,11 @@ nav a.active {
 
 .work {
     position: relative;
-
     overflow: hidden;
 
     background: rgba(255,255,255,.94);
 
     border: 3px solid #f0cddd;
-
     border-radius: 30px;
 
     padding: 20px;
@@ -216,11 +212,9 @@ nav a.active {
     background-size: 35px 35px;
 
     border: 2px dashed #e1bfd3;
-
     border-radius: 22px;
 
     color: #c27a9d;
-
     font-size: 45px;
 }
 
@@ -255,7 +249,6 @@ nav a.active {
     color: #805675;
 
     font-size: 22px;
-
     line-height: 1.5;
 }
 
@@ -265,7 +258,6 @@ nav a.active {
     color: #69576a;
 
     font-size: 16px;
-
     line-height: 1.9;
 }
 
@@ -285,7 +277,6 @@ nav a.active {
     background: rgba(255,255,255,.94);
 
     border: 3px solid #f0cddd;
-
     border-radius: 30px;
 
     text-align: center;
@@ -299,7 +290,6 @@ nav a.active {
     margin-bottom: 20px;
 
     color: #9f5a83;
-
     font-size: 27px;
 }
 
@@ -313,7 +303,6 @@ nav a.active {
     border: 1px solid #e8c5d8;
 
     padding: 10px 16px;
-
     margin: 5px;
 
     border-radius: 22px;
@@ -325,6 +314,7 @@ nav a.active {
 
 .skill:hover {
     transform: translateY(-3px);
+
     background: linear-gradient(135deg, #ffd5e5, #e8d8ff);
 }
 
@@ -348,12 +338,12 @@ footer {
 
 @media (max-width: 750px) {
 
-    nav {
+    .navbar {
         gap: 6px;
         padding: 10px;
     }
 
-    nav a {
+    .navbar a {
         font-size: 12px;
         padding: 9px 12px;
     }
@@ -423,12 +413,29 @@ footer {
      MENU
 ========================= -->
 
-<nav>
-    <a href="portfolio.html">🌸 Portfolio</a>
-    <a href="introduction.html">📖 คำนำ</a>
-    <a href="interest.html">💡 ความสนใจ</a>
-    <a href="works.html" class="active">🏆 ผลงาน</a>
-</nav>
+<header class="navbar">
+
+    <a href="portfolio.html">
+        🌸 Portfolio
+    </a>
+
+    <a href="introduction.html">
+        📖 คำนำ
+    </a>
+
+    <a href="education.html">
+        🎓 ประวัติการศึกษา
+    </a>
+
+    <a href="interest.html">
+        💡 ความสนใจ
+    </a>
+
+    <a href="works.html" class="active">
+        🏆 ผลงาน
+    </a>
+
+</header>
 
 
 <!-- =========================
@@ -439,21 +446,24 @@ footer {
 
     <section class="title">
 
-        <div class="icon">🏆✨</div>
+        <div class="icon">
+            🏆✨
+        </div>
 
-        <h1>ผลงานและกิจกรรม</h1>
+        <h1>
+            ผลงานและกิจกรรม
+        </h1>
 
-        <p>✦ MY WORKS & ACTIVITIES ✦</p>
+        <p>
+            ✦ MY WORKS & ACTIVITIES ✦
+        </p>
 
     </section>
 
 
     <section class="works">
 
-
-        <!-- =====================
-             01
-        ====================== -->
+        <!-- 01 -->
 
         <article class="work">
 
@@ -462,9 +472,13 @@ footer {
                 alt="เวิร์กช็อปวิศวกรรมโยธา"
             >
 
-            <span class="number">01</span>
+            <span class="number">
+                01
+            </span>
 
-            <h2>🏗️ เวิร์กช็อปวิศวกรรมโยธา สจล.</h2>
+            <h2>
+                🏗️ เวิร์กช็อปวิศวกรรมโยธา สจล.
+            </h2>
 
             <p>
                 เข้าร่วมกิจกรรมเวิร์กช็อปด้านวิศวกรรมโยธา
@@ -475,9 +489,7 @@ footer {
         </article>
 
 
-        <!-- =====================
-             02
-        ====================== -->
+        <!-- 02 -->
 
         <article class="work">
 
@@ -486,9 +498,13 @@ footer {
                 alt="สอบวัดระดับความรู้"
             >
 
-            <span class="number">02</span>
+            <span class="number">
+                02
+            </span>
 
-            <h2>📚 สอบวัดระดับความรู้</h2>
+            <h2>
+                📚 สอบวัดระดับความรู้
+            </h2>
 
             <p>
                 เข้าร่วมการสอบวัดระดับความรู้
@@ -499,9 +515,7 @@ footer {
         </article>
 
 
-        <!-- =====================
-             03
-        ====================== -->
+        <!-- 03 -->
 
         <article class="work">
 
@@ -510,9 +524,13 @@ footer {
                 alt="วิทยากรวันวิทยาศาสตร์"
             >
 
-            <span class="number">03</span>
+            <span class="number">
+                03
+            </span>
 
-            <h2>🔬 วิทยากรวันวิทยาศาสตร์</h2>
+            <h2>
+                🔬 วิทยากรวันวิทยาศาสตร์
+            </h2>
 
             <p>
                 มีส่วนร่วมเป็นวิทยากรในกิจกรรมวันวิทยาศาสตร์
@@ -523,20 +541,22 @@ footer {
         </article>
 
 
-        <!-- =====================
-             04
-        ====================== -->
+        <!-- 04 -->
 
         <article class="work">
 
             <img
-                src="images/mecanum-iot.jpg"
+        
                 alt="ค่าย Mecanum IoT"
             >
 
-            <span class="number">04</span>
+            <span class="number">
+                04
+            </span>
 
-            <h2>🤖 ค่าย Mecanum IoT</h2>
+            <h2>
+                🤖 ค่าย Mecanum IoT
+            </h2>
 
             <p>
                 เข้าร่วมค่าย Mecanum IoT
@@ -548,20 +568,22 @@ footer {
         </article>
 
 
-        <!-- =====================
-             05
-        ====================== -->
+        <!-- 05 -->
 
         <article class="work">
 
             <img
-                src="images/math-week.jpg"
+            
                 alt="สตาฟสัปดาห์คณิตศาสตร์"
             >
 
-            <span class="number">05</span>
+            <span class="number">
+                05
+            </span>
 
-            <h2>🧮 สตาฟสัปดาห์คณิตศาสตร์</h2>
+            <h2>
+                🧮 สตาฟสัปดาห์คณิตศาสตร์
+            </h2>
 
             <p>
                 ทำหน้าที่สตาฟในกิจกรรมสัปดาห์คณิตศาสตร์
@@ -572,9 +594,7 @@ footer {
         </article>
 
 
-        <!-- =====================
-             06
-        ====================== -->
+        <!-- 06 -->
 
         <article class="work">
 
@@ -582,15 +602,20 @@ footer {
                 🏅
             </div>
 
-            <span class="number">06</span>
+            <span class="number">
+                06
+            </span>
 
-            <h2>📖 การแข่งขันเล่านิทานคุณธรรม</h2>
+            <h2>
+                📖 การแข่งขันเล่านิทานคุณธรรม
+            </h2>
 
             <p>
                 เข้าร่วมการแข่งขันเล่านิทานคุณธรรม
                 ระดับมัธยมศึกษาตอนปลาย
                 ในระดับเขตพื้นที่การศึกษาชลบุรีระยอง
-                และได้รับ <strong>รางวัลเหรียญทอง</strong>
+                และได้รับ
+                <strong>รางวัลเหรียญทอง</strong>
             </p>
 
         </article>
@@ -604,21 +629,37 @@ footer {
 
     <section class="skills">
 
-        <h2>✨ ความสามารถ</h2>
+        <h2>
+            ✨ ความสามารถ
+        </h2>
 
-        <span class="skill">🔬 วิทยาศาสตร์</span>
+        <span class="skill">
+            🔬 วิทยาศาสตร์
+        </span>
 
-        <span class="skill">💬 การสื่อสาร</span>
+        <span class="skill">
+            💬 การสื่อสาร
+        </span>
 
-        <span class="skill">🤝 การทำงานเป็นทีม</span>
+        <span class="skill">
+            🤝 การทำงานเป็นทีม
+        </span>
 
-        <span class="skill">👥 การทำงานร่วมกับคนหมู่มาก</span>
+        <span class="skill">
+            👥 การทำงานร่วมกับคนหมู่มาก
+        </span>
 
-        <span class="skill">🧠 การวิเคราะห์และแก้ปัญหา</span>
+        <span class="skill">
+            🧠 การวิเคราะห์และแก้ปัญหา
+        </span>
 
-        <span class="skill">📋 การวางแผน</span>
+        <span class="skill">
+            📋 การวางแผน
+        </span>
 
-        <span class="skill">⭐ ความรับผิดชอบ</span>
+        <span class="skill">
+            ⭐ ความรับผิดชอบ
+        </span>
 
     </section>
 
