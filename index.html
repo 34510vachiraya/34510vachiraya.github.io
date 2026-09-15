@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="แฟ้มสะสมผลงานของ วชิรญาณ์ คลังแก้ว โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์">
     <title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
-
     <style>
         * {
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             margin: 0;
             font-family: Arial, Tahoma, sans-serif;
             color: #60415f;
             min-height: 100vh;
-
             background:
                 radial-gradient(
                     circle at 10% 20%,
@@ -48,43 +44,32 @@
                     #ffdff0,
                     #e8ddff
                 );
+            background-attachment: fixed;
         }
-
         /* =========================
            แถบเมนู
         ========================= */
-
         .navbar {
             position: sticky;
             top: 0;
             z-index: 1000;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
             gap: 20px;
-
             padding: 14px 35px;
-
             background: rgba(255,255,255,0.90);
             backdrop-filter: blur(12px);
-
-            box-shadow:
-                0 4px 18px rgba(130,90,130,0.14);
-
+            box-shadow: 0 4px 18px rgba(130,90,130,0.14);
             border-bottom: 2px solid rgba(242,207,225,0.8);
         }
-
         .logo {
             text-decoration: none;
             color: #9b5f91;
-
             font-size: 24px;
             font-weight: bold;
-
             white-space: nowrap;
         }
-
         .navbar nav {
             display: flex;
             justify-content: center;
@@ -92,422 +77,299 @@
             flex-wrap: wrap;
             gap: 8px;
         }
-
         .navbar nav a {
             text-decoration: none;
             color: #76516f;
-
             background: #fff;
-
             padding: 9px 15px;
-
             border-radius: 25px;
             border: 2px solid #f2cfe1;
-
             font-size: 14px;
             font-weight: bold;
-
             transition: 0.25s ease;
         }
-
         .navbar nav a:hover,
         .navbar nav a.active {
             color: #704565;
             background: #ffd9ea;
-
             transform: translateY(-2px);
-
-            box-shadow:
-                0 5px 12px rgba(180,120,160,0.15);
+            box-shadow: 0 5px 12px rgba(180,120,160,0.15);
         }
-
         /* =========================
            ส่วน Portfolio
         ========================= */
-
         .hero {
             max-width: 1050px;
             margin: 0 auto;
-
             padding: 55px 20px 35px;
-
             text-align: center;
         }
-
         .sparkle {
             color: #c58bb8;
-
             font-size: 28px;
             letter-spacing: 8px;
-
             margin-bottom: 10px;
         }
-
         .small-title {
             display: inline-block;
-
             padding: 8px 20px;
             margin-bottom: 10px;
-
             background: rgba(255,255,255,0.72);
-
             border: 2px solid #f1cadd;
             border-radius: 30px;
-
             color: #9b638f;
-
             font-size: 14px;
             font-weight: bold;
-
             letter-spacing: 2px;
         }
-
         h1 {
             margin: 8px 0;
-
             font-size: 48px;
-
             color: #815878;
-
-            text-shadow:
-                2px 2px 0 rgba(255,255,255,0.8);
+            text-shadow: 2px 2px 0 rgba(255,255,255,0.8);
         }
-
         .subtitle {
             margin: 0 0 35px;
-
             font-size: 18px;
             color: #98718f;
         }
-
         /* =========================
            กล่องโปรไฟล์
         ========================= */
-
         .profile-box {
             position: relative;
-
             max-width: 850px;
             margin: 0 auto;
-
             padding: 40px 30px;
-
             background: rgba(255,255,255,0.86);
-
             border: 3px solid #f2d0e2;
             border-radius: 38px;
-
-            box-shadow:
-                0 15px 35px rgba(130,90,130,0.14);
+            box-shadow: 0 15px 35px rgba(130,90,130,0.14);
         }
-
         .profile-box::before {
             content: "✦";
-
             position: absolute;
-
             top: 18px;
             left: 25px;
-
             color: #e4a7c9;
-
             font-size: 24px;
         }
-
         .profile-box::after {
             content: "✧";
-
             position: absolute;
-
             right: 28px;
             bottom: 18px;
-
             color: #b99be8;
-
             font-size: 28px;
         }
-
         /* =========================
            รูปโปรไฟล์
         ========================= */
-
         .profile-image {
             width: 210px;
             height: 210px;
-
             object-fit: cover;
-
             border-radius: 50%;
-
             border: 7px solid #fff;
-
-            box-shadow:
-                0 7px 22px rgba(120,80,120,0.20);
-
+            box-shadow: 0 7px 22px rgba(120,80,120,0.20);
             margin-bottom: 18px;
+            background: #f9e7f0;
         }
-
         .name {
             margin-top: 5px;
-
             font-size: 30px;
             font-weight: bold;
-
             color: #815878;
         }
-
         .nickname {
             margin-top: 6px;
-
             color: #a27699;
-
             font-size: 17px;
         }
-
         .info {
             line-height: 1.9;
-
             font-size: 17px;
-
             margin: 18px 0 0;
         }
-
         /* =========================
            ปุ่ม
         ========================= */
-
         .buttons {
             display: flex;
-
             justify-content: center;
-
             flex-wrap: wrap;
-
             gap: 13px;
-
             margin-top: 30px;
         }
-
         .page-button {
             display: inline-block;
-
             text-decoration: none;
-
             color: #fff;
-
-            background: linear-gradient(
-                135deg,
-                #d99bc4,
-                #b99be8
-            );
-
+            background: linear-gradient(135deg, #d99bc4, #b99be8);
             padding: 13px 22px;
-
             border-radius: 30px;
-
             font-weight: bold;
-
-            box-shadow:
-                0 5px 15px rgba(150,100,160,0.20);
-
+            box-shadow: 0 5px 15px rgba(150,100,160,0.20);
             transition: 0.25s ease;
         }
-
         .page-button:hover {
             transform: translateY(-4px) scale(1.02);
-
-            box-shadow:
-                0 8px 18px rgba(150,100,160,0.25);
+            box-shadow: 0 8px 18px rgba(150,100,160,0.25);
         }
-
         /* =========================
            กล่องคำคม
         ========================= */
-
         .quote {
             margin-top: 32px;
-
             padding: 20px;
-
             border-radius: 22px;
-
             background: #fff8df;
-
             border: 2px dashed #e6c7d8;
-
             color: #80606f;
-
             line-height: 1.7;
         }
-
         .decoration {
             margin: 28px auto 0;
-
             color: #c98db9;
-
             font-size: 22px;
-
             letter-spacing: 7px;
         }
-
         /* =========================
            Footer
         ========================= */
-
         footer {
             text-align: center;
-
             padding: 30px 20px;
-
+            margin-top: 20px;
             color: #8b6b85;
-
             font-size: 14px;
         }
-
         /* =========================
            Tablet
         ========================= */
-
         @media (max-width: 800px) {
-
             .navbar {
                 flex-direction: column;
-
                 padding: 12px 15px;
-
                 gap: 10px;
             }
-
             .navbar nav {
                 width: 100%;
             }
-
             .navbar nav a {
                 font-size: 13px;
-
                 padding: 8px 11px;
             }
-
             .hero {
                 padding-top: 35px;
             }
-
             h1 {
                 font-size: 38px;
             }
         }
-
         /* =========================
            Mobile
         ========================= */
-
         @media (max-width: 600px) {
-
             .sparkle {
                 font-size: 22px;
-
                 letter-spacing: 5px;
             }
-
             .small-title {
                 font-size: 12px;
-
                 padding: 7px 15px;
             }
-
             h1 {
                 font-size: 31px;
             }
-
             .subtitle {
                 font-size: 16px;
             }
-
             .profile-box {
                 padding: 32px 18px;
-
                 border-radius: 28px;
             }
-
             .profile-image {
                 width: 170px;
                 height: 170px;
             }
-
             .name {
                 font-size: 25px;
             }
-
             .info {
                 font-size: 16px;
             }
-
             .page-button {
                 width: 100%;
-
                 max-width: 280px;
             }
         }
     </style>
 </head>
-
 <body>
-
     <!-- =========================
          NAVIGATION
     ========================== -->
-
     <header class="navbar">
-
-        <a href="index.html" class="logo">
-            W.K.
-        </a>
-
+        <a href="index.html" class="logo">W.K.</a>
         <nav>
-
-            <a href="index.html" class="active">
-                🌸 Portfolio
-            </a>
-
-            <a href="preface.html">
-                📖 คำนำ
-            </a>
-
-            <a href="education.html">
-                🎓 ประวัติการศึกษา
-            </a>
-
-            <a href="interest.html">
-                💡 ความสนใจ
-            </a>
-
-            <a href="work.html">
-                🏆 ผลงาน
-            </a>
-
+            <a href="index.html" class="active">🌸 Portfolio</a>
+            <a href="preface.html">📖 คำนำ</a>
+            <a href="education.html">🎓 ประวัติการศึกษา</a>
+            <a href="interest.html">💡 ความสนใจ</a>
+            <a href="work.html">🏆 ผลงาน</a>
         </nav>
-
     </header>
-
 
     <!-- =========================
          PORTFOLIO
     ========================== -->
-
     <main class="hero">
+        <div class="sparkle">✦ ✧ ✦ ✧ ✦</div>
+        <div class="small-title">✦ MY MAGICAL PORTFOLIO ✦</div>
+        <h1>PORTFOLIO</h1>
+        <p class="subtitle">✨ แฟ้มสะสมผลงานของ วชิรญาณ์ คลังแก้ว ✨</p>
 
-        <div class="sparkle">
-            ✦ ✧ ✦ ✧ ✦
+        <!-- กล่องโปรไฟล์ -->
+        <div class="profile-box">
+            <img 
+                src="profile.png" 
+                alt="รูปโปรไฟล์ - วชิรญาณ์ คลังแก้ว (โฟร์ท)"
+                class="profile-image"
+                onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22f9e7f0%22 width=%22200%22 height=%22200%22/><text x=%22100%22 y=%22110%22 text-anchor=%22middle%22 font-size=%2280%22>🌸</text></svg>'"
+            >
+            <div class="name">วชิรญาณ์ คลังแก้ว</div>
+            <div class="nickname">✿ ชื่อเล่น โฟร์ท ✿</div>
+            <div class="info">
+                นักเรียนชั้นมัธยมศึกษาปีที่ 6<br>
+                แผนการเรียนเตรียมวิศวกรรมศาสตร์<br>
+                โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
+            </div>
+
+            <!-- ปุ่มลิงก์ไปหน้าอื่น -->
+            <div class="buttons">
+                <a href="preface.html" class="page-button">📖 คำนำ</a>
+                <a href="education.html" class="page-button">🎓 ประวัติการศึกษา</a>
+                <a href="interest.html" class="page-button">💡 ความสนใจ</a>
+                <a href="work.html" class="page-button">🏆 ผลงาน</a>
+            </div>
+
+            <!-- คำคม -->
+            <div class="quote">
+                💡 <strong>ความคิดประจำใจ</strong><br>
+                "ความพยายามอยู่ที่ไหน ความสำเร็จอยู่ที่นั่น"<br>
+                ไม่ยอมท้อถอย เพื่อวันข้างหน้าที่ดีกว่า
+            </div>
+
+            <div class="decoration">✦ ✧ ✦ ✧ ✦</div>
         </div>
+    </main>
 
-        <div class="small-title">
-            ✦ MY MAGICAL PORTFOLIO ✦
-        </div>
-
-        <h1>
-            PORTFOLIO
-        </h1>
-
-        <p class="subtitle">
-            ✨ แฟ้มสะสมผลงานของ วชิรญาณ์ คลังแก้ว ✨
-        </p
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+        ✦ วชิรญาณ์ คลังแก้ว | My Portfolio ✦
+    </footer>
+</body>
+</html>
