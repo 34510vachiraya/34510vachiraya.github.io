@@ -1,323 +1,705 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>คำนำ | วชิรญาณ์ คลังแก้ว</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* ================================
-           INTRODUCTION PAGE
-        ================================= */
-
-        .intro-page {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 55px 25px 90px;
-        }
-
-        /* Header */
-
-        .intro-header {
-            position: relative;
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .intro-label {
-            display: inline-block;
-            padding: 8px 20px;
-            margin-bottom: 12px;
-
-            border-radius: 50px;
-            background: #fff0b8;
-
-            color: #72536b;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .intro-header h1 {
-            margin: 0;
-            color: #654866;
-            font-size: clamp(40px, 7vw, 65px);
-        }
-
-        .intro-header p {
-            margin-top: 12px;
-            color: #806c7e;
-            font-size: 17px;
-        }
-
-        /* Decorative */
-
-        .intro-header::before {
-            content: "✦";
-            position: absolute;
-            left: 7%;
-            top: 25px;
-            color: #e5b84d;
-            font-size: 30px;
-        }
-
-        .intro-header::after {
-            content: "✧";
-            position: absolute;
-            right: 8%;
-            top: 55px;
-            color: #d89ac6;
-            font-size: 38px;
-        }
-
-        /* Main card */
-
-        .intro-card {
-            position: relative;
-            overflow: hidden;
-
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 40px;
-            align-items: center;
-
-            padding: 35px;
-
-            background: #fffdf7;
-            border: 2px solid #f0dce8;
-            border-radius: 38px;
-
-            box-shadow: 0 18px 45px rgba(130, 85, 120, 0.12);
-        }
-
-        /* Left decoration */
-
-        .intro-visual {
-            position: relative;
-            min-height: 350px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 30px;
-
-            background:
-                radial-gradient(
-                    circle at 20% 20%,
-                    #fff0b8 0 7px,
-                    transparent 8px
-                ),
-                radial-gradient(
-                    circle at 80% 75%,
-                    #efcde4 0 6px,
-                    transparent 7px
-                ),
-                #faedf5;
-        }
-
-        .intro-symbol {
-            width: 190px;
-            height: 190px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 50%;
-
-            background: #fff9dc;
-            border: 10px solid #ffffff;
-
-            font-size: 75px;
-
-            box-shadow:
-                0 15px 35px rgba(150, 105, 140, 0.15);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>คำนำ | วชิรญาณ์ คลังแก้ว</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Arial,
+        "Noto Sans Thai",
+        "Tahoma",
+        sans-serif;
 
-        .star {
-            position: absolute;
-            color: #d69ac2;
-            font-size: 28px;
-        }
+    color: #675467;
 
-        .star.one {
-            top: 35px;
-            left: 45px;
-        }
-
-        .star.two {
-            top: 80px;
-            right: 45px;
-        }
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(255,255,255,.95) 0 3px,
+            transparent 4px
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255,255,255,.9) 0 3px,
+            transparent 4px
+        ),
+        radial-gradient(
+            circle at 25% 80%,
+            rgba(255,255,255,.8) 0 2px,
+            transparent 3px
+        ),
+        linear-gradient(
+            135deg,
+            #fff0d2,
+            #ffe1ed,
+            #eee0ff
+        );
 
-        .star.three {
-            bottom: 45px;
-            left: 70px;
-        }
-
-        .star.four {
-            bottom: 35px;
-            right: 65px;
-        }
-
-        /* Text */
+    background-size:
+        150px 150px,
+        190px 190px,
+        170px 170px,
+        cover;
 
-        .intro-content {
-            padding: 10px 5px;
-        }
+    min-height: 100vh;
+}
 
-        .intro-content .mini-title {
-            color: #c078a7;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
 
-        .intro-content h2 {
-            margin: 8px 0 20px;
+/* =========================
+   NAVIGATION
+========================= */
 
-            color: #654866;
-            font-size: 31px;
-        }
-
-        .intro-content p {
-            margin: 0 0 18px;
-
-            color: #776875;
-            font-size: 16px;
-            line-height: 2;
-        }
-
-        .intro-content strong {
-            color: #a95f8d;
-        }
-
-        /* Highlight */
-
-        .intro-highlight {
-            margin-top: 25px;
-            padding: 20px 23px;
-
-            border-left: 5px solid #e7c55f;
-            border-radius: 0 20px 20px 0;
-
-            background: #fff5d5;
-
-            color: #705d68;
-            line-height: 1.8;
-        }
-
-        .intro-highlight span {
-            display: block;
-            margin-bottom: 5px;
-
-            color: #9a7187;
-            font-size: 12px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        /* Bottom cards */
-
-        .intro-points {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-
-            margin-top: 30px;
-        }
-
-        .point {
-            padding: 22px 18px;
-
-            text-align: center;
-
-            background: #fffdf7;
-            border: 2px solid #f0dce8;
-            border-radius: 25px;
-
-            box-shadow: 0 10px 25px rgba(130, 85, 120, 0.08);
-        }
-
-        .point-icon {
-            display: block;
-            margin-bottom: 8px;
-            font-size: 30px;
-        }
-
-        .point h3 {
-            margin: 5px 0 7px;
-
-            color: #654866;
-            font-size: 18px;
-        }
-
-        .point p {
-            margin: 0;
-
-            color: #806f7d;
-            font-size: 14px;
-            line-height: 1.7;
-        }
-
-        /* Mobile */
-
-        @media (max-width: 800px) {
-
-            .intro-page {
-                padding: 35px 17px 70px;
-            }
-
-            .intro-header::before,
-            .intro-header::after {
-                display: none;
-            }
-
-            .intro-card {
-                grid-template-columns: 1fr;
-                padding: 18px;
-                gap: 25px;
-                border-radius: 28px;
-            }
-
-            .intro-visual {
-                min-height: 260px;
-            }
-
-            .intro-symbol {
-                width: 145px;
-                height: 145px;
-                font-size: 55px;
-            }
-
-            .intro-content {
-                padding: 5px;
-            }
-
-            .intro-content h2 {
-                font-size: 26px;
-            }
-
-            .intro-content p {
-                font-size: 15px;
-            }
-
-            .intro-points {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 14px 6%;
+
+    background: rgba(255, 250, 244, .94);
+
+    border-bottom:
+        2px solid rgba(214, 164, 191, .35);
+
+    box-shadow:
+        0 5px 20px rgba(130, 90, 120, .10);
+
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    color: #a75d88;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.logo::before {
+    content: "✦ ";
+    color: #d6a94c;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    gap: 7px;
+}
+
+.menu a {
+    display: block;
+
+    padding: 9px 14px;
+
+    border-radius: 30px;
+
+    color: #735f70;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: .25s ease;
+}
+
+.menu a:hover {
+    background: #ffe4ef;
+    color: #ad5b8a;
+    transform: translateY(-2px);
+}
+
+.menu a.active {
+    background:
+        linear-gradient(
+            135deg,
+            #f8d7e8,
+            #eee0ff
+        );
+
+    color: #a34f80;
+
+    box-shadow:
+        0 4px 12px rgba(180, 110, 160, .15);
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.intro-page {
+    width: min(1100px, 92%);
+
+    margin: 0 auto;
+
+    padding: 65px 0 80px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.intro-header {
+    position: relative;
+
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.intro-label {
+    display: inline-block;
+
+    padding: 9px 22px;
+
+    border-radius: 50px;
+
+    background: #fff2c7;
+
+    color: #806273;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 5px 15px rgba(170, 120, 100, .08);
+}
+
+.intro-header h1 {
+    margin: 15px 0 5px;
+
+    color: #a85582;
+
+    font-size: clamp(42px, 7vw, 68px);
+
+    line-height: 1.1;
+
+    text-shadow:
+        3px 3px 0 white;
+}
+
+.intro-header p {
+    margin: 15px auto 0;
+
+    color: #887384;
+
+    font-size: 17px;
+}
+
+.intro-header::before {
+    content: "✦";
+
+    position: absolute;
+
+    left: 7%;
+    top: 30px;
+
+    color: #d9ad51;
+
+    font-size: 32px;
+}
+
+.intro-header::after {
+    content: "✧";
+
+    position: absolute;
+
+    right: 8%;
+    top: 60px;
+
+    color: #d596bd;
+
+    font-size: 42px;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.intro-card {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: 360px 1fr;
+
+    gap: 42px;
+
+    align-items: center;
+
+    padding: 35px;
+
+    background:
+        rgba(255, 253, 248, .96);
+
+    border:
+        2px solid #f0d9e7;
+
+    border-radius: 38px;
+
+    box-shadow:
+        0 20px 45px rgba(125, 80, 115, .12);
+}
+
+
+/* =========================
+   VISUAL
+========================= */
+
+.intro-visual {
+    position: relative;
+
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at 18% 18%,
+            #fff1bd 0 8px,
+            transparent 9px
+        ),
+        radial-gradient(
+            circle at 82% 78%,
+            #efc8e0 0 7px,
+            transparent 8px
+        ),
+        linear-gradient(
+            145deg,
+            #fff4f8,
+            #f7eafb
+        );
+}
+
+.intro-visual::before {
+    content: "♡";
+
+    position: absolute;
+
+    top: 25px;
+    right: 28px;
+
+    color: #dda5c5;
+
+    font-size: 32px;
+}
+
+.intro-visual::after {
+    content: "✿";
+
+    position: absolute;
+
+    bottom: 25px;
+    right: 35px;
+
+    color: #dfba68;
+
+    font-size: 30px;
+}
+
+.intro-symbol {
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fff8d9,
+            #fff0f6
+        );
+
+    border:
+        10px solid white;
+
+    font-size: 78px;
+
+    box-shadow:
+        0 15px 35px rgba(130, 85, 120, .15);
+}
+
+.star {
+    position: absolute;
+
+    color: #d39bbb;
+
+    font-size: 28px;
+}
+
+.star.one {
+    top: 40px;
+    left: 42px;
+}
+
+.star.two {
+    top: 95px;
+    right: 55px;
+}
+
+.star.three {
+    bottom: 48px;
+    left: 65px;
+}
+
+.star.four {
+    bottom: 35px;
+    right: 65px;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.intro-content {
+    padding: 8px;
+}
+
+.mini-title {
+    color: #c075a3;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.intro-content h2 {
+    margin: 8px 0 20px;
+
+    color: #654865;
+
+    font-size: 31px;
+}
+
+.intro-content p {
+    margin: 0 0 18px;
+
+    color: #776875;
+
+    font-size: 16px;
+
+    line-height: 2;
+}
+
+.intro-content strong {
+    color: #a85c8b;
+}
+
+
+/* =========================
+   HIGHLIGHT
+========================= */
+
+.intro-highlight {
+    margin-top: 25px;
+
+    padding: 20px 23px;
+
+    border-left:
+        5px solid #e2bd55;
+
+    border-radius:
+        0 20px 20px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5d7,
+            #fff0e7
+        );
+
+    color: #705e69;
+
+    line-height: 1.8;
+
+    box-shadow:
+        0 5px 15px rgba(160, 120, 100, .06);
+}
+
+.intro-highlight span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #9a7187;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   POINTS
+========================= */
+
+.intro-points {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 30px;
+}
+
+.point {
+    position: relative;
+
+    padding: 25px 20px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 253, 248, .96);
+
+    border:
+        2px solid #f0dce8;
+
+    border-radius: 27px;
+
+    box-shadow:
+        0 10px 25px rgba(130, 85, 120, .08);
+
+    transition: .25s ease;
+}
+
+.point:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 30px rgba(130, 85, 120, .14);
+}
+
+.point-icon {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 34px;
+}
+
+.point h3 {
+    margin: 5px 0 8px;
+
+    color: #654866;
+
+    font-size: 18px;
+}
+
+.point p {
+    margin: 0;
+
+    color: #806f7d;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 25px 15px 35px;
+
+    text-align: center;
+
+    color: #98738f;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+
+        padding: 13px 15px;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+
+    .intro-card {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-visual {
+        min-height: 280px;
+    }
+
+    .intro-points {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 520px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .menu {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .menu a {
+        text-align: center;
+
+        padding: 9px 5px;
+
+        font-size: 12px;
+    }
+
+    .intro-page {
+        width: 94%;
+
+        padding: 40px 0 55px;
+    }
+
+    .intro-header h1 {
+        font-size: 46px;
+    }
+
+    .intro-header p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+    .intro-header::before,
+    .intro-header::after {
+        display: none;
+    }
+
+    .intro-card {
+        padding: 15px;
+
+        gap: 20px;
+
+        border-radius: 28px;
+    }
+
+    .intro-visual {
+        min-height: 240px;
+
+        border-radius: 23px;
+    }
+
+    .intro-symbol {
+        width: 145px;
+        height: 145px;
+
+        font-size: 55px;
+
+        border-width: 8px;
+    }
+
+    .intro-content h2 {
+        font-size: 25px;
+    }
+
+    .intro-content p {
+        font-size: 15px;
+
+        line-height: 1.9;
+    }
+
+    .intro-highlight {
+        padding: 17px;
+
+        font-size: 14px;
+    }
+
+    .intro-points {
+        gap: 15px;
+    }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
-<!-- =================================
+
+<!-- =========================
      NAVIGATION
-================================= -->
+========================= -->
 
 <header class="navbar">
 
@@ -328,23 +710,23 @@
     <nav class="menu">
 
         <a href="portfolio.html">
-            พอร์ต
+            🏠 พอร์ต
         </a>
 
         <a href="introduction.html" class="active">
-            คำนำ
+            📖 คำนำ
         </a>
 
         <a href="education.html">
-            ประวัติการศึกษา
+            🎓 การศึกษา
         </a>
 
         <a href="interest.html">
-            ความสนใจ
+            💡 ความสนใจ
         </a>
 
         <a href="works.html">
-            ผลงาน
+            🏆 ผลงาน
         </a>
 
     </nav>
@@ -352,13 +734,14 @@
 </header>
 
 
-<!-- =================================
+<!-- =========================
      MAIN
-================================= -->
+========================= -->
 
 <main>
 
 <section class="intro-page">
+
 
     <!-- HEADER -->
 
@@ -379,11 +762,12 @@
     </div>
 
 
-    <!-- INTRODUCTION -->
+    <!-- MAIN INTRO -->
 
     <div class="intro-card">
 
-        <!-- Decorative side -->
+
+        <!-- VISUAL -->
 
         <div class="intro-visual">
 
@@ -399,7 +783,7 @@
         </div>
 
 
-        <!-- Text -->
+        <!-- TEXT -->
 
         <div class="intro-content">
 
@@ -411,28 +795,43 @@
                 แฟ้มสะสมผลงานของฉัน
             </h2>
 
+
             <p>
-                แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้จัดทำขึ้นเพื่อรวบรวม
-                <strong>ประวัติการศึกษา ผลงาน กิจกรรม
-                และความสนใจ</strong>
-                ของ <strong>วชิรญาณ์ คลังแก้ว</strong>
-                เพื่อแสดงให้เห็นถึงประสบการณ์และการเรียนรู้
-                ที่ได้รับจากการศึกษาและการเข้าร่วมกิจกรรมต่าง ๆ
+                แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้
+                จัดทำขึ้นเพื่อรวบรวม
+                <strong>
+                    ประวัติการศึกษา ผลงาน กิจกรรม
+                    และความสนใจ
+                </strong>
+                ของ
+                <strong>
+                    วชิรญาณ์ คลังแก้ว
+                </strong>
+                เพื่อแสดงให้เห็นถึงประสบการณ์
+                และการเรียนรู้ที่ได้รับจากการศึกษา
+                และการเข้าร่วมกิจกรรมต่าง ๆ
             </p>
+
 
             <p>
                 ข้าพเจ้ามีความสนใจในด้าน
-                <strong>วิทยาศาสตร์ คณิตศาสตร์ เทคโนโลยี
-                และวิศวกรรมศาสตร์</strong>
+                <strong>
+                    วิทยาศาสตร์ คณิตศาสตร์
+                    เทคโนโลยี และวิศวกรรมศาสตร์
+                </strong>
                 โดยเฉพาะด้านวิศวกรรมโยธา
-                ซึ่งเป็นสาขาที่ข้าพเจ้าตั้งใจศึกษาต่อในอนาคต
+                ซึ่งเป็นสาขาที่ข้าพเจ้าตั้งใจ
+                ศึกษาต่อในอนาคต
             </p>
 
+
             <p>
-                ประสบการณ์จากการเรียน การทำกิจกรรม
-                การทำงานร่วมกับผู้อื่น และการเข้าร่วมเวิร์กช็อปต่าง ๆ
-                ล้วนเป็นส่วนสำคัญที่ช่วยให้ข้าพเจ้าได้เรียนรู้
-                และพัฒนาตนเองอย่างต่อเนื่อง
+                ประสบการณ์จากการเรียน
+                การทำกิจกรรม
+                การทำงานร่วมกับผู้อื่น
+                และการเข้าร่วมเวิร์กช็อปต่าง ๆ
+                ล้วนเป็นส่วนสำคัญที่ช่วยให้ข้าพเจ้า
+                ได้เรียนรู้และพัฒนาตนเองอย่างต่อเนื่อง
             </p>
 
 
@@ -443,10 +842,12 @@
                 </span>
 
                 ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้
-                จะช่วยสะท้อนถึงความตั้งใจ ความสามารถ
-                ประสบการณ์ และพัฒนาการของข้าพเจ้า
+                จะช่วยสะท้อนถึงความตั้งใจ
+                ความสามารถ ประสบการณ์
+                และพัฒนาการของข้าพเจ้า
                 รวมถึงความมุ่งมั่นในการศึกษาต่อ
-                และก้าวไปสู่เส้นทางวิศวกรรมโยธาในอนาคต
+                และก้าวไปสู่เส้นทางวิศวกรรมโยธา
+                ในอนาคต
 
             </div>
 
@@ -455,9 +856,10 @@
     </div>
 
 
-    <!-- KEY POINTS -->
+    <!-- POINTS -->
 
     <div class="intro-points">
+
 
         <div class="point">
 
@@ -512,11 +914,18 @@
 
         </div>
 
+
     </div>
 
 </section>
 
 </main>
+
+
+<footer>
+    ✦ วชิรญาณ์ คลังแก้ว • Portfolio ✦
+</footer>
+
 
 </body>
 </html>
