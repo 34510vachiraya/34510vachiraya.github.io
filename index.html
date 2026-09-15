@@ -17,16 +17,37 @@
 
         body {
             margin: 0;
-            font-family: Arial, "Tahoma", sans-serif;
+            font-family: Arial, Tahoma, sans-serif;
             color: #60415f;
             min-height: 100vh;
 
             background:
-                radial-gradient(circle at 10% 20%, rgba(255,255,255,0.9) 0 4px, transparent 5px),
-                radial-gradient(circle at 85% 15%, rgba(255,255,255,0.9) 0 4px, transparent 5px),
-                radial-gradient(circle at 75% 75%, rgba(255,255,255,0.7) 0 3px, transparent 4px),
-                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.7) 0 3px, transparent 4px),
-                linear-gradient(135deg, #fff4c7, #ffdff0, #e8ddff);
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(255,255,255,0.9) 0 4px,
+                    transparent 5px
+                ),
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(255,255,255,0.9) 0 4px,
+                    transparent 5px
+                ),
+                radial-gradient(
+                    circle at 75% 75%,
+                    rgba(255,255,255,0.7) 0 3px,
+                    transparent 4px
+                ),
+                radial-gradient(
+                    circle at 20% 80%,
+                    rgba(255,255,255,0.7) 0 3px,
+                    transparent 4px
+                ),
+                linear-gradient(
+                    135deg,
+                    #fff4c7,
+                    #ffdff0,
+                    #e8ddff
+                );
         }
 
         /* =========================
@@ -45,13 +66,13 @@
 
             padding: 14px 35px;
 
-            background: rgba(255, 255, 255, 0.90);
+            background: rgba(255,255,255,0.90);
             backdrop-filter: blur(12px);
 
             box-shadow:
-                0 4px 18px rgba(130, 90, 130, 0.14);
+                0 4px 18px rgba(130,90,130,0.14);
 
-            border-bottom: 2px solid rgba(242, 207, 225, 0.8);
+            border-bottom: 2px solid rgba(242,207,225,0.8);
         }
 
         .logo {
@@ -97,7 +118,7 @@
             transform: translateY(-2px);
 
             box-shadow:
-                0 5px 12px rgba(180, 120, 160, 0.15);
+                0 5px 12px rgba(180,120,160,0.15);
         }
 
         /* =========================
@@ -107,14 +128,18 @@
         .hero {
             max-width: 1050px;
             margin: 0 auto;
+
             padding: 55px 20px 35px;
+
             text-align: center;
         }
 
         .sparkle {
             color: #c58bb8;
+
             font-size: 28px;
             letter-spacing: 8px;
+
             margin-bottom: 10px;
         }
 
@@ -130,6 +155,7 @@
             border-radius: 30px;
 
             color: #9b638f;
+
             font-size: 14px;
             font-weight: bold;
             letter-spacing: 2px;
@@ -139,6 +165,7 @@
             margin: 8px 0;
 
             font-size: 48px;
+
             color: #815878;
 
             text-shadow:
@@ -160,6 +187,7 @@
             position: relative;
 
             max-width: 850px;
+
             margin: 0 auto;
 
             padding: 40px 30px;
@@ -167,6 +195,7 @@
             background: rgba(255,255,255,0.86);
 
             border: 3px solid #f2d0e2;
+
             border-radius: 38px;
 
             box-shadow:
@@ -175,23 +204,27 @@
 
         .profile-box::before {
             content: "✦";
+
             position: absolute;
 
             top: 18px;
             left: 25px;
 
             color: #e4a7c9;
+
             font-size: 24px;
         }
 
         .profile-box::after {
             content: "✧";
+
             position: absolute;
 
             right: 28px;
             bottom: 18px;
 
             color: #b99be8;
+
             font-size: 28px;
         }
 
@@ -206,6 +239,7 @@
             object-fit: cover;
 
             border-radius: 50%;
+
             border: 7px solid #fff;
 
             box-shadow:
@@ -227,23 +261,27 @@
             margin-top: 6px;
 
             color: #a27699;
+
             font-size: 17px;
         }
 
         .info {
             line-height: 1.9;
+
             font-size: 17px;
 
             margin: 18px 0 0;
         }
 
         /* =========================
-           ปุ่มไปแต่ละหน้า
+           ปุ่ม
         ========================= */
 
         .buttons {
             display: flex;
+
             justify-content: center;
+
             flex-wrap: wrap;
 
             gap: 13px;
@@ -284,7 +322,7 @@
         }
 
         /* =========================
-           กล่องคำคม
+           คำคม
         ========================= */
 
         .quote {
@@ -304,14 +342,16 @@
         }
 
         /* =========================
-           จุดตกแต่ง
+           ตกแต่ง
         ========================= */
 
         .decoration {
             margin: 28px auto 0;
 
             color: #c98db9;
+
             font-size: 22px;
+
             letter-spacing: 7px;
         }
 
@@ -330,14 +370,16 @@
         }
 
         /* =========================
-           มือถือ
+           Tablet / มือถือ
         ========================= */
 
         @media (max-width: 800px) {
 
             .navbar {
                 flex-direction: column;
+
                 padding: 12px 15px;
+
                 gap: 10px;
             }
 
@@ -347,6 +389,7 @@
 
             .navbar nav a {
                 font-size: 13px;
+
                 padding: 8px 11px;
             }
 
@@ -363,11 +406,13 @@
 
             .sparkle {
                 font-size: 22px;
+
                 letter-spacing: 5px;
             }
 
             .small-title {
                 font-size: 12px;
+
                 padding: 7px 15px;
             }
 
@@ -381,6 +426,7 @@
 
             .profile-box {
                 padding: 32px 18px;
+
                 border-radius: 28px;
             }
 
@@ -399,6 +445,7 @@
 
             .page-button {
                 width: 100%;
+
                 max-width: 280px;
             }
         }
@@ -413,17 +460,17 @@
 
     <header class="navbar">
 
-        <a href="portfolio.html" class="logo">
+        <a href="index.html" class="logo">
             W.K.
         </a>
 
         <nav>
 
-            <a href="portfolio.html" class="active">
+            <a href="index.html" class="active">
                 🌸 Portfolio
             </a>
 
-            <a href="introduction.html">
+            <a href="preface.html">
                 📖 คำนำ
             </a>
 
@@ -435,7 +482,7 @@
                 💡 ความสนใจ
             </a>
 
-            <a href="works.html">
+            <a href="work.html">
                 🏆 ผลงาน
             </a>
 
@@ -464,89 +511,3 @@
 
         <p class="subtitle">
             ✨ แฟ้มสะสมผลงานของ วชิรญาณ์ คลังแก้ว ✨
-        </p>
-
-
-        <!-- PROFILE -->
-
-        <section class="profile-box">
-
-            <img
-                src="profile.png"
-                alt="รูปโปรไฟล์ วชิรญาณ์ คลังแก้ว"
-                class="profile-image"
-            >
-
-            <div class="name">
-                วชิรญาณ์ คลังแก้ว
-            </div>
-
-            <div class="nickname">
-                ✿ ชื่อเล่น โฟร์ท ✿
-            </div>
-
-            <p class="info">
-                นักเรียนชั้นมัธยมศึกษาปีที่ 6<br>
-                แผนการเรียนเตรียมวิศวกรรมศาสตร์<br>
-                โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-            </p>
-
-
-            <!-- BUTTONS -->
-
-            <div class="buttons">
-
-                <a
-                    href="preface.html"
-                    class="page-button"
-                >
-                    📖 คำนำ
-                </a>
-
-                <a
-                    href="education.html"
-                    class="page-button"
-                >
-                    🎓 ประวัติการศึกษา
-                </a>
-
-                <a
-                    href="interest.html"
-                    class="page-button"
-                >
-                    💡 ความสนใจ
-                </a>
-
-                <a
-                    href="work.html"
-                    class="page-button"
-                >
-                    🏆 ผลงาน
-                </a>
-
-            </div>
-
-
-            <!-- QUOTE -->
-
-            <div class="quote">
-                🌷 “เรียนรู้สิ่งใหม่ พัฒนาตัวเอง
-                และก้าวไปสู่ความฝันด้านวิศวกรรม” 🌷
-            </div>
-
-        </section>
-
-
-        <div class="decoration">
-            ♡ ✦ ♡ ✧ ♡
-        </div>
-
-    </main>
-
-
-    <footer>
-        ✦ วชิรญาณ์ คลังแก้ว | My Portfolio ✦
-    </footer>
-
-</body>
-</html>
