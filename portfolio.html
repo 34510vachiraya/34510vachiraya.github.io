@@ -4,789 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Portfolio | วชิรญาณ์ คลังแก้ว</title>
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, "Noto Sans Thai", sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            width: 100%;
-            background: white;
-            border-bottom: 1px solid #ddd;
-            padding: 20px 7%;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 20px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        nav {
-            display: flex;
-            gap: 28px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 15px;
-            cursor: pointer;
-        }
-
-        nav a:hover {
-            color: #777;
-        }
-
-        nav a.active {
-            font-weight: bold;
-            border-bottom: 2px solid #222;
-            padding-bottom: 5px;
-        }
-
-
-        /* =========================
-           PAGE
-        ========================= */
-
-        .page {
-            display: none;
-            min-height: calc(100vh - 80px);
-        }
-
-        .page.active-page {
-            display: block;
-        }
-
-
-        /* =========================
-           GENERAL TITLE
-        ========================= */
-
-        .title {
-            max-width: 1000px;
-            margin: auto;
-            padding: 80px 30px 50px;
-        }
-
-        .title p {
-            font-size: 13px;
-            letter-spacing: 4px;
-            margin-bottom: 15px;
-        }
-
-        .title h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-
-        .title span {
-            color: #777;
-        }
-
-
-        /* =========================
-           PORTFOLIO PAGE
-        ========================= */
-
-        .portfolio-container {
-            max-width: 1000px;
-            margin: 0 auto 100px;
-            padding: 50px;
-
-            background: white;
-            border: 1px solid #ddd;
-
-            display: flex;
-            justify-content: space-between;
-            gap: 50px;
-        }
-
-        .portfolio-text {
-            flex: 1;
-        }
-
-        .portfolio-text h2 {
-            font-size: 28px;
-            margin-bottom: 25px;
-        }
-
-        .portfolio-text p {
-            color: #666;
-            line-height: 2;
-            margin-bottom: 15px;
-        }
-
-        .portfolio-symbol {
-            width: 230px;
-            border-left: 1px solid #ddd;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            padding-left: 40px;
-        }
-
-        .portfolio-symbol strong {
-            font-size: 50px;
-        }
-
-        .portfolio-symbol span {
-            letter-spacing: 3px;
-        }
-
-        .portfolio-symbol small {
-            margin-top: 20px;
-            color: #777;
-        }
-
-
-        /* =========================
-           PREFACE PAGE
-        ========================= */
-
-        .preface-container {
-            max-width: 850px;
-            margin: 0 auto 100px;
-
-            background: white;
-            border: 1px solid #ddd;
-
-            padding: 60px;
-        }
-
-        .preface-container h2 {
-            font-size: 30px;
-            margin-bottom: 30px;
-        }
-
-        .preface-container p {
-            line-height: 2;
-            color: #555;
-            margin-bottom: 25px;
-        }
-
-        .signature {
-            text-align: right;
-            margin-top: 60px;
-        }
-
-        .signature p {
-            color: #222;
-            margin-bottom: 5px;
-        }
-
-        .signature span {
-            color: #777;
-        }
-
-
-        /* =========================
-           EDUCATION PAGE
-        ========================= */
-
-        .education-container {
-            max-width: 1000px;
-            margin: 0 auto 100px;
-        }
-
-        .education-box {
-            background: white;
-            border: 1px solid #ddd;
-
-            padding: 35px 40px;
-            margin-bottom: 20px;
-
-            display: flex;
-            gap: 50px;
-        }
-
-        .education-year {
-            width: 190px;
-            font-weight: bold;
-        }
-
-        .education-content {
-            flex: 1;
-        }
-
-        .education-content h2 {
-            margin-bottom: 12px;
-        }
-
-        .education-content p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-
-        /* =========================
-           WORK PAGE
-        ========================= */
-
-        .works-container {
-            max-width: 1000px;
-            margin: 0 auto 100px;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .work-box {
-            background: white;
-            border: 1px solid #ddd;
-
-            padding: 35px;
-            min-height: 280px;
-        }
-
-        .work-number {
-            color: #888;
-            font-size: 14px;
-            margin-bottom: 50px;
-        }
-
-        .work-box h2 {
-            margin-bottom: 20px;
-        }
-
-        .work-box p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 13px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 768px) {
-
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            nav a {
-                font-size: 13px;
-            }
-
-            .title {
-                padding: 50px 25px 35px;
-            }
-
-            .title h1 {
-                font-size: 36px;
-            }
-
-            .portfolio-container {
-                margin: 0 20px 70px;
-                padding: 30px;
-                flex-direction: column;
-            }
-
-            .portfolio-symbol {
-                width: 100%;
-                border-left: none;
-                border-top: 1px solid #ddd;
-                padding-left: 0;
-                padding-top: 30px;
-            }
-
-            .preface-container {
-                margin: 0 20px 70px;
-                padding: 30px;
-            }
-
-            .education-container {
-                margin: 0 20px 70px;
-            }
-
-            .education-box {
-                flex-direction: column;
-                gap: 20px;
-                padding: 30px;
-            }
-
-            .education-year {
-                width: auto;
-            }
-
-            .works-container {
-                grid-template-columns: 1fr;
-                margin: 0 20px 70px;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+<nav class="topbar">
+    <div class="logo">✦ WACHIRAYA ✦</div>
 
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-    <div class="logo">
-        MY PORTFOLIO
+    <div class="menu">
+        <a href="portfolio.html" class="active">PORTFOLIO</a>
+        <a href="index.html">INDEX</a>
+        <a href="introduction.html">คำนำ</a>
+        <a href="education.html">ประวัติการศึกษา</a>
+        <a href="interest.html">ความสนใจ</a>
+        <a href="works.html">ผลงาน</a>
     </div>
+</nav>
 
-    <nav>
+<main>
 
-        <!-- ไม่มีหน้าแรกแล้ว -->
+<section class="profile">
 
-        <a onclick="showPage('portfolio')" id="nav-portfolio" class="active">
-            พอร์ต
-        </a>
+    <div class="profile-container">
 
-        <a onclick="showPage('preface')" id="nav-preface">
-            คำนำ
-        </a>
+        <div class="profile-label">
+            ✦ MY MAGICAL PORTFOLIO ✦
+        </div>
 
-        <a onclick="showPage('education')" id="nav-education">
-            ประวัติการศึกษา
-        </a>
-
-        <a onclick="showPage('works')" id="nav-works">
-            ผลงาน
-        </a>
-
-    </nav>
-
-</header>
-
-
-
-<!-- =========================
-     PORTFOLIO PAGE
-========================= -->
-
-<section id="portfolio" class="page active-page">
-
-    <div class="title">
-
-        <p>PORTFOLIO</p>
-
-        <h1>
-            แฟ้มสะสมผลงาน
+        <h1 class="profile-title">
+            PORTFOLIO
         </h1>
 
-        <span>
+        <img
+            src="profile.PNG"
+            alt="รูปโปรไฟล์ของวชิรญาณ์ คลังแก้ว"
+            class="profile-image"
+        >
+
+        <div class="profile-name">
             วชิรญาณ์ คลังแก้ว
-        </span>
+        </div>
 
-    </div>
+        <div class="profile-detail">
+            ✧ ชื่อเล่น : โฟร์ท<br>
+            ✧ อายุ : 17 ปี<br>
+            ✧ ชั้นมัธยมศึกษาปีที่ 6<br>
+            ✧ แผนการเรียน : เตรียมวิศวกรรมศาสตร์
+        </div>
 
+        <div class="profile-card">
 
-    <div class="portfolio-container">
-
-        <div class="portfolio-text">
-
-            <h2>
-                เกี่ยวกับแฟ้มสะสมผลงาน
-            </h2>
+            <h2>🪄 คำนำ 🪄</h2>
 
             <p>
-                แฟ้มสะสมผลงานนี้จัดทำขึ้นเพื่อรวบรวม
-                ประวัติส่วนตัว ประวัติการศึกษา ผลงาน
-                กิจกรรม และประสบการณ์ต่าง ๆ
-                ที่ได้เรียนรู้ตลอดช่วงการศึกษา
+                แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้
+                จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
+                ประวัติการศึกษา ความสนใจ ความสามารถ
+                ทักษะ และผลงานต่าง ๆ
+                ที่ข้าพเจ้าได้เรียนรู้และสั่งสมจากการศึกษา
+                รวมถึงการเข้าร่วมกิจกรรมต่าง ๆ
             </p>
 
             <p>
-                เว็บไซต์นี้จัดทำขึ้นเพื่อแสดงข้อมูล
-                และผลงานของผู้จัดทำในรูปแบบที่สามารถ
-                เข้าถึงข้อมูลแต่ละส่วนได้อย่างสะดวก
+                ข้าพเจ้าชื่อ วชิรญาณ์ คลังแก้ว
+                ชื่อเล่น โฟร์ท
+                ปัจจุบันกำลังศึกษาอยู่ชั้นมัธยมศึกษาปีที่ 6
+                แผนการเรียนเตรียมวิศวกรรมศาสตร์
+                โดยมีความสนใจในด้านวิศวกรรมโยธา
+            </p>
+
+            <p>
+                ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานฉบับนี้
+                จะช่วยแสดงให้เห็นถึงความตั้งใจ
+                ความสามารถ ทักษะ และประสบการณ์
+                รวมถึงความพร้อมในการศึกษาต่อ
+                ในระดับมหาวิทยาลัย
             </p>
 
         </div>
 
-
-        <div class="portfolio-symbol">
-
-            <strong>MY</strong>
-
-            <span>
-                PORTFOLIO
-            </span>
-
-            <small>
-                2026
-            </small>
-
+        <div class="buttons">
+            <a href="index.html" class="button">
+                ✦ ไปหน้า INDEX →
+            </a>
         </div>
 
     </div>
 
 </section>
 
-
-
-<!-- =========================
-     PREFACE PAGE
-========================= -->
-
-<section id="preface" class="page">
-
-    <div class="title">
-
-        <p>PREFACE</p>
-
-        <h1>
-            คำนำ
-        </h1>
-
-        <span>
-            แฟ้มสะสมผลงาน
-        </span>
-
-    </div>
-
-
-    <div class="preface-container">
-
-        <h2>
-            คำนำ
-        </h2>
-
-        <p>
-            แฟ้มสะสมผลงานฉบับนี้จัดทำขึ้นเพื่อรวบรวม
-            ประวัติส่วนตัว ประวัติการศึกษา ผลงาน
-            กิจกรรม และประสบการณ์ต่าง ๆ ของข้าพเจ้า
-        </p>
-
-        <p>
-            เนื้อหาภายในแฟ้มสะสมผลงานสะท้อนให้เห็นถึง
-            ความรู้ ความสามารถ ทักษะ และประสบการณ์
-            ที่ข้าพเจ้าได้เรียนรู้จากการศึกษา
-            และการเข้าร่วมกิจกรรมต่าง ๆ
-        </p>
-
-        <p>
-            ข้าพเจ้าหวังเป็นอย่างยิ่งว่าแฟ้มสะสมผลงาน
-            ฉบับนี้จะช่วยให้ผู้อ่านได้รู้จักตัวตน
-            ความสนใจ และความสามารถของข้าพเจ้า
-            มากยิ่งขึ้น
-        </p>
-
-
-        <div class="signature">
-
-            <p>
-                วชิรญาณ์ คลังแก้ว
-            </p>
-
-            <span>
-                ผู้จัดทำ
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     EDUCATION PAGE
-========================= -->
-
-<section id="education" class="page">
-
-    <div class="title">
-
-        <p>EDUCATION</p>
-
-        <h1>
-            ประวัติการศึกษา
-        </h1>
-
-        <span>
-            เส้นทางการศึกษา
-        </span>
-
-    </div>
-
-
-    <div class="education-container">
-
-
-        <div class="education-box">
-
-            <div class="education-year">
-                ระดับประถมศึกษา
-            </div>
-
-            <div class="education-content">
-
-                <h2>
-                    ประถมศึกษาปีที่ 1-6
-                </h2>
-
-                <p>
-                    โรงเรียนบ้านเนินโมกการุณราษฎ์อุปถัมป์
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="education-box">
-
-            <div class="education-year">
-                ระดับมัธยมศึกษาตอนต้น
-            </div>
-
-            <div class="education-content">
-
-                <h2>
-                    มัธยมศึกษาตอนต้นปีที่ 1-3
-                </h2>
-
-                <p>
-                    แผนการเรียนภาษาอังกฤษและภาษาจีน
-                    โรงเรียนบ้านบึงอุตสหกรรมนุเคราะห์
-                </p>
-
-            </div>
-
-        </div>
-
-
-
-        <div class="education-box">
-
-            <div class="education-year">
-                ระดับมัธยมศึกษาตอนปลาย
-            </div>
-
-            <div class="education-content">
-
-                <h2>
-                    มัธยมศึกษาปีที่ 4-6
-                </h2>
-
-                <p>
-                    แผนการเรียนเตรียมวิศวกรรมศาสตร์
-                    ปัจจุบันกำลังศึกษาอยู่ในระดับ
-                    มัธยมศึกษาปีที่ 6
-                    โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-                </p>
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     WORKS PAGE
-========================= -->
-
-<section id="works" class="page">
-
-    <div class="title">
-
-        <p>MY WORKS</p>
-
-        <h1>
-            ผลงาน
-        </h1>
-
-        <span>
-            ผลงานและกิจกรรมที่เคยทำ
-        </span>
-
-    </div>
-
-
-    <div class="works-container">
-
-
-        <div class="work-box">
-
-            <div class="work-number">
-                01
-            </div>
-
-            <h2>
-                ผลงานที่ 1
-            </h2>
-
-            <p>
-                ใส่รายละเอียดเกี่ยวกับผลงาน
-                กิจกรรม หรือโครงงานที่เคยทำ
-                สามารถเพิ่มรูปภาพของผลงานได้
-            </p>
-
-        </div>
-
-
-
-        <div class="work-box">
-
-            <div class="work-number">
-                02
-            </div>
-
-            <h2>
-                ผลงานที่ 2
-            </h2>
-
-            <p>
-                ใส่รายละเอียดเกี่ยวกับผลงาน
-                หรือกิจกรรมที่เคยเข้าร่วม
-                พร้อมรายละเอียดเพิ่มเติม
-            </p>
-
-        </div>
-
-
-
-        <div class="work-box">
-
-            <div class="work-number">
-                03
-            </div>
-
-            <h2>
-                ผลงานที่ 3
-            </h2>
-
-            <p>
-                ใส่รายละเอียดเกี่ยวกับโครงงาน
-                ผลงาน หรือประสบการณ์
-                ที่ภาคภูมิใจ
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    © 2026 วชิรญาณ์ คลังแก้ว
-
-</footer>
-
-
-
-<!-- =========================
-     JAVASCRIPT
-========================= -->
-
-<script>
-
-function showPage(pageName) {
-
-    const pages = document.querySelectorAll(".page");
-
-    pages.forEach(function(page) {
-        page.classList.remove("active-page");
-    });
-
-
-    const selectedPage = document.getElementById(pageName);
-
-    if (selectedPage) {
-        selectedPage.classList.add("active-page");
-    }
-
-
-    const navLinks = document.querySelectorAll("nav a");
-
-    navLinks.forEach(function(link) {
-        link.classList.remove("active");
-    });
-
-
-    const selectedNav = document.getElementById("nav-" + pageName);
-
-    if (selectedNav) {
-        selectedNav.classList.add("active");
-    }
-
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-
-}
-
-</script>
-
+</main>
 
 </body>
 </html>
