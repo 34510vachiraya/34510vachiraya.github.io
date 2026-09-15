@@ -11,140 +11,342 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
-    font-family: Arial, "Tahoma", sans-serif;
-    color: #5d4560;
-    background:
-        radial-gradient(circle at 12% 18%, white 0 4px, transparent 5px),
-        radial-gradient(circle at 88% 20%, white 0 5px, transparent 6px),
-        linear-gradient(135deg, #fff4c9, #ffdceb, #e9ddff);
+    font-family: Arial, "Noto Sans Thai", "Tahoma", sans-serif;
+    color: #66556b;
     min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 8% 15%, rgba(255,255,255,.9) 0 4px, transparent 5px),
+        radial-gradient(circle at 90% 25%, rgba(255,255,255,.9) 0 5px, transparent 6px),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,.8) 0 3px, transparent 4px),
+        linear-gradient(135deg, #ffe8f3, #f0e3ff, #fff3d6);
+
+    background-size: 150px 150px, 190px 190px, 120px 120px, cover;
 }
+
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    padding: 15px;
-    background: rgba(255,255,255,0.9);
-    box-shadow: 0 3px 15px rgba(120,80,120,0.12);
+
+    padding: 14px;
+
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(10px);
+
+    border-bottom: 2px solid #efc7dc;
+    box-shadow: 0 5px 20px rgba(130,80,130,.12);
 }
 
 nav a {
     text-decoration: none;
-    color: #76536f;
-    background: white;
-    padding: 11px 20px;
+    color: #765674;
+
+    background: #fff;
+    border: 2px solid #efcfe1;
+
+    padding: 10px 20px;
     border-radius: 25px;
+
     font-weight: bold;
-    border: 2px solid #f0cfe0;
-    transition: 0.25s;
+    font-size: 15px;
+
+    transition: .25s;
 }
 
-nav a:hover,
-nav a.active {
-    background: #ffd4e7;
+nav a:hover {
+    background: #ffe0ed;
     transform: translateY(-3px);
 }
 
-.container {
-    max-width: 950px;
-    margin: 50px auto;
-    padding: 20px;
+nav a.active {
+    background: linear-gradient(135deg, #ffd1e4, #ead8ff);
+    border-color: #dfa9cc;
+    color: #714c6c;
 }
+
+/* =========================
+   MAIN
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 950px;
+
+    margin: 50px auto 70px;
+}
+
+/* =========================
+   TITLE
+========================= */
 
 .title {
     text-align: center;
+    margin-bottom: 35px;
 }
 
-.title .icon {
-    font-size: 65px;
+.title .symbol {
+    font-size: 45px;
+    margin-bottom: 8px;
 }
 
 .title h1 {
-    color: #805675;
-    font-size: 44px;
-    margin: 10px;
+    margin: 0;
+
+    font-size: 45px;
+    color: #bd5d91;
+
+    text-shadow: 2px 2px rgba(255,255,255,.9);
 }
 
-.title p {
-    color: #98738e;
+.title .english {
+    margin-top: 8px;
+
+    color: #98739a;
+    font-size: 16px;
+    letter-spacing: 3px;
 }
 
-.content {
-    margin-top: 35px;
-    background: rgba(255,255,255,0.9);
-    border: 3px solid #f2d0e2;
+/* =========================
+   BOOK
+========================= */
+
+.book {
+    position: relative;
+
+    background: rgba(255,255,255,.94);
+
+    border: 3px solid #edbfd8;
     border-radius: 35px;
-    padding: 40px;
-    box-shadow: 0 15px 35px rgba(120,80,120,0.13);
-    line-height: 2;
-    font-size: 17px;
+
+    padding: 45px 50px;
+
+    box-shadow:
+        0 15px 35px rgba(120,70,120,.15),
+        0 0 0 8px rgba(255,255,255,.45);
+
+    overflow: hidden;
 }
 
-.content h2 {
+.book::before {
+    content: "✦";
+    position: absolute;
+
+    top: 18px;
+    left: 25px;
+
+    color: #e2a7ca;
+    font-size: 28px;
+}
+
+.book::after {
+    content: "✧";
+    position: absolute;
+
+    right: 25px;
+    bottom: 15px;
+
+    color: #cdb0e7;
+    font-size: 35px;
+}
+
+/* =========================
+   INTRODUCTION TEXT
+========================= */
+
+.greeting {
     text-align: center;
-    color: #805675;
+
+    color: #b65389;
+    font-size: 23px;
+    font-weight: bold;
+
+    margin-bottom: 25px;
 }
 
-.goal {
-    margin-top: 30px;
-    padding: 25px;
-    background: #fff7d8;
-    border: 2px dashed #dfbfd0;
+.book p {
+    font-size: 17px;
+    line-height: 2;
+
+    margin: 0 0 20px;
+}
+
+.book strong {
+    color: #b65389;
+}
+
+/* =========================
+   HIGHLIGHT BOX
+========================= */
+
+.highlight {
+    margin: 30px 0;
+
+    padding: 25px 28px;
+
+    background: linear-gradient(
+        135deg,
+        #fff3f8,
+        #f7efff
+    );
+
+    border: 2px dashed #ddb6d2;
     border-radius: 25px;
 }
 
-.goal h3 {
-    color: #805675;
-    margin-top: 0;
+.highlight h2 {
+    margin: 0 0 12px;
+
+    color: #a85687;
+    font-size: 22px;
 }
+
+.highlight p {
+    margin: 0;
+}
+
+/* =========================
+   SMALL CARDS
+========================= */
 
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
-    margin-top: 25px;
+
+    margin-top: 30px;
 }
 
 .card {
-    background: white;
-    border: 2px solid #efd2e1;
-    border-radius: 25px;
-    padding: 22px;
     text-align: center;
+
+    background: #fff;
+
+    border: 2px solid #efd1e1;
+    border-radius: 25px;
+
+    padding: 22px 15px;
+
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(130,80,130,.12);
 }
 
 .card .icon {
-    font-size: 38px;
+    font-size: 35px;
+    margin-bottom: 8px;
 }
 
 .card h3 {
-    color: #805675;
+    margin: 8px 0;
+
+    color: #9e5b88;
+    font-size: 18px;
 }
+
+.card p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* =========================
+   END MESSAGE
+========================= */
+
+.end-message {
+    margin-top: 35px;
+
+    text-align: center;
+
+    padding: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #fff0f7,
+        #f1e8ff
+    );
+
+    border-radius: 25px;
+}
+
+.end-message p {
+    margin: 0;
+    color: #80627d;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     text-align: center;
-    padding: 30px;
-    color: #8b6d85;
+
+    padding: 25px;
+
+    color: #92718e;
+    font-size: 14px;
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 700px) {
+
+    nav {
+        gap: 6px;
+        padding: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 9px 12px;
+    }
+
+    .container {
+        width: 92%;
+        margin-top: 35px;
+    }
+
+    .title h1 {
+        font-size: 36px;
+    }
+
+    .book {
+        padding: 32px 22px;
+        border-radius: 28px;
+    }
+
+    .book p {
+        font-size: 16px;
+    }
+
     .cards {
         grid-template-columns: 1fr;
     }
 
-    .content {
-        padding: 25px 20px;
-    }
-
-    .title h1 {
-        font-size: 35px;
+    .greeting {
+        font-size: 20px;
     }
 }
 </style>
@@ -152,78 +354,159 @@ footer {
 
 <body>
 
+<!-- =========================
+     MENU
+========================= -->
+
 <nav>
-    <a href="portfolio.html">🌸 Portfolio</a>
-    <a href="introduction.html" class="active">📖 คำนำ</a>
-    <a href="interest.html">💡 ความสนใจ</a>
-    <a href="works.html">🏆 ผลงาน</a>
+
+    <a href="portfolio.html">
+        🌸 Portfolio
+    </a>
+
+    <a href="introduction.html" class="active">
+        📖 คำนำ
+    </a>
+
+    <a href="interest.html">
+        💡 ความสนใจ
+    </a>
+
+    <a href="works.html">
+        🏆 ผลงาน
+    </a>
+
 </nav>
+
+
+<!-- =========================
+     CONTENT
+========================= -->
 
 <main class="container">
 
-    <section class="title">
+    <div class="title">
 
-        <div class="icon">📖</div>
+        <div class="symbol">
+            📖 ✨
+        </div>
 
         <h1>คำนำ</h1>
 
-        <p>✦ INTRODUCTION ✦</p>
+        <div class="english">
+            INTRODUCTION
+        </div>
 
-    </section>
+    </div>
 
-    <section class="content">
 
-        <h2>🪄 แนะนำตัว 🪄</h2>
+    <section class="book">
+
+        <div class="greeting">
+            ✦ คำนำแฟ้มสะสมผลงาน ✦
+        </div>
+
 
         <p>
-            แฟ้มสะสมผลงานเล่มนี้จัดทำขึ้นเพื่อรวบรวมประวัติ
-            ผลงาน กิจกรรม ความสามารถ และประสบการณ์ต่าง ๆ
-            ของข้าพเจ้า <strong>วชิรญาณ์ คลังแก้ว</strong>
+            แฟ้มสะสมผลงานฉบับนี้จัดทำขึ้นเพื่อรวบรวม
+            ประวัติส่วนตัว ความสนใจ ผลงาน กิจกรรม
+            และประสบการณ์ที่ข้าพเจ้าได้เรียนรู้และสั่งสม
+            ตลอดช่วงเวลาที่ผ่านมา
+        </p>
+
+
+        <p>
+            ข้าพเจ้า
+            <strong>วชิรญาณ์ คลังแก้ว</strong>
             นักเรียนชั้นมัธยมศึกษาปีที่ 6
             แผนการเรียนเตรียมวิศวกรรมศาสตร์
+            มีความสนใจในด้านวิทยาศาสตร์ คณิตศาสตร์
+            เทคโนโลยี และวิศวกรรมศาสตร์
         </p>
 
-        <p>
-            ข้าพเจ้ามีความสนใจในด้านวิทยาศาสตร์ คณิตศาสตร์
-            เทคโนโลยี และวิศวกรรมศาสตร์ โดยเฉพาะ
-            <strong>วิศวกรรมโยธา</strong>
-            ซึ่งเป็นสาขาที่เกี่ยวข้องกับการออกแบบ
-            การก่อสร้าง และการพัฒนาระบบคมนาคม
-        </p>
 
-        <div class="goal">
+        <div class="highlight">
 
-            <h3>🎯 เป้าหมายในอนาคต</h3>
+            <h2>
+                🌷 จุดประสงค์ของแฟ้มสะสมผลงาน
+            </h2>
 
             <p>
-                ข้าพเจ้ามุ่งหวังที่จะศึกษาต่อด้านวิศวกรรมโยธา
-                ที่สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
-                และนำความรู้ที่ได้รับไปพัฒนาตนเอง
-                รวมถึงมีส่วนร่วมในการพัฒนาระบบคมนาคม
-                และสังคมให้มีประสิทธิภาพมากยิ่งขึ้น
+                แฟ้มสะสมผลงานเล่มนี้เป็นพื้นที่สำหรับนำเสนอ
+                ตัวตน ความตั้งใจ ความสามารถ และประสบการณ์
+                ที่สะท้อนถึงความสนใจด้านการเรียนรู้ของข้าพเจ้า
+                รวมถึงความมุ่งมั่นในการพัฒนาตนเอง
+                เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อในอนาคต
             </p>
 
         </div>
 
+
         <div class="cards">
 
             <div class="card">
-                <div class="icon">🔬</div>
-                <h3>วิทยาศาสตร์</h3>
-                <p>เรียนรู้ ทดลอง และค้นหาสิ่งใหม่</p>
+
+                <div class="icon">
+                    🌱
+                </div>
+
+                <h3>
+                    การเรียนรู้
+                </h3>
+
+                <p>
+                    เปิดรับความรู้และประสบการณ์ใหม่ ๆ
+                    อยู่เสมอ
+                </p>
+
             </div>
 
-            <div class="card">
-                <div class="icon">⚙️</div>
-                <h3>วิศวกรรม</h3>
-                <p>สนใจการออกแบบและการแก้ปัญหา</p>
-            </div>
 
             <div class="card">
-                <div class="icon">🚆</div>
-                <h3>คมนาคม</h3>
-                <p>สนใจการพัฒนาระบบการเดินทาง</p>
+
+                <div class="icon">
+                    💡
+                </div>
+
+                <h3>
+                    การพัฒนาตนเอง
+                </h3>
+
+                <p>
+                    ฝึกฝนทักษะและนำประสบการณ์
+                    มาปรับปรุงตนเอง
+                </p>
+
             </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🎯
+                </div>
+
+                <h3>
+                    เป้าหมาย
+                </h3>
+
+                <p>
+                    มุ่งมั่นพัฒนาตนเองเพื่อก้าวไปสู่
+                    เป้าหมายในอนาคต
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="end-message">
+
+            <p>
+                ✨ หวังว่าแฟ้มสะสมผลงานฉบับนี้
+                จะช่วยสะท้อนตัวตน ความตั้งใจ
+                และเส้นทางการเรียนรู้ของข้าพเจ้าได้เป็นอย่างดี ✨
+            </p>
 
         </div>
 
@@ -231,8 +514,9 @@ footer {
 
 </main>
 
+
 <footer>
-    ✦ วชิรญาณ์ คลังแก้ว | คำนำ ✦
+    ✦ วชิรญาณ์ คลังแก้ว | Portfolio ✦
 </footer>
 
 </body>
