@@ -18,16 +18,22 @@ html {
 body {
     margin: 0;
     font-family: Arial, "Noto Sans Thai", "Tahoma", sans-serif;
-    color: #66556b;
+    color: #5d4560;
     min-height: 100vh;
 
     background:
-        radial-gradient(circle at 8% 15%, rgba(255,255,255,.9) 0 4px, transparent 5px),
-        radial-gradient(circle at 90% 25%, rgba(255,255,255,.9) 0 5px, transparent 6px),
-        radial-gradient(circle at 20% 80%, rgba(255,255,255,.8) 0 3px, transparent 4px),
-        linear-gradient(135deg, #ffe8f3, #f0e3ff, #fff3d6);
+        radial-gradient(circle at 8% 12%, rgba(255,255,255,.95) 0 4px, transparent 5px),
+        radial-gradient(circle at 90% 20%, rgba(255,255,255,.9) 0 5px, transparent 6px),
+        radial-gradient(circle at 18% 80%, rgba(255,255,255,.85) 0 3px, transparent 4px),
+        radial-gradient(circle at 78% 75%, rgba(255,255,255,.8) 0 4px, transparent 5px),
+        linear-gradient(135deg, #fff0c9, #ffdbea, #e9ddff);
 
-    background-size: 150px 150px, 190px 190px, 120px 120px, cover;
+    background-size:
+        150px 150px,
+        190px 190px,
+        130px 130px,
+        170px 170px,
+        cover;
 }
 
 /* =========================
@@ -47,22 +53,25 @@ nav {
 
     padding: 14px;
 
-    background: rgba(255,255,255,.92);
+    background: rgba(255,255,255,.94);
     backdrop-filter: blur(10px);
 
-    border-bottom: 2px solid #efc7dc;
-    box-shadow: 0 5px 20px rgba(130,80,130,.12);
+    border-bottom: 2px solid #efc9dd;
+
+    box-shadow:
+        0 5px 20px rgba(120,80,120,.12);
 }
 
 nav a {
     text-decoration: none;
-    color: #765674;
 
-    background: #fff;
-    border: 2px solid #efcfe1;
+    color: #76536f;
+    background: #ffffff;
 
-    padding: 10px 20px;
+    padding: 10px 19px;
+
     border-radius: 25px;
+    border: 2px solid #f0cfe0;
 
     font-weight: bold;
     font-size: 15px;
@@ -71,12 +80,17 @@ nav a {
 }
 
 nav a:hover {
-    background: #ffe0ed;
+    background: #ffe0ec;
     transform: translateY(-3px);
 }
 
 nav a.active {
-    background: linear-gradient(135deg, #ffd1e4, #ead8ff);
+    background: linear-gradient(
+        135deg,
+        #ffd1e4,
+        #ead9ff
+    );
+
     border-color: #dfa9cc;
     color: #714c6c;
 }
@@ -89,7 +103,7 @@ nav a.active {
     width: 90%;
     max-width: 950px;
 
-    margin: 50px auto 70px;
+    margin: 45px auto 70px;
 }
 
 /* =========================
@@ -102,196 +116,229 @@ nav a.active {
 }
 
 .title .symbol {
-    font-size: 45px;
+    font-size: 52px;
     margin-bottom: 8px;
 }
 
 .title h1 {
     margin: 0;
 
-    font-size: 45px;
-    color: #bd5d91;
+    font-size: 44px;
 
-    text-shadow: 2px 2px rgba(255,255,255,.9);
+    color: #a85d88;
+
+    text-shadow:
+        2px 2px rgba(255,255,255,.9);
 }
 
 .title .english {
-    margin-top: 8px;
+    margin-top: 10px;
 
     color: #98739a;
-    font-size: 16px;
+
+    font-size: 15px;
     letter-spacing: 3px;
 }
 
 /* =========================
-   BOOK
+   PREFACE
 ========================= */
 
-.book {
+.preface {
     position: relative;
 
-    background: rgba(255,255,255,.94);
+    background: rgba(255,255,255,.95);
 
     border: 3px solid #edbfd8;
+
     border-radius: 35px;
 
-    padding: 45px 50px;
+    padding: 45px 55px;
 
     box-shadow:
-        0 15px 35px rgba(120,70,120,.15),
-        0 0 0 8px rgba(255,255,255,.45);
+        0 15px 35px rgba(120,70,120,.14),
+        0 0 0 7px rgba(255,255,255,.4);
 
     overflow: hidden;
 }
 
-.book::before {
+/* ตกแต่งมุม */
+
+.preface::before {
     content: "✦";
+
     position: absolute;
 
     top: 18px;
     left: 25px;
 
-    color: #e2a7ca;
-    font-size: 28px;
+    font-size: 30px;
+
+    color: #e1a4c8;
 }
 
-.book::after {
+.preface::after {
     content: "✧";
+
     position: absolute;
 
     right: 25px;
-    bottom: 15px;
+    bottom: 18px;
 
-    color: #cdb0e7;
-    font-size: 35px;
+    font-size: 38px;
+
+    color: #c9a9df;
 }
 
 /* =========================
-   INTRODUCTION TEXT
+   PREFACE HEADER
 ========================= */
 
-.greeting {
+.preface-header {
     text-align: center;
 
+    margin-bottom: 30px;
+}
+
+.preface-header h2 {
+    margin: 0 0 8px;
+
     color: #b65389;
-    font-size: 23px;
-    font-weight: bold;
 
-    margin-bottom: 25px;
+    font-size: 24px;
 }
 
-.book p {
+.preface-header p {
+    margin: 0;
+
+    color: #a27b99;
+
+    font-size: 14px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.preface-text {
     font-size: 17px;
-    line-height: 2;
 
-    margin: 0 0 20px;
+    line-height: 2.05;
+
+    text-align: justify;
+
+    margin: 0 0 22px;
 }
 
-.book strong {
+.preface-text strong {
     color: #b65389;
 }
 
 /* =========================
-   HIGHLIGHT BOX
+   PURPOSE
 ========================= */
 
-.highlight {
+.purpose {
     margin: 30px 0;
+
+    padding: 25px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff3f8,
+            #f5edff
+        );
+
+    border: 2px dashed #ddb6d2;
+
+    border-radius: 25px;
+}
+
+.purpose-title {
+    margin: 0 0 12px;
+
+    color: #a85687;
+
+    font-size: 21px;
+
+    font-weight: bold;
+}
+
+.purpose-text {
+    margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+/* =========================
+   GOAL
+========================= */
+
+.goal {
+    margin-top: 30px;
 
     padding: 25px 28px;
 
     background: linear-gradient(
         135deg,
-        #fff3f8,
-        #f7efff
+        #fff8dc,
+        #f5eaff
     );
 
-    border: 2px dashed #ddb6d2;
     border-radius: 25px;
+
+    border: 2px solid #ecd2df;
 }
 
-.highlight h2 {
+.goal-title {
     margin: 0 0 12px;
 
-    color: #a85687;
-    font-size: 22px;
+    color: #9d5c82;
+
+    font-size: 21px;
+
+    font-weight: bold;
 }
 
-.highlight p {
+.goal-text {
     margin: 0;
+
+    font-size: 16px;
+
+    line-height: 1.9;
 }
 
 /* =========================
-   SMALL CARDS
+   SIGNATURE
 ========================= */
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+.signature {
+    margin-top: 38px;
 
-    margin-top: 30px;
+    padding-top: 25px;
+
+    border-top: 2px dashed #e6c8d9;
+
+    text-align: right;
 }
 
-.card {
-    text-align: center;
+.signature p {
+    margin: 5px 0;
 
-    background: #fff;
-
-    border: 2px solid #efd1e1;
-    border-radius: 25px;
-
-    padding: 22px 15px;
-
-    transition: .25s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(130,80,130,.12);
-}
-
-.card .icon {
-    font-size: 35px;
-    margin-bottom: 8px;
-}
-
-.card h3 {
-    margin: 8px 0;
-
-    color: #9e5b88;
-    font-size: 18px;
-}
-
-.card p {
-    font-size: 14px;
-    line-height: 1.7;
-    margin: 0;
-}
-
-/* =========================
-   END MESSAGE
-========================= */
-
-.end-message {
-    margin-top: 35px;
-
-    text-align: center;
-
-    padding: 22px;
-
-    background: linear-gradient(
-        135deg,
-        #fff0f7,
-        #f1e8ff
-    );
-
-    border-radius: 25px;
-}
-
-.end-message p {
-    margin: 0;
     color: #80627d;
+
+    font-size: 15px;
+}
+
+.signature .name {
+    color: #a65383;
+
+    font-size: 18px;
+
+    font-weight: bold;
 }
 
 /* =========================
@@ -301,9 +348,10 @@ nav a.active {
 footer {
     text-align: center;
 
-    padding: 25px;
+    padding: 30px;
 
     color: #92718e;
+
     font-size: 14px;
 }
 
@@ -328,25 +376,46 @@ footer {
         margin-top: 35px;
     }
 
-    .title h1 {
-        font-size: 36px;
+    .title .symbol {
+        font-size: 45px;
     }
 
-    .book {
+    .title h1 {
+        font-size: 35px;
+    }
+
+    .title .english {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .preface {
         padding: 32px 22px;
         border-radius: 28px;
     }
 
-    .book p {
+    .preface-header h2 {
+        font-size: 21px;
+    }
+
+    .preface-text {
         font-size: 16px;
+        line-height: 1.9;
+        text-align: left;
     }
 
-    .cards {
-        grid-template-columns: 1fr;
+    .purpose,
+    .goal {
+        padding: 21px 19px;
     }
 
-    .greeting {
-        font-size: 20px;
+    .purpose-text,
+    .goal-text {
+        font-size: 15px;
+    }
+
+    .signature {
+        text-align: center;
     }
 }
 </style>
@@ -385,127 +454,121 @@ footer {
 
 <main class="container">
 
-    <div class="title">
+    <section class="title">
 
         <div class="symbol">
             📖 ✨
         </div>
 
-        <h1>คำนำ</h1>
+        <h1>
+            คำนำ
+        </h1>
 
         <div class="english">
             INTRODUCTION
         </div>
 
-    </div>
+    </section>
 
 
-    <section class="book">
+    <!-- =========================
+         PREFACE
+    ========================== -->
 
-        <div class="greeting">
-            ✦ คำนำแฟ้มสะสมผลงาน ✦
+    <section class="preface">
+
+        <div class="preface-header">
+
+            <h2>
+                ✦ คำนำแฟ้มสะสมผลงาน ✦
+            </h2>
+
+            <p>
+                Portfolio of Wachiraya Klangkaew
+            </p>
+
         </div>
 
 
-        <p>
-            แฟ้มสะสมผลงานฉบับนี้จัดทำขึ้นเพื่อรวบรวม
-            ประวัติส่วนตัว ความสนใจ ผลงาน กิจกรรม
-            และประสบการณ์ที่ข้าพเจ้าได้เรียนรู้และสั่งสม
-            ตลอดช่วงเวลาที่ผ่านมา
+        <p class="preface-text">
+
+            แฟ้มสะสมผลงานเล่มนี้จัดทำขึ้นเพื่อรวบรวม
+            ประวัติการศึกษา ความสนใจ ผลงาน กิจกรรม
+            และประสบการณ์ต่าง ๆ ที่ข้าพเจ้าได้เรียนรู้
+            และสั่งสมตลอดระยะเวลาที่ผ่านมา
+            เพื่อสะท้อนให้เห็นถึงความตั้งใจ ความสามารถ
+            และการพัฒนาตนเองในด้านต่าง ๆ
+
         </p>
 
 
-        <p>
+        <p class="preface-text">
+
             ข้าพเจ้า
             <strong>วชิรญาณ์ คลังแก้ว</strong>
             นักเรียนชั้นมัธยมศึกษาปีที่ 6
             แผนการเรียนเตรียมวิศวกรรมศาสตร์
             มีความสนใจในด้านวิทยาศาสตร์ คณิตศาสตร์
             เทคโนโลยี และวิศวกรรมศาสตร์
+            โดยเฉพาะด้านวิศวกรรมโยธา
+            ซึ่งเป็นสาขาที่ข้าพเจ้าสนใจศึกษาต่อในอนาคต
+
         </p>
 
 
-        <div class="highlight">
+        <!-- PURPOSE -->
 
-            <h2>
+        <div class="purpose">
+
+            <h3 class="purpose-title">
                 🌷 จุดประสงค์ของแฟ้มสะสมผลงาน
-            </h2>
+            </h3>
 
-            <p>
-                แฟ้มสะสมผลงานเล่มนี้เป็นพื้นที่สำหรับนำเสนอ
-                ตัวตน ความตั้งใจ ความสามารถ และประสบการณ์
-                ที่สะท้อนถึงความสนใจด้านการเรียนรู้ของข้าพเจ้า
-                รวมถึงความมุ่งมั่นในการพัฒนาตนเอง
-                เพื่อเตรียมความพร้อมสำหรับการศึกษาต่อในอนาคต
+            <p class="purpose-text">
+
+                แฟ้มสะสมผลงานเล่มนี้จัดทำขึ้นเพื่อแสดงให้เห็นถึง
+                ความสนใจ ความสามารถ และประสบการณ์จากการเรียน
+                และการเข้าร่วมกิจกรรมต่าง ๆ
+                รวมถึงใช้เป็นส่วนหนึ่งในการนำเสนอความพร้อม
+                และความมุ่งมั่นในการศึกษาต่อในระดับอุดมศึกษา
+
             </p>
 
         </div>
 
 
-        <div class="cards">
+        <!-- GOAL -->
 
-            <div class="card">
+        <div class="goal">
 
-                <div class="icon">
-                    🌱
-                </div>
+            <h3 class="goal-title">
+                🎯 เป้าหมายในอนาคต
+            </h3>
 
-                <h3>
-                    การเรียนรู้
-                </h3>
+            <p class="goal-text">
 
-                <p>
-                    เปิดรับความรู้และประสบการณ์ใหม่ ๆ
-                    อยู่เสมอ
-                </p>
+                ข้าพเจ้ามีความตั้งใจที่จะศึกษาต่อในด้าน
+                <strong>วิศวกรรมโยธา</strong>
+                และพัฒนาความรู้ความสามารถของตนเอง
+                เพื่อนำความรู้ทางด้านวิศวกรรมไปประยุกต์ใช้
+                ในการออกแบบและพัฒนาระบบคมนาคม
+                รวมถึงมีส่วนร่วมในการพัฒนาสังคมให้ก้าวหน้าต่อไป
 
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">
-                    💡
-                </div>
-
-                <h3>
-                    การพัฒนาตนเอง
-                </h3>
-
-                <p>
-                    ฝึกฝนทักษะและนำประสบการณ์
-                    มาปรับปรุงตนเอง
-                </p>
-
-            </div>
-
-
-            <div class="card">
-
-                <div class="icon">
-                    🎯
-                </div>
-
-                <h3>
-                    เป้าหมาย
-                </h3>
-
-                <p>
-                    มุ่งมั่นพัฒนาตนเองเพื่อก้าวไปสู่
-                    เป้าหมายในอนาคต
-                </p>
-
-            </div>
+            </p>
 
         </div>
 
 
-        <div class="end-message">
+        <!-- SIGNATURE -->
+
+        <div class="signature">
 
             <p>
-                ✨ หวังว่าแฟ้มสะสมผลงานฉบับนี้
-                จะช่วยสะท้อนตัวตน ความตั้งใจ
-                และเส้นทางการเรียนรู้ของข้าพเจ้าได้เป็นอย่างดี ✨
+                ผู้จัดทำ
+            </p>
+
+            <p class="name">
+                วชิรญาณ์ คลังแก้ว
             </p>
 
         </div>
