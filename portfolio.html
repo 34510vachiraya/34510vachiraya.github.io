@@ -1,249 +1,282 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>พอร์ต | วชิรญาณ์ คลังแก้ว</title>
+
+    <!-- เชื่อม CSS หลัก -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="navbar">
-    <a href="index.html" class="logo">W.K. Portfolio</a>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-    <nav class="menu">
-        <a href="portfolio.html" class="active">พอร์ต</a>
-        <a href="introduction.html">คำนำ</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="interest.html">ความสนใจ</a>
-        <a href="activities.html">กิจกรรม</a>
-    </nav>
-</header>
+    <header class="navbar">
 
-<main>
+        <a href="index.html" class="logo">
+            W.K.
+        </a>
 
-<section class="profile-section">
+        <nav>
+            <a href="index.html">
+                หน้าปก
+            </a>
 
-    <div class="profile-photo">
-        <img src="images/profile.jpg" alt="วชิรญาณ์ คลังแก้ว">
-    </div>
+            <a href="portfolio.html" class="active">
+                พอร์ต
+            </a>
 
-    <div class="profile-text">
+            <a href="introduction.html">
+                คำนำ
+            </a>
 
-        <p class="eyebrow">PROFILE</p>
+            <a href="education.html">
+                ประวัติการศึกษา
+            </a>
 
-        <h1>วชิรญาณ์ คลังแก้ว</h1>
+            <a href="works.html">
+                ผลงาน
+            </a>
 
-        <p class="nickname">โฟร์ท</p>
+            <a href="interest.html">
+                ความสนใจ
+            </a>
+        </nav>
 
-        <p class="description">
-            นักเรียนที่มีความสนใจด้านวิทยาศาสตร์ คณิตศาสตร์
-            เทคโนโลยี และวิศวกรรมศาสตร์ โดยมีเป้าหมายในการ
-            ศึกษาต่อด้านวิศวกรรมโยธา
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="container">
+
+        <!-- หัวข้อหน้า -->
+
+        <section class="page-title">
+
+            <p>MY PORTFOLIO</p>
+
+            <h1>
+                พอร์ตโฟลิโอ
+            </h1>
+
+            <span>
+                วชิรญาณ์ คลังแก้ว
+            </span>
+
+        </section>
+
+
+        <!-- =========================
+             PROFILE
+        ========================== -->
+
+        <section class="profile-card">
+
+            <div class="profile-photo">
+
+                <!--
+                    รูปตัวเองใส่ไว้ที่
+
+                    images/profile.jpg
+
+                    ถ้าชื่อไฟล์เป็นอย่างอื่น
+                    ให้เปลี่ยนชื่อใน src ให้ตรงกับไฟล์
+                -->
+
+                <img
+                    src="images/profile.jpg"
+                    alt="รูปโปรไฟล์ของวชิรญาณ์ คลังแก้ว"
+                >
+
+            </div>
+
+
+            <div class="profile-detail">
+
+                <p class="section-label">
+                    PROFILE
+                </p>
+
+                <h2>
+                    วชิรญาณ์ คลังแก้ว
+                </h2>
+
+                <p class="intro-text">
+                    เป็นนักเรียนที่มีความสนใจในด้านวิทยาศาสตร์
+                    คณิตศาสตร์ เทคโนโลยี และวิศวกรรมศาสตร์
+                    พร้อมเรียนรู้สิ่งใหม่และพัฒนาตนเองอยู่เสมอ
+                </p>
+
+
+                <!-- ข้อมูลส่วนตัว -->
+
+                <div class="info-list">
+
+                    <div>
+                        <strong>
+                            ชื่อเล่น
+                        </strong>
+
+                        <span>
+                            โฟร์ท
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            วันเกิด
+                        </strong>
+
+                        <span>
+                            6 ตุลาคม พ.ศ. 2551
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            ระดับการศึกษา
+                        </strong>
+
+                        <span>
+                            มัธยมศึกษาปีที่ 6
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <strong>
+                            แผนการเรียน
+                        </strong>
+
+                        <span>
+                            เตรียมวิศวกรรมศาสตร์
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             MENU
+        ========================== -->
+
+        <section class="menu-grid">
+
+            <a
+                href="introduction.html"
+                class="menu-card"
+            >
+
+                <span>
+                    01
+                </span>
+
+                <h3>
+                    คำนำ
+                </h3>
+
+                <p>
+                    แนวคิดและจุดประสงค์
+                    ในการจัดทำ Portfolio
+                </p>
+
+            </a>
+
+
+            <a
+                href="education.html"
+                class="menu-card"
+            >
+
+                <span>
+                    02
+                </span>
+
+                <h3>
+                    ประวัติการศึกษา
+                </h3>
+
+                <p>
+                    เส้นทางการศึกษา
+                    และแผนการเรียน
+                </p>
+
+            </a>
+
+
+            <a
+                href="works.html"
+                class="menu-card"
+            >
+
+                <span>
+                    03
+                </span>
+
+                <h3>
+                    ผลงานและกิจกรรม
+                </h3>
+
+                <p>
+                    ผลงาน ประสบการณ์
+                    และกิจกรรมที่เข้าร่วม
+                </p>
+
+            </a>
+
+
+            <a
+                href="interest.html"
+                class="menu-card"
+            >
+
+                <span>
+                    04
+                </span>
+
+                <h3>
+                    ความสนใจ
+                </h3>
+
+                <p>
+                    ความสนใจและเป้าหมาย
+                    ในการศึกษาต่อ
+                </p>
+
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 วชิรญาณ์ คลังแก้ว
         </p>
 
-        <div class="quick-info">
-            <div>
-                <strong>วันเกิด</strong>
-                <span>6 ตุลาคม พ.ศ. 2551</span>
-            </div>
-
-            <div>
-                <strong>เป้าหมาย</strong>
-                <span>วิศวกรรมโยธา</span>
-            </div>
-
-            <div>
-                <strong>มหาวิทยาลัยที่สนใจ</strong>
-                <span>สจล.</span>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="folder-section">
-
-    <div class="section-heading">
-        <p class="eyebrow">PORTFOLIO</p>
-        <h2>แฟ้มสะสมผลงาน</h2>
-        <p>เลือกดูรายละเอียดแต่ละส่วนได้จากเมนูด้านบน</p>
-    </div>
-
-    <div class="folder-grid">
-
-        <a href="introduction.html" class="folder-card">
-            <div class="folder-tab"></div>
-            <div class="folder-body">
-                <div class="folder-icon">✦</div>
-                <h3>คำนำ</h3>
-                <p>แนะนำตัวและเป้าหมายของฉัน</p>
-            </div>
-        </a>
-
-        <a href="education.html" class="folder-card">
-            <div class="folder-tab"></div>
-            <div class="folder-body">
-                <div class="folder-icon">▤</div>
-                <h3>ประวัติการศึกษา</h3>
-                <p>เส้นทางการศึกษาและแผนการเรียน</p>
-            </div>
-        </a>
-
-        <a href="interest.html" class="folder-card">
-            <div class="folder-tab"></div>
-            <div class="folder-body">
-                <div class="folder-icon">♡</div>
-                <h3>ความสนใจ</h3>
-                <p>สาขาที่สนใจและเป้าหมายในอนาคต</p>
-            </div>
-        </a>
-
-        <a href="activities.html" class="folder-card">
-            <div class="folder-tab"></div>
-            <div class="folder-body">
-                <div class="folder-icon">☆</div>
-                <h3>กิจกรรม</h3>
-                <p>กิจกรรมและประสบการณ์ที่เข้าร่วม</p>
-            </div>
-        </a>
-
-    </div>
-
-</section>
-
-</main>
-
-<footer>
-    <p>© 2026 Wachiraya Klangkaew</p>
-</footer>
+    </footer>
 
 </body>
-</html><!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>พอร์ต | วชิรญาณ์ คลังแก้ว</title>
-    <link rel="stylesheet" href="style.css">
-</head>
 
-<body>
-
-<header class="navbar">
-    <a href="index.html" class="logo">W.K. Portfolio</a>
-
-    <nav class="menu">
-        <a href="portfolio.html" class="active">พอร์ต</a>
-        <a href="introduction.html">คำนำ</a>
-        <a href="education.html">ประวัติการศึกษา</a>
-        <a href="interest.html">ความสนใจ</a>
-        <a href="activities.html">กิจกรรม</a>
-    </nav>
-</header>
-
-<main>
-
-<section class="profile-section">
-
-    <div class="profile-photo">
-        <img src="images/profile.jpg" alt="วชิรญาณ์ คลังแก้ว">
-    </div>
-
-    <div class="profile-text">
-
-        <p class="eyebrow">PROFILE</p>
-
-        <h1>วชิรญาณ์ คลังแก้ว</h1>
-
-        <p class="nickname">โฟร์ท</p>
-
-        <p class="description">
-            นักเรียนที่มีความสนใจด้านวิทยาศาสตร์ คณิตศาสตร์
-            เทคโนโลยี และวิศวกรรมศาสตร์ โดยมีเป้าหมายในการ
-            ศึกษาต่อด้านวิศวกรรมโยธา
-        </p>
-
-        <div class="quick-info">
-            <div>
-                <strong>วันเกิด</strong>
-                <span>6 ตุลาคม พ.ศ. 2551</span>
-            </div>
-
-            <div>
-                <strong>เป้าหมาย</strong>
-                <span>วิศวกรรมโยธา</span>
-            </div>
-
-            <div>
-                <strong>มหาวิทยาลัยที่สนใจ</strong>
-                <span>สจล.</span>
-            </div>
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="folder-section">
-
-    <div class="section-heading">
-        <p class="eyebrow">PORTFOLIO</p>
-        <h2>แฟ้มสะสมผลงาน</h2>
-        <p>เลือกดูรายละเอียดแต่ละส่วนได้จากเมนูด้านบน</p>
-    </div>
-
-    <div class="folder-grid">
-
-        <a href="introduction.html" class="folder-card">
-            <div class="folder-tab"></div>
-            <div class="folder-body">
-                <div class="folder-icon">✦</div>
-                <h3>คำนำ</h3>
-                <p>แนะนำตัวและเป้าหมายของฉัน</p>
-            </div>
-        </a>
-
-        <a href="education.html" class="folder-card">
-            <div class="folder-tab"></div>
-            <div class="folder-body">
-                <div class="folder-icon">▤</div>
-                <h3>ประวัติการศึกษา</h3>
-                <p>เส้นทางการศึกษาและแผนการเรียน</p>
-            </div>
-        </a>
-
-        <a href="interest.html" class="folder-card">
-            <div class="folder-tab"></div>
-            <div class="folder-body">
-                <div class="folder-icon">♡</div>
-                <h3>ความสนใจ</h3>
-                <p>สาขาที่สนใจและเป้าหมายในอนาคต</p>
-            </div>
-        </a>
-
-        <a href="activities.html" class="folder-card">
-            <div class="folder-tab"></div>
-            <div class="folder-body">
-                <div class="folder-icon">☆</div>
-                <h3>กิจกรรม</h3>
-                <p>กิจกรรมและประสบการณ์ที่เข้าร่วม</p>
-            </div>
-        </a>
-
-    </div>
-
-</section>
-
-</main>
-
-<footer>
-    <p>© 2026 Wachiraya Klangkaew</p>
-</footer>
-
-</body>
 </html>
